@@ -1,0 +1,177 @@
+.filter-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 100px;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 0.2em;
+}
+
+.c-button--gooey {
+    color: #06c8d9;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    border: 1px solid #06c8d9;
+    border-radius: 0;
+    transition: all 700ms ease;
+    width: auto;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -2px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: #06c8d9;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 700ms ease;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+    background-color: #06c8d9;
+    border-color: #06c8d9;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1) translateY(0);
+}
+
+.dropdown-style {
+    min-width: 80px;
+    padding: 0.2em 0.4em;
+    font-size: 12px;
+}
+
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    margin: 0 0.5em;
+}
+
+.c-button--gooey {
+    color: #06c8d9;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    border: 2px solid #06c8d9;
+    border-radius: 0;
+    position: relative;
+    transition: all 700ms ease;
+    width: auto;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -2px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: #06c8d9;
+    width: 10%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 35%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 65%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+    background-color: #06c8d9;
+    border-color: #06c8d9;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1) translateY(0) translateZ(0);
+}
+
+.dropdown-style {
+    min-width: 120px;
+    padding: 0.5em 1em;
+    font-size: 12px;
+}
+
+.c-button--gooey .p-dropdown-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.c-button--gooey:hover .p-dropdown-label {
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}

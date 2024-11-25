@@ -1,0 +1,2232 @@
+[
+    {
+        "title": "Aliyar Reservoir",
+        "latitude": 10.4739,
+        "longitude": 76.97279999999999
+    },
+    {
+        "title": "Almatti Reservoir",
+        "latitude": 16.331,
+        "longitude": 75.88799999999999
+    },
+    {
+        "title": "Balimela Reservoir",
+        "latitude": 18.25314,
+        "longitude": 82.1849588
+    },
+    {
+        "title": "Ban Sagar",
+        "latitude": 24.189611770246398,
+        "longitude": 81.28702792788569
+    },
+    {
+        "title": "Bargi\\Rani Avanti Bai Sagar",
+        "latitude": 22.941165504021214,
+        "longitude": 79.92314652545501
+    },
+    {
+        "title": "Barna",
+        "latitude": 23.072971,
+        "longitude": 78.03107
+    },
+    {
+        "title": "Bhadar Reservoir",
+        "latitude": 21.805908,
+        "longitude": 70.8060491
+    },
+    {
+        "title": "Bhadra Reservoir",
+        "latitude": 13.6785039,
+        "longitude": 75.5800678
+    },
+    {
+        "title": "Bhandardara",
+        "latitude": 19.5375291,
+        "longitude": 73.7694815
+    },
+    {
+        "title": "Bhatghar",
+        "latitude": 18.1649049,
+        "longitude": 73.85587360000001
+    },
+    {
+        "title": "Bhatsa",
+        "latitude": 19.518938,
+        "longitude": 73.42231
+    },
+    {
+        "title": "Bhima\\Ujjani Reservoir",
+        "latitude": 18.073889,
+        "longitude": 75.11999999999999
+    },
+    {
+        "title": "Bisalpur",
+        "latitude": 28.2937839,
+        "longitude": 79.804459
+    },
+    {
+        "title": "Brahmani-I",
+        "latitude": 22.900828921121335,
+        "longitude": 71.1506332555713
+    },
+    {
+        "title": "Damanganga Reservoir",
+        "latitude": 20.347962459373086,
+        "longitude": 72.91135153367222
+    },
+    {
+        "title": "Dantiwada Reservoir",
+        "latitude": 24.32383,
+        "longitude": 72.3308073
+    },
+    {
+        "title": "Dhom",
+        "latitude": 17.9842552700021,
+        "longitude": 73.79556407856244
+    },
+    {
+        "title": "Doyang Hep",
+        "latitude": 26.2313818,
+        "longitude": 94.26172670000001
+    },
+    {
+        "title": "Dudhawa",
+        "latitude": 20.2966187,
+        "longitude": 81.7404134
+    },
+    {
+        "title": "Dudhganga",
+        "latitude": 16.315979609014143,
+        "longitude": 73.97232055198376
+    },
+    {
+        "title": "Gandhi Sagar",
+        "latitude": 24.6902562,
+        "longitude": 75.56697
+    },
+    {
+        "title": "Gerusoppa Reservoir",
+        "latitude": 14.2577836,
+        "longitude": 74.6971257
+    },
+    {
+        "title": "GhatPrabha\\Hidkal Reservoir",
+        "latitude": 16.2394587,
+        "longitude": 74.7585775
+    },
+    {
+        "title": "Girna Reservoir",
+        "latitude": 20.83286428382371,
+        "longitude": 75.42391974089239
+    },
+    {
+        "title": "Gobind Sagar-Bhakra Reservoir",
+        "latitude": 31.4111875,
+        "longitude": 76.4334219
+    },
+    {
+        "title": "Gumti Reservoir",
+        "latitude": 23.538927860796992,
+        "longitude": 91.86054636465109
+    },
+    {
+        "title": "Harangi Reservoir",
+        "latitude": 12.491667,
+        "longitude": 75.90555599999999
+    },
+    {
+        "title": "Hathmati",
+        "latitude": 23.62332837058363,
+        "longitude": 72.94307296229093
+    },
+    {
+        "title": "Hemavathy Reservoir",
+        "latitude": 12.824763371675848,
+        "longitude": 76.05457959981271
+    },
+    {
+        "title": "Hirakud Reservoir",
+        "latitude": 21.6109371,
+        "longitude": 83.81547909999999
+    },
+    {
+        "title": "Idamalayar Reservoir",
+        "latitude": 10.22184486092529,
+        "longitude": 76.70641281188423
+    },
+    {
+        "title": "Idukki Reservoir",
+        "latitude": 9.8061793,
+        "longitude": 76.944141
+    },
+    {
+        "title": "Indira Sagar",
+        "latitude": 22.2841592,
+        "longitude": 76.4715817
+    },
+    {
+        "title": "Isapur Reservoir",
+        "latitude": 19.76425,
+        "longitude": 77.376452
+    },
+    {
+        "title": "Jayakwadi\\Nath Sagar",
+        "latitude": 19.4779213,
+        "longitude": 75.3656299
+    },
+    {
+        "title": "Jhakam Reservoir",
+        "latitude": 24.170086409066922,
+        "longitude": 74.5908653986417
+    },
+    {
+        "title": "Jirgo Dam",
+        "latitude": 25.0495769,
+        "longitude": 82.93595529999999
+    },
+    {
+        "title": "Kabini Reservoir",
+        "latitude": 11.957336,
+        "longitude": 76.2855634
+    },
+    {
+        "title": "Kadana Reservoir",
+        "latitude": 23.3475192,
+        "longitude": 73.859549
+    },
+    {
+        "title": "Kakki Reservoir",
+        "latitude": 9.325802756726942,
+        "longitude": 77.15459973104352
+    },
+    {
+        "title": "Kallada Reservoir",
+        "latitude": 8.959405635259976,
+        "longitude": 77.06613662752581
+    },
+    {
+        "title": "Kangsabati Reservoir",
+        "latitude": 22.953503947012134,
+        "longitude": 86.711911836311
+    },
+    {
+        "title": "Kanher Dam",
+        "latitude": 17.758849,
+        "longitude": 73.874205
+    },
+    {
+        "title": "Karjan Reservoir",
+        "latitude": 21.783362,
+        "longitude": 73.5329091
+    },
+    {
+        "title": "Khadakwasla Reservoir",
+        "latitude": 18.4454128,
+        "longitude": 73.7801447
+    },
+    {
+        "title": "Kolar",
+        "latitude": 13.1362143,
+        "longitude": 78.12909859999999
+    },
+    {
+        "title": "Kol Dam",
+        "latitude": 31.383056,
+        "longitude": 76.871111
+    },
+    {
+        "title": "Konar Reservoir",
+        "latitude": 23.929163,
+        "longitude": 85.76193839999999
+    },
+    {
+        "title": "Koyana/Shivaji Sagar",
+        "latitude": 17.4009594,
+        "longitude": 73.75035989999999
+    },
+    {
+        "title": "Krishnaraja Sagar",
+        "latitude": 12.4254763,
+        "longitude": 76.5724381
+    },
+    {
+        "title": "Linganamakki Reservoir",
+        "latitude": 14.0549312,
+        "longitude": 74.903339
+    },
+    {
+        "title": "Lower Bhawani \\ Bhavanisagar Reservoir",
+        "latitude": 11.4709508,
+        "longitude": 77.11428169999999
+    },
+    {
+        "title": "Lower Manair\\G.V.Sudhakar Rao Reservoir",
+        "latitude": 18.388805321499014,
+        "longitude": 79.12053765497673
+    },
+    {
+        "title": "Machhu I",
+        "latitude": 22.492436855348597,
+        "longitude": 70.9709304291086
+    },
+    {
+        "title": "Machhu II",
+        "latitude": 22.816873331814353,
+        "longitude": 70.86381373155228
+    },
+    {
+        "title": "Machkund\\Jalaput Reservoir",
+        "latitude": 18.3977508,
+        "longitude": 82.55916030000002
+    },
+    {
+        "title": "Mahanadi\\Ravishankar Sagar",
+        "latitude": 20.589307851030288,
+        "longitude": 81.53301235514559
+    },
+    {
+        "title": "Maithon Reservoir",
+        "latitude": 23.7734998,
+        "longitude": 86.79752769999999
+    },
+    {
+        "title": "Malampuzha",
+        "latitude": 10.8280802,
+        "longitude": 76.7368037
+    },
+    {
+        "title": "Malaprabha Reservoir",
+        "latitude": 15.817209421938086,
+        "longitude": 75.09338893852492
+    },
+    {
+        "title": "Mani Dam",
+        "latitude": 13.6577164,
+        "longitude": 75.0932352
+    },
+    {
+        "title": "Manikdoh",
+        "latitude": 19.2267466,
+        "longitude": 73.8154394
+    },
+    {
+        "title": "Matatila Reservoir",
+        "latitude": 25.1075688,
+        "longitude": 78.3652049
+    },
+    {
+        "title": "Mayurakshi\\Masanjor Reservoir",
+        "latitude": 24.1114381,
+        "longitude": 87.30906829999999
+    },
+    {
+        "title": "Mettur Reservoir",
+        "latitude": 11.7973262,
+        "longitude": 77.8106033
+    },
+    {
+        "title": "Minimata Bangoi\\Hasdeo Reservoir",
+        "latitude": 22.605037522437822,
+        "longitude": 82.59887339383438
+    },
+    {
+        "title": "Mula Reservoir",
+        "latitude": 19.329307,
+        "longitude": 74.529555
+    },
+    {
+        "title": "Mulshi Dam",
+        "latitude": 18.5306668,
+        "longitude": 73.5111883
+    },
+    {
+        "title": "Nagarjuna Sagar",
+        "latitude": 16.5759672,
+        "longitude": 79.3124022
+    },
+    {
+        "title": "Narayanapura Reservoir",
+        "latitude": 16.2121455,
+        "longitude": 76.3347838
+    },
+    {
+        "title": "Niradevghar",
+        "latitude": 18.100174,
+        "longitude": 73.721375
+    },
+    {
+        "title": "Nizam sagar",
+        "latitude": 18.2025,
+        "longitude": 77.923889
+    },
+    {
+        "title": "Omkareshwar",
+        "latitude": 22.2507773,
+        "longitude": 76.15228789999999
+    },
+    {
+        "title": "Panam Reservoir",
+        "latitude": 23.0252144,
+        "longitude": 73.7654367
+    },
+    {
+        "title": "Panchat Reservoir",
+        "latitude": 23.678056,
+        "longitude": 86.746944
+    },
+    {
+        "title": "Parambikulam Reservoir",
+        "latitude": 10.386646,
+        "longitude": 76.8057776
+    },
+    {
+        "title": "Pench\\Totladoh Reservoir",
+        "latitude": 21.658385,
+        "longitude": 79.294167
+    },
+    {
+        "title": "Periyar Reservoir",
+        "latitude": 9.5287072,
+        "longitude": 77.1443026
+    },
+    {
+        "title": "Pong Reservoir",
+        "latitude": 31.9765793,
+        "longitude": 76.0507949
+    },
+    {
+        "title": "Ramganga Reservoir",
+        "latitude": 29.5533039,
+        "longitude": 78.7589558
+    },
+    {
+        "title": "Ranapratap Sagar",
+        "latitude": 24.9176854,
+        "longitude": 75.5836194
+    },
+    {
+        "title": "Rengali Reservoir",
+        "latitude": 21.3296999,
+        "longitude": 85.0025539
+    },
+    {
+        "title": "RIHAND RESERVOIR",
+        "latitude": 24.1426423,
+        "longitude": 82.8425216
+    },
+    {
+        "title": "Sabarmati Reservoir",
+        "latitude": 24.021381535356063,
+        "longitude": 72.86428846297882
+    },
+    {
+        "title": "Salandi Reservoir",
+        "latitude": 21.3329898,
+        "longitude": 86.2818753
+    },
+    {
+        "title": "Sanjay Sarovar (Upper Wainganga)",
+        "latitude": 22.376111,
+        "longitude": 79.66383929999999
+    },
+    {
+        "title": "Sapua",
+        "latitude": 20.59,
+        "longitude": 85.29
+    },
+    {
+        "title": "Sardar Sarovar",
+        "latitude": 21.8305054,
+        "longitude": 73.7485212
+    },
+    {
+        "title": "Sharda Sagar",
+        "latitude": 28.7793245,
+        "longitude": 80.0814292
+    },
+    {
+        "title": "Shetrunji Reservoir",
+        "latitude": 21.38834631366483,
+        "longitude": 71.999012843716
+    },
+    {
+        "title": "Sholayar Reservoir",
+        "latitude": 10.3046321,
+        "longitude": 76.7812596
+    },
+    {
+        "title": "Singur",
+        "latitude": 22.814957,
+        "longitude": 88.234481
+    },
+    {
+        "title": "Somasila Reservoir",
+        "latitude": 14.4909383,
+        "longitude": 79.2112769
+    },
+    {
+        "title": "Sriram Sagar",
+        "latitude": 18.9686106,
+        "longitude": 78.3411074
+    },
+    {
+        "title": "Srisailam Reservoir",
+        "latitude": 16.0861287,
+        "longitude": 78.8971772
+    },
+    {
+        "title": "Supa Reservoir",
+        "latitude": 15.2632035,
+        "longitude": 74.49359129999999
+    },
+    {
+        "title": "Tattihalla",
+        "latitude": 15.1179105,
+        "longitude": 74.78306289999999
+    },
+    {
+        "title": "Tawa Reservoir",
+        "latitude": 22.544688144858817,
+        "longitude": 77.97068757067737
+    },
+    {
+        "title": "Tehri Reservoir",
+        "latitude": 30.3929041,
+        "longitude": 78.478036
+    },
+    {
+        "title": "Tenughat Reservoir",
+        "latitude": 23.7420757,
+        "longitude": 85.7974141
+    },
+    {
+        "title": "Thokarwadi",
+        "latitude": 18.90502,
+        "longitude": 73.5093474
+    },
+    {
+        "title": "Tilaiya Reservoir",
+        "latitude": 24.3190189,
+        "longitude": 85.5277488
+    },
+    {
+        "title": "Tungabhadra Reservoir",
+        "latitude": 15.3,
+        "longitude": 76.333333
+    },
+    {
+        "title": "Ukai Reservoir",
+        "latitude": 21.2341558,
+        "longitude": 73.5785523
+    },
+    {
+        "title": "Und I",
+        "latitude": 22.39593930439285,
+        "longitude": 70.40378002814322
+    },
+    {
+        "title": "Upper Indrawati Reservoir",
+        "latitude": 19.27917495379358,
+        "longitude": 82.82827734616316
+    },
+    {
+        "title": "Upper Kolab Reservoir",
+        "latitude": 18.8028232,
+        "longitude": 82.6059416
+    },
+    {
+        "title": "Upper Tapi\\Hatnur Reservoir",
+        "latitude": 17.1527665,
+        "longitude": 74.63199159999999
+    },
+    {
+        "title": "Upper Vaitarana Reservoir",
+        "latitude": 19.8223626,
+        "longitude": 73.51523809999999
+    },
+    {
+        "title": "Upper Wardha Reservoir",
+        "latitude": 20.745319,
+        "longitude": 78.60219459999999
+    },
+    {
+        "title": "Urmodi",
+        "latitude": 17.678490003825484,
+        "longitude": 73.88542913651696
+    },
+    {
+        "title": "Vagai Reservoir",
+        "latitude": 9.8977545,
+        "longitude": 78.1763046
+    },
+    {
+        "title": "Vanivilasa Sagar",
+        "latitude": 13.8882241,
+        "longitude": 76.489327
+    },
+    {
+        "title": "Watrak",
+        "latitude": 23.324588658471786,
+        "longitude": 73.45944977053044
+    },
+    {
+        "title": "Yeldari Reservoir",
+        "latitude": 19.7461111,
+        "longitude": 76.7297222
+    },
+    {
+        "title": "Yeleru",
+        "latitude": 17.315481908112567,
+        "longitude": 82.06434430235142
+    },
+    {
+        "title": "ADAVIPALLI RESERVOIR",
+        "latitude": 13.382732905096804,
+        "longitude": 79.28544484611935
+    },
+    {
+        "title": "ADINIMMAYAPALLI ANICUT",
+        "latitude": 14.605490796189384,
+        "longitude": 78.73125672463347
+    },
+    {
+        "title": "Advana",
+        "latitude": 21.9139461,
+        "longitude": 69.5939002
+    },
+    {
+        "title": "Aji-I",
+        "latitude": 22.264416793481356,
+        "longitude": 70.84837515628746
+    },
+    {
+        "title": "Aji - II",
+        "latitude": 22.381291193847794,
+        "longitude": 70.77284415160031
+    },
+    {
+        "title": "Aji-III",
+        "latitude": 22.516780642078754,
+        "longitude": 70.57921012140233
+    },
+    {
+        "title": "Aji-IV",
+        "latitude": 22.71793169708311,
+        "longitude": 70.48614954402564
+    },
+    {
+        "title": "ALAGANURU BALANCING RESERVOIR",
+        "latitude": 15.7119964,
+        "longitude": 78.401286
+    },
+    {
+        "title": "Ambajal",
+        "latitude": 21.28302634322572,
+        "longitude": 70.73840261548585
+    },
+    {
+        "title": "Amipur",
+        "latitude": 28.4009417,
+        "longitude": 77.443383
+    },
+    {
+        "title": "ANDRA RESERVOIR",
+        "latitude": 18.3389043,
+        "longitude": 83.19437239999999
+    },
+    {
+        "title": "ANNAMAYYA (CHEYYERU) RESERVOIR",
+        "latitude": 16.6027709,
+        "longitude": 82.1006244
+    },
+    {
+        "title": "ARANIAR RESERVOIR",
+        "latitude": 13.3991349,
+        "longitude": 79.74138959999999
+    },
+    {
+        "title": "BADVEL TANK",
+        "latitude": 14.7304949,
+        "longitude": 79.05974049999999
+    },
+    {
+        "title": "BAHUDA RESERVOIR",
+        "latitude": 13.560042039777553,
+        "longitude": 78.62398476413411
+    },
+    {
+        "title": "Baldeva",
+        "latitude": 21.616794307069448,
+        "longitude": 73.40979485120053
+    },
+    {
+        "title": "BALIMELA RESERVOIR",
+        "latitude": 18.25314,
+        "longitude": 82.1849588
+    },
+    {
+        "title": "Bangawadi",
+        "latitude": 13.0764978,
+        "longitude": 75.3590152
+    },
+    {
+        "title": "Bantva-Kharo",
+        "latitude": 21.4900542,
+        "longitude": 70.0749046
+    },
+    {
+        "title": "Berachia",
+        "latitude": 23.212398279957153,
+        "longitude": 69.06631064668584
+    },
+    {
+        "title": "Bhadar",
+        "latitude": 21.810312858273956,
+        "longitude": 70.8073534954462
+    },
+    {
+        "title": "Bhadar - II",
+        "latitude": 21.780904741528023,
+        "longitude": 70.4394147431314
+    },
+    {
+        "title": "BHAIRAVANITHIPPA PROJECT",
+        "latitude": 14.5394713,
+        "longitude": 76.8386364
+    },
+    {
+        "title": "Bhimdad",
+        "latitude": 22.0868593,
+        "longitude": 71.5842643
+    },
+    {
+        "title": "Bhukhi",
+        "latitude": 22.6345342,
+        "longitude": 73.59769
+    },
+    {
+        "title": "BHUPATIPALEM RESERVOIR",
+        "latitude": 17.4491681,
+        "longitude": 81.7581928
+    },
+    {
+        "title": "BRAHMAMSAGAR RESERVOIR",
+        "latitude": 14.7802661,
+        "longitude": 78.8892146
+    },
+    {
+        "title": "BUGGAVAGU",
+        "latitude": 16.47007557187789,
+        "longitude": 79.52936207254967
+    },
+    {
+        "title": "BUGGAVANKA RESERVOIR",
+        "latitude": 14.397674131672327,
+        "longitude": 78.8388857547677
+    },
+    {
+        "title": "CHAGALLU BALANCING RESERVOIR",
+        "latitude": 16.9918555,
+        "longitude": 81.6652051
+    },
+    {
+        "title": "CHENNARAYA SWAMI GUDI PROJECT",
+        "latitude": 13.86311168069486,
+        "longitude": 78.17494510640901
+    },
+    {
+        "title": "CHERLOPALLI RESERVOIR",
+        "latitude": 14.0348879,
+        "longitude": 78.1121215
+    },
+    {
+        "title": "Chhaparwadi-II",
+        "latitude": 21.888988583629462,
+        "longitude": 70.63119199701075
+    },
+    {
+        "title": "CHITRAVATI BALANCING RESERVOIR",
+        "latitude": 14.5465668,
+        "longitude": 77.948165
+    },
+    {
+        "title": "Chopadvav",
+        "latitude": 21.5513475,
+        "longitude": 73.735282
+    },
+    {
+        "title": "CUM BUM TANK",
+        "latitude": 15.580755627728184,
+        "longitude": 79.06102417914856
+    },
+    {
+        "title": "Damanganga",
+        "latitude": 20.37363049904731,
+        "longitude": 72.87074420367418
+    },
+    {
+        "title": "DAMODARAM SAGARAM",
+        "latitude": 17.86850717613452,
+        "longitude": 82.79076315409021
+    },
+    {
+        "title": "Dantiwada",
+        "latitude": 24.32383,
+        "longitude": 72.3308073
+    },
+    {
+        "title": "Demi - I",
+        "latitude": 22.637971995806858,
+        "longitude": 70.68138509225612
+    },
+    {
+        "title": "Demi - II",
+        "latitude": 22.740511480508314,
+        "longitude": 70.61211207775975
+    },
+    {
+        "title": "Deo",
+        "latitude": 21.80736495593551,
+        "longitude": 86.08698557551583
+    },
+    {
+        "title": "Dhari",
+        "latitude": 21.326649,
+        "longitude": 71.02525709999999
+    },
+    {
+        "title": "Dharoi",
+        "latitude": 24.0004375,
+        "longitude": 72.8426858
+    },
+    {
+        "title": "Dhatarvadi",
+        "latitude": 21.03559782320557,
+        "longitude": 71.42418754037168
+    },
+    {
+        "title": "Dhatarwadi-II",
+        "latitude": 21.132951201967014,
+        "longitude": 71.43260194559487
+    },
+    {
+        "title": "Dholi",
+        "latitude": 21.712826356419054,
+        "longitude": 73.32250084724969
+    },
+    {
+        "title": "Dholidhaja",
+        "latitude": 22.7213641,
+        "longitude": 71.5872314
+    },
+    {
+        "title": "Dia-Minsar",
+        "latitude": 21.83238541974844,
+        "longitude": 69.93140645454493
+    },
+    {
+        "title": "Don",
+        "latitude": 21.871936472608144,
+        "longitude": 69.7930059861553
+    },
+    {
+        "title": "Dondi",
+        "latitude": 22.286629418188138,
+        "longitude": 70.60316829490951
+    },
+    {
+        "title": "DONKARAYI RESERVOIR",
+        "latitude": 17.9634385,
+        "longitude": 81.8688751
+    },
+    {
+        "title": "Doswada",
+        "latitude": 21.1231609,
+        "longitude": 73.49462
+    },
+    {
+        "title": "Dhrafad",
+        "latitude": 21.34566706454572,
+        "longitude": 70.70942255670187
+    },
+    {
+        "title": "Edalwada",
+        "latitude": 22.679025801961128,
+        "longitude": 74.0521246025957
+    },
+    {
+        "title": "Falku",
+        "latitude": 36.845974,
+        "longitude": 10.1570662
+    },
+    {
+        "title": "Fatehgadh",
+        "latitude": 23.7023588,
+        "longitude": 70.84618429999999
+    },
+    {
+        "title": "Fulzar-I",
+        "latitude": 20.0245169,
+        "longitude": 79.6403857
+    },
+    {
+        "title": "Fulzar-II",
+        "latitude": 22.246228809639057,
+        "longitude": 69.80916784871994
+    },
+    {
+        "title": "Gadhaki",
+        "latitude": 22.11395780170169,
+        "longitude": 69.45295563831799
+    },
+    {
+        "title": "Gajansar",
+        "latitude": 23.5963676,
+        "longitude": 69.1089444
+    },
+    {
+        "title": "GAJJILIGEDDA RESERVOIR",
+        "latitude": 18.575639684065287,
+        "longitude": 83.83045553241871
+    },
+    {
+        "title": "Gajod",
+        "latitude": 23.0362651,
+        "longitude": 69.5693225
+    },
+    {
+        "title": "GAJULADINNE PROJECT",
+        "latitude": 15.6933813,
+        "longitude": 77.619379
+    },
+    {
+        "title": "GANDIKOTA RESERVOIR",
+        "latitude": 14.8007239,
+        "longitude": 78.2347984
+    },
+    {
+        "title": "GANDIPALEM RESERVOIR PROJECT",
+        "latitude": 14.9803748,
+        "longitude": 79.281759
+    },
+    {
+        "title": "Ghee",
+        "latitude": 22.179949760262996,
+        "longitude": 69.65456253751007
+    },
+    {
+        "title": "Ghelo-I",
+        "latitude": 22.054906068235,
+        "longitude": 71.38860782270683
+    },
+    {
+        "title": "Ghodadhroi",
+        "latitude": 28.627729,
+        "longitude": 80.9650023
+    },
+    {
+        "title": "GODDAMVARIPALLI SR3",
+        "latitude": 14.2426406,
+        "longitude": 78.5407079
+    },
+    {
+        "title": "GODDUMARRI ANICUT",
+        "latitude": 14.690767486932051,
+        "longitude": 78.0575814152
+    },
+    {
+        "title": "Godhatad",
+        "latitude": 23.6388965,
+        "longitude": 68.6499169
+    },
+    {
+        "title": "GOLLAPALLI RESERVOIR",
+        "latitude": 14.1991049,
+        "longitude": 77.5831115
+    },
+    {
+        "title": "Goma",
+        "latitude": 22.23768312770168,
+        "longitude": 71.49542628582365
+    },
+    {
+        "title": "Gondali",
+        "latitude": 22.065567408014065,
+        "longitude": 70.85994381283173
+    },
+    {
+        "title": "GONELAVAGU RESERVOIR",
+        "latitude": 18.8756,
+        "longitude": 79.6927
+    },
+    {
+        "title": "GORAKKALU BALANCING RESERVIOR",
+        "latitude": 18.7292712,
+        "longitude": 79.4647633
+    },
+    {
+        "title": "Gorathiya",
+        "latitude": 23.487462452700274,
+        "longitude": 73.01266914324484
+    },
+    {
+        "title": "GOTTA BARRAGE",
+        "latitude": 18.6887708,
+        "longitude": 83.962147
+    },
+    {
+        "title": "Guhai",
+        "latitude": 23.708860035262145,
+        "longitude": 73.03685694589767
+    },
+    {
+        "title": "GUNDLAKAMMA RESERVOIR",
+        "latitude": 15.6879212,
+        "longitude": 79.9822126
+    },
+    {
+        "title": "Hadaf",
+        "latitude": 22.895051145151673,
+        "longitude": 73.89187559226748
+    },
+    {
+        "title": "Hamirpara",
+        "latitude": 21.4980891,
+        "longitude": 72.0608898
+    },
+    {
+        "title": "Hanol",
+        "latitude": 30.9700226,
+        "longitude": 77.9267437
+    },
+    {
+        "title": "Harnav-II",
+        "latitude": 23.985106089656092,
+        "longitude": 73.30126025544709
+    },
+    {
+        "title": "Hasanapur",
+        "latitude": 26.4149694,
+        "longitude": 80.60354939999999
+    },
+    {
+        "title": "Hiran-I",
+        "latitude": 21.196595826609418,
+        "longitude": 70.66906208981699
+    },
+    {
+        "title": "Ishwaria",
+        "latitude": 21.984344254664528,
+        "longitude": 71.01631681880576
+    },
+    {
+        "title": "JALLERU RESERVOIR",
+        "latitude": 17.291468083315593,
+        "longitude": 81.34869568245598
+    },
+    {
+        "title": "Jangdia",
+        "latitude": 23.405910572152305,
+        "longitude": 87.08291979640524
+    },
+    {
+        "title": "Jaspara-Mandva",
+        "latitude": 21.4635497,
+        "longitude": 72.2112099
+    },
+    {
+        "title": "Javanpura",
+        "latitude": 23.5972334,
+        "longitude": 73.20281
+    },
+    {
+        "title": "JEEDIPALLI RESERVOIR",
+        "latitude": 14.6873805,
+        "longitude": 77.2663771
+    },
+    {
+        "title": "Jhanjeshri",
+        "latitude": 21.393921471412323,
+        "longitude": 70.80839023995999
+    },
+    {
+        "title": "Jhuj",
+        "latitude": 20.708812966101913,
+        "longitude": 73.39015978204671
+    },
+    {
+        "title": "Kabarka",
+        "latitude": 22.050255,
+        "longitude": 69.829959
+    },
+    {
+        "title": "Kabir-Sarovar",
+        "latitude": 22.6851485,
+        "longitude": 81.7453716
+    },
+    {
+        "title": "Kabutari",
+        "latitude": 22.97401569168919,
+        "longitude": 73.93124077933922
+    },
+    {
+        "title": "Kadana",
+        "latitude": 23.2895908,
+        "longitude": 73.8382306
+    },
+    {
+        "title": "Kaila",
+        "latitude": 23.734309402782113,
+        "longitude": 69.85991370543123
+    },
+    {
+        "title": "Kakdi-Amba",
+        "latitude": 21.549644,
+        "longitude": 73.8566087
+    },
+    {
+        "title": "KALANGI RESERVOIR",
+        "latitude": 13.6017185,
+        "longitude": 79.79489439999999
+    },
+    {
+        "title": "Kali - II",
+        "latitude": 22.864704856103568,
+        "longitude": 74.23427772344424
+    },
+    {
+        "title": "Kalindri",
+        "latitude": 21.722665320650687,
+        "longitude": 69.95999329153774
+    },
+    {
+        "title": "KALINGADAL PROJECT",
+        "latitude": 18.950257875127015,
+        "longitude": 84.43548262127386
+    },
+    {
+        "title": "Kalubhar",
+        "latitude": 21.86666630350509,
+        "longitude": 71.62174731941973
+    },
+    {
+        "title": "KALYANI DAM",
+        "latitude": 13.6576604,
+        "longitude": 79.26922139999999
+    },
+    {
+        "title": "KANDALERU RESERVOIR",
+        "latitude": 14.347401,
+        "longitude": 79.59405439999999
+    },
+    {
+        "title": "KANIGIRI RESERVOIR",
+        "latitude": 14.5831965,
+        "longitude": 79.85768279999999
+    },
+    {
+        "title": "Kaniyad",
+        "latitude": 22.2530939,
+        "longitude": 71.6317359
+    },
+    {
+        "title": "Kankavati",
+        "latitude": 23.071115,
+        "longitude": 71.3581703
+    },
+    {
+        "title": "Kankawati",
+        "latitude": 23.071115,
+        "longitude": 71.3581703
+    },
+    {
+        "title": "Karad",
+        "latitude": 17.277693,
+        "longitude": 74.1843535
+    },
+    {
+        "title": "Karjan",
+        "latitude": 22.0534997,
+        "longitude": 73.1201988
+    },
+    {
+        "title": "Karmal",
+        "latitude": 22.039350528257796,
+        "longitude": 70.99503242004411
+    },
+    {
+        "title": "Karnuki",
+        "latitude": 21.938785,
+        "longitude": 71.1827267
+    },
+    {
+        "title": "Kaswati",
+        "latitude": 23.378143949679753,
+        "longitude": 69.90110522184725
+    },
+    {
+        "title": "Kelia",
+        "latitude": 20.703674168452377,
+        "longitude": 73.28516471132275
+    },
+    {
+        "title": "Khambhada",
+        "latitude": 22.163874,
+        "longitude": 71.8037638
+    },
+    {
+        "title": "Khambhala",
+        "latitude": 22.3389849,
+        "longitude": 70.67521339999999
+    },
+    {
+        "title": "Kharo",
+        "latitude": 21.510234623029167,
+        "longitude": 70.08355773716741
+    },
+    {
+        "title": "Khedva",
+        "latitude": 24.1298572,
+        "longitude": 73.0936509
+    },
+    {
+        "title": "Khodapipar",
+        "latitude": 22.5602472,
+        "longitude": 70.6157308
+    },
+    {
+        "title": "Khodiyar",
+        "latitude": 21.351038760451544,
+        "longitude": 71.0379858713578
+    },
+    {
+        "title": "KONAM RESERVOIR",
+        "latitude": 17.9785438,
+        "longitude": 82.8506002
+    },
+    {
+        "title": "KOVVADAKALVA RESERVOIR",
+        "latitude": 17.200454081428116,
+        "longitude": 81.50252046069157
+    },
+    {
+        "title": "KRISHNAGIRI RESERVOIR",
+        "latitude": 12.5265661,
+        "longitude": 78.2149575
+    },
+    {
+        "title": "KRISHNAPURAM PROJECT",
+        "latitude": 79.3561,
+        "longitude": 13.5377
+    },
+    {
+        "title": "Lakhanka",
+        "latitude": 21.956392,
+        "longitude": 71.659919
+    },
+    {
+        "title": "Lakhigam",
+        "latitude": 21.6898778,
+        "longitude": 72.55227769999999
+    },
+    {
+        "title": "Lalpari",
+        "latitude": 22.305295689014663,
+        "longitude": 70.84953316006121
+    },
+    {
+        "title": "Lank",
+        "latitude": 23.147435489370785,
+        "longitude": 73.24968772811273
+    },
+    {
+        "title": "Limbali",
+        "latitude": 22.5619146,
+        "longitude": 72.7067604
+    },
+    {
+        "title": "Lim-Bhogavo-I",
+        "latitude": 22.547718627857783,
+        "longitude": 71.64851112723308
+    },
+    {
+        "title": "Lim-Bhogavo-II",
+        "latitude": 22.56652094161988,
+        "longitude": 71.8159133381895
+    },
+    {
+        "title": "LOWER SAGILERU ANI CUT",
+        "latitude": 14.2017,
+        "longitude": 79.0209
+    },
+    {
+        "title": "Machchhanala",
+        "latitude": 22.8595,
+        "longitude": 73.7675
+    },
+    {
+        "title": "Machchhu - I",
+        "latitude": 22.446685863952514,
+        "longitude": 70.95883345713679
+    },
+    {
+        "title": "Machchhu-II",
+        "latitude": 22.75681019549557,
+        "longitude": 70.87088345687428
+    },
+    {
+        "title": "Machchhu-III",
+        "latitude": 22.87453335720596,
+        "longitude": 70.81389188061036
+    },
+    {
+        "title": "Machhundri",
+        "latitude": 20.986038705792897,
+        "longitude": 70.93408686253711
+    },
+    {
+        "title": "MADDIGEDDA PROJECT",
+        "latitude": 17.495076368944,
+        "longitude": 82.01482772564307
+    },
+    {
+        "title": "MADDUVALASA PROJECT",
+        "latitude": 18.5806426,
+        "longitude": 83.6236074
+    },
+    {
+        "title": "Madhuvanti",
+        "latitude": 21.261286015205883,
+        "longitude": 70.49530933001242
+    },
+    {
+        "title": "Malan",
+        "latitude": 21.232844571979303,
+        "longitude": 71.62964778272364
+    },
+    {
+        "title": "Malgadh",
+        "latitude": 24.2641687,
+        "longitude": 72.1472005
+    },
+    {
+        "title": "MALLIMADUGU",
+        "latitude": 17.2983777,
+        "longitude": 80.1456496
+    },
+    {
+        "title": "Malpara",
+        "latitude": 21.8538712,
+        "longitude": 71.5453177
+    },
+    {
+        "title": "MARALA RESERVOIR",
+        "latitude": 14.2913378,
+        "longitude": 77.9394133
+    },
+    {
+        "title": "Mathal",
+        "latitude": 23.430979341360548,
+        "longitude": 69.17091486136957
+    },
+    {
+        "title": "Mazam",
+        "latitude": 36.83017290000001,
+        "longitude": 10.1780287
+    },
+    {
+        "title": "MEHADRIGADD RESERVOIR",
+        "latitude": 17.781236,
+        "longitude": 83.18097759999999
+    },
+    {
+        "title": "Meshwo",
+        "latitude": 23.68687207539104,
+        "longitude": 73.39822031387675
+    },
+    {
+        "title": "MID PENNAR RESERVOIR",
+        "latitude": 14.8715122,
+        "longitude": 77.38699
+    },
+    {
+        "title": "Mitti",
+        "latitude": 23.337039100911603,
+        "longitude": 68.83687668633608
+    },
+    {
+        "title": "Moj",
+        "latitude": 21.845462823577545,
+        "longitude": 70.28460494218314
+    },
+    {
+        "title": "MOPADU RESERVOIR PROJECT",
+        "latitude": 15.1159835,
+        "longitude": 79.467576
+    },
+    {
+        "title": "Morshal",
+        "latitude": 21.2764,
+        "longitude": 78.0572
+    },
+    {
+        "title": "Mota-Gujariya",
+        "latitude": 21.4899567,
+        "longitude": 70.74658289999999
+    },
+    {
+        "title": "Motisar",
+        "latitude": 20.9862759,
+        "longitude": 71.09100339999999
+    },
+    {
+        "title": "Mukteshwar",
+        "latitude": 29.4604149,
+        "longitude": 79.6558242
+    },
+    {
+        "title": "MUNIYERU PROJECT",
+        "latitude": 17.0833,
+        "longitude": 80.1667
+    },
+    {
+        "title": "Munjiasar",
+        "latitude": 21.0232142,
+        "longitude": 71.2926178
+    },
+    {
+        "title": "MUSURIMALLI",
+        "latitude": 17.389821816824448,
+        "longitude": 81.76667863540783
+    },
+    {
+        "title": "MYLAVARAM(PENNAR) RESERVOIR",
+        "latitude": 16.7560489,
+        "longitude": 80.6414006
+    },
+    {
+        "title": "NAGARJUNA SAGAR",
+        "latitude": 16.5759672,
+        "longitude": 79.3124022
+    },
+    {
+        "title": "Nara",
+        "latitude": 31.549887304512957,
+        "longitude": 76.04049678350734
+    },
+    {
+        "title": "NARAYANAPURAM ANICUT",
+        "latitude": 18.3833,
+        "longitude": 83.8
+    },
+    {
+        "title": "NELLORE ANICUT",
+        "latitude": 14.4425987,
+        "longitude": 79.98645599999999
+    },
+    {
+        "title": "NELLORE TANK",
+        "latitude": 14.4425987,
+        "longitude": 79.98645599999999
+    },
+    {
+        "title": "Nimbmani",
+        "latitude": 17.23442976211487,
+        "longitude": 79.27239986790026
+    },
+    {
+        "title": "Niruna",
+        "latitude": 23.60902,
+        "longitude": 69.491913
+    },
+    {
+        "title": "NTR JALASAYAM",
+        "latitude": 13.2873612,
+        "longitude": 79.1301573
+    },
+    {
+        "title": "NTR RESERVOIR",
+        "latitude": 17.9400415,
+        "longitude": 82.7654225
+    },
+    {
+        "title": "Nyari - I",
+        "latitude": 22.237469670014715,
+        "longitude": 70.712398146163
+    },
+    {
+        "title": "Nyari-II",
+        "latitude": 22.361704037308037,
+        "longitude": 70.6759499711558
+    },
+    {
+        "title": "Nyka",
+        "latitude": 22.66393322646502,
+        "longitude": 71.46589256854459
+    },
+    {
+        "title": "OWK RESERVOIR",
+        "latitude": 15.1850442,
+        "longitude": 78.0851607
+    },
+    {
+        "title": "Ozat-II",
+        "latitude": 21.384067202970385,
+        "longitude": 70.58186480365498
+    },
+    {
+        "title": "Ozat-Weir",
+        "latitude": 21.46704367896128,
+        "longitude": 70.30417457767781
+    },
+    {
+        "title": "Ozat-Weir(Vanthali)",
+        "latitude": 21.4673722,
+        "longitude": 70.3029835
+    },
+    {
+        "title": "PAIDIPALEM BALANCING RESERVOIR",
+        "latitude": 14.704008620826855,
+        "longitude": 78.18822929661161
+    },
+    {
+        "title": "PALERU BITRAGUNTA ANICUT",
+        "latitude": 14.7949897,
+        "longitude": 79.9584397
+    },
+    {
+        "title": "PAMPA RESERVOIR",
+        "latitude": 17.2873006,
+        "longitude": 82.4075192
+    },
+    {
+        "title": "Panam",
+        "latitude": 23.029974818563854,
+        "longitude": 73.7647840111883
+    },
+    {
+        "title": "Patadungari",
+        "latitude": 22.727104790033994,
+        "longitude": 74.29350501417315
+    },
+    {
+        "title": "PATHIKONDA RESERVOIR",
+        "latitude": 13.2001765,
+        "longitude": 78.64838429999999
+    },
+    {
+        "title": "PEDDAGEDDA RESERVOIR",
+        "latitude": 18.462609749296096,
+        "longitude": 83.1039479524634
+    },
+    {
+        "title": "PEDDERU RESERVOIR",
+        "latitude": 17.89550576634225,
+        "longitude": 82.69472579349579
+    },
+    {
+        "title": "PEDDERU RESERVOIR PROJECT",
+        "latitude": 14.102568554327682,
+        "longitude": 78.37007749996846
+    },
+    {
+        "title": "PENNA AHOBILAM BALANCING RESERVOIR",
+        "latitude": 14.860553,
+        "longitude": 77.3058772
+    },
+    {
+        "title": "PENNAR KUMUDWATHI PROJECT (ANICUT)",
+        "latitude": 13.82945,
+        "longitude": 77.47056
+    },
+    {
+        "title": "Phadangbeti",
+        "latitude": 22.3027,
+        "longitude": 70.8022
+    },
+    {
+        "title": "Phodarness",
+        "latitude": 21.589320041290485,
+        "longitude": 69.74048674274648
+    },
+    {
+        "title": "Phophal - I",
+        "latitude": 21.862719556351546,
+        "longitude": 70.52203843087666
+    },
+    {
+        "title": "KHAJURADA",
+        "latitude": 21.88573566200977,
+        "longitude": 70.40158372765988
+    },
+    {
+        "title": "Pigut",
+        "latitude": 21.567887311804057,
+        "longitude": 73.15959951099539
+    },
+    {
+        "title": "PINCHA PROJECT",
+        "latitude": 13.909456298363713,
+        "longitude": 79.00006761983295
+    },
+    {
+        "title": "Pingli",
+        "latitude": 19.211879,
+        "longitude": 76.8591235
+    },
+    {
+        "title": "PRAKASAM BARRAGE",
+        "latitude": 16.5020777,
+        "longitude": 80.603335
+    },
+    {
+        "title": "Prempara",
+        "latitude": 21.2951845,
+        "longitude": 70.7012348
+    },
+    {
+        "title": "PULICHINTHALA PROJECT",
+        "latitude": 16.770833,
+        "longitude": 80.05666699999999
+    },
+    {
+        "title": "Puna",
+        "latitude": 22.467130749779955,
+        "longitude": 70.06455576270116
+    },
+    {
+        "title": "Raidy",
+        "latitude": 20.984044725720384,
+        "longitude": 71.31330357486667
+    },
+    {
+        "title": "RAIWADA RESERVOIR",
+        "latitude": 18.008424475402254,
+        "longitude": 82.96565984261998
+    },
+    {
+        "title": "Rajawal",
+        "latitude": 27.7768501,
+        "longitude": 77.8495921
+    },
+    {
+        "title": "RALLAPADU RESERVOIR",
+        "latitude": 15.0460843,
+        "longitude": 79.7035265
+    },
+    {
+        "title": "RAMA THIRTHAM",
+        "latitude": 18.1678708,
+        "longitude": 83.4950236
+    },
+    {
+        "title": "Rami",
+        "latitude": 22.079915250000166,
+        "longitude": 74.00437629744572
+    },
+    {
+        "title": "Rana Khirasara",
+        "latitude": 21.72546987452143,
+        "longitude": 69.87602868660899
+    },
+    {
+        "title": "Ranghola",
+        "latitude": 21.7628822,
+        "longitude": 71.6747513
+    },
+    {
+        "title": "Rangmati",
+        "latitude": 22.7324173,
+        "longitude": 92.29851339999999
+    },
+    {
+        "title": "Raval",
+        "latitude": 21.88669240197028,
+        "longitude": 69.40326191079075
+    },
+    {
+        "title": "Rojki",
+        "latitude": 27.4474259,
+        "longitude": 77.05500719999999
+    },
+    {
+        "title": "Rudramata",
+        "latitude": 23.3799684,
+        "longitude": 69.7066974
+    },
+    {
+        "title": "Ruparel",
+        "latitude": 22.48837790632176,
+        "longitude": 70.0543941195026
+    },
+    {
+        "title": "Rupavati",
+        "latitude": 21.5033684,
+        "longitude": 71.6391527
+    },
+    {
+        "title": "Sabali",
+        "latitude": 21.36028,
+        "longitude": 70.32695
+    },
+    {
+        "title": "Nayka Dam",
+        "latitude": 22.665546787723702,
+        "longitude": 71.46427889361583
+    },
+    {
+        "title": "Sanandro",
+        "latitude": 23.0935,
+        "longitude": 70.5887
+    },
+    {
+        "title": "SANGAM ANICUT / BARRGE",
+        "latitude": 14.57522439939255,
+        "longitude": 79.74793919600995
+    },
+    {
+        "title": "Sani",
+        "latitude": 22.04128789713139,
+        "longitude": 69.48753397589816
+    },
+    {
+        "title": "Sankroli",
+        "latitude": 21.65626146710393,
+        "longitude": 70.77349661078446
+    },
+    {
+        "title": "Sapada",
+        "latitude": 46.5660359,
+        "longitude": 12.6859575
+    },
+    {
+        "title": "Saran",
+        "latitude": 25.8559698,
+        "longitude": 84.8567932
+    },
+    {
+        "title": "SARVARAJA SAGAR",
+        "latitude": 14.532610039692905,
+        "longitude": 78.45649433946329
+    },
+    {
+        "title": "SARVEPALLI RESERVOIR",
+        "latitude": 14.3124036,
+        "longitude": 79.98081429999999
+    },
+    {
+        "title": "Sasoi",
+        "latitude": 22.3355977965006,
+        "longitude": 69.95746105436368
+    },
+    {
+        "title": "Shedhabhadthari",
+        "latitude": 22.006318944108667,
+        "longitude": 69.48622392322856
+    },
+    {
+        "title": "Shell-Dedumal",
+        "latitude": 21.66491466318091,
+        "longitude": 71.32183302493635
+    },
+    {
+        "title": "Shetrunji",
+        "latitude": 21.38834631366483,
+        "longitude": 71.999012843716
+    },
+    {
+        "title": "Shingoda",
+        "latitude": 21.026812349465246,
+        "longitude": 70.78523261362287
+    },
+    {
+        "title": "SILERU (GUNTAWADA) RESERVOIR",
+        "latitude": 18.0584877,
+        "longitude": 82.03254009999999
+    },
+    {
+        "title": "Sindhani",
+        "latitude": 21.96277607083568,
+        "longitude": 69.34104396480522
+    },
+    {
+        "title": "Sipu",
+        "latitude": 25.137616306797423,
+        "longitude": 72.22160787487451
+    },
+    {
+        "title": "SIR AURTHUR COTTON BARRAGE",
+        "latitude": 16.9369301,
+        "longitude": 81.7524342
+    },
+    {
+        "title": "Sodvadar",
+        "latitude": 21.8507187,
+        "longitude": 70.3719915
+    },
+    {
+        "title": "SOMASILA RESERVOIR",
+        "latitude": 14.4909383,
+        "longitude": 79.2112769
+    },
+    {
+        "title": "Sonmati",
+        "latitude": 26.4933553,
+        "longitude": 86.33007049999999
+    },
+    {
+        "title": "Sorthi",
+        "latitude": 21.939154984358645,
+        "longitude": 69.59678868010369
+    },
+    {
+        "title": "SRINIVASAPURAM RESERVOIR (HNSS)",
+        "latitude": 14.766649873747268,
+        "longitude": 79.11607637239895
+    },
+    {
+        "title": "SRISAILAM R",
+        "latitude": 16.0737457,
+        "longitude": 78.8726842
+    },
+    {
+        "title": "SUBBAREDDY SAGAR",
+        "latitude": 17.3349577,
+        "longitude": 82.2026291
+    },
+    {
+        "title": "SUBSIDIARY RESERVOIR -I",
+        "latitude": 14.8472,
+        "longitude": 78.7278
+    },
+    {
+        "title": "SUBSIDIARY RESERVOIR -II",
+        "latitude": 14.7902,
+        "longitude": 78.7986
+    },
+    {
+        "title": "Sukhbhadar",
+        "latitude": 22.34534966697248,
+        "longitude": 71.53891056662314
+    },
+    {
+        "title": "Sukhi",
+        "latitude": 22.439152259433705,
+        "longitude": 73.88260771080617
+    },
+    {
+        "title": "SUNKESULA BARRAGE",
+        "latitude": 15.8800258,
+        "longitude": 77.8306977
+    },
+    {
+        "title": "Surajwadi",
+        "latitude": 21.199306639366863,
+        "longitude": 71.36977312426406
+    },
+    {
+        "title": "SUREMPALEM RESERVOIR",
+        "latitude": 17.081386,
+        "longitude": 82.05705789999999
+    },
+    {
+        "title": "Survo",
+        "latitude": 21.713496696603514,
+        "longitude": 70.72800635311393
+    },
+    {
+        "title": "Rapar",
+        "latitude": 23.6011340253744,
+        "longitude": 70.50769864095025
+    },
+    {
+        "title": "SWARNAMUKHI BARRAGE CUM BRIDGE",
+        "latitude": 13.837656793942244,
+        "longitude": 79.7025642533824
+    },
+    {
+        "title": "TAMMILERU RESERVOIR",
+        "latitude": 16.7393362497026,
+        "longitude": 81.08104132450538
+    },
+    {
+        "title": "TANDAVA RESERVOIR",
+        "latitude": 17.6489319,
+        "longitude": 82.45902819999999
+    },
+    {
+        "title": "Tappar",
+        "latitude": 23.0124752,
+        "longitude": 69.6572032
+    },
+    {
+        "title": "THATIPUDI RESERVOIR",
+        "latitude": 18.1722115,
+        "longitude": 83.1913807
+    },
+    {
+        "title": "Thebi",
+        "latitude": 21.623602887136748,
+        "longitude": 71.21334133776725
+    },
+    {
+        "title": "THIMMAPURAM SR1",
+        "latitude": 17.03291765283618,
+        "longitude": 82.2467369052402
+    },
+    {
+        "title": "THOTAPALLI REGULATOR / BARRAGE",
+        "latitude": 18.78614060343783,
+        "longitude": 83.4961903727235
+    },
+    {
+        "title": "Triveni Thanga",
+        "latitude": 22.315547331169952,
+        "longitude": 71.09958874086765
+    },
+    {
+        "title": "Uben",
+        "latitude": 21.63617064639327,
+        "longitude": 70.6312814789197
+    },
+    {
+        "title": "Ukai",
+        "latitude": 21.2341558,
+        "longitude": 73.5785523
+    },
+    {
+        "title": "Umaria",
+        "latitude": 23.5309797,
+        "longitude": 80.82947469999999
+    },
+    {
+        "title": "Umiyasagar",
+        "latitude": 21.882064652246548,
+        "longitude": 70.09691769714694
+    },
+    {
+        "title": "Und-I",
+        "latitude": 16.5860043,
+        "longitude": 81.46728519999999
+    },
+    {
+        "title": "Und-II",
+        "latitude": 22.16284184831384,
+        "longitude": 70.39347941953888
+    },
+    {
+        "title": "Und-III",
+        "latitude": 22.166650433245753,
+        "longitude": 70.39488669545435
+    },
+    {
+        "title": "UPPER PENNAR",
+        "latitude": 14.719831602026273,
+        "longitude": 78.75780900745244
+    },
+    {
+        "title": "UPPER SAGILERU",
+        "latitude": 18.282819354682466,
+        "longitude": 82.00441820463482
+    },
+    {
+        "title": "Utavali",
+        "latitude": 20.40904152053351,
+        "longitude": 76.69131698006326
+    },
+    {
+        "title": "Vachhapari",
+        "latitude": 22.047508657764045,
+        "longitude": 70.88155740033656
+    },
+    {
+        "title": "Vadi",
+        "latitude": 22.217394705767173,
+        "longitude": 70.53356156944857
+    },
+    {
+        "title": "VAMIKONDA SAGAR RESERVOIR",
+        "latitude": 16.4835506,
+        "longitude": 79.27577060000002
+    },
+    {
+        "title": "Vansal",
+        "latitude": 22.478364114773264,
+        "longitude": 71.68858859672146
+    },
+    {
+        "title": "VARADARAJASWAMY GUDI PROJECT",
+        "latitude": 15.9698369,
+        "longitude": 78.6462088
+    },
+    {
+        "title": "VARAHA RESERVOIR",
+        "latitude": 17.496394300488397,
+        "longitude": 82.73841601113462
+    },
+    {
+        "title": "Varansi",
+        "latitude": 25.3176452,
+        "longitude": 82.9739144
+    },
+    {
+        "title": "Vartu-I",
+        "latitude": 21.925045401501162,
+        "longitude": 69.70389271079178
+    },
+    {
+        "title": "Vartu-II",
+        "latitude": 21.9242656,
+        "longitude": 69.70420709999999
+    },
+    {
+        "title": "VATTIGEDDA RESERVOIR",
+        "latitude": 18.843586035310892,
+        "longitude": 83.60005593093506
+    },
+    {
+        "title": "VEERA RAGHAVANI KOTA ANICUT",
+        "latitude": 15.106589474246567,
+        "longitude": 79.79466266444537
+    },
+    {
+        "title": "VELIGALLU RESERVOIR",
+        "latitude": 14.0438017,
+        "longitude": 78.4449285
+    },
+    {
+        "title": "VELOGODU BALANCING RESERVOIR",
+        "latitude": 15.7349984,
+        "longitude": 78.6171753
+    },
+    {
+        "title": "VENGALRAYA SAGARAM",
+        "latitude": 18.628980850274907,
+        "longitude": 83.21036749351218
+    },
+    {
+        "title": "Venu-II",
+        "latitude": 21.787273912610143,
+        "longitude": 70.17206653700195
+    },
+    {
+        "title": "Veradi",
+        "latitude": 21.95652874374501,
+        "longitude": 69.87389329544847
+    },
+    {
+        "title": "Veradi-II",
+        "latitude": 21.98435601308772,
+        "longitude": 69.81473199359674
+    },
+    {
+        "title": "Veri",
+        "latitude": 22.00091291836646,
+        "longitude": 70.80430166973115
+    },
+    {
+        "title": "Ver-II",
+        "latitude": 21.10539054515885,
+        "longitude": 73.38950396563527
+    },
+    {
+        "title": "Vijarkhi",
+        "latitude": 22.40508,
+        "longitude": 70.1991616
+    },
+    {
+        "title": "VIJAYARAI ANICUT",
+        "latitude": 16.8120897,
+        "longitude": 81.03267950000001
+    },
+    {
+        "title": "Vrajmi",
+        "latitude": 21.067265272783033,
+        "longitude": 70.29725873816764
+    },
+    {
+        "title": "Waidy",
+        "latitude": 23.510253473561754,
+        "longitude": 73.5027960107636
+    },
+    {
+        "title": "Wanakbori",
+        "latitude": 22.9511649,
+        "longitude": 73.42096769999999
+    },
+    {
+        "title": "WNKL.-BHEY",
+        "latitude": 22.700598692002387,
+        "longitude": 73.98644504907612
+    },
+    {
+        "title": "Vodisang",
+        "latitude": 22.280588476873437,
+        "longitude": 70.36289567161428
+    },
+    {
+        "title": "YELERU RESERVOIR",
+        "latitude": 17.3281998,
+        "longitude": 82.06795199999999
+    },
+    {
+        "title": "YELLANUR SR2",
+        "latitude": 14.7000169,
+        "longitude": 78.0733647
+    },
+    {
+        "title": "YERRAKALVA RESERVOIR",
+        "latitude": 17.144450029673077,
+        "longitude": 81.22249966397575
+    },
+    {
+        "title": "YOGI VEMANA (MADDILERU) RESERVOIR",
+        "latitude": 14.359731706446196,
+        "longitude": 78.0513808913066
+    },
+    {
+        "title": "ZURRERU RESERVOIR",
+        "latitude": 15.328329062537843,
+        "longitude": 78.13233286873923
+    },
+    {
+        "title": "Bagad",
+        "latitude": 21.293172676361017,
+        "longitude": 71.89579718144414
+    },
+    {
+        "title": "BHAMA ASKHED",
+        "latitude": 18.8423858,
+        "longitude": 73.7014444
+    },
+    {
+        "title": "CHANDAN DAM",
+        "latitude": 24.6666335,
+        "longitude": 86.9426198
+    },
+    {
+        "title": "CHASKAMAN",
+        "latitude": 18.9739417,
+        "longitude": 73.762495
+    },
+    {
+        "title": "DARNA DAM",
+        "latitude": 19.761978,
+        "longitude": 73.737188
+    },
+    {
+        "title": "DIMBHE DAM",
+        "latitude": 19.114674,
+        "longitude": 73.7221
+    },
+    {
+        "title": "DONKARAYI",
+        "latitude": 17.9296363,
+        "longitude": 81.7992057
+    },
+    {
+        "title": "GETALSUD",
+        "latitude": 23.4321667,
+        "longitude": 85.5457689
+    },
+    {
+        "title": "HARIHARJHORE",
+        "latitude": 21.090688725651116,
+        "longitude": 84.0592507966922
+    },
+    {
+        "title": "JAISAMAND",
+        "latitude": 24.2411105,
+        "longitude": 73.9499426
+    },
+    {
+        "title": "JAWAI DAM",
+        "latitude": 25.0892718,
+        "longitude": 73.1485981
+    },
+    {
+        "title": "KADDAM (K.N.R.)",
+        "latitude": 19.145130185297013,
+        "longitude": 78.74182624797565
+    },
+    {
+        "title": "KANDALERU",
+        "latitude": 14.347401,
+        "longitude": 79.59405439999999
+    },
+    {
+        "title": "KHANDONG",
+        "latitude": 25.515834997041686,
+        "longitude": 92.6405666289491
+    },
+    {
+        "title": "MANDIRA DAM",
+        "latitude": 22.2686614,
+        "longitude": 84.6569434
+    },
+    {
+        "title": "MAUDAHA",
+        "latitude": 25.6861784,
+        "longitude": 80.1154808
+    },
+    {
+        "title": "MEJA",
+        "latitude": 25.395714876028823,
+        "longitude": 74.54024291438412
+    },
+    {
+        "title": "NANAK SAGAR",
+        "latitude": 28.96109302769416,
+        "longitude": 79.84644087994634
+    },
+    {
+        "title": "PANSHET(TANAJISAGAR)",
+        "latitude": 18.3779339,
+        "longitude": 73.6135141
+    },
+    {
+        "title": "PRIYADARSHINI JURALA",
+        "latitude": 16.3375,
+        "longitude": 77.704444
+    },
+    {
+        "title": "RANGAWAN",
+        "latitude": 26.1707516,
+        "longitude": 78.5944718
+    },
+    {
+        "title": "SATHANUR",
+        "latitude": 13.1222276,
+        "longitude": 77.63056689999999
+    },
+    {
+        "title": "SIRSI",
+        "latitude": 14.6155109,
+        "longitude": 74.8347096
+    },
+    {
+        "title": "SURYA",
+        "latitude": 19.698015090261418,
+        "longitude": 72.85069883494002
+    },
+    {
+        "title": "TANDULA",
+        "latitude": 20.7094272937216,
+        "longitude": 81.22275775686019
+    },
+    {
+        "title": "TILLARI",
+        "latitude": 15.761031214322038,
+        "longitude": 74.1212800259971
+    },
+    {
+        "title": "UMRONG",
+        "latitude": 25.515204929246206,
+        "longitude": 92.72645048299268
+    },
+    {
+        "title": "VEER DAM",
+        "latitude": 18.1362072,
+        "longitude": 74.06819879999999
+    }
+]

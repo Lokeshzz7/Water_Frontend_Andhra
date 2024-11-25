@@ -1,0 +1,4462 @@
+[
+    {
+        "title": "Aliyar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.97279999999999,
+                10.4739
+            ]
+        }
+    },
+    {
+        "title": "Almatti Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.88799999999999,
+                16.331
+            ]
+        }
+    },
+    {
+        "title": "Balimela Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.1849588,
+                18.25314
+            ]
+        }
+    },
+    {
+        "title": "Ban Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.28702792788569,
+                24.189611770246398
+            ]
+        }
+    },
+    {
+        "title": "Bargi\\Rani Avanti Bai Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.92314652545501,
+                22.941165504021214
+            ]
+        }
+    },
+    {
+        "title": "Barna",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.03107,
+                23.072971
+            ]
+        }
+    },
+    {
+        "title": "Bhadar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.8060491,
+                21.805908
+            ]
+        }
+    },
+    {
+        "title": "Bhadra Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.5800678,
+                13.6785039
+            ]
+        }
+    },
+    {
+        "title": "Bhandardara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7694815,
+                19.5375291
+            ]
+        }
+    },
+    {
+        "title": "Bhatghar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.85587360000001,
+                18.1649049
+            ]
+        }
+    },
+    {
+        "title": "Bhatsa",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.42231,
+                19.518938
+            ]
+        }
+    },
+    {
+        "title": "Bhima\\Ujjani Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.11999999999999,
+                18.073889
+            ]
+        }
+    },
+    {
+        "title": "Bisalpur",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.804459,
+                28.2937839
+            ]
+        }
+    },
+    {
+        "title": "Brahmani-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.1506332555713,
+                22.900828921121335
+            ]
+        }
+    },
+    {
+        "title": "Damanganga Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.91135153367222,
+                20.347962459373086
+            ]
+        }
+    },
+    {
+        "title": "Dantiwada Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.3308073,
+                24.32383
+            ]
+        }
+    },
+    {
+        "title": "Dhom",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.79556407856244,
+                17.9842552700021
+            ]
+        }
+    },
+    {
+        "title": "Doyang Hep",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                94.26172670000001,
+                26.2313818
+            ]
+        }
+    },
+    {
+        "title": "Dudhawa",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.7404134,
+                20.2966187
+            ]
+        }
+    },
+    {
+        "title": "Dudhganga",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.97232055198376,
+                16.315979609014143
+            ]
+        }
+    },
+    {
+        "title": "Gandhi Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.56697,
+                24.6902562
+            ]
+        }
+    },
+    {
+        "title": "Gerusoppa Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.6971257,
+                14.2577836
+            ]
+        }
+    },
+    {
+        "title": "GhatPrabha\\Hidkal Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.7585775,
+                16.2394587
+            ]
+        }
+    },
+    {
+        "title": "Girna Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.42391974089239,
+                20.83286428382371
+            ]
+        }
+    },
+    {
+        "title": "Gobind Sagar-Bhakra Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.4334219,
+                31.4111875
+            ]
+        }
+    },
+    {
+        "title": "Gumti Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                91.86054636465109,
+                23.538927860796992
+            ]
+        }
+    },
+    {
+        "title": "Harangi Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.90555599999999,
+                12.491667
+            ]
+        }
+    },
+    {
+        "title": "Hathmati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.94307296229093,
+                23.62332837058363
+            ]
+        }
+    },
+    {
+        "title": "Hemavathy Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.05457959981271,
+                12.824763371675848
+            ]
+        }
+    },
+    {
+        "title": "Hirakud Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.81547909999999,
+                21.6109371
+            ]
+        }
+    },
+    {
+        "title": "Idamalayar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.70641281188423,
+                10.22184486092529
+            ]
+        }
+    },
+    {
+        "title": "Idukki Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.944141,
+                9.8061793
+            ]
+        }
+    },
+    {
+        "title": "Indira Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.4715817,
+                22.2841592
+            ]
+        }
+    },
+    {
+        "title": "Isapur Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.376452,
+                19.76425
+            ]
+        }
+    },
+    {
+        "title": "Jayakwadi\\Nath Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.3656299,
+                19.4779213
+            ]
+        }
+    },
+    {
+        "title": "Jhakam Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.5908653986417,
+                24.170086409066922
+            ]
+        }
+    },
+    {
+        "title": "Jirgo Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.93595529999999,
+                25.0495769
+            ]
+        }
+    },
+    {
+        "title": "Kabini Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.2855634,
+                11.957336
+            ]
+        }
+    },
+    {
+        "title": "Kadana Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.859549,
+                23.3475192
+            ]
+        }
+    },
+    {
+        "title": "Kakki Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.15459973104352,
+                9.325802756726942
+            ]
+        }
+    },
+    {
+        "title": "Kallada Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.06613662752581,
+                8.959405635259976
+            ]
+        }
+    },
+    {
+        "title": "Kangsabati Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.711911836311,
+                22.953503947012134
+            ]
+        }
+    },
+    {
+        "title": "Kanher Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.874205,
+                17.758849
+            ]
+        }
+    },
+    {
+        "title": "Karjan Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5329091,
+                21.783362
+            ]
+        }
+    },
+    {
+        "title": "Khadakwasla Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7801447,
+                18.4454128
+            ]
+        }
+    },
+    {
+        "title": "Kolar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.12909859999999,
+                13.1362143
+            ]
+        }
+    },
+    {
+        "title": "Kol Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.871111,
+                31.383056
+            ]
+        }
+    },
+    {
+        "title": "Konar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.76193839999999,
+                23.929163
+            ]
+        }
+    },
+    {
+        "title": "Koyana/Shivaji Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.75035989999999,
+                17.4009594
+            ]
+        }
+    },
+    {
+        "title": "Krishnaraja Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.5724381,
+                12.4254763
+            ]
+        }
+    },
+    {
+        "title": "Linganamakki Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.903339,
+                14.0549312
+            ]
+        }
+    },
+    {
+        "title": "Lower Bhawani \\ Bhavanisagar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.11428169999999,
+                11.4709508
+            ]
+        }
+    },
+    {
+        "title": "Lower Manair\\G.V.Sudhakar Rao Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.12053765497673,
+                18.388805321499014
+            ]
+        }
+    },
+    {
+        "title": "Machhu I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.9709304291086,
+                22.492436855348597
+            ]
+        }
+    },
+    {
+        "title": "Machhu II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.86381373155228,
+                22.816873331814353
+            ]
+        }
+    },
+    {
+        "title": "Machkund\\Jalaput Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.55916030000002,
+                18.3977508
+            ]
+        }
+    },
+    {
+        "title": "Mahanadi\\Ravishankar Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.53301235514559,
+                20.589307851030288
+            ]
+        }
+    },
+    {
+        "title": "Maithon Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.79752769999999,
+                23.7734998
+            ]
+        }
+    },
+    {
+        "title": "Malampuzha",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.7368037,
+                10.8280802
+            ]
+        }
+    },
+    {
+        "title": "Malaprabha Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.09338893852492,
+                15.817209421938086
+            ]
+        }
+    },
+    {
+        "title": "Mani Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.0932352,
+                13.6577164
+            ]
+        }
+    },
+    {
+        "title": "Manikdoh",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.8154394,
+                19.2267466
+            ]
+        }
+    },
+    {
+        "title": "Matatila Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.3652049,
+                25.1075688
+            ]
+        }
+    },
+    {
+        "title": "Mayurakshi\\Masanjor Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                87.30906829999999,
+                24.1114381
+            ]
+        }
+    },
+    {
+        "title": "Mettur Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.8106033,
+                11.7973262
+            ]
+        }
+    },
+    {
+        "title": "Minimata Bangoi\\Hasdeo Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.59887339383438,
+                22.605037522437822
+            ]
+        }
+    },
+    {
+        "title": "Mula Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.529555,
+                19.329307
+            ]
+        }
+    },
+    {
+        "title": "Mulshi Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5111883,
+                18.5306668
+            ]
+        }
+    },
+    {
+        "title": "Nagarjuna Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.3124022,
+                16.5759672
+            ]
+        }
+    },
+    {
+        "title": "Narayanapura Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.3347838,
+                16.2121455
+            ]
+        }
+    },
+    {
+        "title": "Niradevghar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.721375,
+                18.100174
+            ]
+        }
+    },
+    {
+        "title": "Nizam sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.923889,
+                18.2025
+            ]
+        }
+    },
+    {
+        "title": "Omkareshwar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.15228789999999,
+                22.2507773
+            ]
+        }
+    },
+    {
+        "title": "Panam Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7654367,
+                23.0252144
+            ]
+        }
+    },
+    {
+        "title": "Panchat Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.746944,
+                23.678056
+            ]
+        }
+    },
+    {
+        "title": "Parambikulam Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.8057776,
+                10.386646
+            ]
+        }
+    },
+    {
+        "title": "Pench\\Totladoh Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.294167,
+                21.658385
+            ]
+        }
+    },
+    {
+        "title": "Periyar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.1443026,
+                9.5287072
+            ]
+        }
+    },
+    {
+        "title": "Pong Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.0507949,
+                31.9765793
+            ]
+        }
+    },
+    {
+        "title": "Ramganga Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.7589558,
+                29.5533039
+            ]
+        }
+    },
+    {
+        "title": "Ranapratap Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.5836194,
+                24.9176854
+            ]
+        }
+    },
+    {
+        "title": "Rengali Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.0025539,
+                21.3296999
+            ]
+        }
+    },
+    {
+        "title": "RIHAND RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.8425216,
+                24.1426423
+            ]
+        }
+    },
+    {
+        "title": "Sabarmati Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.86428846297882,
+                24.021381535356063
+            ]
+        }
+    },
+    {
+        "title": "Salandi Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.2818753,
+                21.3329898
+            ]
+        }
+    },
+    {
+        "title": "Sanjay Sarovar (Upper Wainganga)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.66383929999999,
+                22.376111
+            ]
+        }
+    },
+    {
+        "title": "Sapua",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.29,
+                20.59
+            ]
+        }
+    },
+    {
+        "title": "Sardar Sarovar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7485212,
+                21.8305054
+            ]
+        }
+    },
+    {
+        "title": "Sharda Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.0814292,
+                28.7793245
+            ]
+        }
+    },
+    {
+        "title": "Shetrunji Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.999012843716,
+                21.38834631366483
+            ]
+        }
+    },
+    {
+        "title": "Sholayar Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.7812596,
+                10.3046321
+            ]
+        }
+    },
+    {
+        "title": "Singur",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                88.234481,
+                22.814957
+            ]
+        }
+    },
+    {
+        "title": "Somasila Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.2112769,
+                14.4909383
+            ]
+        }
+    },
+    {
+        "title": "Sriram Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.3411074,
+                18.9686106
+            ]
+        }
+    },
+    {
+        "title": "Srisailam Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.8971772,
+                16.0861287
+            ]
+        }
+    },
+    {
+        "title": "Supa Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.49359129999999,
+                15.2632035
+            ]
+        }
+    },
+    {
+        "title": "Tattihalla",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.78306289999999,
+                15.1179105
+            ]
+        }
+    },
+    {
+        "title": "Tawa Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.97068757067737,
+                22.544688144858817
+            ]
+        }
+    },
+    {
+        "title": "Tehri Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.478036,
+                30.3929041
+            ]
+        }
+    },
+    {
+        "title": "Tenughat Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.7974141,
+                23.7420757
+            ]
+        }
+    },
+    {
+        "title": "Thokarwadi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5093474,
+                18.90502
+            ]
+        }
+    },
+    {
+        "title": "Tilaiya Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.5277488,
+                24.3190189
+            ]
+        }
+    },
+    {
+        "title": "Tungabhadra Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.333333,
+                15.3
+            ]
+        }
+    },
+    {
+        "title": "Ukai Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5785523,
+                21.2341558
+            ]
+        }
+    },
+    {
+        "title": "Und I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.40378002814322,
+                22.39593930439285
+            ]
+        }
+    },
+    {
+        "title": "Upper Indrawati Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.82827734616316,
+                19.27917495379358
+            ]
+        }
+    },
+    {
+        "title": "Upper Kolab Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.6059416,
+                18.8028232
+            ]
+        }
+    },
+    {
+        "title": "Upper Tapi\\Hatnur Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.63199159999999,
+                17.1527665
+            ]
+        }
+    },
+    {
+        "title": "Upper Vaitarana Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.51523809999999,
+                19.8223626
+            ]
+        }
+    },
+    {
+        "title": "Upper Wardha Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.60219459999999,
+                20.745319
+            ]
+        }
+    },
+    {
+        "title": "Urmodi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.88542913651696,
+                17.678490003825484
+            ]
+        }
+    },
+    {
+        "title": "Vagai Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.1763046,
+                9.8977545
+            ]
+        }
+    },
+    {
+        "title": "Vanivilasa Sagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.489327,
+                13.8882241
+            ]
+        }
+    },
+    {
+        "title": "Watrak",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.45944977053044,
+                23.324588658471786
+            ]
+        }
+    },
+    {
+        "title": "Yeldari Reservoir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.7297222,
+                19.7461111
+            ]
+        }
+    },
+    {
+        "title": "Yeleru",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.06434430235142,
+                17.315481908112567
+            ]
+        }
+    },
+    {
+        "title": "ADAVIPALLI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.28544484611935,
+                13.382732905096804
+            ]
+        }
+    },
+    {
+        "title": "ADINIMMAYAPALLI ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.73125672463347,
+                14.605490796189384
+            ]
+        }
+    },
+    {
+        "title": "Advana",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.5939002,
+                21.9139461
+            ]
+        }
+    },
+    {
+        "title": "Aji-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.84837515628746,
+                22.264416793481356
+            ]
+        }
+    },
+    {
+        "title": "Aji - II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.77284415160031,
+                22.381291193847794
+            ]
+        }
+    },
+    {
+        "title": "Aji-III",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.57921012140233,
+                22.516780642078754
+            ]
+        }
+    },
+    {
+        "title": "Aji-IV",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.48614954402564,
+                22.71793169708311
+            ]
+        }
+    },
+    {
+        "title": "ALAGANURU BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.401286,
+                15.7119964
+            ]
+        }
+    },
+    {
+        "title": "Ambajal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.73840261548585,
+                21.28302634322572
+            ]
+        }
+    },
+    {
+        "title": "Amipur",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.443383,
+                28.4009417
+            ]
+        }
+    },
+    {
+        "title": "ANDRA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.19437239999999,
+                18.3389043
+            ]
+        }
+    },
+    {
+        "title": "ANNAMAYYA (CHEYYERU) RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.1006244,
+                16.6027709
+            ]
+        }
+    },
+    {
+        "title": "ARANIAR RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.74138959999999,
+                13.3991349
+            ]
+        }
+    },
+    {
+        "title": "BADVEL TANK",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.05974049999999,
+                14.7304949
+            ]
+        }
+    },
+    {
+        "title": "BAHUDA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.62398476413411,
+                13.560042039777553
+            ]
+        }
+    },
+    {
+        "title": "Baldeva",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.40979485120053,
+                21.616794307069448
+            ]
+        }
+    },
+    {
+        "title": "BALIMELA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.1849588,
+                18.25314
+            ]
+        }
+    },
+    {
+        "title": "Bangawadi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                75.3590152,
+                13.0764978
+            ]
+        }
+    },
+    {
+        "title": "Bantva-Kharo",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.0749046,
+                21.4900542
+            ]
+        }
+    },
+    {
+        "title": "Berachia",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.06631064668584,
+                23.212398279957153
+            ]
+        }
+    },
+    {
+        "title": "Bhadar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.8073534954462,
+                21.810312858273956
+            ]
+        }
+    },
+    {
+        "title": "Bhadar - II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.4394147431314,
+                21.780904741528023
+            ]
+        }
+    },
+    {
+        "title": "BHAIRAVANITHIPPA PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.8386364,
+                14.5394713
+            ]
+        }
+    },
+    {
+        "title": "Bhimdad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.5842643,
+                22.0868593
+            ]
+        }
+    },
+    {
+        "title": "Bhukhi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.59769,
+                22.6345342
+            ]
+        }
+    },
+    {
+        "title": "BHUPATIPALEM RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.7581928,
+                17.4491681
+            ]
+        }
+    },
+    {
+        "title": "BRAHMAMSAGAR RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.8892146,
+                14.7802661
+            ]
+        }
+    },
+    {
+        "title": "BUGGAVAGU",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.52936207254967,
+                16.47007557187789
+            ]
+        }
+    },
+    {
+        "title": "BUGGAVANKA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.8388857547677,
+                14.397674131672327
+            ]
+        }
+    },
+    {
+        "title": "CHAGALLU BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.6652051,
+                16.9918555
+            ]
+        }
+    },
+    {
+        "title": "CHENNARAYA SWAMI GUDI PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.17494510640901,
+                13.86311168069486
+            ]
+        }
+    },
+    {
+        "title": "CHERLOPALLI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.1121215,
+                14.0348879
+            ]
+        }
+    },
+    {
+        "title": "Chhaparwadi-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.63119199701075,
+                21.888988583629462
+            ]
+        }
+    },
+    {
+        "title": "CHITRAVATI BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.948165,
+                14.5465668
+            ]
+        }
+    },
+    {
+        "title": "Chopadvav",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.735282,
+                21.5513475
+            ]
+        }
+    },
+    {
+        "title": "CUM BUM TANK",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.06102417914856,
+                15.580755627728184
+            ]
+        }
+    },
+    {
+        "title": "Damanganga",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.87074420367418,
+                20.37363049904731
+            ]
+        }
+    },
+    {
+        "title": "DAMODARAM SAGARAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.79076315409021,
+                17.86850717613452
+            ]
+        }
+    },
+    {
+        "title": "Dantiwada",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.3308073,
+                24.32383
+            ]
+        }
+    },
+    {
+        "title": "Demi - I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.68138509225612,
+                22.637971995806858
+            ]
+        }
+    },
+    {
+        "title": "Demi - II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.61211207775975,
+                22.740511480508314
+            ]
+        }
+    },
+    {
+        "title": "Deo",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.08698557551583,
+                21.80736495593551
+            ]
+        }
+    },
+    {
+        "title": "Dhari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.02525709999999,
+                21.326649
+            ]
+        }
+    },
+    {
+        "title": "Dharoi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.8426858,
+                24.0004375
+            ]
+        }
+    },
+    {
+        "title": "Dhatarvadi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.42418754037168,
+                21.03559782320557
+            ]
+        }
+    },
+    {
+        "title": "Dhatarwadi-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.43260194559487,
+                21.132951201967014
+            ]
+        }
+    },
+    {
+        "title": "Dholi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.32250084724969,
+                21.712826356419054
+            ]
+        }
+    },
+    {
+        "title": "Dholidhaja",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.5872314,
+                22.7213641
+            ]
+        }
+    },
+    {
+        "title": "Dia-Minsar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.93140645454493,
+                21.83238541974844
+            ]
+        }
+    },
+    {
+        "title": "Don",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.7930059861553,
+                21.871936472608144
+            ]
+        }
+    },
+    {
+        "title": "Dondi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.60316829490951,
+                22.286629418188138
+            ]
+        }
+    },
+    {
+        "title": "DONKARAYI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.8688751,
+                17.9634385
+            ]
+        }
+    },
+    {
+        "title": "Doswada",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.49462,
+                21.1231609
+            ]
+        }
+    },
+    {
+        "title": "Dhrafad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.70942255670187,
+                21.34566706454572
+            ]
+        }
+    },
+    {
+        "title": "Edalwada",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.0521246025957,
+                22.679025801961128
+            ]
+        }
+    },
+    {
+        "title": "Falku",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                10.1570662,
+                36.845974
+            ]
+        }
+    },
+    {
+        "title": "Fatehgadh",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.84618429999999,
+                23.7023588
+            ]
+        }
+    },
+    {
+        "title": "Fulzar-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.6403857,
+                20.0245169
+            ]
+        }
+    },
+    {
+        "title": "Fulzar-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.80916784871994,
+                22.246228809639057
+            ]
+        }
+    },
+    {
+        "title": "Gadhaki",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.45295563831799,
+                22.11395780170169
+            ]
+        }
+    },
+    {
+        "title": "Gajansar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.1089444,
+                23.5963676
+            ]
+        }
+    },
+    {
+        "title": "GAJJILIGEDDA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.83045553241871,
+                18.575639684065287
+            ]
+        }
+    },
+    {
+        "title": "Gajod",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.5693225,
+                23.0362651
+            ]
+        }
+    },
+    {
+        "title": "GAJULADINNE PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.619379,
+                15.6933813
+            ]
+        }
+    },
+    {
+        "title": "GANDIKOTA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.2347984,
+                14.8007239
+            ]
+        }
+    },
+    {
+        "title": "GANDIPALEM RESERVOIR PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.281759,
+                14.9803748
+            ]
+        }
+    },
+    {
+        "title": "Ghee",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.65456253751007,
+                22.179949760262996
+            ]
+        }
+    },
+    {
+        "title": "Ghelo-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.38860782270683,
+                22.054906068235
+            ]
+        }
+    },
+    {
+        "title": "Ghodadhroi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.9650023,
+                28.627729
+            ]
+        }
+    },
+    {
+        "title": "GODDAMVARIPALLI SR3",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.5407079,
+                14.2426406
+            ]
+        }
+    },
+    {
+        "title": "GODDUMARRI ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.0575814152,
+                14.690767486932051
+            ]
+        }
+    },
+    {
+        "title": "Godhatad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                68.6499169,
+                23.6388965
+            ]
+        }
+    },
+    {
+        "title": "GOLLAPALLI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.5831115,
+                14.1991049
+            ]
+        }
+    },
+    {
+        "title": "Goma",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.49542628582365,
+                22.23768312770168
+            ]
+        }
+    },
+    {
+        "title": "Gondali",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.85994381283173,
+                22.065567408014065
+            ]
+        }
+    },
+    {
+        "title": "GONELAVAGU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.6927,
+                18.8756
+            ]
+        }
+    },
+    {
+        "title": "GORAKKALU BALANCING RESERVIOR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.4647633,
+                18.7292712
+            ]
+        }
+    },
+    {
+        "title": "Gorathiya",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.01266914324484,
+                23.487462452700274
+            ]
+        }
+    },
+    {
+        "title": "GOTTA BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.962147,
+                18.6887708
+            ]
+        }
+    },
+    {
+        "title": "Guhai",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.03685694589767,
+                23.708860035262145
+            ]
+        }
+    },
+    {
+        "title": "GUNDLAKAMMA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.9822126,
+                15.6879212
+            ]
+        }
+    },
+    {
+        "title": "Hadaf",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.89187559226748,
+                22.895051145151673
+            ]
+        }
+    },
+    {
+        "title": "Hamirpara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.0608898,
+                21.4980891
+            ]
+        }
+    },
+    {
+        "title": "Hanol",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.9267437,
+                30.9700226
+            ]
+        }
+    },
+    {
+        "title": "Harnav-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.30126025544709,
+                23.985106089656092
+            ]
+        }
+    },
+    {
+        "title": "Hasanapur",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.60354939999999,
+                26.4149694
+            ]
+        }
+    },
+    {
+        "title": "Hiran-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.66906208981699,
+                21.196595826609418
+            ]
+        }
+    },
+    {
+        "title": "Ishwaria",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.01631681880576,
+                21.984344254664528
+            ]
+        }
+    },
+    {
+        "title": "JALLERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.34869568245598,
+                17.291468083315593
+            ]
+        }
+    },
+    {
+        "title": "Jangdia",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                87.08291979640524,
+                23.405910572152305
+            ]
+        }
+    },
+    {
+        "title": "Jaspara-Mandva",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.2112099,
+                21.4635497
+            ]
+        }
+    },
+    {
+        "title": "Javanpura",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.20281,
+                23.5972334
+            ]
+        }
+    },
+    {
+        "title": "JEEDIPALLI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.2663771,
+                14.6873805
+            ]
+        }
+    },
+    {
+        "title": "Jhanjeshri",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.80839023995999,
+                21.393921471412323
+            ]
+        }
+    },
+    {
+        "title": "Jhuj",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.39015978204671,
+                20.708812966101913
+            ]
+        }
+    },
+    {
+        "title": "Kabarka",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.829959,
+                22.050255
+            ]
+        }
+    },
+    {
+        "title": "Kabir-Sarovar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.7453716,
+                22.6851485
+            ]
+        }
+    },
+    {
+        "title": "Kabutari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.93124077933922,
+                22.97401569168919
+            ]
+        }
+    },
+    {
+        "title": "Kadana",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.8382306,
+                23.2895908
+            ]
+        }
+    },
+    {
+        "title": "Kaila",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.85991370543123,
+                23.734309402782113
+            ]
+        }
+    },
+    {
+        "title": "Kakdi-Amba",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.8566087,
+                21.549644
+            ]
+        }
+    },
+    {
+        "title": "KALANGI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.79489439999999,
+                13.6017185
+            ]
+        }
+    },
+    {
+        "title": "Kali - II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.23427772344424,
+                22.864704856103568
+            ]
+        }
+    },
+    {
+        "title": "Kalindri",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.95999329153774,
+                21.722665320650687
+            ]
+        }
+    },
+    {
+        "title": "KALINGADAL PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                84.43548262127386,
+                18.950257875127015
+            ]
+        }
+    },
+    {
+        "title": "Kalubhar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.62174731941973,
+                21.86666630350509
+            ]
+        }
+    },
+    {
+        "title": "KALYANI DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.26922139999999,
+                13.6576604
+            ]
+        }
+    },
+    {
+        "title": "KANDALERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.59405439999999,
+                14.347401
+            ]
+        }
+    },
+    {
+        "title": "KANIGIRI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.85768279999999,
+                14.5831965
+            ]
+        }
+    },
+    {
+        "title": "Kaniyad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.6317359,
+                22.2530939
+            ]
+        }
+    },
+    {
+        "title": "Kankavati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.3581703,
+                23.071115
+            ]
+        }
+    },
+    {
+        "title": "Kankawati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.3581703,
+                23.071115
+            ]
+        }
+    },
+    {
+        "title": "Karad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.1843535,
+                17.277693
+            ]
+        }
+    },
+    {
+        "title": "Karjan",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.1201988,
+                22.0534997
+            ]
+        }
+    },
+    {
+        "title": "Karmal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.99503242004411,
+                22.039350528257796
+            ]
+        }
+    },
+    {
+        "title": "Karnuki",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.1827267,
+                21.938785
+            ]
+        }
+    },
+    {
+        "title": "Kaswati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.90110522184725,
+                23.378143949679753
+            ]
+        }
+    },
+    {
+        "title": "Kelia",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.28516471132275,
+                20.703674168452377
+            ]
+        }
+    },
+    {
+        "title": "Khambhada",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.8037638,
+                22.163874
+            ]
+        }
+    },
+    {
+        "title": "Khambhala",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.67521339999999,
+                22.3389849
+            ]
+        }
+    },
+    {
+        "title": "Kharo",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.08355773716741,
+                21.510234623029167
+            ]
+        }
+    },
+    {
+        "title": "Khedva",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.0936509,
+                24.1298572
+            ]
+        }
+    },
+    {
+        "title": "Khodapipar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.6157308,
+                22.5602472
+            ]
+        }
+    },
+    {
+        "title": "Khodiyar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.0379858713578,
+                21.351038760451544
+            ]
+        }
+    },
+    {
+        "title": "KONAM RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.8506002,
+                17.9785438
+            ]
+        }
+    },
+    {
+        "title": "KOVVADAKALVA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.50252046069157,
+                17.200454081428116
+            ]
+        }
+    },
+    {
+        "title": "KRISHNAGIRI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.2149575,
+                12.5265661
+            ]
+        }
+    },
+    {
+        "title": "KRISHNAPURAM PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                13.5377,
+                79.3561
+            ]
+        }
+    },
+    {
+        "title": "Lakhanka",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.659919,
+                21.956392
+            ]
+        }
+    },
+    {
+        "title": "Lakhigam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.55227769999999,
+                21.6898778
+            ]
+        }
+    },
+    {
+        "title": "Lalpari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.84953316006121,
+                22.305295689014663
+            ]
+        }
+    },
+    {
+        "title": "Lank",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.24968772811273,
+                23.147435489370785
+            ]
+        }
+    },
+    {
+        "title": "Limbali",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.7067604,
+                22.5619146
+            ]
+        }
+    },
+    {
+        "title": "Lim-Bhogavo-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.64851112723308,
+                22.547718627857783
+            ]
+        }
+    },
+    {
+        "title": "Lim-Bhogavo-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.8159133381895,
+                22.56652094161988
+            ]
+        }
+    },
+    {
+        "title": "LOWER SAGILERU ANI CUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.0209,
+                14.2017
+            ]
+        }
+    },
+    {
+        "title": "Machchhanala",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7675,
+                22.8595
+            ]
+        }
+    },
+    {
+        "title": "Machchhu - I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.95883345713679,
+                22.446685863952514
+            ]
+        }
+    },
+    {
+        "title": "Machchhu-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.87088345687428,
+                22.75681019549557
+            ]
+        }
+    },
+    {
+        "title": "Machchhu-III",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.81389188061036,
+                22.87453335720596
+            ]
+        }
+    },
+    {
+        "title": "Machhundri",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.93408686253711,
+                20.986038705792897
+            ]
+        }
+    },
+    {
+        "title": "MADDIGEDDA PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.01482772564307,
+                17.495076368944
+            ]
+        }
+    },
+    {
+        "title": "MADDUVALASA PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.6236074,
+                18.5806426
+            ]
+        }
+    },
+    {
+        "title": "Madhuvanti",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.49530933001242,
+                21.261286015205883
+            ]
+        }
+    },
+    {
+        "title": "Malan",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.62964778272364,
+                21.232844571979303
+            ]
+        }
+    },
+    {
+        "title": "Malgadh",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.1472005,
+                24.2641687
+            ]
+        }
+    },
+    {
+        "title": "MALLIMADUGU",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.1456496,
+                17.2983777
+            ]
+        }
+    },
+    {
+        "title": "Malpara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.5453177,
+                21.8538712
+            ]
+        }
+    },
+    {
+        "title": "MARALA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.9394133,
+                14.2913378
+            ]
+        }
+    },
+    {
+        "title": "Mathal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.17091486136957,
+                23.430979341360548
+            ]
+        }
+    },
+    {
+        "title": "Mazam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                10.1780287,
+                36.83017290000001
+            ]
+        }
+    },
+    {
+        "title": "MEHADRIGADD RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.18097759999999,
+                17.781236
+            ]
+        }
+    },
+    {
+        "title": "Meshwo",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.39822031387675,
+                23.68687207539104
+            ]
+        }
+    },
+    {
+        "title": "MID PENNAR RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.38699,
+                14.8715122
+            ]
+        }
+    },
+    {
+        "title": "Mitti",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                68.83687668633608,
+                23.337039100911603
+            ]
+        }
+    },
+    {
+        "title": "Moj",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.28460494218314,
+                21.845462823577545
+            ]
+        }
+    },
+    {
+        "title": "MOPADU RESERVOIR PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.467576,
+                15.1159835
+            ]
+        }
+    },
+    {
+        "title": "Morshal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.0572,
+                21.2764
+            ]
+        }
+    },
+    {
+        "title": "Mota-Gujariya",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.74658289999999,
+                21.4899567
+            ]
+        }
+    },
+    {
+        "title": "Motisar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.09100339999999,
+                20.9862759
+            ]
+        }
+    },
+    {
+        "title": "Mukteshwar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.6558242,
+                29.4604149
+            ]
+        }
+    },
+    {
+        "title": "MUNIYERU PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.1667,
+                17.0833
+            ]
+        }
+    },
+    {
+        "title": "Munjiasar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.2926178,
+                21.0232142
+            ]
+        }
+    },
+    {
+        "title": "MUSURIMALLI",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.76667863540783,
+                17.389821816824448
+            ]
+        }
+    },
+    {
+        "title": "MYLAVARAM(PENNAR) RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.6414006,
+                16.7560489
+            ]
+        }
+    },
+    {
+        "title": "NAGARJUNA SAGAR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.3124022,
+                16.5759672
+            ]
+        }
+    },
+    {
+        "title": "Nara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.04049678350734,
+                31.549887304512957
+            ]
+        }
+    },
+    {
+        "title": "NARAYANAPURAM ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.8,
+                18.3833
+            ]
+        }
+    },
+    {
+        "title": "NELLORE ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.98645599999999,
+                14.4425987
+            ]
+        }
+    },
+    {
+        "title": "NELLORE TANK",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.98645599999999,
+                14.4425987
+            ]
+        }
+    },
+    {
+        "title": "Nimbmani",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.27239986790026,
+                17.23442976211487
+            ]
+        }
+    },
+    {
+        "title": "Niruna",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.491913,
+                23.60902
+            ]
+        }
+    },
+    {
+        "title": "NTR JALASAYAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.1301573,
+                13.2873612
+            ]
+        }
+    },
+    {
+        "title": "NTR RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.7654225,
+                17.9400415
+            ]
+        }
+    },
+    {
+        "title": "Nyari - I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.712398146163,
+                22.237469670014715
+            ]
+        }
+    },
+    {
+        "title": "Nyari-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.6759499711558,
+                22.361704037308037
+            ]
+        }
+    },
+    {
+        "title": "Nyka",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.46589256854459,
+                22.66393322646502
+            ]
+        }
+    },
+    {
+        "title": "OWK RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.0851607,
+                15.1850442
+            ]
+        }
+    },
+    {
+        "title": "Ozat-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.58186480365498,
+                21.384067202970385
+            ]
+        }
+    },
+    {
+        "title": "Ozat-Weir",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.30417457767781,
+                21.46704367896128
+            ]
+        }
+    },
+    {
+        "title": "Ozat-Weir(Vanthali)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.3029835,
+                21.4673722
+            ]
+        }
+    },
+    {
+        "title": "PAIDIPALEM BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.18822929661161,
+                14.704008620826855
+            ]
+        }
+    },
+    {
+        "title": "PALERU BITRAGUNTA ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.9584397,
+                14.7949897
+            ]
+        }
+    },
+    {
+        "title": "PAMPA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.4075192,
+                17.2873006
+            ]
+        }
+    },
+    {
+        "title": "Panam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7647840111883,
+                23.029974818563854
+            ]
+        }
+    },
+    {
+        "title": "Patadungari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.29350501417315,
+                22.727104790033994
+            ]
+        }
+    },
+    {
+        "title": "PATHIKONDA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.64838429999999,
+                13.2001765
+            ]
+        }
+    },
+    {
+        "title": "PEDDAGEDDA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.1039479524634,
+                18.462609749296096
+            ]
+        }
+    },
+    {
+        "title": "PEDDERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.69472579349579,
+                17.89550576634225
+            ]
+        }
+    },
+    {
+        "title": "PEDDERU RESERVOIR PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.37007749996846,
+                14.102568554327682
+            ]
+        }
+    },
+    {
+        "title": "PENNA AHOBILAM BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.3058772,
+                14.860553
+            ]
+        }
+    },
+    {
+        "title": "PENNAR KUMUDWATHI PROJECT (ANICUT)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.47056,
+                13.82945
+            ]
+        }
+    },
+    {
+        "title": "Phadangbeti",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.8022,
+                22.3027
+            ]
+        }
+    },
+    {
+        "title": "Phodarness",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.74048674274648,
+                21.589320041290485
+            ]
+        }
+    },
+    {
+        "title": "Phophal - I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.52203843087666,
+                21.862719556351546
+            ]
+        }
+    },
+    {
+        "title": "KHAJURADA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.40158372765988,
+                21.88573566200977
+            ]
+        }
+    },
+    {
+        "title": "Pigut",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.15959951099539,
+                21.567887311804057
+            ]
+        }
+    },
+    {
+        "title": "PINCHA PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.00006761983295,
+                13.909456298363713
+            ]
+        }
+    },
+    {
+        "title": "Pingli",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.8591235,
+                19.211879
+            ]
+        }
+    },
+    {
+        "title": "PRAKASAM BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.603335,
+                16.5020777
+            ]
+        }
+    },
+    {
+        "title": "Prempara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.7012348,
+                21.2951845
+            ]
+        }
+    },
+    {
+        "title": "PULICHINTHALA PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.05666699999999,
+                16.770833
+            ]
+        }
+    },
+    {
+        "title": "Puna",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.06455576270116,
+                22.467130749779955
+            ]
+        }
+    },
+    {
+        "title": "Raidy",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.31330357486667,
+                20.984044725720384
+            ]
+        }
+    },
+    {
+        "title": "RAIWADA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.96565984261998,
+                18.008424475402254
+            ]
+        }
+    },
+    {
+        "title": "Rajawal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.8495921,
+                27.7768501
+            ]
+        }
+    },
+    {
+        "title": "RALLAPADU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.7035265,
+                15.0460843
+            ]
+        }
+    },
+    {
+        "title": "RAMA THIRTHAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.4950236,
+                18.1678708
+            ]
+        }
+    },
+    {
+        "title": "Rami",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.00437629744572,
+                22.079915250000166
+            ]
+        }
+    },
+    {
+        "title": "Rana Khirasara",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.87602868660899,
+                21.72546987452143
+            ]
+        }
+    },
+    {
+        "title": "Ranghola",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.6747513,
+                21.7628822
+            ]
+        }
+    },
+    {
+        "title": "Rangmati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                92.29851339999999,
+                22.7324173
+            ]
+        }
+    },
+    {
+        "title": "Raval",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.40326191079075,
+                21.88669240197028
+            ]
+        }
+    },
+    {
+        "title": "Rojki",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.05500719999999,
+                27.4474259
+            ]
+        }
+    },
+    {
+        "title": "Rudramata",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.7066974,
+                23.3799684
+            ]
+        }
+    },
+    {
+        "title": "Ruparel",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.0543941195026,
+                22.48837790632176
+            ]
+        }
+    },
+    {
+        "title": "Rupavati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.6391527,
+                21.5033684
+            ]
+        }
+    },
+    {
+        "title": "Sabali",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.32695,
+                21.36028
+            ]
+        }
+    },
+    {
+        "title": "Nayka Dam",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.46427889361583,
+                22.665546787723702
+            ]
+        }
+    },
+    {
+        "title": "Sanandro",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.5887,
+                23.0935
+            ]
+        }
+    },
+    {
+        "title": "SANGAM ANICUT / BARRGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.74793919600995,
+                14.57522439939255
+            ]
+        }
+    },
+    {
+        "title": "Sani",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.48753397589816,
+                22.04128789713139
+            ]
+        }
+    },
+    {
+        "title": "Sankroli",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.77349661078446,
+                21.65626146710393
+            ]
+        }
+    },
+    {
+        "title": "Sapada",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                12.6859575,
+                46.5660359
+            ]
+        }
+    },
+    {
+        "title": "Saran",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                84.8567932,
+                25.8559698
+            ]
+        }
+    },
+    {
+        "title": "SARVARAJA SAGAR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.45649433946329,
+                14.532610039692905
+            ]
+        }
+    },
+    {
+        "title": "SARVEPALLI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.98081429999999,
+                14.3124036
+            ]
+        }
+    },
+    {
+        "title": "Sasoi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.95746105436368,
+                22.3355977965006
+            ]
+        }
+    },
+    {
+        "title": "Shedhabhadthari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.48622392322856,
+                22.006318944108667
+            ]
+        }
+    },
+    {
+        "title": "Shell-Dedumal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.32183302493635,
+                21.66491466318091
+            ]
+        }
+    },
+    {
+        "title": "Shetrunji",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.999012843716,
+                21.38834631366483
+            ]
+        }
+    },
+    {
+        "title": "Shingoda",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.78523261362287,
+                21.026812349465246
+            ]
+        }
+    },
+    {
+        "title": "SILERU (GUNTAWADA) RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.03254009999999,
+                18.0584877
+            ]
+        }
+    },
+    {
+        "title": "Sindhani",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.34104396480522,
+                21.96277607083568
+            ]
+        }
+    },
+    {
+        "title": "Sipu",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.22160787487451,
+                25.137616306797423
+            ]
+        }
+    },
+    {
+        "title": "SIR AURTHUR COTTON BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.7524342,
+                16.9369301
+            ]
+        }
+    },
+    {
+        "title": "Sodvadar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.3719915,
+                21.8507187
+            ]
+        }
+    },
+    {
+        "title": "SOMASILA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.2112769,
+                14.4909383
+            ]
+        }
+    },
+    {
+        "title": "Sonmati",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.33007049999999,
+                26.4933553
+            ]
+        }
+    },
+    {
+        "title": "Sorthi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.59678868010369,
+                21.939154984358645
+            ]
+        }
+    },
+    {
+        "title": "SRINIVASAPURAM RESERVOIR (HNSS)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.11607637239895,
+                14.766649873747268
+            ]
+        }
+    },
+    {
+        "title": "SRISAILAM R",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.8726842,
+                16.0737457
+            ]
+        }
+    },
+    {
+        "title": "SUBBAREDDY SAGAR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.2026291,
+                17.3349577
+            ]
+        }
+    },
+    {
+        "title": "SUBSIDIARY RESERVOIR -I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.7278,
+                14.8472
+            ]
+        }
+    },
+    {
+        "title": "SUBSIDIARY RESERVOIR -II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.7986,
+                14.7902
+            ]
+        }
+    },
+    {
+        "title": "Sukhbhadar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.53891056662314,
+                22.34534966697248
+            ]
+        }
+    },
+    {
+        "title": "Sukhi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.88260771080617,
+                22.439152259433705
+            ]
+        }
+    },
+    {
+        "title": "SUNKESULA BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.8306977,
+                15.8800258
+            ]
+        }
+    },
+    {
+        "title": "Surajwadi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.36977312426406,
+                21.199306639366863
+            ]
+        }
+    },
+    {
+        "title": "SUREMPALEM RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.05705789999999,
+                17.081386
+            ]
+        }
+    },
+    {
+        "title": "Survo",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.72800635311393,
+                21.713496696603514
+            ]
+        }
+    },
+    {
+        "title": "Rapar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.50769864095025,
+                23.6011340253744
+            ]
+        }
+    },
+    {
+        "title": "SWARNAMUKHI BARRAGE CUM BRIDGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.7025642533824,
+                13.837656793942244
+            ]
+        }
+    },
+    {
+        "title": "TAMMILERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.08104132450538,
+                16.7393362497026
+            ]
+        }
+    },
+    {
+        "title": "TANDAVA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.45902819999999,
+                17.6489319
+            ]
+        }
+    },
+    {
+        "title": "Tappar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.6572032,
+                23.0124752
+            ]
+        }
+    },
+    {
+        "title": "THATIPUDI RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.1913807,
+                18.1722115
+            ]
+        }
+    },
+    {
+        "title": "Thebi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.21334133776725,
+                21.623602887136748
+            ]
+        }
+    },
+    {
+        "title": "THIMMAPURAM SR1",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.2467369052402,
+                17.03291765283618
+            ]
+        }
+    },
+    {
+        "title": "THOTAPALLI REGULATOR / BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.4961903727235,
+                18.78614060343783
+            ]
+        }
+    },
+    {
+        "title": "Triveni Thanga",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.09958874086765,
+                22.315547331169952
+            ]
+        }
+    },
+    {
+        "title": "Uben",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.6312814789197,
+                21.63617064639327
+            ]
+        }
+    },
+    {
+        "title": "Ukai",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5785523,
+                21.2341558
+            ]
+        }
+    },
+    {
+        "title": "Umaria",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.82947469999999,
+                23.5309797
+            ]
+        }
+    },
+    {
+        "title": "Umiyasagar",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.09691769714694,
+                21.882064652246548
+            ]
+        }
+    },
+    {
+        "title": "Und-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.46728519999999,
+                16.5860043
+            ]
+        }
+    },
+    {
+        "title": "Und-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.39347941953888,
+                22.16284184831384
+            ]
+        }
+    },
+    {
+        "title": "Und-III",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.39488669545435,
+                22.166650433245753
+            ]
+        }
+    },
+    {
+        "title": "UPPER PENNAR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.75780900745244,
+                14.719831602026273
+            ]
+        }
+    },
+    {
+        "title": "UPPER SAGILERU",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.00441820463482,
+                18.282819354682466
+            ]
+        }
+    },
+    {
+        "title": "Utavali",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                76.69131698006326,
+                20.40904152053351
+            ]
+        }
+    },
+    {
+        "title": "Vachhapari",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.88155740033656,
+                22.047508657764045
+            ]
+        }
+    },
+    {
+        "title": "Vadi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.53356156944857,
+                22.217394705767173
+            ]
+        }
+    },
+    {
+        "title": "VAMIKONDA SAGAR RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.27577060000002,
+                16.4835506
+            ]
+        }
+    },
+    {
+        "title": "Vansal",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.68858859672146,
+                22.478364114773264
+            ]
+        }
+    },
+    {
+        "title": "VARADARAJASWAMY GUDI PROJECT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.6462088,
+                15.9698369
+            ]
+        }
+    },
+    {
+        "title": "VARAHA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.73841601113462,
+                17.496394300488397
+            ]
+        }
+    },
+    {
+        "title": "Varansi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.9739144,
+                25.3176452
+            ]
+        }
+    },
+    {
+        "title": "Vartu-I",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.70389271079178,
+                21.925045401501162
+            ]
+        }
+    },
+    {
+        "title": "Vartu-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.70420709999999,
+                21.9242656
+            ]
+        }
+    },
+    {
+        "title": "VATTIGEDDA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.60005593093506,
+                18.843586035310892
+            ]
+        }
+    },
+    {
+        "title": "VEERA RAGHAVANI KOTA ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.79466266444537,
+                15.106589474246567
+            ]
+        }
+    },
+    {
+        "title": "VELIGALLU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.4449285,
+                14.0438017
+            ]
+        }
+    },
+    {
+        "title": "VELOGODU BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.6171753,
+                15.7349984
+            ]
+        }
+    },
+    {
+        "title": "VENGALRAYA SAGARAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.21036749351218,
+                18.628980850274907
+            ]
+        }
+    },
+    {
+        "title": "Venu-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.17206653700195,
+                21.787273912610143
+            ]
+        }
+    },
+    {
+        "title": "Veradi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.87389329544847,
+                21.95652874374501
+            ]
+        }
+    },
+    {
+        "title": "Veradi-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                69.81473199359674,
+                21.98435601308772
+            ]
+        }
+    },
+    {
+        "title": "Veri",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.80430166973115,
+                22.00091291836646
+            ]
+        }
+    },
+    {
+        "title": "Ver-II",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.38950396563527,
+                21.10539054515885
+            ]
+        }
+    },
+    {
+        "title": "Vijarkhi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.1991616,
+                22.40508
+            ]
+        }
+    },
+    {
+        "title": "VIJAYARAI ANICUT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.03267950000001,
+                16.8120897
+            ]
+        }
+    },
+    {
+        "title": "Vrajmi",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.29725873816764,
+                21.067265272783033
+            ]
+        }
+    },
+    {
+        "title": "Waidy",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.5027960107636,
+                23.510253473561754
+            ]
+        }
+    },
+    {
+        "title": "Wanakbori",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.42096769999999,
+                22.9511649
+            ]
+        }
+    },
+    {
+        "title": "WNKL.-BHEY",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.98644504907612,
+                22.700598692002387
+            ]
+        }
+    },
+    {
+        "title": "Vodisang",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                70.36289567161428,
+                22.280588476873437
+            ]
+        }
+    },
+    {
+        "title": "YELERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                82.06795199999999,
+                17.3281998
+            ]
+        }
+    },
+    {
+        "title": "YELLANUR SR2",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.0733647,
+                14.7000169
+            ]
+        }
+    },
+    {
+        "title": "YERRAKALVA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.22249966397575,
+                17.144450029673077
+            ]
+        }
+    },
+    {
+        "title": "YOGI VEMANA (MADDILERU) RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.0513808913066,
+                14.359731706446196
+            ]
+        }
+    },
+    {
+        "title": "ZURRERU RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.13233286873923,
+                15.328329062537843
+            ]
+        }
+    },
+    {
+        "title": "Bagad",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                71.89579718144414,
+                21.293172676361017
+            ]
+        }
+    },
+    {
+        "title": "BHAMA ASKHED",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7014444,
+                18.8423858
+            ]
+        }
+    },
+    {
+        "title": "CHANDAN DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                86.9426198,
+                24.6666335
+            ]
+        }
+    },
+    {
+        "title": "CHASKAMAN",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.762495,
+                18.9739417
+            ]
+        }
+    },
+    {
+        "title": "DARNA DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.737188,
+                19.761978
+            ]
+        }
+    },
+    {
+        "title": "DIMBHE DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.7221,
+                19.114674
+            ]
+        }
+    },
+    {
+        "title": "DONKARAYI",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.7992057,
+                17.9296363
+            ]
+        }
+    },
+    {
+        "title": "GETALSUD",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                85.5457689,
+                23.4321667
+            ]
+        }
+    },
+    {
+        "title": "HARIHARJHORE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                84.0592507966922,
+                21.090688725651116
+            ]
+        }
+    },
+    {
+        "title": "JAISAMAND",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.9499426,
+                24.2411105
+            ]
+        }
+    },
+    {
+        "title": "JAWAI DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.1485981,
+                25.0892718
+            ]
+        }
+    },
+    {
+        "title": "KADDAM (K.N.R.)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.74182624797565,
+                19.145130185297013
+            ]
+        }
+    },
+    {
+        "title": "KANDALERU",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.59405439999999,
+                14.347401
+            ]
+        }
+    },
+    {
+        "title": "KHANDONG",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                92.6405666289491,
+                25.515834997041686
+            ]
+        }
+    },
+    {
+        "title": "MANDIRA DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                84.6569434,
+                22.2686614
+            ]
+        }
+    },
+    {
+        "title": "MAUDAHA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.1154808,
+                25.6861784
+            ]
+        }
+    },
+    {
+        "title": "MEJA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.54024291438412,
+                25.395714876028823
+            ]
+        }
+    },
+    {
+        "title": "NANAK SAGAR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.84644087994634,
+                28.96109302769416
+            ]
+        }
+    },
+    {
+        "title": "PANSHET(TANAJISAGAR)",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.6135141,
+                18.3779339
+            ]
+        }
+    },
+    {
+        "title": "PRIYADARSHINI JURALA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.704444,
+                16.3375
+            ]
+        }
+    },
+    {
+        "title": "RANGAWAN",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.5944718,
+                26.1707516
+            ]
+        }
+    },
+    {
+        "title": "SATHANUR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.63056689999999,
+                13.1222276
+            ]
+        }
+    },
+    {
+        "title": "SIRSI",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.8347096,
+                14.6155109
+            ]
+        }
+    },
+    {
+        "title": "SURYA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                72.85069883494002,
+                19.698015090261418
+            ]
+        }
+    },
+    {
+        "title": "TANDULA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                81.22275775686019,
+                20.7094272937216
+            ]
+        }
+    },
+    {
+        "title": "TILLARI",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.1212800259971,
+                15.761031214322038
+            ]
+        }
+    },
+    {
+        "title": "UMRONG",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                92.72645048299268,
+                25.515204929246206
+            ]
+        }
+    },
+    {
+        "title": "VEER DAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                74.06819879999999,
+                18.1362072
+            ]
+        }
+    }
+]

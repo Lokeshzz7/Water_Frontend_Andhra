@@ -1,0 +1,6374 @@
+{
+    "1": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 25536,
+            "Others": 76574,
+            "Fallow": 77455,
+            "Cropped": 242299
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 25536,
+            "Others": 76574,
+            "Fallow": 77455,
+            "Cropped": 247739
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 25586,
+            "Others": 76574,
+            "Fallow": 77455,
+            "Cropped": 255212
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 63613,
+            "Others": 120303,
+            "Fallow": 109094,
+            "Cropped": 254000
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 64904,
+            "Others": 121765,
+            "Fallow": 109218,
+            "Cropped": 255000
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 64882,
+            "Others": 121901,
+            "Fallow": 109210,
+            "Cropped": 266000
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 64922,
+            "Others": 121900,
+            "Fallow": 109279,
+            "Cropped": 271000
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 64463,
+            "Others": 122195,
+            "Fallow": 109608,
+            "Cropped": 272000
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 64471,
+            "Others": 120261,
+            "Fallow": 109500,
+            "Cropped": 275500
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 64462,
+            "Others": 120440,
+            "Fallow": 109648,
+            "Cropped": 276000
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 64462,
+            "Others": 119943,
+            "Fallow": 109143,
+            "Cropped": 278000
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 64402,
+            "Others": 119355,
+            "Fallow": 108181,
+            "Cropped": 281017
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 64402,
+            "Others": 118920,
+            "Fallow": 107182,
+            "Cropped": 284573
+        },
+        "2013": {
+            "Forest": 5129677,
+            "Barren": 64402,
+            "Others": 116380,
+            "Fallow": 100782,
+            "Cropped": 295577
+        },
+        "2014": {
+            "Forest": 5129677,
+            "Barren": 61979,
+            "Others": 115380,
+            "Fallow": 100618,
+            "Cropped": 299000
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 114489,
+            "Fallow": 100173,
+            "Cropped": 301112
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 113489,
+            "Fallow": 95673,
+            "Cropped": 313200
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 112989,
+            "Fallow": 95763,
+            "Cropped": 316417
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 112989,
+            "Fallow": 94673,
+            "Cropped": 319895
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 112989,
+            "Fallow": 94193,
+            "Cropped": 320388
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 112759,
+            "Fallow": 94123,
+            "Cropped": 327942
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "2": {
+        "2000": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 770000,
+            "Cropped": 7877960
+        },
+        "2001": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 754000,
+            "Cropped": 8798650
+        },
+        "2002": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 919000,
+            "Cropped": 7852560
+        },
+        "2003": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 804000,
+            "Cropped": 8636590
+        },
+        "2004": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 860000,
+            "Cropped": 8717921
+        },
+        "2005": {
+            "Forest": 5813000,
+            "Barren": 1842000,
+            "Others": 1317000,
+            "Fallow": 908000,
+            "Cropped": 8928390
+        },
+        "2006": {
+            "Forest": 862930,
+            "Barren": 74656,
+            "Others": 177074,
+            "Fallow": 158159,
+            "Cropped": 405842
+        },
+        "2007": {
+            "Forest": 5813000,
+            "Barren": 2138000,
+            "Others": 1211000,
+            "Fallow": 785000,
+            "Cropped": 9015820
+        },
+        "2008": {
+            "Forest": 5813000,
+            "Barren": 2138000,
+            "Others": 1211000,
+            "Fallow": 805000,
+            "Cropped": 9070620
+        },
+        "2009": {
+            "Forest": 5813547,
+            "Barren": 2306000,
+            "Others": 1223000,
+            "Fallow": 1432000,
+            "Cropped": 5510044
+        },
+        "2010": {
+            "Forest": 5813547,
+            "Barren": 2279000,
+            "Others": 1253000,
+            "Fallow": 1444000,
+            "Cropped": 5428784
+        },
+        "2011": {
+            "Forest": 5813547,
+            "Barren": 2297000,
+            "Others": 1244000,
+            "Fallow": 1619000,
+            "Cropped": 4964475
+        },
+        "2012": {
+            "Forest": 5813547,
+            "Barren": 2409000,
+            "Others": 1285000,
+            "Fallow": 1608000,
+            "Cropped": 5068591
+        },
+        "2013": {
+            "Forest": 5813547,
+            "Barren": 2332000,
+            "Others": 1315000,
+            "Fallow": 1511000,
+            "Cropped": 5167661
+        },
+        "2014": {
+            "Forest": 5813547,
+            "Barren": 2396000,
+            "Others": 1285000,
+            "Fallow": 1549000,
+            "Cropped": 5173003
+        },
+        "2015": {
+            "Forest": 1924000,
+            "Barren": 2430000,
+            "Others": 1302000,
+            "Fallow": 1683000,
+            "Cropped": 4802647
+        },
+        "2016": {
+            "Forest": 1897000,
+            "Barren": 2436000,
+            "Others": 1333000,
+            "Fallow": 1770000,
+            "Cropped": 4884260
+        },
+        "2017": {
+            "Forest": 1925000,
+            "Barren": 2353000,
+            "Others": 1401000,
+            "Fallow": 1993000,
+            "Cropped": 4501826
+        },
+        "2018": {
+            "Forest": 1912000,
+            "Barren": 2419000,
+            "Others": 1365000,
+            "Fallow": 1827000,
+            "Cropped": 4526995
+        },
+        "2019": {
+            "Forest": 1963000,
+            "Barren": 2331000,
+            "Others": 1372000,
+            "Fallow": 1760000,
+            "Cropped": 4669753
+        },
+        "2020": {
+            "Forest": 1850000,
+            "Barren": 2485000,
+            "Others": 1356000,
+            "Fallow": 1658000,
+            "Cropped": 4819259
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "3": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 26900,
+            "Others": 8055,
+            "Fallow": 200,
+            "Cropped": 208500
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 216160
+        },
+        "2002": {
+            "Forest": 5149700,
+            "Barren": 2915400,
+            "Others": 2454000,
+            "Fallow": 3043700,
+            "Cropped": 20915500
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 217420
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 179530
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "4": {
+        "2000": {
+            "Forest": 2606093,
+            "Barren": 4305645,
+            "Others": 6628637,
+            "Fallow": 4859466,
+            "Cropped": 19230240
+        },
+        "2001": {
+            "Forest": 2645097,
+            "Barren": 4272203,
+            "Others": 6442262,
+            "Fallow": 4140665,
+            "Cropped": 20798311
+        },
+        "2002": {
+            "Forest": 2651014,
+            "Barren": 4278953,
+            "Others": 6582075,
+            "Fallow": 9947231,
+            "Cropped": 13217538
+        },
+        "2003": {
+            "Forest": 2660600,
+            "Barren": 4259109,
+            "Others": 6269106,
+            "Fallow": 3682903,
+            "Cropped": 21664038
+        },
+        "2004": {
+            "Forest": 2660816,
+            "Barren": 4266913,
+            "Others": 6325028,
+            "Fallow": 4464498,
+            "Cropped": 21334486
+        },
+        "2005": {
+            "Forest": 2674961,
+            "Barren": 4262260,
+            "Others": 6318715,
+            "Fallow": 4173666,
+            "Cropped": 21699348
+        },
+        "2006": {
+            "Forest": 2697575,
+            "Barren": 4262060,
+            "Others": 6337091,
+            "Fallow": 4204437,
+            "Cropped": 21533809
+        },
+        "2007": {
+            "Forest": 2726690,
+            "Barren": 4264426,
+            "Others": 6291626,
+            "Fallow": 3891287,
+            "Cropped": 22208291
+        },
+        "2008": {
+            "Forest": 2727944,
+            "Barren": 4265141,
+            "Others": 6052329,
+            "Fallow": 3673058,
+            "Cropped": 22771259
+        },
+        "2009": {
+            "Forest": 2735445,
+            "Barren": 4267633,
+            "Others": 6189617,
+            "Fallow": 4102834,
+            "Cropped": 21744877
+        },
+        "2010": {
+            "Forest": 2742705,
+            "Barren": 4267932,
+            "Others": 5948808,
+            "Fallow": 2961631,
+            "Cropped": 26001788
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 2749812,
+            "Barren": 4275172,
+            "Others": 5869865,
+            "Fallow": 3893610,
+            "Cropped": 23953602
+        },
+        "2013": {
+            "Forest": 2757735,
+            "Barren": 4274149,
+            "Others": 5717844,
+            "Fallow": 3249827,
+            "Cropped": 26119527
+        },
+        "2014": {
+            "Forest": 2739819,
+            "Barren": 4343013,
+            "Others": 5738312,
+            "Fallow": 3924829,
+            "Cropped": 24235354
+        },
+        "2015": {
+            "Forest": 2751867,
+            "Barren": 4340113,
+            "Others": 5587835,
+            "Fallow": 3563187,
+            "Cropped": 25013704
+        },
+        "2016": {
+            "Forest": 255408,
+            "Barren": 536283,
+            "Others": 26688,
+            "Fallow": 84219,
+            "Cropped": 7804364
+        },
+        "2017": {
+            "Forest": 2755703,
+            "Barren": 4365999,
+            "Others": 5528090,
+            "Fallow": 3734161,
+            "Cropped": 25069010
+        },
+        "2018": {
+            "Forest": 2760127,
+            "Barren": 4375272,
+            "Others": 5478146,
+            "Fallow": 3895421,
+            "Cropped": 25313351
+        },
+        "2019": {
+            "Forest": 2769790,
+            "Barren": 4378847,
+            "Others": 5412194,
+            "Fallow": 3697764,
+            "Cropped": 27515432
+        },
+        "2020": {
+            "Forest": 2771530,
+            "Barren": 4377403,
+            "Others": 5424021,
+            "Fallow": 3768283,
+            "Cropped": 26099974
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "5": {
+        "2000": {
+            "Forest": 616446,
+            "Barren": 2074594,
+            "Others": 295365,
+            "Fallow": 710586,
+            "Cropped": 7992279
+        },
+        "2001": {
+            "Forest": 621635,
+            "Barren": 2078572,
+            "Others": 298602,
+            "Fallow": 697207,
+            "Cropped": 7896888
+        },
+        "2002": {
+            "Forest": 621635,
+            "Barren": 2079382,
+            "Others": 300660,
+            "Fallow": 632412,
+            "Cropped": 7957402
+        },
+        "2003": {
+            "Forest": 621635,
+            "Barren": 2080880,
+            "Others": 301773,
+            "Fallow": 643192,
+            "Cropped": 7882377
+        },
+        "2004": {
+            "Forest": 621635,
+            "Barren": 2081892,
+            "Others": 302718,
+            "Fallow": 780921,
+            "Cropped": 7399318
+        },
+        "2005": {
+            "Forest": 621635,
+            "Barren": 2082759,
+            "Others": 303395,
+            "Fallow": 795593,
+            "Cropped": 7396492
+        },
+        "2006": {
+            "Forest": 621635,
+            "Barren": 2082950,
+            "Others": 303499,
+            "Fallow": 686362,
+            "Cropped": 7718948
+        },
+        "2007": {
+            "Forest": 621635,
+            "Barren": 2084753,
+            "Others": 303025,
+            "Fallow": 687951,
+            "Cropped": 7764646
+        },
+        "2008": {
+            "Forest": 621635,
+            "Barren": 2102222,
+            "Others": 304159,
+            "Fallow": 777469,
+            "Cropped": 7670934
+        },
+        "2009": {
+            "Forest": 621635,
+            "Barren": 2121439,
+            "Others": 305136,
+            "Fallow": 979625,
+            "Cropped": 7295805
+        },
+        "2010": {
+            "Forest": 621635,
+            "Barren": 2131457,
+            "Others": 305628,
+            "Fallow": 1042149,
+            "Cropped": 7194000
+        },
+        "2011": {
+            "Forest": 621635,
+            "Barren": 2134254,
+            "Others": 305506,
+            "Fallow": 902428,
+            "Cropped": 7646756
+        },
+        "2012": {
+            "Forest": 621635,
+            "Barren": 2140090,
+            "Others": 306963,
+            "Fallow": 888486,
+            "Cropped": 7777518
+        },
+        "2013": {
+            "Forest": 621635,
+            "Barren": 2143999,
+            "Others": 307710,
+            "Fallow": 1033973,
+            "Cropped": 7580142
+        },
+        "2014": {
+            "Forest": 621635,
+            "Barren": 2143809,
+            "Others": 307811,
+            "Fallow": 1007997,
+            "Cropped": 7672952
+        },
+        "2015": {
+            "Forest": 621635,
+            "Barren": 2144739,
+            "Others": 307640,
+            "Fallow": 1080658,
+            "Cropped": 7572417
+        },
+        "2016": {
+            "Forest": 621635,
+            "Barren": 2150305,
+            "Others": 307606,
+            "Fallow": 987088,
+            "Cropped": 7654357
+        },
+        "2017": {
+            "Forest": 621635,
+            "Barren": 2150029,
+            "Others": 307513,
+            "Fallow": 1038419,
+            "Cropped": 7525181
+        },
+        "2018": {
+            "Forest": 621635,
+            "Barren": 2150280,
+            "Others": 307325,
+            "Fallow": 1113174,
+            "Cropped": 7406378
+        },
+        "2019": {
+            "Forest": 621635,
+            "Barren": 2165829,
+            "Others": 308509,
+            "Fallow": 1186462,
+            "Cropped": 7296812
+        },
+        "2020": {
+            "Forest": 621635,
+            "Barren": 2182455,
+            "Others": 308540,
+            "Fallow": 1201582,
+            "Cropped": 7264538
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "6": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 2105906,
+            "Barren": 2664505,
+            "Others": 702415,
+            "Fallow": 2510923,
+            "Cropped": 5824248
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 2125475,
+            "Barren": 2672415,
+            "Others": 687138,
+            "Fallow": 3003848,
+            "Cropped": 5139832
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 21700,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 21700,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 2646812,
+            "Barren": 1379438,
+            "Others": 568993,
+            "Fallow": 1523992,
+            "Cropped": 5477964
+        },
+        "2017": {
+            "Forest": 2646812,
+            "Barren": 1361738,
+            "Others": 568993,
+            "Fallow": 1458200,
+            "Cropped": 5530169
+        },
+        "2018": {
+            "Forest": 2353355,
+            "Barren": 1322974,
+            "Others": 551247,
+            "Fallow": 1657128,
+            "Cropped": 5215398
+        },
+        "2019": {
+            "Forest": 2683795,
+            "Barren": 1418779,
+            "Others": 545418,
+            "Fallow": 997053,
+            "Cropped": 7238236
+        },
+        "2020": {
+            "Forest": 2753605,
+            "Barren": 1418767,
+            "Others": 469850,
+            "Fallow": 575299,
+            "Cropped": 8226638
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "7": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 515,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 2290
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "8": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 515,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 2290
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "9": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "10": {
+        "2000": {
+            "Forest": 1081509,
+            "Barren": 411191,
+            "Others": 74830,
+            "Fallow": 111841,
+            "Cropped": 3021682
+        },
+        "2001": {
+            "Forest": 1081509,
+            "Barren": 422080,
+            "Others": 77617,
+            "Fallow": 113601,
+            "Cropped": 2992252
+        },
+        "2002": {
+            "Forest": 1081509,
+            "Barren": 422921,
+            "Others": 82551,
+            "Fallow": 109979,
+            "Cropped": 2970384
+        },
+        "2003": {
+            "Forest": 1081509,
+            "Barren": 424783,
+            "Others": 78432,
+            "Fallow": 109940,
+            "Cropped": 2954454
+        },
+        "2004": {
+            "Forest": 1081509,
+            "Barren": 458975,
+            "Others": 80577,
+            "Fallow": 109551,
+            "Cropped": 2996293
+        },
+        "2005": {
+            "Forest": 1081509,
+            "Barren": 481025,
+            "Others": 75933,
+            "Fallow": 115337,
+            "Cropped": 2985727
+        },
+        "2006": {
+            "Forest": 1081509,
+            "Barren": 475004,
+            "Others": 99548,
+            "Fallow": 128795,
+            "Cropped": 2917541
+        },
+        "2007": {
+            "Forest": 1081509,
+            "Barren": 488205,
+            "Others": 99377,
+            "Fallow": 128167,
+            "Cropped": 2761094
+        },
+        "2008": {
+            "Forest": 1081509,
+            "Barren": 499685,
+            "Others": 102424,
+            "Fallow": 113714,
+            "Cropped": 2694943
+        },
+        "2009": {
+            "Forest": 1081509,
+            "Barren": 501079,
+            "Others": 102665,
+            "Fallow": 122319,
+            "Cropped": 2668678
+        },
+        "2010": {
+            "Forest": 1081509,
+            "Barren": 509792,
+            "Others": 95508,
+            "Fallow": 127971,
+            "Cropped": 2647461
+        },
+        "2011": {
+            "Forest": 1081509,
+            "Barren": 531032,
+            "Others": 98888,
+            "Fallow": 134726,
+            "Cropped": 2661757
+        },
+        "2012": {
+            "Forest": 1081509,
+            "Barren": 524577,
+            "Others": 99513,
+            "Fallow": 132579,
+            "Cropped": 2591734
+        },
+        "2013": {
+            "Forest": 1081509,
+            "Barren": 525864,
+            "Others": 99598,
+            "Fallow": 128322,
+            "Cropped": 2616670
+        },
+        "2014": {
+            "Forest": 1081509,
+            "Barren": 538493,
+            "Others": 103334,
+            "Fallow": 120070,
+            "Cropped": 2624624
+        },
+        "2015": {
+            "Forest": 1081509,
+            "Barren": 554282,
+            "Others": 102162,
+            "Fallow": 125261,
+            "Cropped": 2627577
+        },
+        "2016": {
+            "Forest": 1081509,
+            "Barren": 557929,
+            "Others": 103829,
+            "Fallow": 127538,
+            "Cropped": 2584006
+        },
+        "2017": {
+            "Forest": 1081509,
+            "Barren": 558644,
+            "Others": 98736,
+            "Fallow": 106983,
+            "Cropped": 2579701
+        },
+        "2018": {
+            "Forest": 1081509,
+            "Barren": 569530,
+            "Others": 98616,
+            "Fallow": 103006,
+            "Cropped": 2571095
+        },
+        "2019": {
+            "Forest": 1081509,
+            "Barren": 572443,
+            "Others": 101953,
+            "Fallow": 104318,
+            "Cropped": 2586452
+        },
+        "2020": {
+            "Forest": 1081509,
+            "Barren": 576248,
+            "Others": 96396,
+            "Fallow": 97009,
+            "Cropped": 2568967
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "11": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "12": {
+        "2000": {
+            "Forest": 5149700,
+            "Barren": 2907900,
+            "Others": 2453900,
+            "Fallow": 2402700,
+            "Cropped": 21618500
+        },
+        "2001": {
+            "Forest": 5149700,
+            "Barren": 2912400,
+            "Others": 2453900,
+            "Fallow": 3020000,
+            "Cropped": 20991000
+        },
+        "2002": {
+            "Forest": 5149700,
+            "Barren": 2915400,
+            "Others": 2454000,
+            "Fallow": 3043700,
+            "Cropped": 20915500
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 8688874,
+            "Barren": 3431507,
+            "Others": 2508423,
+            "Fallow": 1155374,
+            "Cropped": 21411401
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "13": {
+        "2000": {
+            "Forest": 1686004,
+            "Barren": 3007390,
+            "Others": 934491,
+            "Fallow": 1655805,
+            "Cropped": 25014777
+        },
+        "2001": {
+            "Forest": 1678480,
+            "Barren": 3068089,
+            "Others": 933461,
+            "Fallow": 1619677,
+            "Cropped": 25127607
+        },
+        "2002": {
+            "Forest": 1678480,
+            "Barren": 3089607,
+            "Others": 900639,
+            "Fallow": 1842703,
+            "Cropped": 24009834
+        },
+        "2003": {
+            "Forest": 1675956,
+            "Barren": 3102513,
+            "Others": 883108,
+            "Fallow": 1696360,
+            "Cropped": 25108160
+        },
+        "2004": {
+            "Forest": 1677797,
+            "Barren": 3136262,
+            "Others": 854266,
+            "Fallow": 1755522,
+            "Cropped": 25210376
+        },
+        "2005": {
+            "Forest": 1648305,
+            "Barren": 3170610,
+            "Others": 870014,
+            "Fallow": 1788358,
+            "Cropped": 24990663
+        },
+        "2006": {
+            "Forest": 1651226,
+            "Barren": 3191848,
+            "Others": 867668,
+            "Fallow": 1795180,
+            "Cropped": 25097467
+        },
+        "2007": {
+            "Forest": 1652475,
+            "Barren": 3223112,
+            "Others": 870545,
+            "Fallow": 1915561,
+            "Cropped": 25004430
+        },
+        "2008": {
+            "Forest": 1656296,
+            "Barren": 3232145,
+            "Others": 859369,
+            "Fallow": 1768872,
+            "Cropped": 25154833
+        },
+        "2009": {
+            "Forest": 1656227,
+            "Barren": 3249982,
+            "Others": 848464,
+            "Fallow": 1733551,
+            "Cropped": 25148324
+        },
+        "2010": {
+            "Forest": 1652146,
+            "Barren": 3274948,
+            "Others": 838733,
+            "Fallow": 1719008,
+            "Cropped": 25319320
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 1658068,
+            "Barren": 3371403,
+            "Others": 838645,
+            "Fallow": 1738506,
+            "Cropped": 25820707
+        },
+        "2013": {
+            "Forest": 1658153,
+            "Barren": 3491436,
+            "Others": 800973,
+            "Fallow": 1674004,
+            "Cropped": 25895877
+        },
+        "2014": {
+            "Forest": 1658608,
+            "Barren": 3507535,
+            "Others": 775526,
+            "Fallow": 1630742,
+            "Cropped": 26147116
+        },
+        "2015": {
+            "Forest": 1666173,
+            "Barren": 3576216,
+            "Others": 750990,
+            "Fallow": 1707892,
+            "Cropped": 26203317
+        },
+        "2016": {
+            "Forest": 1666317,
+            "Barren": 3591613,
+            "Others": 739002,
+            "Fallow": 1609825,
+            "Cropped": 26948520
+        },
+        "2017": {
+            "Forest": 1671096,
+            "Barren": 3606762,
+            "Others": 738180,
+            "Fallow": 1612602,
+            "Cropped": 26864140
+        },
+        "2018": {
+            "Forest": 1714612,
+            "Barren": 3610677,
+            "Others": 726601,
+            "Fallow": 1580886,
+            "Cropped": 26858658
+        },
+        "2019": {
+            "Forest": 1770751,
+            "Barren": 3715750,
+            "Others": 706387,
+            "Fallow": 1610035,
+            "Cropped": 27108875
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "14": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 68793
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 75791
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 78512
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 82855
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 82211
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 83125
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 73396
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 96041
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 94985
+        },
+        "2009": {
+            "Forest": 1585305,
+            "Barren": 94962,
+            "Others": 50660,
+            "Fallow": 246823,
+            "Cropped": 122865
+        },
+        "2010": {
+            "Forest": 1585305,
+            "Barren": 94962,
+            "Others": 49443,
+            "Fallow": 248869,
+            "Cropped": 120750
+        },
+        "2011": {
+            "Forest": 1585305,
+            "Barren": 95026,
+            "Others": 52818,
+            "Fallow": 244303,
+            "Cropped": 97282
+        },
+        "2012": {
+            "Forest": 1585305,
+            "Barren": 95130,
+            "Others": 53033,
+            "Fallow": 244411,
+            "Cropped": 115979
+        },
+        "2013": {
+            "Forest": 1585305,
+            "Barren": 99530,
+            "Others": 85612,
+            "Fallow": 208205,
+            "Cropped": 113878
+        },
+        "2014": {
+            "Forest": 1585305,
+            "Barren": 75248,
+            "Others": 59849,
+            "Fallow": 173885,
+            "Cropped": 144701
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 940164,
+            "Barren": 240401,
+            "Others": 548938,
+            "Fallow": 213883,
+            "Cropped": 308580
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "15": {
+        "2000": {
+            "Forest": 3465057,
+            "Barren": 462491,
+            "Others": 866760,
+            "Fallow": 107446,
+            "Cropped": 1222315
+        },
+        "2001": {
+            "Forest": 3465057,
+            "Barren": 461966,
+            "Others": 866106,
+            "Fallow": 102302,
+            "Cropped": 1219008
+        },
+        "2002": {
+            "Forest": 3467918,
+            "Barren": 464615,
+            "Others": 867967,
+            "Fallow": 112415,
+            "Cropped": 1208061
+        },
+        "2003": {
+            "Forest": 3465057,
+            "Barren": 462958,
+            "Others": 865932,
+            "Fallow": 113770,
+            "Cropped": 1221510
+        },
+        "2004": {
+            "Forest": 1677797,
+            "Barren": 3136262,
+            "Others": 854266,
+            "Fallow": 1755522,
+            "Cropped": 25210376
+        },
+        "2005": {
+            "Forest": 3465057,
+            "Barren": 466674,
+            "Others": 862951,
+            "Fallow": 103514,
+            "Cropped": 1212342
+        },
+        "2006": {
+            "Forest": 1651226,
+            "Barren": 3191848,
+            "Others": 867668,
+            "Fallow": 1795180,
+            "Cropped": 25097467
+        },
+        "2007": {
+            "Forest": 3483872,
+            "Barren": 440867,
+            "Others": 885189,
+            "Fallow": 107627,
+            "Cropped": 1187409
+        },
+        "2008": {
+            "Forest": 3485847,
+            "Barren": 441014,
+            "Others": 885868,
+            "Fallow": 106128,
+            "Cropped": 1193193
+        },
+        "2009": {
+            "Forest": 3484803,
+            "Barren": 440907,
+            "Others": 891325,
+            "Fallow": 118762,
+            "Cropped": 1166380
+        },
+        "2010": {
+            "Forest": 3484803,
+            "Barren": 442412,
+            "Others": 894464,
+            "Fallow": 127793,
+            "Cropped": 1169697
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 3484803,
+            "Barren": 448840,
+            "Others": 896615,
+            "Fallow": 136288,
+            "Cropped": 1124404
+        },
+        "2013": {
+            "Forest": 3799953,
+            "Barren": 450189,
+            "Others": 898179,
+            "Fallow": 142921,
+            "Cropped": 1099185
+        },
+        "2014": {
+            "Forest": 3799953,
+            "Barren": 451992,
+            "Others": 896878,
+            "Fallow": 143610,
+            "Cropped": 1096834
+        },
+        "2015": {
+            "Forest": 3799953,
+            "Barren": 453361,
+            "Others": 897521,
+            "Fallow": 143356,
+            "Cropped": 1082704
+        },
+        "2016": {
+            "Forest": 3799953,
+            "Barren": 454936,
+            "Others": 897136,
+            "Fallow": 150017,
+            "Cropped": 1081797
+        },
+        "2017": {
+            "Forest": 3811662,
+            "Barren": 435356,
+            "Others": 925156,
+            "Fallow": 159609,
+            "Cropped": 1059531
+        },
+        "2018": {
+            "Forest": 3811662,
+            "Barren": 434670,
+            "Others": 930709,
+            "Fallow": 177095,
+            "Cropped": 1029014
+        },
+        "2019": {
+            "Forest": 1770751,
+            "Barren": 3715750,
+            "Others": 706387,
+            "Fallow": 1610035,
+            "Cropped": 27108875
+        },
+        "2020": {
+            "Forest": 3811662,
+            "Barren": 437674,
+            "Others": 940575,
+            "Fallow": 191013,
+            "Cropped": 996826
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "16": {
+        "2000": {
+            "Forest": 6199225,
+            "Barren": 4704988,
+            "Others": 1669609,
+            "Fallow": 3728713,
+            "Cropped": 13545133
+        },
+        "2001": {
+            "Forest": 6199225,
+            "Barren": 4725606,
+            "Others": 1653684,
+            "Fallow": 4428870,
+            "Cropped": 12756360
+        },
+        "2002": {
+            "Forest": 6199225,
+            "Barren": 4763895,
+            "Others": 1653745,
+            "Fallow": 5185643,
+            "Cropped": 11558629
+        },
+        "2003": {
+            "Forest": 6199225,
+            "Barren": 4752295,
+            "Others": 1653745,
+            "Fallow": 4693498,
+            "Cropped": 12366370
+        },
+        "2004": {
+            "Forest": 6199225,
+            "Barren": 4668457,
+            "Others": 1648285,
+            "Fallow": 4469341,
+            "Cropped": 12518548
+        },
+        "2005": {
+            "Forest": 6199225,
+            "Barren": 4769728,
+            "Others": 1645843,
+            "Fallow": 4057214,
+            "Cropped": 13362084
+        },
+        "2006": {
+            "Forest": 6210369,
+            "Barren": 4758857,
+            "Others": 1617648,
+            "Fallow": 4749156,
+            "Cropped": 12810880
+        },
+        "2007": {
+            "Forest": 6210369,
+            "Barren": 4762236,
+            "Others": 1535438,
+            "Fallow": 4219198,
+            "Cropped": 13566996
+        },
+        "2008": {
+            "Forest": 6210369,
+            "Barren": 4775614,
+            "Others": 1517157,
+            "Fallow": 4111317,
+            "Cropped": 13830091
+        },
+        "2009": {
+            "Forest": 6210369,
+            "Barren": 4786078,
+            "Others": 1507680,
+            "Fallow": 4987218,
+            "Cropped": 12560466
+        },
+        "2010": {
+            "Forest": 6229899,
+            "Barren": 4877091,
+            "Others": 1470550,
+            "Fallow": 3718793,
+            "Cropped": 14512257
+        },
+        "2011": {
+            "Forest": 6229899,
+            "Barren": 4805742,
+            "Others": 1455111,
+            "Fallow": 3831442,
+            "Cropped": 13759374
+        },
+        "2012": {
+            "Forest": 6227219,
+            "Barren": 4811023,
+            "Others": 1380412,
+            "Fallow": 3947374,
+            "Cropped": 13649960
+        },
+        "2013": {
+            "Forest": 6236331,
+            "Barren": 4924756,
+            "Others": 1356913,
+            "Fallow": 3555741,
+            "Cropped": 14415256
+        },
+        "2014": {
+            "Forest": 6203379,
+            "Barren": 4823056,
+            "Others": 1357763,
+            "Fallow": 4465608,
+            "Cropped": 13005153
+        },
+        "2015": {
+            "Forest": 6228562,
+            "Barren": 4856088,
+            "Others": 1372264,
+            "Fallow": 4642716,
+            "Cropped": 12424735
+        },
+        "2016": {
+            "Forest": 3739237,
+            "Barren": 3473402,
+            "Others": 805492,
+            "Fallow": 2515679,
+            "Cropped": 7910070
+        },
+        "2017": {
+            "Forest": 3739237,
+            "Barren": 3479347,
+            "Others": 802438,
+            "Fallow": 2502349,
+            "Cropped": 7973475
+        },
+        "2018": {
+            "Forest": 3731324,
+            "Barren": 3457549,
+            "Others": 794517,
+            "Fallow": 2482353,
+            "Cropped": 7620229
+        },
+        "2019": {
+            "Forest": 3702476,
+            "Barren": 3435119,
+            "Others": 783289,
+            "Fallow": 2390146,
+            "Cropped": 7527257
+        },
+        "2020": {
+            "Forest": 3702507,
+            "Barren": 3440340,
+            "Others": 771277,
+            "Fallow": 2358489,
+            "Cropped": 7659531
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "17": {
+        "2000": {
+            "Forest": 115494,
+            "Barren": 469287,
+            "Others": 59595,
+            "Fallow": 231955,
+            "Cropped": 6115418
+        },
+        "2001": {
+            "Forest": 44841,
+            "Barren": 526492,
+            "Others": 61426,
+            "Fallow": 172895,
+            "Cropped": 6318005
+        },
+        "2002": {
+            "Forest": 45347,
+            "Barren": 568763,
+            "Others": 66651,
+            "Fallow": 235850,
+            "Cropped": 6031956
+        },
+        "2003": {
+            "Forest": 45225,
+            "Barren": 531726,
+            "Others": 66622,
+            "Fallow": 196376,
+            "Cropped": 6388045
+        },
+        "2004": {
+            "Forest": 44120,
+            "Barren": 524386,
+            "Others": 65337,
+            "Fallow": 212565,
+            "Cropped": 6425077
+        },
+        "2005": {
+            "Forest": 44458,
+            "Barren": 518136,
+            "Others": 68152,
+            "Fallow": 174779,
+            "Cropped": 6503736
+        },
+        "2006": {
+            "Forest": 39441,
+            "Barren": 523937,
+            "Others": 103881,
+            "Fallow": 148611,
+            "Cropped": 6393834
+        },
+        "2007": {
+            "Forest": 39501,
+            "Barren": 560596,
+            "Others": 65974,
+            "Fallow": 111687,
+            "Cropped": 6458019
+        },
+        "2008": {
+            "Forest": 39927,
+            "Barren": 573250,
+            "Others": 72039,
+            "Fallow": 110568,
+            "Cropped": 6484111
+        },
+        "2009": {
+            "Forest": 39544,
+            "Barren": 573585,
+            "Others": 70076,
+            "Fallow": 137991,
+            "Cropped": 6351156
+        },
+        "2010": {
+            "Forest": 38545,
+            "Barren": 624114,
+            "Others": 65088,
+            "Fallow": 124624,
+            "Cropped": 6504866
+        },
+        "2011": {
+            "Forest": 39205,
+            "Barren": 606480,
+            "Others": 64175,
+            "Fallow": 148998,
+            "Cropped": 6488889
+        },
+        "2012": {
+            "Forest": 39551,
+            "Barren": 643190,
+            "Others": 55086,
+            "Fallow": 120990,
+            "Cropped": 6375542
+        },
+        "2013": {
+            "Forest": 38966,
+            "Barren": 661812,
+            "Others": 50690,
+            "Fallow": 122818,
+            "Cropped": 6471190
+        },
+        "2014": {
+            "Forest": 37623,
+            "Barren": 653340,
+            "Others": 50651,
+            "Fallow": 108102,
+            "Cropped": 6535654
+        },
+        "2015": {
+            "Forest": 41041,
+            "Barren": 507558,
+            "Others": 77608,
+            "Fallow": 223133,
+            "Cropped": 6510352
+        },
+        "2016": {
+            "Forest": 39605,
+            "Barren": 563860,
+            "Others": 67714,
+            "Fallow": 201177,
+            "Cropped": 6451853
+        },
+        "2017": {
+            "Forest": 35577,
+            "Barren": 552612,
+            "Others": 79304,
+            "Fallow": 186841,
+            "Cropped": 6548944
+        },
+        "2018": {
+            "Forest": 35428,
+            "Barren": 445340,
+            "Others": 149320,
+            "Fallow": 140898,
+            "Cropped": 6604878
+        },
+        "2019": {
+            "Forest": 2118841,
+            "Barren": 3496426,
+            "Others": 2711527,
+            "Fallow": 696590,
+            "Cropped": 13815653
+        },
+        "2020": {
+            "Forest": 32451,
+            "Barren": 339186,
+            "Others": 254707,
+            "Fallow": 134411,
+            "Cropped": 6565572
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "18": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "19": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 1120946,
+            "Others": 1710535,
+            "Fallow": 67662,
+            "Cropped": 947542
+        },
+        "2001": {
+            "Forest": 1098661,
+            "Barren": 1124043,
+            "Others": 1701032,
+            "Fallow": 69380,
+            "Cropped": 955740
+        },
+        "2002": {
+            "Forest": 1099447,
+            "Barren": 1125464,
+            "Others": 1698203,
+            "Fallow": 75457,
+            "Cropped": 945205
+        },
+        "2003": {
+            "Forest": 1099055,
+            "Barren": 1126010,
+            "Others": 1705912,
+            "Fallow": 72661,
+            "Cropped": 955614
+        },
+        "2004": {
+            "Forest": 1101013,
+            "Barren": 1130167,
+            "Others": 1696606,
+            "Fallow": 74523,
+            "Cropped": 952510
+        },
+        "2005": {
+            "Forest": 1100853,
+            "Barren": 1129395,
+            "Others": 1699325,
+            "Fallow": 76236,
+            "Cropped": 943517
+        },
+        "2006": {
+            "Forest": 1101046,
+            "Barren": 1131374,
+            "Others": 1693623,
+            "Fallow": 78094,
+            "Cropped": 943784
+        },
+        "2007": {
+            "Forest": 1102960,
+            "Barren": 1122781,
+            "Others": 1703859,
+            "Fallow": 77773,
+            "Cropped": 954498
+        },
+        "2008": {
+            "Forest": 1103036,
+            "Barren": 1121757,
+            "Others": 1706187,
+            "Fallow": 79169,
+            "Cropped": 946127
+        },
+        "2009": {
+            "Forest": 1105997,
+            "Barren": 1132053,
+            "Others": 1700448,
+            "Fallow": 82100,
+            "Cropped": 940597
+        },
+        "2010": {
+            "Forest": 1125742,
+            "Barren": 1131192,
+            "Others": 1696548,
+            "Fallow": 78791,
+            "Cropped": 938641
+        },
+        "2011": {
+            "Forest": 1126124,
+            "Barren": 1127288,
+            "Others": 1695771,
+            "Fallow": 76419,
+            "Cropped": 931862
+        },
+        "2012": {
+            "Forest": 1124228,
+            "Barren": 1123944,
+            "Others": 1698653,
+            "Fallow": 80820,
+            "Cropped": 933504
+        },
+        "2013": {
+            "Forest": 1126169,
+            "Barren": 1121268,
+            "Others": 1700842,
+            "Fallow": 79056,
+            "Cropped": 939807
+        },
+        "2014": {
+            "Forest": 1126745,
+            "Barren": 1126767,
+            "Others": 1700243,
+            "Fallow": 75298,
+            "Cropped": 918203
+        },
+        "2015": {
+            "Forest": 1126831,
+            "Barren": 1132495,
+            "Others": 1690318,
+            "Fallow": 76202,
+            "Cropped": 932592
+        },
+        "2016": {
+            "Forest": 1125386,
+            "Barren": 1131405,
+            "Others": 1696274,
+            "Fallow": 77121,
+            "Cropped": 959223
+        },
+        "2017": {
+            "Forest": 1123882,
+            "Barren": 1135804,
+            "Others": 1688657,
+            "Fallow": 85376,
+            "Cropped": 917393
+        },
+        "2018": {
+            "Forest": 1125020,
+            "Barren": 1132800,
+            "Others": 1692475,
+            "Fallow": 83900,
+            "Cropped": 914014
+        },
+        "2019": {
+            "Forest": 1123172,
+            "Barren": 1133259,
+            "Others": 1688045,
+            "Fallow": 102077,
+            "Cropped": 891926
+        },
+        "2020": {
+            "Forest": 1123800,
+            "Barren": 1131032,
+            "Others": 1695144,
+            "Fallow": 102114,
+            "Cropped": 898583
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "20": {
+        "2000": {
+            "Forest": 3068353,
+            "Barren": 2106146,
+            "Others": 1689197,
+            "Fallow": 1775688,
+            "Cropped": 12284398
+        },
+        "2001": {
+            "Forest": 3069980,
+            "Barren": 2113311,
+            "Others": 1681163,
+            "Fallow": 2153890,
+            "Cropped": 11669750
+        },
+        "2002": {
+            "Forest": 3070330,
+            "Barren": 2119660,
+            "Others": 1678185,
+            "Fallow": 2344041,
+            "Cropped": 11531576
+        },
+        "2003": {
+            "Forest": 3070941,
+            "Barren": 2123653,
+            "Others": 1667589,
+            "Fallow": 2341047,
+            "Cropped": 11450313
+        },
+        "2004": {
+            "Forest": 3070293,
+            "Barren": 2127821,
+            "Others": 1662967,
+            "Fallow": 1689278,
+            "Cropped": 12807402
+        },
+        "2005": {
+            "Forest": 3071833,
+            "Barren": 2136942,
+            "Others": 1647102,
+            "Fallow": 1684314,
+            "Cropped": 13026714
+        },
+        "2006": {
+            "Forest": 3071833,
+            "Barren": 2150894,
+            "Others": 1642609,
+            "Fallow": 2080038,
+            "Cropped": 12438309
+        },
+        "2007": {
+            "Forest": 3071833,
+            "Barren": 2157057,
+            "Others": 1634659,
+            "Fallow": 1767495,
+            "Cropped": 12892671
+        },
+        "2008": {
+            "Forest": 3071833,
+            "Barren": 2162675,
+            "Others": 1626011,
+            "Fallow": 2015728,
+            "Cropped": 12368443
+        },
+        "2009": {
+            "Forest": 3071833,
+            "Barren": 2173931,
+            "Others": 1614677,
+            "Fallow": 1785288,
+            "Cropped": 12873308
+        },
+        "2010": {
+            "Forest": 3071833,
+            "Barren": 2216990,
+            "Others": 1612768,
+            "Fallow": 1625592,
+            "Cropped": 13062163
+        },
+        "2011": {
+            "Forest": 3071833,
+            "Barren": 2219577,
+            "Others": 1606690,
+            "Fallow": 2210337,
+            "Cropped": 12059367
+        },
+        "2012": {
+            "Forest": 3073376,
+            "Barren": 2222224,
+            "Others": 1603652,
+            "Fallow": 2357756,
+            "Cropped": 11747857
+        },
+        "2013": {
+            "Forest": 3073376,
+            "Barren": 2230243,
+            "Others": 1597935,
+            "Fallow": 2225175,
+            "Cropped": 12266906
+        },
+        "2014": {
+            "Forest": 3073376,
+            "Barren": 2247684,
+            "Others": 1590405,
+            "Fallow": 2094779,
+            "Cropped": 12246635
+        },
+        "2015": {
+            "Forest": 3073376,
+            "Barren": 2269261,
+            "Others": 1591947,
+            "Fallow": 2109143,
+            "Cropped": 12008579
+        },
+        "2016": {
+            "Forest": 3073376,
+            "Barren": 2287519,
+            "Others": 1580667,
+            "Fallow": 2253506,
+            "Cropped": 11778938
+        },
+        "2017": {
+            "Forest": 3073376,
+            "Barren": 2294475,
+            "Others": 1579420,
+            "Fallow": 2207468,
+            "Cropped": 11993633
+        },
+        "2018": {
+            "Forest": 3073376,
+            "Barren": 2274331,
+            "Others": 1526772,
+            "Fallow": 1511160,
+            "Cropped": 13551039
+        },
+        "2019": {
+            "Forest": 3073376,
+            "Barren": 2262532,
+            "Others": 1499222,
+            "Fallow": 1410948,
+            "Cropped": 13830703
+        },
+        "2020": {
+            "Forest": 3073376,
+            "Barren": 2258891,
+            "Others": 1476867,
+            "Fallow": 787634,
+            "Cropped": 14909500
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "21": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 643928,
+            "Barren": 525186,
+            "Others": 326432,
+            "Fallow": 119619,
+            "Cropped": 1111728
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "22": {
+        "2000": {
+            "Forest": 6302598,
+            "Barren": 1023100,
+            "Others": 1189045,
+            "Fallow": 508917,
+            "Cropped": 5327068
+        },
+        "2001": {
+            "Forest": 6247068,
+            "Barren": 1028786,
+            "Others": 1186485,
+            "Fallow": 474197,
+            "Cropped": 5596343
+        },
+        "2002": {
+            "Forest": 6299652,
+            "Barren": 1034265,
+            "Others": 1193902,
+            "Fallow": 507971,
+            "Cropped": 5445741
+        },
+        "2003": {
+            "Forest": 6299585,
+            "Barren": 1038624,
+            "Others": 1192262,
+            "Fallow": 480426,
+            "Cropped": 5706605
+        },
+        "2004": {
+            "Forest": 6299803,
+            "Barren": 1044737,
+            "Others": 1187653,
+            "Fallow": 487347,
+            "Cropped": 5715837
+        },
+        "2005": {
+            "Forest": 621635,
+            "Barren": 2082759,
+            "Others": 303395,
+            "Fallow": 795593,
+            "Cropped": 7396492
+        },
+        "2006": {
+            "Forest": 5222204,
+            "Barren": 966435,
+            "Others": 1148157,
+            "Fallow": 482124,
+            "Cropped": 5631684
+        },
+        "2007": {
+            "Forest": 6349995,
+            "Barren": 998936,
+            "Others": 1201153,
+            "Fallow": 512894,
+            "Cropped": 5747611
+        },
+        "2008": {
+            "Forest": 6366752,
+            "Barren": 1076286,
+            "Others": 1295177,
+            "Fallow": 529491,
+            "Cropped": 6287339
+        },
+        "2009": {
+            "Forest": 6349177,
+            "Barren": 1011662,
+            "Others": 1210949,
+            "Fallow": 534632,
+            "Cropped": 5561453
+        },
+        "2010": {
+            "Forest": 6336495,
+            "Barren": 1018752,
+            "Others": 1210506,
+            "Fallow": 527541,
+            "Cropped": 5671460
+        },
+        "2011": {
+            "Forest": 4796502,
+            "Barren": 801661,
+            "Others": 879268,
+            "Fallow": 416916,
+            "Cropped": 4000721
+        },
+        "2012": {
+            "Forest": 6352413,
+            "Barren": 1024190,
+            "Others": 1219814,
+            "Fallow": 521950,
+            "Cropped": 5690855
+        },
+        "2013": {
+            "Forest": 1840191,
+            "Barren": 1027061,
+            "Others": 1231871,
+            "Fallow": 513907,
+            "Cropped": 5697707
+        },
+        "2014": {
+            "Forest": 6315530,
+            "Barren": 1029560,
+            "Others": 1238612,
+            "Fallow": 525394,
+            "Cropped": 5727723
+        },
+        "2015": {
+            "Forest": 6314198,
+            "Barren": 1026924,
+            "Others": 1253055,
+            "Fallow": 544684,
+            "Cropped": 5640317
+        },
+        "2016": {
+            "Forest": 6317281,
+            "Barren": 1028143,
+            "Others": 1249975,
+            "Fallow": 530229,
+            "Cropped": 5673420
+        },
+        "2017": {
+            "Forest": 6313701,
+            "Barren": 1031457,
+            "Others": 1249340,
+            "Fallow": 541843,
+            "Cropped": 5540239
+        },
+        "2018": {
+            "Forest": 6303503,
+            "Barren": 1027110,
+            "Others": 1256221,
+            "Fallow": 522245,
+            "Cropped": 5613579
+        },
+        "2019": {
+            "Forest": 6160496,
+            "Barren": 1027173,
+            "Others": 1250770,
+            "Fallow": 538751,
+            "Cropped": 5667010
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "23": {
+        "2000": {
+            "Forest": 950510,
+            "Barren": 223393,
+            "Others": 596395,
+            "Fallow": 226535,
+            "Cropped": 276754
+        },
+        "2001": {
+            "Forest": 950533,
+            "Barren": 223384,
+            "Others": 596359,
+            "Fallow": 226551,
+            "Cropped": 277732
+        },
+        "2002": {
+            "Forest": 950792,
+            "Barren": 223400,
+            "Others": 596363,
+            "Fallow": 226527,
+            "Cropped": 284738
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 217420
+        },
+        "2004": {
+            "Forest": 941786,
+            "Barren": 227945,
+            "Others": 608717,
+            "Fallow": 229760,
+            "Cropped": 264855
+        },
+        "2005": {
+            "Forest": 941786,
+            "Barren": 227484,
+            "Others": 610847,
+            "Fallow": 235375,
+            "Cropped": 257509
+        },
+        "2006": {
+            "Forest": 941774,
+            "Barren": 227997,
+            "Others": 607712,
+            "Fallow": 236768,
+            "Cropped": 246333
+        },
+        "2007": {
+            "Forest": 943759,
+            "Barren": 227009,
+            "Others": 593708,
+            "Fallow": 227310,
+            "Cropped": 283228
+        },
+        "2008": {
+            "Forest": 948133,
+            "Barren": 225921,
+            "Others": 553444,
+            "Fallow": 215453,
+            "Cropped": 337394
+        },
+        "2009": {
+            "Forest": 946318,
+            "Barren": 230525,
+            "Others": 555840,
+            "Fallow": 213292,
+            "Cropped": 336416
+        },
+        "2010": {
+            "Forest": 946116,
+            "Barren": 237547,
+            "Others": 554532,
+            "Fallow": 213309,
+            "Cropped": 337853
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 946127,
+            "Barren": 239248,
+            "Others": 555039,
+            "Fallow": 215241,
+            "Cropped": 339725
+        },
+        "2013": {
+            "Forest": 946197,
+            "Barren": 239041,
+            "Others": 555234,
+            "Fallow": 215331,
+            "Cropped": 342885
+        },
+        "2014": {
+            "Forest": 946201,
+            "Barren": 239690,
+            "Others": 554579,
+            "Fallow": 215253,
+            "Cropped": 343431
+        },
+        "2015": {
+            "Forest": 946248,
+            "Barren": 238432,
+            "Others": 549453,
+            "Fallow": 212691,
+            "Cropped": 302635
+        },
+        "2016": {
+            "Forest": 940164,
+            "Barren": 240401,
+            "Others": 548938,
+            "Fallow": 213883,
+            "Cropped": 308580
+        },
+        "2017": {
+            "Forest": 928815,
+            "Barren": 254238,
+            "Others": 548970,
+            "Fallow": 210887,
+            "Cropped": 309205
+        },
+        "2018": {
+            "Forest": 910259,
+            "Barren": 274639,
+            "Others": 546020,
+            "Fallow": 210049,
+            "Cropped": 312168
+        },
+        "2019": {
+            "Forest": 913824,
+            "Barren": 271533,
+            "Others": 544728,
+            "Fallow": 210633,
+            "Cropped": 312913
+        },
+        "2020": {
+            "Forest": 913428,
+            "Barren": 272068,
+            "Others": 544907,
+            "Fallow": 212020,
+            "Cropped": 309423
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "24": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "25": {
+        "2000": {
+            "Forest": 606168,
+            "Barren": 132640,
+            "Others": 27751,
+            "Fallow": 3610,
+            "Cropped": 279000
+        },
+        "2001": {
+            "Forest": 606168,
+            "Barren": 133291,
+            "Others": 26100,
+            "Fallow": 3610,
+            "Cropped": 280000
+        },
+        "2002": {
+            "Forest": 606168,
+            "Barren": 133291,
+            "Others": 26100,
+            "Fallow": 3610,
+            "Cropped": 283095
+        },
+        "2003": {
+            "Forest": 606168,
+            "Barren": 133291,
+            "Others": 26100,
+            "Fallow": 3610,
+            "Cropped": 283267
+        },
+        "2004": {
+            "Forest": 606168,
+            "Barren": 134000,
+            "Others": 25391,
+            "Fallow": 3610,
+            "Cropped": 281403
+        },
+        "2005": {
+            "Forest": 606168,
+            "Barren": 133291,
+            "Others": 27210,
+            "Fallow": 3610,
+            "Cropped": 280000
+        },
+        "2006": {
+            "Forest": 629266,
+            "Barren": 138754,
+            "Others": 21752,
+            "Fallow": 4320,
+            "Cropped": 275778
+        },
+        "2007": {
+            "Forest": 629429,
+            "Barren": 139163,
+            "Others": 20806,
+            "Fallow": 5862,
+            "Cropped": 275806
+        },
+        "2008": {
+            "Forest": 629426,
+            "Barren": 139178,
+            "Others": 20613,
+            "Fallow": 4366,
+            "Cropped": 263320
+        },
+        "2009": {
+            "Forest": 629426,
+            "Barren": 140693,
+            "Others": 19656,
+            "Fallow": 3870,
+            "Cropped": 453043
+        },
+        "2010": {
+            "Forest": 629426,
+            "Barren": 141896,
+            "Others": 19191,
+            "Fallow": 3240,
+            "Cropped": 469984
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 629426,
+            "Barren": 144443,
+            "Others": 16997,
+            "Fallow": 3093,
+            "Cropped": 474369
+        },
+        "2013": {
+            "Forest": 629426,
+            "Barren": 145390,
+            "Others": 16060,
+            "Fallow": 3225,
+            "Cropped": 474499
+        },
+        "2014": {
+            "Forest": 629426,
+            "Barren": 146155,
+            "Others": 15361,
+            "Fallow": 2863,
+            "Cropped": 483488
+        },
+        "2015": {
+            "Forest": 629426,
+            "Barren": 146920,
+            "Others": 14642,
+            "Fallow": 2731,
+            "Cropped": 485677
+        },
+        "2016": {
+            "Forest": 629426,
+            "Barren": 147413,
+            "Others": 14347,
+            "Fallow": 2493,
+            "Cropped": 490540
+        },
+        "2017": {
+            "Forest": 629426,
+            "Barren": 147979,
+            "Others": 14245,
+            "Fallow": 2424,
+            "Cropped": 486770
+        },
+        "2018": {
+            "Forest": 629426,
+            "Barren": 148304,
+            "Others": 13647,
+            "Fallow": 2244,
+            "Cropped": 487000
+        },
+        "2019": {
+            "Forest": 629426,
+            "Barren": 148691,
+            "Others": 13540,
+            "Fallow": 2144,
+            "Cropped": 487000
+        },
+        "2020": {
+            "Forest": 629426,
+            "Barren": 148988,
+            "Others": 13204,
+            "Fallow": 2085,
+            "Cropped": 487400
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "26": {
+        "2000": {
+            "Forest": 1190436,
+            "Barren": 1594226,
+            "Others": 98468,
+            "Fallow": 387195,
+            "Cropped": 9116597
+        },
+        "2001": {
+            "Forest": 1184165,
+            "Barren": 1573177,
+            "Others": 97817,
+            "Fallow": 317938,
+            "Cropped": 9778815
+        },
+        "2002": {
+            "Forest": 1193639,
+            "Barren": 1633426,
+            "Others": 97921,
+            "Fallow": 407457,
+            "Cropped": 9510423
+        },
+        "2003": {
+            "Forest": 1171293,
+            "Barren": 1636038,
+            "Others": 97030,
+            "Fallow": 355488,
+            "Cropped": 9661325
+        },
+        "2004": {
+            "Forest": 1174771,
+            "Barren": 1699993,
+            "Others": 99241,
+            "Fallow": 339341,
+            "Cropped": 9522930
+        },
+        "2005": {
+            "Forest": 1174977,
+            "Barren": 1753328,
+            "Others": 111110,
+            "Fallow": 348837,
+            "Cropped": 9532607
+        },
+        "2006": {
+            "Forest": 1173787,
+            "Barren": 1754346,
+            "Others": 96584,
+            "Fallow": 363391,
+            "Cropped": 9634535
+        },
+        "2007": {
+            "Forest": 1173669,
+            "Barren": 1783437,
+            "Others": 100273,
+            "Fallow": 330961,
+            "Cropped": 9751508
+        },
+        "2008": {
+            "Forest": 1173669,
+            "Barren": 1813790,
+            "Others": 93901,
+            "Fallow": 308713,
+            "Cropped": 9801516
+        },
+        "2009": {
+            "Forest": 1173669,
+            "Barren": 1820274,
+            "Others": 92121,
+            "Fallow": 342242,
+            "Cropped": 9530276
+        },
+        "2010": {
+            "Forest": 1173669,
+            "Barren": 1839970,
+            "Others": 86808,
+            "Fallow": 602444,
+            "Cropped": 8832348
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 1173669,
+            "Barren": 1834325,
+            "Others": 76367,
+            "Fallow": 394850,
+            "Cropped": 9458675
+        },
+        "2013": {
+            "Forest": 1173669,
+            "Barren": 1845770,
+            "Others": 69428,
+            "Fallow": 361520,
+            "Cropped": 9618451
+        },
+        "2014": {
+            "Forest": 1173669,
+            "Barren": 1853105,
+            "Others": 68774,
+            "Fallow": 350179,
+            "Cropped": 9689920
+        },
+        "2015": {
+            "Forest": 1173669,
+            "Barren": 1860161,
+            "Others": 68139,
+            "Fallow": 338756,
+            "Cropped": 9881354
+        },
+        "2016": {
+            "Forest": 1175161,
+            "Barren": 1873991,
+            "Others": 66756,
+            "Fallow": 322448,
+            "Cropped": 9618250
+        },
+        "2017": {
+            "Forest": 1175161,
+            "Barren": 1882185,
+            "Others": 64157,
+            "Fallow": 315278,
+            "Cropped": 9945032
+        },
+        "2018": {
+            "Forest": 1175161,
+            "Barren": 1892182,
+            "Others": 61898,
+            "Fallow": 306615,
+            "Cropped": 9959546
+        },
+        "2019": {
+            "Forest": 1175161,
+            "Barren": 1898633,
+            "Others": 55573,
+            "Fallow": 304986,
+            "Cropped": 10099923
+        },
+        "2020": {
+            "Forest": 1175161,
+            "Barren": 1905375,
+            "Others": 55998,
+            "Fallow": 265329,
+            "Cropped": 10207279
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "27": {
+        "2000": {
+            "Forest": 1932718,
+            "Barren": 2532151,
+            "Others": 444985,
+            "Fallow": 146875,
+            "Cropped": 4091699
+        },
+        "2001": {
+            "Forest": 1932718,
+            "Barren": 2533319,
+            "Others": 445255,
+            "Fallow": 164249,
+            "Cropped": 3983640
+        },
+        "2002": {
+            "Forest": 1932718,
+            "Barren": 2533382,
+            "Others": 445255,
+            "Fallow": 185656,
+            "Cropped": 3958065
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 63613,
+            "Others": 120303,
+            "Fallow": 109094,
+            "Cropped": 254000
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 1954012,
+            "Barren": 2511977,
+            "Others": 445255,
+            "Fallow": 185782,
+            "Cropped": 3949040
+        },
+        "2006": {
+            "Forest": 1954012,
+            "Barren": 2511977,
+            "Others": 445255,
+            "Fallow": 185782,
+            "Cropped": 3763284
+        },
+        "2007": {
+            "Forest": 1853260,
+            "Barren": 2625545,
+            "Others": 432439,
+            "Fallow": 185782,
+            "Cropped": 3838732
+        },
+        "2008": {
+            "Forest": 1853260,
+            "Barren": 2625545,
+            "Others": 432439,
+            "Fallow": 128318,
+            "Cropped": 3998826
+        },
+        "2009": {
+            "Forest": 1853260,
+            "Barren": 2625545,
+            "Others": 432439,
+            "Fallow": 128164,
+            "Cropped": 4099462
+        },
+        "2010": {
+            "Forest": 1853260,
+            "Barren": 2625545,
+            "Others": 432439,
+            "Fallow": 128164,
+            "Cropped": 4159525
+        },
+        "2011": {
+            "Forest": 1853260,
+            "Barren": 2620445,
+            "Others": 433539,
+            "Fallow": 132164,
+            "Cropped": 4174023
+        },
+        "2012": {
+            "Forest": 1855165,
+            "Barren": 2459320,
+            "Others": 546263,
+            "Fallow": 174526,
+            "Cropped": 4075871
+        },
+        "2013": {
+            "Forest": 1852676,
+            "Barren": 2465913,
+            "Others": 533820,
+            "Fallow": 171882,
+            "Cropped": 4099561
+        },
+        "2014": {
+            "Forest": 1852676,
+            "Barren": 2460317,
+            "Others": 528757,
+            "Fallow": 174726,
+            "Cropped": 4082594
+        },
+        "2015": {
+            "Forest": 1852676,
+            "Barren": 2481525,
+            "Others": 525730,
+            "Fallow": 182397,
+            "Cropped": 4059934
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 61979,
+            "Others": 113489,
+            "Fallow": 95673,
+            "Cropped": 313200
+        },
+        "2017": {
+            "Forest": 1852694,
+            "Barren": 2509166,
+            "Others": 560694,
+            "Fallow": 198716,
+            "Cropped": 4045496
+        },
+        "2018": {
+            "Forest": 1852695,
+            "Barren": 2514657,
+            "Others": 553575,
+            "Fallow": 199407,
+            "Cropped": 4004462
+        },
+        "2019": {
+            "Forest": 1852695,
+            "Barren": 2522129,
+            "Others": 553004,
+            "Fallow": 216505,
+            "Cropped": 3974812
+        },
+        "2020": {
+            "Forest": 1828936,
+            "Barren": 2532890,
+            "Others": 537139,
+            "Fallow": 208452,
+            "Cropped": 3888368
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "28": {
+        "2000": {
+            "Forest": 8655004,
+            "Barren": 3237341,
+            "Others": 2805563,
+            "Fallow": 1393939,
+            "Cropped": 17870415
+        },
+        "2001": {
+            "Forest": 8682798,
+            "Barren": 3255409,
+            "Others": 2717675,
+            "Fallow": 1240606,
+            "Cropped": 19043756
+        },
+        "2002": {
+            "Forest": 8680951,
+            "Barren": 3307325,
+            "Others": 2627373,
+            "Fallow": 1622356,
+            "Cropped": 18078221
+        },
+        "2003": {
+            "Forest": 8683140,
+            "Barren": 3350413,
+            "Others": 2556882,
+            "Fallow": 1219886,
+            "Cropped": 19788168
+        },
+        "2004": {
+            "Forest": 8688481,
+            "Barren": 3364098,
+            "Others": 2536245,
+            "Fallow": 1191862,
+            "Cropped": 20202639
+        },
+        "2005": {
+            "Forest": 8691548,
+            "Barren": 3388579,
+            "Others": 2519323,
+            "Fallow": 1185336,
+            "Cropped": 19607592
+        },
+        "2006": {
+            "Forest": 8698529,
+            "Barren": 3397273,
+            "Others": 2543760,
+            "Fallow": 1380829,
+            "Cropped": 20113059
+        },
+        "2007": {
+            "Forest": 8702552,
+            "Barren": 3391789,
+            "Others": 2540750,
+            "Fallow": 1433490,
+            "Cropped": 20416071
+        },
+        "2008": {
+            "Forest": 8678297,
+            "Barren": 3329006,
+            "Others": 2423525,
+            "Fallow": 1196150,
+            "Cropped": 20052655
+        },
+        "2009": {
+            "Forest": 8688874,
+            "Barren": 3431507,
+            "Others": 2508423,
+            "Fallow": 1155374,
+            "Cropped": 21411401
+        },
+        "2010": {
+            "Forest": 8697030,
+            "Barren": 3423872,
+            "Others": 2444323,
+            "Fallow": 1071525,
+            "Cropped": 22045593
+        },
+        "2011": {
+            "Forest": 8690636,
+            "Barren": 3460175,
+            "Others": 2410401,
+            "Fallow": 958255,
+            "Cropped": 22516389
+        },
+        "2012": {
+            "Forest": 8692762,
+            "Barren": 3513236,
+            "Others": 2330720,
+            "Fallow": 867445,
+            "Cropped": 23129786
+        },
+        "2013": {
+            "Forest": 8690816,
+            "Barren": 3507275,
+            "Others": 2318537,
+            "Fallow": 817618,
+            "Cropped": 24047027
+        },
+        "2014": {
+            "Forest": 8694248,
+            "Barren": 3506454,
+            "Others": 2333046,
+            "Fallow": 871304,
+            "Cropped": 23810058
+        },
+        "2015": {
+            "Forest": 8692367,
+            "Barren": 3510800,
+            "Others": 2336023,
+            "Fallow": 1067720,
+            "Cropped": 23580256
+        },
+        "2016": {
+            "Forest": 8692234,
+            "Barren": 3526771,
+            "Others": 2328146,
+            "Fallow": 981148,
+            "Cropped": 24214048
+        },
+        "2017": {
+            "Forest": 8707582,
+            "Barren": 3504289,
+            "Others": 2324625,
+            "Fallow": 1029120,
+            "Cropped": 25114040
+        },
+        "2018": {
+            "Forest": 8700312,
+            "Barren": 3619085,
+            "Others": 2271467,
+            "Fallow": 960372,
+            "Cropped": 26115071
+        },
+        "2019": {
+            "Forest": 8704371,
+            "Barren": 3528705,
+            "Others": 2232245,
+            "Fallow": 775006,
+            "Cropped": 28276598
+        },
+        "2020": {
+            "Forest": 8708371,
+            "Barren": 3393581,
+            "Others": 2094584,
+            "Fallow": 760185,
+            "Cropped": 29902772
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "29": {
+        "2000": {
+            "Forest": 862930,
+            "Barren": 65890,
+            "Others": 190210,
+            "Fallow": 169935,
+            "Cropped": 336245
+        },
+        "2001": {
+            "Forest": 862930,
+            "Barren": 66690,
+            "Others": 184430,
+            "Fallow": 161015,
+            "Cropped": 377602
+        },
+        "2002": {
+            "Forest": 862930,
+            "Barren": 66878,
+            "Others": 183905,
+            "Fallow": 160678,
+            "Cropped": 369730
+        },
+        "2003": {
+            "Forest": 862930,
+            "Barren": 74893,
+            "Others": 179350,
+            "Fallow": 160223,
+            "Cropped": 369927
+        },
+        "2004": {
+            "Forest": 862930,
+            "Barren": 76129,
+            "Others": 178370,
+            "Fallow": 157412,
+            "Cropped": 380256
+        },
+        "2005": {
+            "Forest": 862930,
+            "Barren": 75444,
+            "Others": 176784,
+            "Fallow": 157847,
+            "Cropped": 386796
+        },
+        "2006": {
+            "Forest": 862930,
+            "Barren": 74656,
+            "Others": 177074,
+            "Fallow": 158159,
+            "Cropped": 405842
+        },
+        "2007": {
+            "Forest": 862930,
+            "Barren": 77559,
+            "Others": 174826,
+            "Fallow": 186454,
+            "Cropped": 399878
+        },
+        "2008": {
+            "Forest": 862930,
+            "Barren": 98174,
+            "Others": 180764,
+            "Fallow": 162892,
+            "Cropped": 401791
+        },
+        "2009": {
+            "Forest": 862930,
+            "Barren": 89168,
+            "Others": 149581,
+            "Fallow": 160293,
+            "Cropped": 486406
+        },
+        "2010": {
+            "Forest": 862930,
+            "Barren": 89470,
+            "Others": 155430,
+            "Fallow": 154943,
+            "Cropped": 452471
+        },
+        "2011": {
+            "Forest": 862930,
+            "Barren": 95159,
+            "Others": 159365,
+            "Fallow": 147400,
+            "Cropped": 474339
+        },
+        "2012": {
+            "Forest": 862930,
+            "Barren": 95179,
+            "Others": 163942,
+            "Fallow": 149520,
+            "Cropped": 488522
+        },
+        "2013": {
+            "Forest": 862930,
+            "Barren": 95358,
+            "Others": 163167,
+            "Fallow": 149607,
+            "Cropped": 499311
+        },
+        "2014": {
+            "Forest": 862930,
+            "Barren": 95378,
+            "Others": 160638,
+            "Fallow": 149342,
+            "Cropped": 500073
+        },
+        "2015": {
+            "Forest": 862930,
+            "Barren": 95446,
+            "Others": 160842,
+            "Fallow": 149794,
+            "Cropped": 503743
+        },
+        "2016": {
+            "Forest": 862930,
+            "Barren": 95491,
+            "Others": 156131,
+            "Fallow": 153078,
+            "Cropped": 521316
+        },
+        "2017": {
+            "Forest": 862930,
+            "Barren": 95530,
+            "Others": 156141,
+            "Fallow": 153188,
+            "Cropped": 530102
+        },
+        "2018": {
+            "Forest": 862930,
+            "Barren": 112109,
+            "Others": 134919,
+            "Fallow": 159558,
+            "Cropped": 528994
+        },
+        "2019": {
+            "Forest": 862930,
+            "Barren": 115160,
+            "Others": 132530,
+            "Fallow": 159533,
+            "Cropped": 529589
+        },
+        "2020": {
+            "Forest": 862930,
+            "Barren": 118203,
+            "Others": 128735,
+            "Fallow": 158850,
+            "Cropped": 532020
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "30": {
+        "2000": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 57302,
+            "Fallow": 0,
+            "Cropped": 171356
+        },
+        "2001": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 57302,
+            "Fallow": 0,
+            "Cropped": 168128
+        },
+        "2002": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 57043,
+            "Fallow": 0,
+            "Cropped": 163846
+        },
+        "2003": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 57043,
+            "Fallow": 0,
+            "Cropped": 168634
+        },
+        "2004": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 56820,
+            "Fallow": 8072,
+            "Cropped": 169200
+        },
+        "2005": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54600,
+            "Fallow": 7122,
+            "Cropped": 170327
+        },
+        "2006": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54714,
+            "Fallow": 6750,
+            "Cropped": 172108
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 9484,
+            "Cropped": 165953
+        },
+        "2009": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 12498,
+            "Cropped": 160320
+        },
+        "2010": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 13065,
+            "Cropped": 159916
+        },
+        "2011": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 12263,
+            "Cropped": 163992
+        },
+        "2012": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 12200,
+            "Cropped": 162505
+        },
+        "2013": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 14879,
+            "Cropped": 157852
+        },
+        "2014": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 14842,
+            "Cropped": 157702
+        },
+        "2015": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 13976,
+            "Cropped": 157332
+        },
+        "2016": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 13947,
+            "Cropped": 154720
+        },
+        "2017": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 14954,
+            "Cropped": 151957
+        },
+        "2018": {
+            "Forest": 125473,
+            "Barren": 37137,
+            "Others": 54418,
+            "Fallow": 16393,
+            "Cropped": 149848
+        },
+        "2019": {
+            "Forest": 125473,
+            "Barren": 93827,
+            "Others": 6666,
+            "Fallow": 8475,
+            "Cropped": 146540
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "31": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "32": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 2239481,
+            "Barren": 1322625,
+            "Others": 527028,
+            "Fallow": 2358995,
+            "Cropped": 1836176
+        },
+        "2002": {
+            "Forest": 2239481,
+            "Barren": 1322625,
+            "Others": 527028,
+            "Fallow": 2344995,
+            "Cropped": 1807322
+        },
+        "2003": {
+            "Forest": 2239481,
+            "Barren": 1322625,
+            "Others": 527028,
+            "Fallow": 2315466,
+            "Cropped": 1749675
+        },
+        "2004": {
+            "Forest": 2239481,
+            "Barren": 1319021,
+            "Others": 525975,
+            "Fallow": 2409676,
+            "Cropped": 1637009
+        },
+        "2005": {
+            "Forest": 2239481,
+            "Barren": 1321421,
+            "Others": 525975,
+            "Fallow": 2477338,
+            "Cropped": 1548319
+        },
+        "2006": {
+            "Forest": 2151670,
+            "Barren": 1251297,
+            "Others": 516898,
+            "Fallow": 2224829,
+            "Cropped": 1562618
+        },
+        "2007": {
+            "Forest": 2239481,
+            "Barren": 1318593,
+            "Others": 535539,
+            "Fallow": 2340697,
+            "Cropped": 1675255
+        },
+        "2008": {
+            "Forest": 1103036,
+            "Barren": 1121757,
+            "Others": 1706187,
+            "Fallow": 79169,
+            "Cropped": 946127
+        },
+        "2009": {
+            "Forest": 2239481,
+            "Barren": 1332421,
+            "Others": 538912,
+            "Fallow": 2608895,
+            "Cropped": 1399235
+        },
+        "2010": {
+            "Forest": 2239481,
+            "Barren": 1332421,
+            "Others": 538912,
+            "Fallow": 2773895,
+            "Cropped": 1249163
+        },
+        "2011": {
+            "Forest": 2239481,
+            "Barren": 1338982,
+            "Others": 563537,
+            "Fallow": 2578174,
+            "Cropped": 1430386
+        },
+        "2012": {
+            "Forest": 2239481,
+            "Barren": 1281426,
+            "Others": 564841,
+            "Fallow": 2478342,
+            "Cropped": 1657035
+        },
+        "2013": {
+            "Forest": 2239481,
+            "Barren": 1273797,
+            "Others": 564940,
+            "Fallow": 2508272,
+            "Cropped": 1671887
+        },
+        "2014": {
+            "Forest": 2239481,
+            "Barren": 1273797,
+            "Others": 564940,
+            "Fallow": 2507342,
+            "Cropped": 1553691
+        },
+        "2015": {
+            "Forest": 2239481,
+            "Barren": 1301904,
+            "Others": 578535,
+            "Fallow": 2464561,
+            "Cropped": 1811552
+        },
+        "2016": {
+            "Forest": 2239481,
+            "Barren": 1252962,
+            "Others": 564548,
+            "Fallow": 2461823,
+            "Cropped": 2044966
+        },
+        "2017": {
+            "Forest": 2239481,
+            "Barren": 1280882,
+            "Others": 616169,
+            "Fallow": 2389740,
+            "Cropped": 2032878
+        },
+        "2018": {
+            "Forest": 2239481,
+            "Barren": 1284553,
+            "Others": 652616,
+            "Fallow": 2512858,
+            "Cropped": 1824468
+        },
+        "2019": {
+            "Forest": 2239481,
+            "Barren": 1319918,
+            "Others": 642814,
+            "Fallow": 2476429,
+            "Cropped": 1759601
+        },
+        "2020": {
+            "Forest": 2239481,
+            "Barren": 1279611,
+            "Others": 662571,
+            "Fallow": 2459927,
+            "Cropped": 1803092
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "33": {
+        "2000": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2001": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2002": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2003": {
+            "Forest": 2660600,
+            "Barren": 4259109,
+            "Others": 6269106,
+            "Fallow": 3682903,
+            "Cropped": 21664038
+        },
+        "2004": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2005": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2006": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2008": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2009": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2010": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2015": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2016": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2017": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2018": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2019": {
+            "Forest": 2769790,
+            "Barren": 4378847,
+            "Others": 5412194,
+            "Fallow": 3697764,
+            "Cropped": 27515432
+        },
+        "2020": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "34": {
+        "2000": {
+            "Forest": 2133617,
+            "Barren": 2461712,
+            "Others": 730409,
+            "Fallow": 2362290,
+            "Cropped": 6338109
+        },
+        "2001": {
+            "Forest": 2131726,
+            "Barren": 2475677,
+            "Others": 776632,
+            "Fallow": 2434795,
+            "Cropped": 6226457
+        },
+        "2002": {
+            "Forest": 2131604,
+            "Barren": 2490262,
+            "Others": 785198,
+            "Fallow": 2993927,
+            "Cropped": 5191108
+        },
+        "2003": {
+            "Forest": 2122041,
+            "Barren": 2622731,
+            "Others": 775893,
+            "Fallow": 2816824,
+            "Cropped": 5316027
+        },
+        "2004": {
+            "Forest": 2122069,
+            "Barren": 2633839,
+            "Others": 777661,
+            "Fallow": 2396065,
+            "Cropped": 5889069
+        },
+        "2005": {
+            "Forest": 2110703,
+            "Barren": 2641934,
+            "Others": 753321,
+            "Fallow": 2276848,
+            "Cropped": 6032718
+        },
+        "2006": {
+            "Forest": 2106113,
+            "Barren": 2662185,
+            "Others": 732628,
+            "Fallow": 2399647,
+            "Cropped": 5842790
+        },
+        "2007": {
+            "Forest": 2105818,
+            "Barren": 2661424,
+            "Others": 718041,
+            "Fallow": 2479443,
+            "Cropped": 5815174
+        },
+        "2008": {
+            "Forest": 2105906,
+            "Barren": 2664505,
+            "Others": 702415,
+            "Fallow": 2510923,
+            "Cropped": 5824248
+        },
+        "2009": {
+            "Forest": 2126672,
+            "Barren": 2665943,
+            "Others": 689197,
+            "Fallow": 2659118,
+            "Cropped": 5571718
+        },
+        "2010": {
+            "Forest": 2125475,
+            "Barren": 2666287,
+            "Others": 692586,
+            "Fallow": 2595110,
+            "Cropped": 5752664
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 2125475,
+            "Barren": 2672415,
+            "Others": 687138,
+            "Fallow": 3003848,
+            "Cropped": 5139832
+        },
+        "2013": {
+            "Forest": 2125475,
+            "Barren": 2678336,
+            "Others": 682571,
+            "Fallow": 2832872,
+            "Cropped": 5897472
+        },
+        "2014": {
+            "Forest": 2125475,
+            "Barren": 2687896,
+            "Others": 668817,
+            "Fallow": 2731910,
+            "Cropped": 5994501
+        },
+        "2015": {
+            "Forest": 2156574,
+            "Barren": 2658399,
+            "Others": 667189,
+            "Fallow": 2718272,
+            "Cropped": 6074160
+        },
+        "2016": {
+            "Forest": 2156574,
+            "Barren": 2658976,
+            "Others": 662150,
+            "Fallow": 3208392,
+            "Cropped": 5128642
+        },
+        "2017": {
+            "Forest": 2156574,
+            "Barren": 2659129,
+            "Others": 653996,
+            "Fallow": 2924856,
+            "Cropped": 5729576
+        },
+        "2018": {
+            "Forest": 2156574,
+            "Barren": 2659615,
+            "Others": 656750,
+            "Fallow": 2977755,
+            "Cropped": 5672086
+        },
+        "2019": {
+            "Forest": 2156574,
+            "Barren": 2660505,
+            "Others": 651118,
+            "Fallow": 2826622,
+            "Cropped": 5942134
+        },
+        "2020": {
+            "Forest": 2156574,
+            "Barren": 2662486,
+            "Others": 623004,
+            "Fallow": 2757756,
+            "Cropped": 6155731
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "35": {
+        "2000": {
+            "Forest": 1865300,
+            "Barren": 3741600,
+            "Others": 2839600,
+            "Fallow": 932000,
+            "Cropped": 10497400
+        },
+        "2001": {
+            "Forest": 1865500,
+            "Barren": 3739000,
+            "Others": 2841800,
+            "Fallow": 743800,
+            "Cropped": 10791000
+        },
+        "2002": {
+            "Forest": 1853500,
+            "Barren": 3753000,
+            "Others": 2839000,
+            "Fallow": 941200,
+            "Cropped": 10630700
+        },
+        "2003": {
+            "Forest": 1853600,
+            "Barren": 3752700,
+            "Others": 2831000,
+            "Fallow": 579300,
+            "Cropped": 11421000
+        },
+        "2004": {
+            "Forest": 1853600,
+            "Barren": 3754200,
+            "Others": 2831000,
+            "Fallow": 682400,
+            "Cropped": 11256900
+        },
+        "2005": {
+            "Forest": 1860500,
+            "Barren": 3748000,
+            "Others": 2827700,
+            "Fallow": 709600,
+            "Cropped": 11494700
+        },
+        "2006": {
+            "Forest": 1833400,
+            "Barren": 3758200,
+            "Others": 2831800,
+            "Fallow": 641900,
+            "Cropped": 11807400
+        },
+        "2007": {
+            "Forest": 0,
+            "Barren": 3722600,
+            "Others": 2815000,
+            "Fallow": 528600,
+            "Cropped": 12211400
+        },
+        "2008": {
+            "Forest": 1895632,
+            "Barren": 3705719,
+            "Others": 2809183,
+            "Fallow": 478082,
+            "Cropped": 12319727
+        },
+        "2009": {
+            "Forest": 1896241,
+            "Barren": 3606006,
+            "Others": 2938545,
+            "Fallow": 523841,
+            "Cropped": 12350664
+        },
+        "2010": {
+            "Forest": 1834113,
+            "Barren": 3559303,
+            "Others": 2808533,
+            "Fallow": 499239,
+            "Cropped": 12702536
+        },
+        "2011": {
+            "Forest": 1853413,
+            "Barren": 3531805,
+            "Others": 2764544,
+            "Fallow": 546230,
+            "Cropped": 12835554
+        },
+        "2012": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2013": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2014": {
+            "Forest": 2148515,
+            "Barren": 3774096,
+            "Others": 2887745,
+            "Fallow": 381482,
+            "Cropped": 12680090
+        },
+        "2015": {
+            "Forest": 2105583,
+            "Barren": 3471807,
+            "Others": 2765617,
+            "Fallow": 697485,
+            "Cropped": 12589723
+        },
+        "2016": {
+            "Forest": 2108758,
+            "Barren": 3449678,
+            "Others": 2740556,
+            "Fallow": 625235,
+            "Cropped": 12949351
+        },
+        "2017": {
+            "Forest": 2121361,
+            "Barren": 3471214,
+            "Others": 2732387,
+            "Fallow": 593773,
+            "Cropped": 13108020
+        },
+        "2018": {
+            "Forest": 2117653,
+            "Barren": 3492461,
+            "Others": 2710942,
+            "Fallow": 1099573,
+            "Cropped": 12233004
+        },
+        "2019": {
+            "Forest": 2118841,
+            "Barren": 3496426,
+            "Others": 2711527,
+            "Fallow": 696590,
+            "Cropped": 13815653
+        },
+        "2020": {
+            "Forest": 2051121,
+            "Barren": 3510298,
+            "Others": 2674498,
+            "Fallow": 752014,
+            "Cropped": 14722236
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    },
+    "36": {
+        "2000": {
+            "Forest": 280224,
+            "Barren": 436958,
+            "Others": 21931,
+            "Fallow": 43637,
+            "Cropped": 7940676
+        },
+        "2001": {
+            "Forest": 305566,
+            "Barren": 434133,
+            "Others": 13410,
+            "Fallow": 25650,
+            "Cropped": 7941414
+        },
+        "2002": {
+            "Forest": 273663,
+            "Barren": 457590,
+            "Others": 17535,
+            "Fallow": 82778,
+            "Cropped": 7772641
+        },
+        "2003": {
+            "Forest": 308461,
+            "Barren": 450873,
+            "Others": 16970,
+            "Fallow": 15961,
+            "Cropped": 7906822
+        },
+        "2004": {
+            "Forest": 299353,
+            "Barren": 483409,
+            "Others": 17015,
+            "Fallow": 33391,
+            "Cropped": 7930747
+        },
+        "2005": {
+            "Forest": 299531,
+            "Barren": 480393,
+            "Others": 18243,
+            "Fallow": 42518,
+            "Cropped": 7867522
+        },
+        "2006": {
+            "Forest": 298002,
+            "Barren": 504118,
+            "Others": 9984,
+            "Fallow": 36403,
+            "Cropped": 7860676
+        },
+        "2007": {
+            "Forest": 286541,
+            "Barren": 507128,
+            "Others": 10250,
+            "Fallow": 42168,
+            "Cropped": 7869691
+        },
+        "2008": {
+            "Forest": 295302,
+            "Barren": 515921,
+            "Others": 14836,
+            "Fallow": 37464,
+            "Cropped": 7912176
+        },
+        "2009": {
+            "Forest": 295061,
+            "Barren": 528013,
+            "Others": 10834,
+            "Fallow": 40392,
+            "Cropped": 7875435
+        },
+        "2010": {
+            "Forest": 293848,
+            "Barren": 532807,
+            "Others": 11643,
+            "Fallow": 36595,
+            "Cropped": 7883024
+        },
+        "2011": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2012": {
+            "Forest": 261929,
+            "Barren": 480113,
+            "Others": 76358,
+            "Fallow": 64186,
+            "Cropped": 7870135
+        },
+        "2013": {
+            "Forest": 258489,
+            "Barren": 550027,
+            "Others": 18616,
+            "Fallow": 60410,
+            "Cropped": 7847665
+        },
+        "2014": {
+            "Forest": 255638,
+            "Barren": 542131,
+            "Others": 27540,
+            "Fallow": 88566,
+            "Cropped": 7857322
+        },
+        "2015": {
+            "Forest": 255759,
+            "Barren": 527619,
+            "Others": 29743,
+            "Fallow": 82332,
+            "Cropped": 7871572
+        },
+        "2016": {
+            "Forest": 255408,
+            "Barren": 536283,
+            "Others": 26688,
+            "Fallow": 84219,
+            "Cropped": 7804364
+        },
+        "2017": {
+            "Forest": 253092,
+            "Barren": 540242,
+            "Others": 24695,
+            "Fallow": 91112,
+            "Cropped": 7778992
+        },
+        "2018": {
+            "Forest": 250285,
+            "Barren": 544983,
+            "Others": 27155,
+            "Fallow": 91451,
+            "Cropped": 7850691
+        },
+        "2019": {
+            "Forest": 245537,
+            "Barren": 545151,
+            "Others": 22315,
+            "Fallow": 93088,
+            "Cropped": 7837650
+        },
+        "2020": {
+            "Forest": 245333,
+            "Barren": 546457,
+            "Others": 22450,
+            "Fallow": 92910,
+            "Cropped": 7834721
+        },
+        "2021": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2022": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2023": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        },
+        "2024": {
+            "Forest": 0,
+            "Barren": 0,
+            "Others": 0,
+            "Fallow": 0,
+            "Cropped": 0
+        }
+    }
+}

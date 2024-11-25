@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages': ['geochart'],
+        // Load GeoChart with region information for India.
+        'mapsApiKey': 'AIzaSyDvQRBaUha_8IrC04CVjbXskJ0Y65g_AZ4' // Replace with your API key if required.
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'Value'],
+          ['Uttar Pradesh', 100],
+          ['Maharashtra', 200],
+          ['Bihar', 150],
+          ['West Bengal', 180],
+          ['Madhya Pradesh', 90],
+          ['Tamil Nadu', 300],
+          ['Karnataka', 250],
+          ['Rajasthan', 130],
+          ['Gujarat', 190],
+          ['Andhra Pradesh', 220]
+        ]);
+
+        var options = {
+          region: 'IN', // Focus on India
+          displayMode: 'regions',
+          resolution: 'provinces', // Show individual states
+          colorAxis: { 
+            colors: ['#FFDDC1', '#F38181', '#EAFFD0', '#A4DDED'] // Gradient of colors for different values
+          },
+          backgroundColor: '#FFFFFF', // Chart background
+          datalessRegionColor: '#F5F5F5', // States without data
+          defaultColor: '#F5F5F5'
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 600px;"></div>
+  </body>
+</html>

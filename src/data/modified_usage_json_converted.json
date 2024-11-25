@@ -1,0 +1,4574 @@
+{
+    "1": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0008
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0005,
+            "Industrial": 0.0005,
+            "Irrigation": 0.002
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0005,
+            "Industrial": 0.0005,
+            "Irrigation": 0.002
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0035,
+            "Industrial": 0.0035,
+            "Irrigation": 0.002
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.01,
+            "Industrial": 0.0002,
+            "Irrigation": 0.003
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.01,
+            "Industrial": 0.01,
+            "Irrigation": 0.02
+        },
+        "2023": {
+            "Domestic": 0.01,
+            "Industrial": 0.0003,
+            "Irrigation": 0.01
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "2": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.42,
+            "Industrial": 0.42,
+            "Irrigation": 3.01
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.445,
+            "Industrial": 0.445,
+            "Irrigation": 3.47
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.46,
+            "Industrial": 0.46,
+            "Irrigation": 3.81
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.435,
+            "Industrial": 0.435,
+            "Irrigation": 4.14
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.15,
+            "Industrial": 0.14,
+            "Irrigation": 5.28
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.21,
+            "Industrial": 0.15,
+            "Irrigation": 5.5
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.24,
+            "Industrial": 0.16,
+            "Irrigation": 5.83
+        },
+        "2023": {
+            "Domestic": 1.25,
+            "Industrial": 0.18,
+            "Irrigation": 5.96
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "3": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.00025,
+            "Industrial": 0.00025,
+            "Irrigation": 0.002
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.00035,
+            "Industrial": 0.00035,
+            "Irrigation": 0.0033
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.00035,
+            "Industrial": 0.00035,
+            "Irrigation": 0.0033
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0005,
+            "Industrial": 0.0005,
+            "Irrigation": 0.004
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.02,
+            "Industrial": 0.0002,
+            "Irrigation": 0.003
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.02,
+            "Industrial": 0.0002,
+            "Irrigation": 0.02
+        },
+        "2023": {
+            "Domestic": 0.02,
+            "Industrial": 0.0002,
+            "Irrigation": 0.017
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "4": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.695,
+            "Industrial": 0.695,
+            "Irrigation": 11.6
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.825,
+            "Industrial": 0.825,
+            "Irrigation": 12.86
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.855,
+            "Industrial": 0.855,
+            "Irrigation": 13.13
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.96,
+            "Industrial": 0.96,
+            "Irrigation": 13.79
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.92,
+            "Industrial": 0.0,
+            "Irrigation": 14.85
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 2.14,
+            "Industrial": 0.13,
+            "Irrigation": 14.37
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 2.23,
+            "Industrial": 0.14,
+            "Irrigation": 14.18
+        },
+        "2023": {
+            "Domestic": 2.31,
+            "Industrial": 0.13,
+            "Irrigation": 14.3
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "5": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.685,
+            "Industrial": 0.685,
+            "Irrigation": 9.39
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.78,
+            "Industrial": 0.78,
+            "Irrigation": 9.79
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.85,
+            "Industrial": 0.85,
+            "Irrigation": 10.25
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 1.185,
+            "Industrial": 1.185,
+            "Irrigation": 10.36
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.83,
+            "Industrial": 0.66,
+            "Irrigation": 10.78
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 2.04,
+            "Industrial": 0.65,
+            "Irrigation": 10.33
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 3.14,
+            "Industrial": 0.35,
+            "Irrigation": 10.01
+        },
+        "2023": {
+            "Domestic": 3.26,
+            "Industrial": 0.37,
+            "Irrigation": 10.13
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "6": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.38,
+            "Industrial": 0.38,
+            "Irrigation": 7.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.0,
+            "Industrial": 0.0,
+            "Irrigation": 7.09
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.73,
+            "Industrial": 0.14,
+            "Irrigation": 7.13
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.596,
+            "Industrial": 0.154,
+            "Irrigation": 7.257
+        },
+        "2023": {
+            "Domestic": 0.49,
+            "Industrial": 0.35,
+            "Irrigation": 7.24
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "7": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.121
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0145,
+            "Industrial": 0.0145,
+            "Irrigation": 0.121
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0145,
+            "Industrial": 0.0145,
+            "Irrigation": 0.124
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0145,
+            "Industrial": 0.0145,
+            "Irrigation": 0.139
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.04,
+            "Industrial": 0.0,
+            "Irrigation": 0.11
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.05,
+            "Industrial": 0.01,
+            "Irrigation": 0.1
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.05,
+            "Industrial": 0.01,
+            "Irrigation": 0.08
+        },
+        "2023": {
+            "Domestic": 0.05,
+            "Industrial": 0.01,
+            "Irrigation": 0.07
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "8": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.001,
+            "Industrial": 0.001,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0013,
+            "Industrial": 0.0013,
+            "Irrigation": 0.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.00115,
+            "Industrial": 0.00115,
+            "Irrigation": 0.0
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.001185,
+            "Industrial": 0.001185,
+            "Irrigation": 0.124
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.002,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.003,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2023": {
+            "Domestic": 0.003,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "9": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.02,
+            "Industrial": 0.0002,
+            "Irrigation": 0.001
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.03,
+            "Industrial": 0.0002,
+            "Irrigation": 0.00037
+        },
+        "2023": {
+            "Domestic": 0.03,
+            "Industrial": 0.0002,
+            "Irrigation": 0.0
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "10": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.55,
+            "Industrial": 0.55,
+            "Irrigation": 1.82
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.75,
+            "Industrial": 0.75,
+            "Irrigation": 1.3
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.765,
+            "Industrial": 0.765,
+            "Irrigation": 1.3
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.725,
+            "Industrial": 0.725,
+            "Irrigation": 1.18
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.44,
+            "Industrial": 0.01,
+            "Irrigation": 1.22
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.47,
+            "Industrial": 0.01,
+            "Irrigation": 1.16
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.55,
+            "Industrial": 0.01,
+            "Irrigation": 1.17
+        },
+        "2023": {
+            "Domestic": 1.59,
+            "Industrial": 0.01,
+            "Irrigation": 1.12
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "11": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.005,
+            "Industrial": 0.005,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.005,
+            "Industrial": 0.005,
+            "Irrigation": 0.0006
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.006,
+            "Industrial": 0.006,
+            "Irrigation": 0.001
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.00175,
+            "Industrial": 0.00175,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.01,
+            "Industrial": 0.001,
+            "Irrigation": 0.0001
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.0065,
+            "Industrial": 0.001,
+            "Irrigation": 0.0001
+        },
+        "2023": {
+            "Domestic": 0.007,
+            "Industrial": 0.001,
+            "Irrigation": 0.0001
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "12": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.425,
+            "Industrial": 0.425,
+            "Irrigation": 14.24
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.52,
+            "Industrial": 0.52,
+            "Irrigation": 15.91
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.515,
+            "Industrial": 0.515,
+            "Irrigation": 16.15
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.57,
+            "Industrial": 0.57,
+            "Irrigation": 15.93
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.22,
+            "Industrial": 0.003,
+            "Irrigation": 15.1
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.34,
+            "Industrial": 0.003,
+            "Irrigation": 15.29
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.35,
+            "Industrial": 0.003,
+            "Irrigation": 15.29
+        },
+        "2023": {
+            "Domestic": 1.36,
+            "Industrial": 0.03,
+            "Irrigation": 15.28
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "13": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 1.71,
+            "Industrial": 1.71,
+            "Irrigation": 45.36
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 1.745,
+            "Industrial": 1.745,
+            "Irrigation": 46.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 2.02,
+            "Industrial": 2.02,
+            "Irrigation": 48.74
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 2.205,
+            "Industrial": 2.205,
+            "Irrigation": 48.35
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 4.95,
+            "Industrial": 0.0,
+            "Irrigation": 40.89
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 4.74,
+            "Industrial": 0.0,
+            "Irrigation": 41.29
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 5.01,
+            "Industrial": 0.41,
+            "Irrigation": 40.72
+        },
+        "2023": {
+            "Domestic": 5.04,
+            "Industrial": 0.44,
+            "Irrigation": 40.92
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "14": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0002,
+            "Industrial": 0.0002,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0002,
+            "Industrial": 0.0002,
+            "Irrigation": 0.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0005,
+            "Industrial": 0.0005,
+            "Irrigation": 0.0
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.00052,
+            "Industrial": 0.00052,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2023": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "15": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.025,
+            "Industrial": 0.025,
+            "Irrigation": 1.34
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 1.01
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 1.1
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.075,
+            "Industrial": 0.075,
+            "Irrigation": 0.84
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.22,
+            "Industrial": 0.13,
+            "Irrigation": 1.3
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.15,
+            "Industrial": 0.09,
+            "Irrigation": 0.63
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.15,
+            "Industrial": 0.12,
+            "Irrigation": 0.63
+        },
+        "2023": {
+            "Domestic": 0.17,
+            "Industrial": 0.12,
+            "Irrigation": 0.67
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "16": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.51,
+            "Industrial": 0.51,
+            "Irrigation": 13.88
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.77,
+            "Industrial": 0.77,
+            "Irrigation": 12.61
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.665,
+            "Industrial": 0.665,
+            "Irrigation": 13.18
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.405,
+            "Industrial": 0.405,
+            "Irrigation": 7.29
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.9,
+            "Industrial": 0.14,
+            "Irrigation": 7.85
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.88,
+            "Industrial": 0.15,
+            "Irrigation": 6.6
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.83,
+            "Industrial": 0.16,
+            "Irrigation": 6.46
+        },
+        "2023": {
+            "Domestic": 0.9,
+            "Industrial": 0.14,
+            "Irrigation": 6.44
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "17": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.175,
+            "Industrial": 0.175,
+            "Irrigation": 9.1
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.36,
+            "Industrial": 0.36,
+            "Irrigation": 11.71
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.355,
+            "Industrial": 0.355,
+            "Irrigation": 12.35
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.3,
+            "Industrial": 0.3,
+            "Irrigation": 13.32
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.63,
+            "Industrial": 0.34,
+            "Irrigation": 11.53
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.62,
+            "Industrial": 0.53,
+            "Irrigation": 10.47
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.65,
+            "Industrial": 0.6,
+            "Irrigation": 10.3
+        },
+        "2023": {
+            "Domestic": 0.62,
+            "Industrial": 0.62,
+            "Irrigation": 10.55
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "18": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0035,
+            "Industrial": 0.0035,
+            "Irrigation": 0.001
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0035,
+            "Industrial": 0.0035,
+            "Irrigation": 0.001
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.003,
+            "Industrial": 0.003,
+            "Irrigation": 0.007
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0065,
+            "Industrial": 0.0065,
+            "Irrigation": 0.008
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.01
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.02,
+            "Industrial": 0.01,
+            "Irrigation": 0.01
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.01,
+            "Industrial": 0.09,
+            "Irrigation": 0.01
+        },
+        "2023": {
+            "Domestic": 0.01,
+            "Industrial": 0.09,
+            "Irrigation": 0.01
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "19": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.01,
+            "Industrial": 0.01,
+            "Irrigation": 0.09
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.04,
+            "Industrial": 0.04,
+            "Irrigation": 0.23
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.065,
+            "Industrial": 0.065,
+            "Irrigation": 0.25
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.055,
+            "Industrial": 0.055,
+            "Irrigation": 0.16
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.19,
+            "Industrial": 0.0,
+            "Irrigation": 0.2
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.1,
+            "Industrial": 0.05,
+            "Irrigation": 0.2
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.12,
+            "Industrial": 0.05,
+            "Irrigation": 0.18
+        },
+        "2023": {
+            "Domestic": 0.12,
+            "Industrial": 0.05,
+            "Irrigation": 0.18
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "20": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.485,
+            "Industrial": 0.485,
+            "Irrigation": 9.75
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.5,
+            "Industrial": 0.5,
+            "Irrigation": 9.01
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.41,
+            "Industrial": 0.41,
+            "Irrigation": 8.59
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.495,
+            "Industrial": 0.495,
+            "Irrigation": 8.76
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.95,
+            "Industrial": 0.0,
+            "Irrigation": 9.39
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.03,
+            "Industrial": 0.0,
+            "Irrigation": 9.6
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.09,
+            "Industrial": 0.13,
+            "Irrigation": 10.01
+        },
+        "2023": {
+            "Domestic": 1.1,
+            "Industrial": 0.13,
+            "Irrigation": 10.09
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "21": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.12,
+            "Industrial": 0.12,
+            "Irrigation": 0.1
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.29,
+            "Industrial": 0.29,
+            "Irrigation": 0.15
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.305,
+            "Industrial": 0.305,
+            "Irrigation": 0.2
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.49,
+            "Industrial": 0.49,
+            "Irrigation": 0.2
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.5,
+            "Industrial": 0.07,
+            "Irrigation": 0.2
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.56,
+            "Industrial": 0.13,
+            "Irrigation": 0.2
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.71,
+            "Industrial": 0.05,
+            "Irrigation": 0.31
+        },
+        "2023": {
+            "Domestic": 0.71,
+            "Industrial": 0.05,
+            "Irrigation": 0.32
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "22": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.24,
+            "Industrial": 0.24,
+            "Irrigation": 2.31
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.26,
+            "Industrial": 0.26,
+            "Irrigation": 3.08
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.31,
+            "Industrial": 0.31,
+            "Irrigation": 3.43
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.32,
+            "Industrial": 0.32,
+            "Irrigation": 3.76
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.67,
+            "Industrial": 0.05,
+            "Irrigation": 3.98
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.71,
+            "Industrial": 0.1,
+            "Irrigation": 4.53
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.73,
+            "Industrial": 0.11,
+            "Irrigation": 4.62
+        },
+        "2023": {
+            "Domestic": 0.75,
+            "Industrial": 0.13,
+            "Irrigation": 4.87
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "23": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.001,
+            "Industrial": 0.001,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0001,
+            "Industrial": 0.0001,
+            "Irrigation": 0.0015
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0001,
+            "Industrial": 0.0001,
+            "Irrigation": 0.0015
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.002,
+            "Industrial": 0.002,
+            "Irrigation": 0.008
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.01,
+            "Industrial": 0.0,
+            "Irrigation": 0.03
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.05,
+            "Industrial": 0.0003,
+            "Irrigation": 0.03
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.05,
+            "Industrial": 0.0007,
+            "Irrigation": 0.003
+        },
+        "2023": {
+            "Domestic": 0.04,
+            "Industrial": 0.0003,
+            "Irrigation": 0.02
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "24": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.14,
+            "Industrial": 0.14,
+            "Irrigation": 0.2
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.13,
+            "Industrial": 0.13,
+            "Irrigation": 0.14
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.125,
+            "Industrial": 0.125,
+            "Irrigation": 0.14
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.125,
+            "Industrial": 0.125,
+            "Irrigation": 0.14
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.24,
+            "Industrial": 0.02,
+            "Irrigation": 0.09
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.18,
+            "Industrial": 0.04,
+            "Irrigation": 0.07
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.2716,
+            "Industrial": 0.0007,
+            "Irrigation": 0.0904
+        },
+        "2023": {
+            "Domestic": 0.26,
+            "Industrial": 0.0007,
+            "Irrigation": 0.08
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "25": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.045,
+            "Industrial": 0.045,
+            "Irrigation": 0.08
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.035,
+            "Industrial": 0.035,
+            "Irrigation": 0.09
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0345,
+            "Industrial": 0.0345,
+            "Irrigation": 0.093
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.036,
+            "Industrial": 0.036,
+            "Irrigation": 0.093
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.08,
+            "Industrial": 0.0,
+            "Irrigation": 0.02
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.08,
+            "Industrial": 0.0002,
+            "Irrigation": 0.02
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.08,
+            "Industrial": 0.0007,
+            "Irrigation": 0.02
+        },
+        "2023": {
+            "Domestic": 0.08,
+            "Industrial": 0.0003,
+            "Irrigation": 0.03
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "26": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.405,
+            "Industrial": 0.405,
+            "Irrigation": 10.84
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.395,
+            "Industrial": 0.395,
+            "Irrigation": 10.11
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.485,
+            "Industrial": 0.485,
+            "Irrigation": 9.72
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.5,
+            "Industrial": 0.5,
+            "Irrigation": 10.84
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.0,
+            "Industrial": 0.0,
+            "Irrigation": 10.84
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.73,
+            "Industrial": 0.27,
+            "Irrigation": 10.84
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.54,
+            "Industrial": 0.14,
+            "Irrigation": 8.38
+        },
+        "2023": {
+            "Domestic": 1.57,
+            "Industrial": 0.15,
+            "Irrigation": 8.99
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "27": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.295,
+            "Industrial": 0.295,
+            "Irrigation": 4.85
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.345,
+            "Industrial": 0.345,
+            "Irrigation": 5.333
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.32,
+            "Industrial": 0.32,
+            "Irrigation": 2.86
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.34,
+            "Industrial": 0.34,
+            "Irrigation": 4.06
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.69,
+            "Industrial": 0.06,
+            "Irrigation": 1.97
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.6,
+            "Industrial": 0.01,
+            "Irrigation": 1.97
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.58,
+            "Industrial": 0.01,
+            "Irrigation": 2.06
+        },
+        "2023": {
+            "Domestic": 0.55,
+            "Industrial": 0.01,
+            "Irrigation": 2.06
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "28": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.52,
+            "Industrial": 0.52,
+            "Irrigation": 16.08
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.665,
+            "Industrial": 0.665,
+            "Irrigation": 16.66
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.675,
+            "Industrial": 0.675,
+            "Irrigation": 17.48
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.705,
+            "Industrial": 0.705,
+            "Irrigation": 17.95
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.24,
+            "Industrial": 0.22,
+            "Irrigation": 17.43
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.61,
+            "Industrial": 0.03,
+            "Irrigation": 17.33
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.69,
+            "Industrial": 0.17,
+            "Irrigation": 17.39
+        },
+        "2023": {
+            "Domestic": 1.72,
+            "Industrial": 0.17,
+            "Irrigation": 17.4
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "29": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.0045,
+            "Industrial": 0.0045,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.004,
+            "Industrial": 0.004,
+            "Irrigation": 0.0
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.0
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.02,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.02,
+            "Industrial": 3e-05,
+            "Irrigation": 0.002
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.02,
+            "Industrial": 2e-05,
+            "Irrigation": 0.002
+        },
+        "2023": {
+            "Domestic": 0.02,
+            "Industrial": 2e-05,
+            "Irrigation": 0.00227
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "30": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.04
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.014
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.01
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.015,
+            "Industrial": 0.015,
+            "Irrigation": 0.02
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.03,
+            "Industrial": 0.0,
+            "Irrigation": 0.02
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.05,
+            "Industrial": 0.004,
+            "Irrigation": 0.02
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.048,
+            "Industrial": 0.004,
+            "Irrigation": 0.026
+        },
+        "2023": {
+            "Domestic": 0.038,
+            "Industrial": 0.005,
+            "Irrigation": 0.025
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "31": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.001,
+            "Industrial": 0.001,
+            "Irrigation": 0.007
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0015,
+            "Industrial": 0.0015,
+            "Irrigation": 0.008
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.001,
+            "Industrial": 0.001,
+            "Irrigation": 0.014
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.001,
+            "Industrial": 0.001,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.01
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.0,
+            "Industrial": 0.03,
+            "Irrigation": 0.003
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.0,
+            "Industrial": 0.055,
+            "Irrigation": 0.003
+        },
+        "2023": {
+            "Domestic": 0.0,
+            "Industrial": 0.055,
+            "Irrigation": 0.003
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "32": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.19,
+            "Industrial": 0.19,
+            "Irrigation": 0.7
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.22,
+            "Industrial": 0.22,
+            "Irrigation": 1.17
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.275,
+            "Industrial": 0.275,
+            "Irrigation": 1.31
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.36,
+            "Industrial": 0.36,
+            "Irrigation": 0.63
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.56,
+            "Industrial": 0.22,
+            "Irrigation": 0.8
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.51,
+            "Industrial": 0.2,
+            "Irrigation": 0.93
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.65,
+            "Industrial": 0.21,
+            "Irrigation": 0.93
+        },
+        "2023": {
+            "Domestic": 0.65,
+            "Industrial": 0.21,
+            "Irrigation": 0.94
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "33": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.005,
+            "Industrial": 0.005,
+            "Irrigation": 0.0
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.0035,
+            "Industrial": 0.0035,
+            "Irrigation": 0.003
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.0045,
+            "Industrial": 0.0045,
+            "Irrigation": 0.003
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.01,
+            "Industrial": 0.002,
+            "Irrigation": 0.0
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.0036,
+            "Industrial": 0.0022,
+            "Irrigation": 0.0089
+        },
+        "2023": {
+            "Domestic": 0.002,
+            "Industrial": 0.001,
+            "Irrigation": 0.009
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "34": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.44,
+            "Industrial": 0.44,
+            "Irrigation": 16.77
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.925,
+            "Industrial": 0.925,
+            "Irrigation": 14.71
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.88,
+            "Industrial": 0.88,
+            "Irrigation": 13.17
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.69,
+            "Industrial": 0.69,
+            "Irrigation": 12.98
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.67,
+            "Industrial": 0.0,
+            "Irrigation": 13.06
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.99,
+            "Industrial": 0.17,
+            "Irrigation": 13.52
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.57,
+            "Industrial": 0.18,
+            "Irrigation": 13.68
+        },
+        "2023": {
+            "Domestic": 0.79,
+            "Industrial": 0.15,
+            "Irrigation": 13.48
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "35": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.495,
+            "Industrial": 0.495,
+            "Irrigation": 10.49
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.525,
+            "Industrial": 0.525,
+            "Irrigation": 11.93
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.555,
+            "Industrial": 0.555,
+            "Irrigation": 10.75
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.57,
+            "Industrial": 0.57,
+            "Irrigation": 12.3
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 0.63,
+            "Industrial": 0.11,
+            "Irrigation": 12.84
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 0.62,
+            "Industrial": 0.03,
+            "Irrigation": 12.65
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 0.82,
+            "Industrial": 0.16,
+            "Irrigation": 12.1
+        },
+        "2023": {
+            "Domestic": 0.84,
+            "Industrial": 0.17,
+            "Irrigation": 12.13
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    },
+    "36": {
+        "2000": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2001": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2002": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2003": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2004": {
+            "Domestic": 0.415,
+            "Industrial": 0.415,
+            "Irrigation": 30.34
+        },
+        "2005": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2006": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2007": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2008": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2009": {
+            "Domestic": 0.345,
+            "Industrial": 0.345,
+            "Irrigation": 33.97
+        },
+        "2010": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2011": {
+            "Domestic": 0.355,
+            "Industrial": 0.355,
+            "Irrigation": 34.17
+        },
+        "2012": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2013": {
+            "Domestic": 0.385,
+            "Industrial": 0.385,
+            "Irrigation": 34.05
+        },
+        "2014": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2015": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2016": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2017": {
+            "Domestic": 1.01,
+            "Industrial": 0.2,
+            "Irrigation": 34.56
+        },
+        "2018": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2019": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2020": {
+            "Domestic": 1.05,
+            "Industrial": 0.0,
+            "Irrigation": 32.8
+        },
+        "2021": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        },
+        "2022": {
+            "Domestic": 1.17,
+            "Industrial": 0.16,
+            "Irrigation": 26.69
+        },
+        "2023": {
+            "Domestic": 1.18,
+            "Industrial": 0.24,
+            "Irrigation": 26.39
+        },
+        "2024": {
+            "Domestic": 0.0,
+            "Industrial": 0.0,
+            "Irrigation": 0.0
+        }
+    }
+}
