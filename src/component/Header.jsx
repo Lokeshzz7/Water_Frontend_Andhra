@@ -1,34 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useCallback } from "react";
+import PropTypes from "prop-types";
+import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
-  const menuItems = [
-    { label: 'HOME', path: '/', width: 'w-[67px]' },
-    // { label: 'Water Forecast', path: '/waterforecast', width: 'w-[190px]' },
-    // { label: 'Reservoir Status', path: '/reservoirstatus', width: 'w-[180px]' },
-    // { label: 'Risk Assessment', path: '/riskassessment', width: 'w-[170px]' },
-    // { label: 'Scenario Planning', path: '/scenarioplanning', width: 'w-[193px]' },
-    { label: 'Map', path: '/map', width: 'w-[100px]' },
-
-    { label: 'Reports & Exports', path: '/reports', width: 'w-[194px]' },
-  ];
+const Header = ({ className = "" }) => {
+  const navigate = useNavigate();
+  const onLogOutClick = useCallback(() => {
+    localStorage.removeItem('userRole');
+    navigate("/");
+  }, [navigate]);
 
   return (
-    <header className="flex overflow-hidden flex-wrap gap-10 px-20 pt-5 pb-3 mr-3 max-w-screen text-xl text-center text-black bg-white rounded-3xl shadow-[0px_-8px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mr-2.5 mx-10 mt-8">
-      <div className=" my-auto text-left items-center">WELCOME !</div>
-      <nav className="flex flex-wrap gap-10 justify-evenly items-center">
-        {menuItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.path}
-            className={`self-stretch px-2.5 py-1.5 my-auto whitespace-nowrap ${item.width}`}
+    <header className={`relative w-full py-2 box-border ${className} mq450:mb-5`}>
+      <div className="flex items-center justify-between w-full max-w-screen-xl mx-auto font-dm-sans font-bold">
+        {/* DashBoard Title */}
+        <div className="absolute left-0 ml-8 text-white text-1xl">
+          <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-[30px]">DashBoard</span>
+        </div>
+        {/* Greeting */}
+        <div className="flex-1 text-center text-white text-[25px] hidden lg:block">
+          <span>Hello {localStorage.getItem('userRole')}</span>
+        </div>
+        {/* Log Out Button */}
+        <div className="absolute right-0">
+          <button
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-[20px]"
+            onClick={onLogOutClick}
           >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+            Log Out
+          </button>
+        </div>
+      </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Header;

@@ -78,8 +78,15 @@ const StateMap = () => {
             })
         );
 
+        // Add population to each state dynamically
+        const statesWithPopulation = polygonSeries.dataItems.map((dataItem, index) => {
+            const population = Math.floor(Math.random() * 100) + 1; // Random population between 1 and 100
+            dataItem.set("population", population);
+            return dataItem;
+        });
+
         polygonSeries.mapPolygons.template.setAll({
-            tooltipText: "{name}",
+            tooltipText: "{name}\nPopulation: {population}", // Dynamically display the population
             interactive: true,
             fill: window.am5.color(0x74b9ff),
             stroke: window.am5.color(0xffffff),

@@ -17,12 +17,13 @@ function WaterManagementDashboard() {
     };
 
     return (
-        <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
-            <section className="mt-7 w-full max-w-[1700px] max-md:max-w-full">
+        <main className="flex overflow-hidden flex-col w-screen justify-evenly items-center px-5 py-9 max-md:px-5">
+            <FilterDropdown />
+            <section className="mt-7 w-full  max-md:max-w-full">
                 <div className="flex  max-md:flex-col">
                     {/* <WaterUsageCard /> */}
                     <WaterLinearCurrent />
-
+        
                     <WaterLinear />
 
 
@@ -32,7 +33,7 @@ function WaterManagementDashboard() {
 
                 </div>
             </section>
-            <section className="mt-17 w-full max-w-[1600px] max-md:max-w-full">
+            <section className="mt-17 w-full  max-md:max-w-full">
                 <div className="flex gap-8 max-md:flex-col">
                     <LucGraph />
 

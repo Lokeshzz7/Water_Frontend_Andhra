@@ -9,6 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    background-color: #0b1437;
+    color: white; /* Optional: Adjust text color for visibility */
+    margin: 0; /* Removes default margin */
+    font-family: Arial, sans-serif; /* Optional: Set a consistent font */
+
 }
 
 code {

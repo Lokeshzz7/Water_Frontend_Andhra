@@ -5,7 +5,7 @@ function WaterUsageChart({ title, value, percentage, status }) {
 
     return (
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex overflow-hidden flex-col px-8 pt-7 pb-10 mx-auto w-full bg-white rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+            <div className="flex overflow-hidden flex-col px-8 pt-7 pb-10 mx-auto w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
                 <div className="max-md:max-w-full">
                     <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-[24%] max-md:ml-0 max-md:w-full">

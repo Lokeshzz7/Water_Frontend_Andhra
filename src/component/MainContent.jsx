@@ -32,7 +32,7 @@ const MainContent = () => (
       </main>
       {/* Right Side */}
       <aside className="flex flex-col ml-5 w-[29%] max-md:ml-0 max-md:w-full">
-        <div className="flex flex-col grow mt-3 font-bold text-black max-md:mt-10">
+        <div className="flex flex-col grow mt-3 font-bold text-white max-md:mt-10">
           <div className="px-14 pt-2.5 text-5xl tracking-tighter leading-none bg-stone-300 max-md:px-5 max-md:pb-28 max-md:text-4xl">
             Scenario Score
             <GaugeChart />

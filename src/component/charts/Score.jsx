@@ -189,8 +189,28 @@ const GaugeChart = () => {
         dataset: {
           source: [[1, value]],
         },
-        tooltip: {},
-        angleAxis: {
+        tooltip: {
+          trigger: "item", // Show the tooltip when hovering over the item
+          formatter: function (params) {
+            // Customize the tooltip content
+            const riskFactor = value.toFixed(2);
+            return `
+                  <div>
+                      <strong>Risk Score</strong><br/>
+                      <strong>Value:</strong> ${riskFactor}%<br/>
+                      <strong>State:</strong> ${stateName}<br/>
+                      <strong>Year:</strong> ${year}
+                  </div>
+              `;
+          },
+          backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark background for the tooltip
+          borderColor: "#fff", // White border color
+          borderWidth: 1, // Border width
+          textStyle: {
+            color: "#fff", // Set tooltip text color to white
+            fontSize: 14, // Font size for the tooltip
+          },
+        }, angleAxis: {
           type: "value",
           startAngle: 0,
           show: false,
@@ -200,8 +220,19 @@ const GaugeChart = () => {
         radiusAxis: {
           type: "value",
           show: false,
+          
         },
         polar: {},
+        title: {
+          text: "Risk Score", // Set the title text
+          left: "center", // Center the title
+          top: "20px", // Adjust vertical position
+          textStyle: {
+            color: "white", // Set title color to white
+            fontSize: 18, // Set title font size
+            fontWeight: "bold", // Set title font weight to bold
+          },
+        },
         series: [
           {
             type: "custom",
@@ -209,6 +240,7 @@ const GaugeChart = () => {
             renderItem,
           },
         ],
+        
       };
 
       chartInstance.current.setOption(option);
@@ -221,7 +253,7 @@ const GaugeChart = () => {
     };
   }, [value]);
 
-  return <div ref={chartRef} className="w-[450px] bg-white h-[454px] rounded-lg ml-6 mt-8 mr-5 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)]" />;
+  return <div ref={chartRef} className="w-[450px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg ml-6 mt-8 mr-5 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] " />;
 };
 
 export default GaugeChart;

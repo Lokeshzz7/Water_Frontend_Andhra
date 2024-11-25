@@ -24,7 +24,7 @@ const ScenarioDropdown = () => {
 
   return (
     <div className="container mx-2 px-4">
-      <section className="flex flex-wrap gap-10 justify-between items-center w-1/2 text-2xl tracking-tight leading-none text-black whitespace-nowrap max-w-[1382px]">
+      <section className="flex flex-wrap gap-10 justify-between items-center w-1/2 text-2xl tracking-tight leading-none text-white whitespace-nowrap max-w-[1382px]">
         <section className="filter-dropdown-container">
           <div className="c-button c-button--gooey">
             <Dropdown

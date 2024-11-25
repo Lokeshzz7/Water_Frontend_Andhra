@@ -28,7 +28,7 @@ function DateFilter() {
   }));
 
   return (
-    <section className="flex flex-wrap gap-10 justify-between items-center mt-4 w-min text-2xl tracking-tight leading-none text-black whitespace-nowrap max-w-[1382px]">
+    <section className="flex flex-wrap gap-10 justify-between items-center mt-4 w-min text-2xl tracking-tight leading-none text-white whitespace-nowrap max-w-[1382px]">
       <div className="card flex justify-content-center">
         <div className="flex flex-row gap-[100px]">
           {/* Month */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChartCard = ({ title, chartImage, legend }) => {
   return (
-    <div className="flex overflow-hidden flex-col p-5 mx-auto w-full bg-white rounded-3xl shadow-[13px_18px_26px_rgba(0,122,255,0.46)] max-md:mt-4">
+    <div className="flex overflow-hidden flex-col p-5 mx-auto w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl shadow-[13px_18px_26px_rgba(0,122,255,0.46)] max-md:mt-4">
       <div className="flex gap-5 justify-between w-full font-bold">
         <div className="text-base tracking-tight leading-loose text-indigo-900">{title}</div>
         <div className="flex gap-0.5 self-start text-xs tracking-tight leading-loose whitespace-nowrap text-slate-400">
@@ -21,7 +21,7 @@ const ChartCard = ({ title, chartImage, legend }) => {
         alt={`Chart for ${title}`}
         className="object-contain self-center mt-5 max-w-full aspect-square w-[143px]"
       />
-      <div className="flex overflow-hidden flex-col px-10 py-6 mx-3.5 leading-loose whitespace-nowrap bg-white rounded-2xl max-md:px-5 max-md:mx-2.5">
+      <div className="flex overflow-hidden flex-col px-10 py-6 mx-3.5 leading-loose whitespace-nowrap shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-2xl max-md:px-5 max-md:mx-2.5">
         <div className="flex gap-10 text-xs font-medium tracking-tight text-slate-400">
           {legend.map((item, index) => (
             <div key={index} className="flex flex-1 gap-1.5">

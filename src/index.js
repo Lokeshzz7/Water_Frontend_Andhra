@@ -16,6 +16,9 @@ import ReservoirStatus from "./ReservoirStatus.jsx";
 import WaterForecast from "./WaterForecast.jsx";
 import Map from "./map.jsx";
 import Home from "./Home.jsx";
+import SideBar from "./component/SideBar.jsx";
+import { Navigate } from "react-router-dom";
+
 
 const root = createRoot(document.getElementById("root"));
 
@@ -26,15 +29,18 @@ root.render(
       {/* Wrap the Router with GlobalStateProvider to provide global state */}
       <Router>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/waterforecast" element={<WaterForecast />} />
-          <Route path="/reservoirstatus" element={<ReservoirStatus />} />
-          <Route path="/riskassessment" element={<RiskAssessment />} />
-          <Route path="/scenarioplanning" element={<ScenarioPlanning />} />
-          <Route path="/reports" element={<ReportsExports />} />
-          <Route path="/map" element={<Map />} />
-        </Routes>
+        <div className="w-full flex flex-row items-start justify-start gap-[32px]  mq1000:pl-5 mq1000:pr-5 mq1000:box-border mq725:gap-[16px]">
+          <SideBar />
+          <Routes>
+            <Route path="/" element={<Navigate to="/waterforecast" />} />
+            <Route path="/waterforecast" element={<WaterForecast />} />
+            <Route path="/reservoirstatus" element={<ReservoirStatus />} />
+            <Route path="/riskassessment" element={<RiskAssessment />} />
+            <Route path="/scenarioplanning" element={<ScenarioPlanning />} />
+            <Route path="/reports" element={<ReportsExports />} />
+            <Route path="/map" element={<Map />} />
+          </Routes>
+        </div>
       </Router>
     </GlobalStateProvider>
   </React.StrictMode>

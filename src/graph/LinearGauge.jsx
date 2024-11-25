@@ -107,9 +107,9 @@ const LinearGauge = () => {
     }, [usageData]);
 
     return (
-        <div className="flex gap-8 p-8 bg-gray-100">
+        <div className="flex gap-8 p-8shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue">
             <div className="w-[600px]">
-                <div className="progress-container bg-white text-black p-6 rounded-lg shadow-lg">
+                <div className="progress-container shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue text-white p-6 rounded-lg shadow-lg">
                     <h2 className="mb-4 text-lg font-bold">Water Usage Distribution</h2>
                     {percentages ? (
                         Object.entries(percentages).map(([category, percentage]) => (

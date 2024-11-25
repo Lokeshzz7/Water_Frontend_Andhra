@@ -70,7 +70,7 @@ const WaterLinearCurrent = () => {
 
     return (
         <div className="flex flex-col w-7/12 p-8 ">
-            <div className="flex flex-col items-center w-full bg-white p-6 rounded-lg shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)]">
+            <div className="flex flex-col items-center w-full  p-6 rounded-lg shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] ">
                 {/* Water Usage Card Section */}
                 <div className="flex flex-col w-full mb-8">
                     <div className="text-lg font-bold text-left">{title}</div>
@@ -107,7 +107,7 @@ const WaterLinearCurrent = () => {
                             <div key={category} className="flex items-center mb-4">
                                 <span className="ml-4 font-bold">{category}: {percentage}%</span>
 
-                                <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
+                                <div className="bar w-full h-4 rounded overflow-hidden">
                                     <div
                                         className="fill h-full rounded"
                                         style={{

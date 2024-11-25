@@ -4,7 +4,7 @@ import axios from 'axios';
 const DataCard = ({ title, value, unit }) => {
 
   return (
-    <div className="flex flex-col  py-9 mt-8  w-[300px] h-[215px] bg-white rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mt-3">
+    <div className="flex flex-col  py-9 mt-8  w-[300px] h-[215px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mt-3">
       <div className="flex flex-col w-[300px] mb-8 pl-8">
         <div className="text-lg font-bold text-left">{title}</div>
         <div className="flex justify-between items-end mt-3">

@@ -39,6 +39,59 @@ const ReservoirHealth = () => {
     const myChart = echarts.init(chartDom);
 
     const option = {
+      title: {
+        text: "Risk Score",
+        textStyle: {
+          color: "white", // Set title color to white
+          fontWeight: "bold", // Set title font weight to bold
+          fontSize: 25, // Optional: Set title font size
+        },
+        padding: [20, 0, 20, 40], // Add padding below the title (top, right, bottom, left)
+      },
+      tooltip: {
+        trigger: "item", // Trigger tooltip on item hover
+        formatter: function (params) {
+          const riskScore = params.value * 100; // Convert to percentage
+          let riskLevel = "";
+          if (params.value >= 0.75) {
+            riskLevel = "No Risk";
+          } else if (params.value >= 0.5) {
+            riskLevel = "Medium Risk";
+          } else if (params.value >= 0.25) {
+            riskLevel = "High Risk";
+          } else {
+            riskLevel = "Very High Risk";
+          }
+
+          return `
+            <div>
+              <strong>Risk Score:</strong> ${Math.round(riskScore)}%<br/>
+              <strong>Risk Level:</strong> ${riskLevel}
+            </div>
+          `;
+        },
+        backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark background for the tooltip
+        borderColor: "#fff", // White border color
+        borderWidth: 1, // Border width
+        textStyle: {
+          color: "#fff", // Set tooltip text color to white
+          fontSize: 14, // Font size for the tooltip
+        },
+        showDelay: 0,  // Delay before tooltip appears
+        hideDelay: 200, // Delay before tooltip disappears
+      },
+      toolbox: {
+        show: true, // Show the toolbox
+        feature: {
+          saveAsImage: {
+            backgroundColor: "transparent"
+          },
+        },
+        
+        itemSize: 18, // Optional: Adjust the size of toolbox icons
+        top: "4%", // Position the toolbox from the top (you can adjust this)
+        right: "5%", // Position the toolbox from the right (you can adjust this)
+      },
       series: [
         {
           type: "gauge",
@@ -84,19 +137,19 @@ const ReservoirHealth = () => {
             },
           },
           axisLabel: {
-            color: "#464646",
-            fontSize: 20,
-            distance: -60,
+            color: "white", // Set axis labels color to white
+            fontSize: 15,
+            distance: -50,
             rotate: "tangential",
             formatter: function (value) {
               if (value === 0.875) {
-                return "Grade A";
+                return "No Risk";
               } else if (value === 0.625) {
-                return "Grade B";
+                return "Medium Risk";
               } else if (value === 0.375) {
-                return "Grade C";
+                return "High Risk";
               } else if (value === 0.125) {
-                return "Grade D";
+                return "Very High Risk";
               }
               return "";
             },
@@ -104,25 +157,29 @@ const ReservoirHealth = () => {
           title: {
             offsetCenter: [0, "-10%"],
             fontSize: 20,
+            color: "white", // Set title color to white
           },
           detail: {
             fontSize: 30,
             offsetCenter: [0, "-35%"],
             valueAnimation: true,
             formatter: function (value) {
-              return Math.round(value * 100) + "";
+              return `${Math.round(value * 100)}/100`;
             },
-            color: "inherit",
+            color: "white", // Set the value color to white
           },
           data: [
             {
-              value: riskScore,
+              value: riskScore, // Make sure this is a valid number
               name: "Reservoir Health Score",
             },
           ],
         },
       ],
     };
+
+
+
 
     myChart.setOption(option);
 
@@ -132,7 +189,7 @@ const ReservoirHealth = () => {
     };
   }, [riskScore]);
 
-  return <div id="reservoir-health-chart" className="w-[400px] h-[454px] bg-white rounded-lg ml-6 mt-8 mr-4 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)]"></div>;
+  return <div id="reservoir-health-chart" className="w-[400px] h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-lg ml-6 mt-8 mr-4 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] "></div>;
 };
 
 export default ReservoirHealth;

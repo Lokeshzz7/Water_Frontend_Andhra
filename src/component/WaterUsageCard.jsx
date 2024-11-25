@@ -84,7 +84,7 @@ const WaterUsageCard = () => {
         <div className="flex flex-col w-5/12 h-full ml-[30px] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col justify-center file:w-full h-full rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:mt-10 max-md:max-w-full">
                 {/* NUMBER */}
-                <div className="pt-2 pr-8 pl-8 max-w-full bg-white w-[654px] max-md:px-5 max-md:pb-24">
+                <div className="pt-2 pr-8 pl-8 max-w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue w-[654px] max-md:px-5 max-md:pb-24">
                     <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-[55%] max-md:ml-0 max-md:w-full">
                             <div className="flex flex-col mt-2 max-md:mt-10">
@@ -94,8 +94,8 @@ const WaterUsageCard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col py-3 pl-4 w-full font-medium bg-white max-w-[654px] shadow-[0px_4px_10px_rgba(80,80,80,0.05)] max-md:max-w-full">
-                    <div className="flex gap-5 justify-between max-w-full text-sm text-black w-[229px]">
+                <div className="flex flex-col py-3 pl-4 w-full font-medium shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue max-w-[654px] shadow-[0px_4px_10px_rgba(80,80,80,0.05)] max-md:max-w-full">
+                    <div className="flex gap-5 justify-between max-w-full text-sm text-white w-[229px]">
                         <div>Sector</div>
                         <div>Water use</div>
                     </div>

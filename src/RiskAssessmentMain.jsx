@@ -9,6 +9,7 @@ const WaterManagementDashboard = () => {
 
   return (
     <main className="flex overflow-hidden flex-col px-8  max-md:px-5">
+      <FilterDropdown />
       {/* <Risk_Selection_Dropdown /> */}
       
       <section className="mt-9 max-md:max-w-full">

@@ -11,7 +11,7 @@ const WaterInfoCard = ({ title, amount, unit }) => (
   <div className="flex flex-col py-4 mt-4 w-full bg-black rounded-3xl shadow-[0px_4px_10px_rgba(80,80,80,0.05)] max-md:max-w-full">
     <div className="flex gap-1.5 self-center ml-4 max-w-full w-[322px]">
       <div className="flex-auto text-4xl font-bold text-white">{title}</div>
-      <div className="my-auto text-lg font-medium text-black">40 gal</div>
+      <div className="my-auto text-lg font-medium text-white">40 gal</div>
     </div>
     <div className="flex gap-9 self-start mt-5 max-md:ml-2.5">
       <div className="flex flex-auto gap-2.5">
