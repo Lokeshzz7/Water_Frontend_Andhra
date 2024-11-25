@@ -46,18 +46,6 @@ const StateMap = () => {
         }
     };
 
-    // Helper function to generate a random population (simulating real data)
-    const generateRandomPopulation = () => {
-        return Math.floor(Math.random() * 100000000); // Random population between 0 and 100 million
-    };
-
-    // Helper function to map population to color (e.g., using a gradient from light green to dark green)
-    const populationToColor = (population) => {
-        // Map population value to a range between 0 and 255 for the color scale
-        const green = Math.min(255, Math.floor((population / 100000000) * 255)); // Scale population to 0-255
-        return window.am5.color(`rgb(0, ${green}, 0)`); // Using green gradient (lighter for less population, darker for more)
-    };
-
     const initializeChart = () => {
         console.log("Initializing chart...");
         if (
@@ -93,18 +81,10 @@ const StateMap = () => {
         polygonSeries.mapPolygons.template.setAll({
             tooltipText: "{name}",
             interactive: true,
+            fill: window.am5.color(0x74b9ff),
             stroke: window.am5.color(0xffffff),
             strokeWidth: 1,
         });
-
-        // Assign a random population to each state and map it to a color
-        polygonSeries.data.setAll(polygonSeries.dataItems.map((dataItem) => {
-            const randomPopulation = generateRandomPopulation(); // Generate random population
-            return {
-                ...dataItem.dataContext,
-                fill: populationToColor(randomPopulation) // Map population to color
-            };
-        }));
 
         polygonSeries.mapPolygons.template.states.create("hover", {
             fill: window.am5.color(0x0984e3),
