@@ -6,6 +6,7 @@ import ReservoirHealth from '../graph/ReservoirHealth.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
 import ScatterChart from './charts/ScatterChart.jsx';
 import SpiderGraph from '../graph/SpiderGraph.jsx';
+import AndraMap from '../map/AndhraMap.jsx';
 
 const ReservoirMainContent = () => {
     const [currentCapacity, setCurrentCapacity] = useState(null);
@@ -72,8 +73,9 @@ const ReservoirMainContent = () => {
                                     unit="galH2O"
                                 />
                             </div>
-                            <div>
+                            <div className='w-full'>
                                 <ReservoirHealth />
+                                {/* <AndraMap /> */}
                             </div>
                         </div>
                         <div>

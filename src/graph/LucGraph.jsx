@@ -144,7 +144,7 @@ const LucGraph = () => {
     }, [stateName , year]);  // Add stateName as a dependency to trigger re-render
 
     return (
-        <div id="lucChart" className="w-[800px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg ml-6 mt-8 mr-5 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] "></div>  // The chart container where the graph will be displayed
+        <div id="lucChart" className="w-11/12 ml-5  shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg   "></div>  // The chart container where the graph will be displayed
     );
 };
 

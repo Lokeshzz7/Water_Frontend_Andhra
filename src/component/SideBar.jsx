@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Menu = ({ className = "" }) => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [userRole, setUserRole] = useState(null);
     const navigate = useNavigate();

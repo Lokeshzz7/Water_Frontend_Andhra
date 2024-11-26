@@ -161,7 +161,7 @@ const FactorGraph = () => {
                         onclick: function () {
                             // Create an info box when the info button is clicked
                             const infoBox = document.createElement('div');
-                            infoBox.style.position = 'relative';
+                            infoBox.style.position = 'absolute';
                             infoBox.style.backgroundColor = 'white'; // White background
                             infoBox.style.color = 'black'; // Black text
                             infoBox.style.padding = '15px';

@@ -4,14 +4,14 @@ import axios from 'axios';
 const DataCard = ({ title, value, unit }) => {
 
   return (
-    <div className="flex flex-col  py-9 mt-8  w-[300px] h-[215px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl shadow-[12px_13px_26px_rgba(0,122,255,0.46)] max-md:px-5 max-md:mt-3">
-      <div className="flex flex-col w-[300px] mb-8 pl-8">
+    <div className="flex flex-col  pt-2 mt-8  w-10/12 h-[100px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl max-md:px-5 max-md:mt-3">
+      <div className="flex flex-col w-[full] pl-9  ">
         <div className="text-lg font-bold text-left">{title}</div>
-        <div className="flex justify-between items-end mt-3">
+        <div className="flex justify-between items-end ">
           {/* Left Side: Water Usage Value and Unit */}
-          <div className="flex items-baseline">
-            <div className="text-8xl font-bold text-blue-500">{value}</div>
-            <div className="text-lg font-semibold text-gray-500 ml-2">galH<sub>2</sub>O</div>
+          <div className="flex items-baseline pl-4">
+            <div className="text-5xl font-bold text-blue-500">{value}</div>
+            <div className="text-xl font-semibold text-gray-500 ml-2">galH<sub>2</sub>O</div>
           </div>
 
           {/* Right Side: Legend */}

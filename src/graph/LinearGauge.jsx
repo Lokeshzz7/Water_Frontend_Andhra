@@ -1,102 +1,75 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import waterUsageData from '../data/modified_usage_json_converted.json'; // Import your JSON file
 
 const LinearGauge = () => {
-    const [percentages, setPercentages] = useState(null);
+    const [waterUsage, setWaterUsage] = useState({ title: 'Water Usage Prediction', value: 0 });
     const [usageData, setUsageData] = useState(null);
+    const [percentages, setPercentages] = useState(null);
+    const [title, setTitle] = useState('Water Usage Prediction');
 
-    const fetchData = async () => {
+    const fetchData = () => {
         try {
-            const state = parseInt(localStorage.getItem('selectedState'), 10);
-            const year = parseInt(localStorage.getItem('selectedYear'), 10);
-            const currentYear = new Date().getFullYear();  // Get the current year
+            const selectedState = parseInt(localStorage.getItem('selectedState'), 10);
+            const selectedYear = parseInt(localStorage.getItem('selectedYear'), 10);
+            const currentYear = new Date().getFullYear();
 
-            console.log("Retrieved from localStorage - State:", state, "Year:", year);
-
-            if (!isNaN(state) && !isNaN(year)) {
-                let response;
+            if (!isNaN(selectedState) && !isNaN(selectedYear)) {
                 let rawData;
 
-                if (year >= currentYear) {
-                    // Make a POST request for the future year
-                    response = await axios.post("http://127.0.0.1:8000/api/forecast/predict/", {
-                        state_idx: state,
-                        target_year: year,
-                    });
-
-                    rawData = response.data;
-                    console.log("POST response:", rawData);
-                    console.log('Future year prediction');
-
-                    // Extract and map data from response for future year
-                    const yearData = rawData[year]; // Assuming the response has the year as a key
-                    const mappedData = {
-                        Domestic: yearData.domestic,
-                        Industrial: yearData.industrial,
-                        Irrigation: yearData.irrigation,
-                    };
-
-                    setUsageData(mappedData);
-
+                if (selectedYear < currentYear) {
+                    setTitle('Past Water Usage'); // Title for past or current year
                 } else {
-                    // Make a GET request for the past or current year
-                    response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_usage/${state}/${year}`);
-                    rawData = response.data;
-                    console.log("GET response:", rawData);
-                    console.log('Past or current year water usage');
-
-                    // Map the data for the past/current year
-                    const mappedData = {
-                        Domestic: rawData.domestic_use,
-                        Industrial: rawData.industrial_use,
-                        Irrigation: rawData.irrigation_use,
-                    };
-
-                    setUsageData(mappedData);
+                    setTitle('Water Usage Prediction'); // Title for future year
                 }
 
-                console.log("Mapped Data:", usageData);
+                // Retrieve data from the JSON file
+                const stateData = waterUsageData[selectedState];
+                if (stateData) {
+                    rawData = stateData[selectedYear];
+                }
 
-            } else {
-                console.warn("Invalid state or year values in localStorage");
-                setUsageData(null);
+                if (!rawData) {
+                    console.warn('Data not found for the selected state and year.');
+                    setUsageData(null);
+                    setPercentages(null);
+                    return;
+                }
+
+                const mappedData = {
+                    Domestic: rawData.Domestic,
+                    Industrial: rawData.Industrial,
+                    Irrigation: rawData.Irrigation,
+                };
+
+                setUsageData(mappedData);
+
+                // Calculate the total water usage
+                const totalUsage = Object.values(mappedData).reduce((acc, value) => acc + value, 0);
+                setWaterUsage({ title: 'Water Usage Prediction', value: totalUsage.toFixed(2) });
+
+                // Calculate percentages for the linear gauge
+                if (totalUsage > 0) {
+                    const calculatedPercentages = Object.fromEntries(
+                        Object.entries(mappedData).map(([key, value]) => [
+                            key,
+                            ((value / totalUsage) * 100).toFixed(2),
+                        ])
+                    );
+                    setPercentages(calculatedPercentages);
+                } else {
+                    setPercentages(null);
+                }
             }
         } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-
-    };
-
-    const analyzeData = () => {
-        if (usageData) {
-            const total = Object.values(usageData).reduce((acc, value) => acc + value, 0);
-            if (total > 0) {
-                const calculatedPercentages = Object.fromEntries(
-                    Object.entries(usageData).map(([key, value]) => [
-                        key,
-                        ((value / total) * 100).toFixed(2),
-                    ])
-                );
-                setPercentages(calculatedPercentages);
-                console.log("Calculated Percentages:", calculatedPercentages);
-            } else {
-                setPercentages(null);
-            }
-        } else {
-            setPercentages(null);
+            console.error('Error processing data:', error);
         }
     };
 
     useEffect(() => {
         fetchData(); // Fetch data initially when component mounts
 
-        // Re-run analyzeData whenever usageData changes
-        if (usageData) {
-            analyzeData();
-        }
-
         const handleStorageChange = () => {
-            fetchData();  // Re-fetch data if localStorage changes
+            fetchData(); // Re-fetch data if localStorage changes
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -104,37 +77,34 @@ const LinearGauge = () => {
         return () => {
             window.removeEventListener("storage", handleStorageChange);
         };
-    }, [usageData]);
+    }, []);
 
     return (
-        <div className="flex gap-8 p-8shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue">
-            <div className="w-[600px]">
-                <div className="progress-container shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue text-white p-6 rounded-lg shadow-lg">
-                    <h2 className="mb-4 text-lg font-bold">Water Usage Distribution</h2>
-                    {percentages ? (
-                        Object.entries(percentages).map(([category, percentage]) => (
-                            <div key={category} className="flex items-center mb-4">
-                                <div className="bar w-full h-4 bg-gray-800 rounded overflow-hidden">
-                                    <div
-                                        className="fill h-full rounded"
-                                        style={{
-                                            width: `${percentage}%`,
-                                            background: {
-                                                Domestic: '#4CAF50',
-                                                Industrial: '#f44336',
-                                                Irrigation: '#00BCD4',
-                                            }[category],
-                                        }}
-                                    />
-                                </div>
-                                <span className="ml-4">{category}: {percentage}%</span>
-                            </div>
-                        ))
-                    ) : (
-                        <p>No data to display</p>
-                    )}
-                </div>
-            </div>
+        <div className="w-11/12 mt-5 ml-5 p-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl max-md:px-5 max-md:mt-3">
+            <h2 className="mb-4 text-lg font-bold">Selected Water Usage Distribution</h2>
+            {percentages ? (
+                Object.entries(percentages).map(([category, percentage]) => (
+                    <div key={category} className="flex items-center mb-4">
+                        <span className="ml-4 font-bold">{category}: {percentage}%</span>
+
+                        <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
+                            <div
+                                className="fill h-full rounded"
+                                style={{
+                                    width: `${percentage}%`,
+                                    background: {
+                                        Domestic: '#4CAF50',
+                                        Industrial: '#f44336',
+                                        Irrigation: '#00BCD4',
+                                    }[category],
+                                }}
+                            />
+                        </div>
+                    </div>
+                ))
+            ) : (
+                <p>No data to display</p>
+            )}
         </div>
     );
 };
