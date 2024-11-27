@@ -23,47 +23,38 @@ const DistrictReservoirDropdown = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const selectedState = localStorage.getItem("selectedState");
-            const selectedYear = localStorage.getItem("selectedYear");
-
-            if (!selectedState || !selectedYear) return;
-
+        const fetchDistricts = async () => {
             setLoading(true);
             try {
-                const response = await fetch(
-                    `http://127.0.0.1:8000/api/reservoir/get-all-reservoirs/${selectedState}/${selectedYear}`
-                );
+                const response = await fetch("http://127.0.0.1:8000/api/forecast/get-districts");
                 const data = await response.json();
-
-                if (data.reservoirs) {
-                    // Extract unique districts
-                    const uniqueDistricts = [
-                        ...new Set(data.reservoirs.map((res) => res.district)),
-                    ].map((district) => ({ label: district, value: district }));
-
-                    setDistricts(uniqueDistricts);
-                    setReservoirs(data.reservoirs);
+                console.log("Fetched Districts Data:", data);
+                if (data && Array.isArray(data)) {
+                    // Map to the format expected for the Dropdown
+                    const districtOptions = data.map((district) => ({
+                        label: district.name,
+                        value: district.id,
+                    }));
+                    setDistricts(districtOptions);
                 } else {
-                    console.warn("No reservoirs found in response.");
+                    console.warn("No districts found in response.");
                     setDistricts([]);
-                    setReservoirs([]);
                 }
             } catch (error) {
-                console.error("Error fetching districts and reservoirs:", error);
+                console.error("Error fetching districts:", error);
                 setDistricts([]);
-                setReservoirs([]);
             } finally {
                 setLoading(false);
             }
         };
 
-        // Initial fetch
-        fetchData();
+        fetchDistricts();
 
-        // Listen to `storage` event for changes in `selectedState` or `selectedYear`
+        // Listen to `storage` event for changes in `selectedDistrict`
         const handleStorageChange = () => {
-            fetchData(); // Re-fetch data if localStorage changes
+            if (selectedDistrict) {
+                fetchReservoirs(selectedDistrict); // Re-fetch reservoirs if district changes
+            }
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -73,17 +64,44 @@ const DistrictReservoirDropdown = () => {
         };
     }, []);
 
-    const handleDistrictChange = (district) => {
-        setSelectedDistrict(district);
+    const fetchReservoirs = async (districtId) => {
+        setLoading(true);
+        try {
+            const response = await fetch(
+                `http://127.0.0.1:8000/api/reservoir/get-all-reservoirs/${districtId}`
+            );
+            const data = await response.json();
+            console.log("Fetched Reservoirs Data:", data);
+
+            if (data && Array.isArray(data)) {
+                // Map to the format expected for the Dropdown
+                const reservoirOptions = data.map((reservoir) => ({
+                    label: reservoir.name,
+                    value: reservoir.id,  // Store the reservoir id here
+                }));
+                setReservoirs(reservoirOptions);
+            } else {
+                console.warn("No reservoirs found for this district.");
+                setReservoirs([]);
+            }
+        } catch (error) {
+            console.error("Error fetching reservoirs:", error);
+            setReservoirs([]);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDistrictChange = (districtId) => {
+        setSelectedDistrict(districtId);
         setSelectedReservoir(null); // Reset reservoir selection
-        localStorage.setItem("selectedDistrict", district); // Store directly as a string
+        localStorage.setItem("selectedDistrict", districtId); // Store district id
         window.dispatchEvent(new Event("storage"));
     };
 
-    const handleReservoirChange = (reservoir) => {
-        setSelectedReservoir(reservoir);
-        const reservoirName = reservoir.name;  // Get the name of the reservoir
-        localStorage.setItem("selectedReservoir", reservoirName);  // Store only the name of the reservoir
+    const handleReservoirChange = (reservoirId) => {
+        setSelectedReservoir(reservoirId);
+        localStorage.setItem("selectedReservoir", reservoirId); // Store reservoir id
         window.dispatchEvent(new Event("storage"));
     };
 
@@ -93,21 +111,12 @@ const DistrictReservoirDropdown = () => {
     );
 
     const reservoirOptions = useMemo(() => {
-        const filteredReservoirs = selectedDistrict
-            ? reservoirs.filter((r) => r.district === selectedDistrict) // Filter by district
-            : reservoirs;
-
-        // Remove duplicate reservoirs by name
-        const uniqueReservoirs = [
-            ...new Map(filteredReservoirs.map((r) => [r.name, r])).values(),
-        ];
-
-        return uniqueReservoirs.map((r) => ({ label: r.name, value: r }));
-    }, [reservoirs, selectedDistrict]);
+        return reservoirs.map((r) => ({ label: r.label, value: r.value }));
+    }, [reservoirs]);
 
     return (
         <div className="container mx-auto px-4">
-            <section className="flex flex-wrap gap-5 justify-start items-center w-full text-2xl tracking-tight leading-none text-white whitespace-nowrap max-w-[1382px]">
+            <section className="flex flex-wrap gap-5 justify-start items-center w-full text-2xl tracking-tight leading-none text-black whitespace-nowrap max-w-[1382px]">
                 <section className="filter-dropdown-container">
                     <section className="button-container">
                         <div className="c-button c-button--gooey">

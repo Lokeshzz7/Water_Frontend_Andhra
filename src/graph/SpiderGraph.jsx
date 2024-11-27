@@ -130,7 +130,7 @@ const SpiderGraph = () => {
     return (
         <div
             id="spider-chart"
-            className="w-[800px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] text-white rounded-lg ml-6 mt-8 mr-4 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] "
+            className="w-[750px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] text-white rounded-lg ml-6 mt-8 mr-4 s"
         ></div>
     );
 };

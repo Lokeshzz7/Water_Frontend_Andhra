@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 
 const FilterDropdown = () => {
+  // Retrieve the selected state and year from localStorage if available
   const [selectedState, setSelectedState] = useState(() => {
     return localStorage.getItem('selectedState') ? parseInt(localStorage.getItem('selectedState')) : null;
   });
@@ -10,75 +11,73 @@ const FilterDropdown = () => {
     return localStorage.getItem('selectedYear') ? parseInt(localStorage.getItem('selectedYear')) : null;
   });
 
+  // Updated states array with id, name, and value properties
   const states = [
-    { label: 'Arunachal Pradesh', value: 1 },
-    { label: 'Odisha', value: 2 },
-    { label: 'Manipur', value: 3 },
-    { label: 'Rajasthan', value: 4 },
-    { label: 'Bihar', value: 5 },
-    { label: 'Telangana', value: 6 },
-    { label: 'Puducherry', value: 7 },
-    { label: 'Lakshadweep', value: 8 },
-    { label: 'Ladakh', value: 9 },
-    { label: 'Kerala', value: 10 },
-    { label: 'Andaman and Nicobar Islands', value: 11 },
-    { label: 'Maharashtra', value: 12 },
-    { label: 'Uttar Pradesh', value: 13 },
-    { label: 'Mizoram', value: 14 },
-    { label: 'Uttarakhand', value: 15 },
-    { label: 'Andhra Pradesh', value: 16 },
-    { label: 'Haryana', value: 17 },
-    { label: 'Dadra and Nagar Haveli', value: 18 },
-    { label: 'Himachal Pradesh', value: 19 },
-    { label: 'Karnataka', value: 20 },
-    { label: 'Jammu and Kashmir', value: 21 },
-    { label: 'Chhattisgarh', value: 22 },
-    { label: 'Meghalaya', value: 23 },
-    { label: 'Delhi', value: 24 },
-    { label: 'Tripura', value: 25 },
-    { label: 'West Bengal', value: 26 },
-    { label: 'Assam', value: 27 },
-    { label: 'Madhya Pradesh', value: 28 },
-    { label: 'Nagaland', value: 29 },
-    { label: 'Goa', value: 30 },
-    { label: 'Daman and Diu', value: 31 },
-    { label: 'Jharkhand', value: 32 },
-    { label: 'Sikkim', value: 33 },
-    { label: 'Tamil Nadu', value: 34 },
-    { label: 'Gujarat', value: 35 },
-    { label: 'Punjab', value: 36 }
+    { id: "IN-AP", name: "Andhra Pradesh", value: 1 },
+    { id: "IN-AR", name: "Arunachal Pradesh", value: 2 },
+    { id: "IN-AS", name: "Assam", value: 3 },
+    { id: "IN-BR", name: "Bihar", value: 4 },
+    { id: "IN-CT", name: "Chhattisgarh", value: 5 },
+    { id: "IN-GA", name: "Goa", value: 6 },
+    { id: "IN-GJ", name: "Gujarat", value: 7 },
+    { id: "IN-HR", name: "Haryana", value: 8 },
+    { id: "IN-HP", name: "Himachal Pradesh", value: 9 },
+    { id: "IN-JH", name: "Jharkhand", value: 10 },
+    { id: "IN-KA", name: "Karnataka", value: 11 },
+    { id: "IN-KL", name: "Kerala", value: 12 },
+    { id: "IN-MP", name: "Madhya Pradesh", value: 13 },
+    { id: "IN-MH", name: "Maharashtra", value: 14 },
+    { id: "IN-MN", name: "Manipur", value: 15 },
+    { id: "IN-ML", name: "Meghalaya", value: 16 },
+    { id: "IN-MZ", name: "Mizoram", value: 17 },
+    { id: "IN-NL", name: "Nagaland", value: 18 },
+    { id: "IN-OR", name: "Odisha", value: 19 },
+    { id: "IN-PB", name: "Punjab", value: 20 },
+    { id: "IN-RJ", name: "Rajasthan", value: 21 },
+    { id: "IN-SK", name: "Sikkim", value: 22 },
+    { id: "IN-TN", name: "Tamil Nadu", value: 23 },
+    { id: "IN-TG", name: "Telangana", value: 24 },
+    { id: "IN-TR", name: "Tripura", value: 25 },
+    { id: "IN-UP", name: "Uttar Pradesh", value: 26 },
+    { id: "IN-UT", name: "Uttarakhand", value: 27 },
+    { id: "IN-WB", name: "West Bengal", value: 28 },
   ];
+
   const years = Array.from({ length: 100 }).map((_, i) => ({
     label: `Year ${2044 - i}`,
     value: 2044 - i,
   }));
 
-  const handleStateChange = (state) => {
-    setSelectedState(state);
-    localStorage.setItem('selectedState', state);
+  const handleStateChange = (stateValue) => {
+    setSelectedState(stateValue);
+    const state = states.find((s) => s.value === stateValue);
+
+    if (state) {
+      localStorage.setItem('selectedState', stateValue);
+      localStorage.setItem('StateMapId', state.id);
+    }
+
     // Trigger storage event to notify other components
     window.dispatchEvent(new Event("storage"));
   };
 
-  const handleYearChange = (year) => {
-
-    setSelectedYear(year);
-    localStorage.setItem('selectedYear', year);
+  const handleYearChange = (yearValue) => {
+    setSelectedYear(yearValue);
+    localStorage.setItem('selectedYear', yearValue);
     // Trigger storage event to notify other components
     window.dispatchEvent(new Event("storage"));
   };
 
   return (
     <div className="container mx-auto px-4">
-      {/* Existing JSX without modification */}
       <section className="flex flex-wrap gap-10 justify-between items-center w-full text-2xl tracking-tight leading-none text-white whitespace-nowrap max-w-[1382px]">
         <section className="filter-dropdown-container">
           <section className="button-container gap-10">
             <div className="c-button c-button--gooey">
-              <Dropdown 
+              <Dropdown
                 value={selectedState}
                 onChange={(e) => handleStateChange(e.value)}
-                options={states}
+                options={states.map((state) => ({ label: state.name, value: state.value }))}
                 placeholder="Select State"
                 className="dropdown-style"
               />

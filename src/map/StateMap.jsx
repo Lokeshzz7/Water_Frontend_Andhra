@@ -1,54 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import resData from "./reservoir_data_full.json";
+import resData from "./reservoir_data_full.json"; // Adjust the path to where your resData is located
 
-const StateMap = ({ selectedStateId }) => {
+const StateMap = () => {
   const chartRef = useRef(null);
   const rootRef = useRef(null);
+  const polygonSeriesRef = useRef(null); // Store polygon series reference
   const [isLoading, setIsLoading] = useState(true);
   const [currentZoomState, setCurrentZoomState] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [stateReservoirCount, setStateReservoirCount] = useState(null);
-
-  // Mapping your custom dropdown IDs to GeoJSON state IDs
-  const stateIdMap = {
-    0: "IN-CH", // Chandigarh
-    1: "IN-AR", // Arunachal Pradesh
-    2: "IN-OD", // Odisha
-    3: "IN-MN", // Manipur
-    4: "IN-RJ", // Rajasthan
-    5: "IN-BR", // Bihar
-    6: "IN-TS", // Telangana
-    7: "IN-PY", // Puducherry
-    8: "IN-LD", // Lakshadweep
-    9: "IN-LD", // Ladakh
-    10: "IN-KL", // Kerala
-    11: "IN-AN", // Andaman and Nicobar Islands
-    12: "IN-MH", // Maharashtra
-    13: "IN-UP", // Uttar Pradesh
-    14: "IN-MZ", // Mizoram
-    15: "IN-UT", // Uttarakhand
-    16: "IN-AP", // Andhra Pradesh
-    17: "IN-HR", // Haryana
-    18: "IN-DN", // Dadra and Nagar Haveli
-    19: "IN-HP", // Himachal Pradesh
-    20: "IN-KA", // Karnataka
-    21: "IN-JK", // Jammu and Kashmir
-    22: "IN-CT", // Chhattisgarh
-    23: "IN-ML", // Meghalaya
-    24: "IN-DL", // Delhi
-    25: "IN-TR", // Tripura
-    26: "IN-WB", // West Bengal
-    27: "IN-AS", // Assam
-    28: "IN-MP", // Madhya Pradesh
-    29: "IN-NL", // Nagaland
-    30: "IN-GA", // Goa
-    31: "IN-DD", // Daman and Diu
-    32: "IN-JH", // Jharkhand
-    33: "IN-SK", // Sikkim
-    34: "IN-TN", // Tamil Nadu
-    35: "IN-GJ", // Gujarat
-    36: "IN-PB", // Punjab
-  };
+  const [stateList, setStateList] = useState([]); // List of states for the dropdown
+  const [selectedState, setSelectedState] = useState(null); // Dropdown selection
 
   const scripts = [
     "https://cdn.amcharts.com/lib/5/index.js",
@@ -119,6 +81,8 @@ const StateMap = ({ selectedStateId }) => {
       })
     );
 
+    polygonSeriesRef.current = polygonSeries; // Save reference for later use
+
     const stateColors = {};
 
     polygonSeries.mapPolygons.template.setAll({
@@ -143,6 +107,9 @@ const StateMap = ({ selectedStateId }) => {
     polygonSeries.mapPolygons.template.events.on("click", function (ev) {
       const dataItem = ev.target.dataItem;
       const stateName = dataItem.dataContext.name;
+      polygonSeriesRef.current.mapPolygons.each((polygon) => {
+        polygon.states.apply("default");
+      });
 
       if (dataItem === currentZoomState) {
         chart.goHome();
@@ -186,25 +153,40 @@ const StateMap = ({ selectedStateId }) => {
     });
 
     reservoirSeries.data.setAll(resData);
+
+    const states = [
+      { id: "IN-AP", name: "Andhra Pradesh" },
+      { id: "IN-AR", name: "Arunachal Pradesh" },
+      { id: "IN-AS", name: "Assam" },
+      { id: "IN-BR", name: "Bihar" },
+      { id: "IN-CT", name: "Chhattisgarh" },
+      { id: "IN-GA", name: "Goa" },
+      { id: "IN-GJ", name: "Gujarat" },
+      { id: "IN-HR", name: "Haryana" },
+      { id: "IN-HP", name: "Himachal Pradesh" },
+      { id: "IN-JH", name: "Jharkhand" },
+      { id: "IN-KA", name: "Karnataka" },
+      { id: "IN-KL", name: "Kerala" },
+      { id: "IN-MP", name: "Madhya Pradesh" },
+      { id: "IN-MH", name: "Maharashtra" },
+      { id: "IN-MN", name: "Manipur" },
+      { id: "IN-ML", name: "Meghalaya" },
+      { id: "IN-MZ", name: "Mizoram" },
+      { id: "IN-NL", name: "Nagaland" },
+      { id: "IN-OR", name: "Odisha" },
+      { id: "IN-PB", name: "Punjab" },
+      { id: "IN-RJ", name: "Rajasthan" },
+      { id: "IN-SK", name: "Sikkim" },
+      { id: "IN-TN", name: "Tamil Nadu" },
+      { id: "IN-TG", name: "Telangana" },
+      { id: "IN-TR", name: "Tripura" },
+      { id: "IN-UP", name: "Uttar Pradesh" },
+      { id: "IN-UT", name: "Uttarakhand" },
+      { id: "IN-WB", name: "West Bengal" },
+    ];
+    setStateList(states);
+
     setIsLoading(false);
-
-    // Highlight state if selectedStateId is passed
-    if (selectedStateId !== null) {
-      highlightState(polygonSeries, chart, selectedStateId);
-    }
-  };
-
-  const highlightState = (polygonSeries, chart, stateId) => {
-    const geoJsonStateId = stateIdMap[stateId]; // Map custom ID to geoJSON ID
-    const statePolygon = polygonSeries.dataItems.find(
-      (dataItem) => dataItem.get("id") === geoJsonStateId
-    );
-
-    if (statePolygon) {
-      chart.zoomToDataItem(statePolygon);
-    } else {
-      console.warn(`State with ID ${geoJsonStateId} not found.`);
-    }
   };
 
   const updateStateReservoirCount = (stateName) => {
@@ -212,6 +194,22 @@ const StateMap = ({ selectedStateId }) => {
       (reservoir) => reservoir.state === stateName
     );
     setStateReservoirCount(stateReservoirs.length);
+  };
+
+  const handleStateSelection = (stateId) => {
+    const selectedState = stateList.find((state) => state.id === stateId);
+    if (selectedState) {
+      setSelectedState(stateId);
+      setSelectedItem({ type: "state", name: selectedState.name });
+      updateStateReservoirCount(selectedState.name);
+
+      // Programmatically zoom to the selected state
+      const dataItem = polygonSeriesRef.current.getDataItemById(stateId);
+      if (dataItem) {
+        polygonSeriesRef.current.zoomToDataItem(dataItem); // Correct method here
+        setCurrentZoomState(dataItem);
+      }
+    }
   };
 
   useEffect(() => {
@@ -227,33 +225,69 @@ const StateMap = ({ selectedStateId }) => {
         rootRef.current.dispose();
       }
     };
-  }, [selectedStateId]);
+  }, []);
+
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      // Custom event listener
+      if (e.detail && e.detail.key === "StateMapId") {
+        const stateMapId = e.detail.value;
+        if (stateList.length > 0) {
+          handleStateSelection(stateMapId);
+        }
+      }
+    };
+
+    // Add custom event listener
+    window.addEventListener("localStorageChange", handleStorageChange);
+
+    // Modify localStorage setting to trigger custom event
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function (key, value) {
+      const event = new CustomEvent("localStorageChange", {
+        detail: { key, value }
+      });
+      window.dispatchEvent(event);
+
+      // Call the original setItem method
+      originalSetItem.apply(this, arguments);
+    };
+
+    // Check initial localStorage value
+    const initialStateMapId = localStorage.getItem("StateMapId");
+    if (initialStateMapId && stateList.length > 0) {
+      handleStateSelection(initialStateMapId);
+    }
+
+    return () => {
+      window.removeEventListener("localStorageChange", handleStorageChange);
+      // Restore original setItem method
+      localStorage.setItem = originalSetItem;
+    };
+  }, [stateList]); // Include stateList as a dependency if you need it to re-run based on changes
+
+
+
 
   return (
     <div className="flex w-full h-[500px]">
-      <div id="chartdiv" ref={chartRef} className="w-3/4 h-full" />
-      <div className="w-1/4 h-full bg-transparent text-white p-4 border-l">
-        {selectedItem ? (
-          selectedItem.type === "reservoir" ? (
+      <div className="w-1/4 h-full bg-gray-800 text-white p-4 border-r">
+        <div className="mt-4">
+          {selectedItem && selectedItem.type === "state" && (
             <>
-              <h2 className="text-xl font-bold mb-2">Reservoir Details</h2>
-              <p><strong>Name:</strong> {selectedItem.title}</p>
-              <p><strong>Capacity:</strong> {selectedItem.capacity}</p>
-              <p><strong>State:</strong> {selectedItem.state}</p>
-            </>
-          ) : (
-            <>
-              <h2 className="text-xl font-bold mb-2">State Details</h2>
-              <p><strong>State:</strong> {selectedItem.name}</p>
               <p>
-                <strong>Reservoirs:</strong> {stateReservoirCount || "Loading..."}
+                <strong>State:</strong> {selectedItem.name}
+              </p>
+              <p>
+                <strong>Number of Reservoirs:</strong>{" "}
+                {stateReservoirCount}
               </p>
             </>
-          )
-        ) : (
-          <p>Select a state on the map to view details.</p>
-        )}
+          )}
+        </div>
       </div>
+
+      <div id="chartdiv" ref={chartRef} className="w-3/4 h-full" />
     </div>
   );
 };

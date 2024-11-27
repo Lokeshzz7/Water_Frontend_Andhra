@@ -5,15 +5,12 @@ import LucGraph from './graph/LucGraph';
 import FilterDropdown from './component/FilterDropdown';  // Import FilterDropdown
 import LinearGauge from './graph/LinearGauge';
 import WaterLinear from './component/WaterLinear';
-import PopulationWater from './graph/PopulationWater';
 import WaterLinearCurrent from './component/WaterLinearCurrent';
 import AndhraMap from './map/AndhraMap.jsx';
 import StateMap from './map/StateMap.jsx';
 import data from '../src/data/reservoir_fake_data.json'; // Import your JSON data
 
 import DataCard from '../src/component/DataCard.jsx';
-import Andhra2 from './map/Andra2.jsx';
-import PopulationAndWater from './graph/PopulationandWater.jsx';
 
 
 function WaterManagementDashboard() {
@@ -70,73 +67,42 @@ function WaterManagementDashboard() {
     }, [selectedStateIndex, selectedYear]);
 
     return (
-        <main className="flex overflow-hidden flex-col justify-evenly items-center  py-9 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue max-md:px-5">
-            < FilterDropdown />
+        <main className="flex flex-col justify-evenly items-center py-9 bg-darkslateblue shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] max-md:px-5 overflow-hidden">
+            <FilterDropdown />
 
-            <div className='flex flex-col justify-center items-center p-3'>
-
-                <section className="flex flex-row w-screen">
-                    <div className="flex flex-col w-1/2 pl-8"> {/* Left side */}
-                        <div className="flex flex-row">
-                            <div className="flex flex-col w-full ml-9">
+            <div className="flex flex-col justify-center items-center p-3 w-full">
+                <section className="flex flex-row w-full">
+                    <div className='flex flex-col  w-full'>
+                        <div className="flex flex-row flex-1 px-4"> {/* Left side */}
+                            <div className="flex flex-wrap "> {/* Added responsive layout */}
                                 <DataCard title="Current Capacity" value={currentCapacity} unit="galH2O" />
                                 <DataCard title="Current Storage" value={currentStorage} unit="galH2O" />
                             </div>
-                            <div className="flex flex-col w-full">
-                                <DataCard title="Future Capacity" value={currentCapacity} unit="galH2O" />
-                                <DataCard title="Future Storage" value={currentStorage} unit="galH2O" />
+                            <div className="flex flex-wrap "> {/* Added responsive layout */}
+                                <DataCard title="Current Capacity" value={currentCapacity} unit="galH2O" />
+                                <DataCard title="Current Storage" value={currentStorage} unit="galH2O" />
                             </div>
                         </div>
-                        <div className="w-full pl-5 mt-4"> {/* Ensure space between sections */}
+                        <div>
                             <LinearGauge />
                         </div>
                     </div>
-                    <div className="w-5/12 "> {/* Ensure `relative` to avoid content spill */}
-                        {/* <AndhraMap /> */}
-                        <PopulationAndWater />
-
-
+                    <div className="flex flex-col flex-1 px-4"> {/* Right side */}
+                        <AndhraMap />
                     </div>
                 </section>
 
-                <section className="flex flex-row w-screen mt-20">
-                    <div className="flex flex-col w-1/2 pl-8">
-                        {/* <div className='flex flex-row'></div> */}
-                        <div className='w-full pl-5'>
-                        </div>
-                    </div>
-                    <div className="w-5/12 "> {/* Add `relative` for isolation */}
-                        <PopulationWater />
+                <section className="flex flex-row w-full mt-20">
+                    <div className="flex flex-col flex-1 px-4">
                         <LucGraph />
                     </div>
+                    <div className="flex flex-col flex-1 px-4">
+                        {/* <PopulationWater /> */}
+                    </div>
                 </section>
-
             </div>
+        </main>
 
-
-            {/* <section className="mt-7 w-full  max-md:max-w-full">
-                <div className="flex  max-md:flex-col">
-                    <WaterUsageCard />
-                    <WaterLinearCurrent />
-        
-                    <WaterLinear />
-
-
-
-                    <WaterUsageChart title="This month" value="35.25" percentage="+2.45%" status="On track" />
-
-
-                </div>
-            </section> */}
-            {/* <section className="mt-17 w-full  max-md:max-w-full">
-                <div className="flex gap-8 max-md:flex-col">
-                    <LucGraph />
-
-                    <PopulationWater />
-                    <LinearGauge />
-                </div>
-            </section> */}
-        </main >
     );
 }
 

@@ -12,6 +12,7 @@ const FactorGraph = () => {
         const loadFromLocalStorage = () => {
             const stateIndex = parseInt(localStorage.getItem('selectedState'), 10);
             const year = parseInt(localStorage.getItem('selectedYear'), 10);
+            
             setSelectedStateIndex(stateIndex);
             setSelectedYear(year);
         };
@@ -148,6 +149,11 @@ const FactorGraph = () => {
                     },
                 },
             ],
+
+
+
+
+
             toolbox: {
                 show: true, // Show the toolbox
                 feature: {
@@ -158,27 +164,37 @@ const FactorGraph = () => {
                         show: true,
                         title: 'Info', // Button title
                         icon: 'path://M256 0C114.84 0 0 114.84 0 256s114.84 256 256 256 256-114.84 256-256S397.16 0 256 0zM256 448C132.48 448 48 363.52 48 256S132.48 64 256 64s208 84.48 208 192-84.48 192-208 192zM256 176c-13.28 0-24 10.72-24 24s10.72 24 24 24 24-10.72 24-24-10.72-24-24-24zM256 272c-13.28 0-24 10.72-24 24s10.72 24 24 24 24-10.72 24-24-10.72-24-24-24z',
-                        onclick: function () {
-                            // Create an info box when the info button is clicked
+                        onclick: function (params, event) {
+                            // Check if the event is available
+                            if (!event || !event.currentTarget) {
+                                console.error('Event object or currentTarget is missing.');
+                                return;
+                            }
+
+                            // Use currentTarget for more stability
+                            const infoButton = event.currentTarget;
+                            const rect = infoButton.getBoundingClientRect();
+
+                            // Create an info box
                             const infoBox = document.createElement('div');
                             infoBox.style.position = 'absolute';
-                            infoBox.style.backgroundColor = 'white'; // White background
-                            infoBox.style.color = 'black'; // Black text
+                            infoBox.style.backgroundColor = 'white';
+                            infoBox.style.color = 'black';
                             infoBox.style.padding = '15px';
                             infoBox.style.borderRadius = '5px';
                             infoBox.style.zIndex = 9999;
                             infoBox.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.1)';
                             infoBox.style.fontSize = '12px';
                             infoBox.style.width = '250px';
-                            infoBox.style.top = '10px';
-                            infoBox.style.right = '10px';
+                            infoBox.style.top = `${rect.top + rect.height + 10}px`; // Position below the button
+                            infoBox.style.left = `${rect.left}px`; // Align with the button
 
                             // Content of the info box
                             infoBox.innerHTML = `
-                                <strong>Graph Information</strong><br/>
-                                This graph visualizes the relationship between different factors and their values over time.<br/>
-                                It helps to analyze trends and patterns.
-                            `;
+                    <strong>Graph Information</strong><br/>
+                    This graph visualizes the relationship between different factors and their values over time.<br/>
+                    It helps to analyze trends and patterns.
+                `;
 
                             // Add the info box to the body
                             document.body.appendChild(infoBox);
@@ -189,12 +205,15 @@ const FactorGraph = () => {
                             }, 5000);
                         },
                     },
-
                 },
                 itemSize: 18, // Optional: Adjust the size of toolbox icons
                 top: '1%', // Position the toolbox from the top (you can adjust this)
                 right: '2%', // Position the toolbox from the right (you can adjust this)
             },
+
+
+
+
             title: {
                 text: 'Factors Affecting',
                 textStyle: {

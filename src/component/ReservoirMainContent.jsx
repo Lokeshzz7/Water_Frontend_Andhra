@@ -4,9 +4,9 @@ import data from '../data/reservoir_fake_data.json'; // Import your JSON data
 import DataCard from './DataCard.jsx';
 import ReservoirHealth from '../graph/ReservoirHealth.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
-import ScatterChart from './charts/ScatterChart.jsx';
 import SpiderGraph from '../graph/SpiderGraph.jsx';
-import AndraMap from '../map/AndhraMap.jsx';
+import AndhraMap from '../map/AndhraMap.jsx';
+
 
 const ReservoirMainContent = () => {
     const [currentCapacity, setCurrentCapacity] = useState(null);
@@ -16,7 +16,7 @@ const ReservoirMainContent = () => {
 
     // Function to load data from localStorage
     const loadFromLocalStorage = () => {
-        const stateIndex = parseInt(localStorage.getItem('selectedState'), 10);
+        const stateIndex = parseInt(localStorage.getItem('selectedReservoir'), 10);
         const year = parseInt(localStorage.getItem('selectedYear'), 10);
         setSelectedStateIndex(stateIndex);
         setSelectedYear(year);
@@ -24,44 +24,72 @@ const ReservoirMainContent = () => {
 
     // Effect to initialize and listen to localStorage changes
     useEffect(() => {
-        // Initial load from localStorage
         loadFromLocalStorage();
-
-        // Listen for storage changes
         window.addEventListener('storage', loadFromLocalStorage);
 
-        // Cleanup listener on unmount
         return () => {
             window.removeEventListener('storage', loadFromLocalStorage);
         };
     }, []);
 
-    // Effect to update data based on selected state and year
+    // Fetch data from API
     useEffect(() => {
-        if (selectedStateIndex !== null && selectedYear !== null && data) {
-            const filteredData = data.find(
-                (item) =>
-                    item.index === selectedStateIndex &&
-                    item.year.toString() === selectedYear.toString()
-            );
+        const fetchReservoirData = async () => {
+            try {
+                const response = await fetch("http://localhost:8000/api/reservoir/get-reservoir-by-id/5/2022");
+                console.log("Response Object:", response);
 
-            if (filteredData) {
-                setCurrentCapacity(Math.trunc(filteredData.currentCapacity));
-                setCurrentStorage(Math.trunc(filteredData.currentStorage));
-            } else {
-                setCurrentCapacity(null);
-                setCurrentStorage(null);
+                if (response.ok) {
+                    const contentType = response.headers.get("Content-Type");
+                    if (contentType && contentType.includes("application/json")) {
+                        // Parse the JSON response
+                        const data = await response.json();
+                        console.log("Parsed JSON Data:", data);
+
+                        // Store values in an array
+                        const reservoirArray = data.map(reservoir => ({
+                            id: reservoir.id,
+                            reservoir: reservoir.reservoir,
+                            district: reservoir.district,
+                            basin: reservoir.basin,
+                            gross_capacity: reservoir.gross_capacity,
+                            current_level: reservoir.current_level,
+                            current_storage: reservoir.current_storage,
+                            flood_cushion: reservoir.flood_cushion,
+                            inflow: reservoir.inflow,
+                            outflow: reservoir.outflow,
+                            year: reservoir.year,
+                            month: reservoir.month
+                        }));
+
+                        // Log the array with a descriptive message
+                        console.log("The get-reservoir-by-id array:", reservoirArray);
+                    } else {
+                        console.error("Error: Response is not JSON");
+                        const text = await response.text();
+                        console.log("Raw Response Text:", text);
+                    }
+                } else {
+                    console.error("Error: Response not OK", response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error("Error fetching API data:", error);
             }
-        }
+        };
+
+
+        fetchReservoirData();
     }, [selectedStateIndex, selectedYear]);
 
+
+
     return (
-        <div>
-            <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
-                <section className="mt-7 mb-4 w-full max-w-[2100px] max-md:max-w-full">
-                    <div className="flex pl-5 gap-5 max-md:flex-col">
-                        <div className="flex flex-row">
-                            <div className="gap-14">
+        <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
+            <div className="flex flex-col justify-center items-center p-3 w-full">
+                <section className="flex flex-row w-full">
+                    <div className="flex flex-col w-full">
+                        <div className="flex flex-row flex-1 px-4">
+                            <div className="flex flex-wrap ">
                                 <DataCard
                                     title="Current Capacity"
                                     value={currentCapacity}
@@ -73,24 +101,35 @@ const ReservoirMainContent = () => {
                                     unit="galH2O"
                                 />
                             </div>
-                            <div className='w-full'>
-                                <ReservoirHealth />
-                                {/* <AndraMap /> */}
+                            <div className="flex flex-wrap ">
+                                <DataCard
+                                    title="Future Capacity"
+                                    value={currentCapacity}
+                                    unit="galH2O"
+                                />
+                                <DataCard
+                                    title="Future Storage"
+                                    value={currentStorage}
+                                    unit="galH2O"
+                                />
                             </div>
                         </div>
-                        <div>
-                            <WaterConsumptionGraph />
-                        </div>
+                    </div>
+                    <div className="flex flex-col flex-1 px-4">
+                        <AndhraMap />
                     </div>
                 </section>
-                <section className="mt-19 w-full max-w-[1900px] max-md:max-w-full">
-                    <div className="flex max-md:flex-col">
-                        <ScatterChart />
+
+                <section className="flex flex-row w-full mt-20">
+                    <div className="flex flex-col flex-1 px-4">
+                        <WaterConsumptionGraph />
+                    </div>
+                    <div className="flex flex-col flex-1 px-4">
                         <SpiderGraph />
                     </div>
                 </section>
-            </main>
-        </div>
+            </div>
+        </main>
     );
 };
 

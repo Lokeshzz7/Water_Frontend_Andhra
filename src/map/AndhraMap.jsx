@@ -1,147 +1,295 @@
-import React, { useEffect, useState } from "react";
-import * as echarts from "echarts";
+import React, { useEffect, useRef, useState } from "react";
+import resData from "./reservoir_data_full.json"; // Adjust the path to where your resData is located
 
-// List of states with index values and static population data
-const states = [
-    { label: 'Chandigarh', value: 0, population: 1055450 },
-    { label: 'Arunachal Pradesh', value: 1, population: 1570458 },
-    { label: 'Odisha', value: 2, population: 45333632 },
-    { label: 'Manipur', value: 3, population: 3162322 },
-    { label: 'Rajasthan', value: 4, population: 81032689 },
-    { label: 'Bihar', value: 5, population: 124799926 },
-    { label: 'Telangana', value: 6, population: 39237488 },
-    { label: 'Puducherry', value: 7, population: 1554000 },
-    { label: 'Lakshadweep', value: 8, population: 64473 },
-    { label: 'Ladakh', value: 9, population: 290492 },
-    { label: 'Kerala', value: 10, population: 35699443 },
-    { label: 'Andaman and Nicobar Islands', value: 11, population: 399001 },
-    { label: 'Maharashtra', value: 12, population: 125848620 },
-    { label: 'Uttar Pradesh', value: 13, population: 240928138 },
-    { label: 'Mizoram', value: 14, population: 1267403 },
-    { label: 'Uttarakhand', value: 15, population: 12033385 },
-    { label: 'Andhra Pradesh', value: 16, population: 54004482 },
-    { label: 'Haryana', value: 17, population: 29482700 },
-    { label: 'Dadra and Nagar Haveli', value: 18, population: 867000 },
-    { label: 'Himachal Pradesh', value: 19, population: 7541833 },
-    { label: 'Karnataka', value: 20, population: 69799967 },
-    { label: 'Jammu and Kashmir', value: 21, population: 12548926 },
-    { label: 'Chhattisgarh', value: 22, population: 29842556 },
-    { label: 'Meghalaya', value: 23, population: 3894783 },
-    { label: 'Delhi', value: 24, population: 32907078 },
-    { label: 'Tripura', value: 25, population: 3673917 },
-    { label: 'West Bengal', value: 26, population: 100671217 },
-    { label: 'Assam', value: 27, population: 35678084 },
-    { label: 'Madhya Pradesh', value: 28, population: 87652982 },
-    { label: 'Nagaland', value: 29, population: 2340458 },
-    { label: 'Goa', value: 30, population: 1619565 },
-    { label: 'Daman and Diu', value: 31, population: 243000 },
-    { label: 'Jharkhand', value: 32, population: 39434820 },
-    { label: 'Sikkim', value: 33, population: 690251 },
-    { label: 'Tamil Nadu', value: 34, population: 83141510 },
-    { label: 'Gujarat', value: 35, population: 70512524 },
-    { label: 'Punjab', value: 36, population: 31978408 },
-];
+const StateMap = () => {
+    const chartRef = useRef(null);
+    const rootRef = useRef(null);
+    const polygonSeriesRef = useRef(null); // Store polygon series reference
+    const [isLoading, setIsLoading] = useState(true);
+    const [currentZoomState, setCurrentZoomState] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(null);
+    const [stateReservoirCount, setStateReservoirCount] = useState(null);
+    const [stateList, setStateList] = useState([]); // List of states for the dropdown
+    const [selectedState, setSelectedState] = useState(null); // Dropdown selection
 
-const AndraMap = () => {
-    const [selectedState, setSelectedState] = useState(null);
-    const [totalPopulation, setTotalPopulation] = useState(null);
-    const [selectedYear, setSelectedYear] = useState(null);
+    const scripts = [
+        "https://cdn.amcharts.com/lib/5/index.js",
+        "https://cdn.amcharts.com/lib/5/map.js",
+        "https://cdn.amcharts.com/lib/5/geodata/indiaLow.js",
+        "https://cdn.amcharts.com/lib/5/themes/Animated.js",
+    ];
 
-    useEffect(() => {
-        const storedStateIndex = localStorage.getItem("selectedState");
-        const storedYear = localStorage.getItem("selectedYear");
+    const loadScript = async (src) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+            return Promise.resolve();
+        }
+        return new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = src;
+            script.async = true;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.body.appendChild(script);
+        });
+    };
 
-        if (storedStateIndex !== null) {
-            const state = states.find((state) => state.value === parseInt(storedStateIndex, 10));
-            if (state) {
-                setSelectedState(state.label);
-                setTotalPopulation(state.population);
+    const loadAllScripts = async () => {
+        try {
+            await Promise.all(scripts.map(loadScript));
+        } catch (error) {
+            console.error("Error loading scripts:", error);
+        }
+    };
+
+    const generateRandomColor = () => {
+        const random = () => Math.floor(Math.random() * 256);
+        return `rgb(${random()}, ${random()}, ${random()})`;
+    };
+
+    const initializeChart = () => {
+        if (
+            !window.am5 ||
+            !window.am5map ||
+            !window.am5themes_Animated ||
+            !window.am5geodata_indiaLow
+        ) {
+            console.error("Required amCharts libraries are missing.");
+            return;
+        }
+
+        if (rootRef.current) {
+            rootRef.current.dispose();
+        }
+
+        const root = window.am5.Root.new("chartdiv");
+        rootRef.current = root;
+
+        root.setThemes([window.am5themes_Animated.new(root)]);
+
+        const chart = root.container.children.push(
+            window.am5map.MapChart.new(root, {
+                projection: window.am5map.geoMercator(),
+                panX: "translateX",
+                panY: "translateY",
+                wheelY: "zoom",
+            })
+        );
+
+        const polygonSeries = chart.series.push(
+            window.am5map.MapPolygonSeries.new(root, {
+                geoJSON: window.am5geodata_indiaLow,
+            })
+        );
+
+        polygonSeriesRef.current = polygonSeries; // Save reference for later use
+
+        const stateColors = {};
+
+        polygonSeries.mapPolygons.template.setAll({
+            tooltipText: "{name}",
+            interactive: true,
+            stroke: window.am5.color(0xffffff),
+            strokeWidth: 1,
+        });
+
+        polygonSeries.mapPolygons.template.adapters.add("fill", (fill, target) => {
+            const stateName = target.dataItem.dataContext.name;
+            if (!stateColors[stateName]) {
+                stateColors[stateName] = window.am5.color(generateRandomColor());
+            }
+            return stateColors[stateName];
+        });
+
+        polygonSeries.mapPolygons.template.states.create("hover", {
+            fill: window.am5.color(0x0984e3),
+        });
+
+        polygonSeries.mapPolygons.template.events.on("click", function (ev) {
+            const dataItem = ev.target.dataItem;
+            const stateName = dataItem.dataContext.name;
+            polygonSeriesRef.current.mapPolygons.each((polygon) => {
+                polygon.states.apply("default");
+            });
+
+            if (dataItem === currentZoomState) {
+                chart.goHome();
+                setCurrentZoomState(null);
+                setSelectedItem(null);
+                setStateReservoirCount(null);
+            } else {
+                polygonSeries.zoomToDataItem(dataItem);
+                setCurrentZoomState(dataItem);
+                setSelectedItem({ type: "state", name: stateName });
+                updateStateReservoirCount(stateName);
+            }
+        });
+
+        const zoomControl = chart.set(
+            "zoomControl",
+            window.am5map.ZoomControl.new(root, {})
+        );
+        zoomControl.homeButton.set("visible", true);
+
+        const reservoirSeries = chart.series.push(
+            window.am5map.MapPointSeries.new(root, {})
+        );
+
+        reservoirSeries.bullets.push(() => {
+            const circle = window.am5.Circle.new(root, {
+                radius: 6,
+                tooltipText: "{title}",
+                tooltipY: 0,
+                fill: window.am5.color(0xff0000),
+                stroke: window.am5.color(0xffffff),
+                strokeWidth: 2,
+            });
+
+            circle.events.on("click", (event) => {
+                const dataItem = event.target.dataItem;
+                setSelectedItem({ type: "reservoir", ...dataItem.dataContext });
+            });
+
+            return window.am5.Bullet.new(root, { sprite: circle });
+        });
+
+        reservoirSeries.data.setAll(resData);
+
+        const states = [
+            { id: "IN-AP", name: "Andhra Pradesh" },
+            { id: "IN-AR", name: "Arunachal Pradesh" },
+            { id: "IN-AS", name: "Assam" },
+            { id: "IN-BR", name: "Bihar" },
+            { id: "IN-CT", name: "Chhattisgarh" },
+            { id: "IN-GA", name: "Goa" },
+            { id: "IN-GJ", name: "Gujarat" },
+            { id: "IN-HR", name: "Haryana" },
+            { id: "IN-HP", name: "Himachal Pradesh" },
+            { id: "IN-JH", name: "Jharkhand" },
+            { id: "IN-KA", name: "Karnataka" },
+            { id: "IN-KL", name: "Kerala" },
+            { id: "IN-MP", name: "Madhya Pradesh" },
+            { id: "IN-MH", name: "Maharashtra" },
+            { id: "IN-MN", name: "Manipur" },
+            { id: "IN-ML", name: "Meghalaya" },
+            { id: "IN-MZ", name: "Mizoram" },
+            { id: "IN-NL", name: "Nagaland" },
+            { id: "IN-OR", name: "Odisha" },
+            { id: "IN-PB", name: "Punjab" },
+            { id: "IN-RJ", name: "Rajasthan" },
+            { id: "IN-SK", name: "Sikkim" },
+            { id: "IN-TN", name: "Tamil Nadu" },
+            { id: "IN-TG", name: "Telangana" },
+            { id: "IN-TR", name: "Tripura" },
+            { id: "IN-UP", name: "Uttar Pradesh" },
+            { id: "IN-UT", name: "Uttarakhand" },
+            { id: "IN-WB", name: "West Bengal" },
+        ];
+        setStateList(states);
+
+        setIsLoading(false);
+    };
+
+    const updateStateReservoirCount = (stateName) => {
+        const stateReservoirs = resData.filter(
+            (reservoir) => reservoir.state === stateName
+        );
+        setStateReservoirCount(stateReservoirs.length);
+    };
+
+    const handleStateSelection = (stateId) => {
+        const selectedState = stateList.find((state) => state.id === stateId);
+        if (selectedState) {
+            setSelectedState(stateId);
+            setSelectedItem({ type: "state", name: selectedState.name });
+            updateStateReservoirCount(selectedState.name);
+
+            // Programmatically zoom to the selected state
+            const dataItem = polygonSeriesRef.current.getDataItemById(stateId);
+            if (dataItem) {
+                polygonSeriesRef.current.zoomToDataItem(dataItem); // Correct method here
+                setCurrentZoomState(dataItem);
             }
         }
+    };
 
-        if (storedYear !== null) {
-            setSelectedYear(storedYear);
-        }
+    useEffect(() => {
+        const setupChart = async () => {
+            await loadAllScripts();
+            initializeChart();
+        };
+
+        setupChart();
+
+        return () => {
+            if (rootRef.current) {
+                rootRef.current.dispose();
+            }
+        };
     }, []);
 
     useEffect(() => {
-        if (!selectedState || totalPopulation === null) return;
-
-        const initializeChart = async () => {
-            const chartDom = document.getElementById("main");
-            const myChart = echarts.init(chartDom);
-            myChart.showLoading();
-
-            try {
-                const response = await fetch(
-                    "https://sharonadhitya.github.io/json/Indian_States%20[MConverter.eu].json"
-                );
-                const indiaGeoJson = await response.json();
-                const stateFeature = indiaGeoJson.features.find(
-                    (feature) => feature.properties.NAME_1 === selectedState
-                );
-
-                if (stateFeature) {
-                    const stateGeoJson = {
-                        type: "FeatureCollection",
-                        features: [stateFeature],
-                    };
-
-                    echarts.registerMap(selectedState, stateGeoJson);
-
-                    myChart.hideLoading();
-
-                    const option = {
-                        title: {
-                            text: `${selectedState} Map`,
-                            subtext: `Population Data: ${totalPopulation.toLocaleString()}`,
-                            left: "center",
-                        },
-                        tooltip: {
-                            trigger: "item",
-                            formatter: (params) =>
-                                `${params.name}<br/>Population: ${totalPopulation.toLocaleString()}`,
-                        },
-                        visualMap: {
-                            min: 0,
-                            max: 200000000,
-                            text: ["High", "Low"],
-                            realtime: false,
-                            calculable: true,
-                            inRange: {
-                                color: ["lightskyblue", "yellow", "orangered"],
-                            },
-                        },
-                        series: [
-                            {
-                                name: selectedState,
-                                type: "map",
-                                map: selectedState,
-                                emphasis: {
-                                    label: {
-                                        show: true,
-                                    },
-                                },
-                                data: [
-                                    { name: selectedState, value: totalPopulation },
-                                ],
-                            },
-                        ],
-                    };
-
-                    myChart.setOption(option);
-                } else {
-                    console.error(`${selectedState} not found in the GeoJSON data.`);
+        const handleStorageChange = (e) => {
+            // Custom event listener
+            if (e.detail && e.detail.key === "StateMapId") {
+                const stateMapId = e.detail.value;
+                if (stateList.length > 0) {
+                    handleStateSelection(stateMapId);
                 }
-            } catch (error) {
-                console.error("Failed to fetch India GeoJSON:", error);
             }
         };
 
-        initializeChart();
-    }, [selectedState, totalPopulation]);
+        // Add custom event listener
+        window.addEventListener("localStorageChange", handleStorageChange);
 
-    return <div id="main" className="w-full h-[520px] p-2 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-lg mt-8"></div>;
+        // Modify localStorage setting to trigger custom event
+        const originalSetItem = localStorage.setItem;
+        localStorage.setItem = function (key, value) {
+            const event = new CustomEvent("localStorageChange", {
+                detail: { key, value }
+            });
+            window.dispatchEvent(event);
+
+            // Call the original setItem method
+            originalSetItem.apply(this, arguments);
+        };
+
+        // Check initial localStorage value
+        const initialStateMapId = localStorage.getItem("StateMapId");
+        if (initialStateMapId && stateList.length > 0) {
+            handleStateSelection(initialStateMapId);
+        }
+
+        return () => {
+            window.removeEventListener("localStorageChange", handleStorageChange);
+            // Restore original setItem method
+            localStorage.setItem = originalSetItem;
+        };
+    }, [stateList]); // Include stateList as a dependency if you need it to re-run based on changes
+
+
+
+
+    return (
+        <div className="flex w-full h-[500px]">
+            {/* <div className="w-1/4 h-full bg-gray-800 text-white p-4 border-r">
+                <div className="mt-4">
+                    {selectedItem && selectedItem.type === "state" && (
+                        <>
+                            <p>
+                                <strong>State:</strong> {selectedItem.name}
+                            </p>
+                            <p>
+                                <strong>Number of Reservoirs:</strong>{" "}
+                                {stateReservoirCount}
+                            </p>
+                        </>
+                    )}
+                </div>
+            </div> */}
+
+            <div id="chartdiv" ref={chartRef} className="w-[800px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[524px] text-white rounded-lg ml-6 mt-8 mr-4 " />
+        </div>
+    );
 };
 
-export default AndraMap;
+export default StateMap;
