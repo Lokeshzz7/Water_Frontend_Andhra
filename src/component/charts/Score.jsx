@@ -253,7 +253,7 @@ const GaugeChart = () => {
     };
   }, [value]);
 
-  return <div ref={chartRef} className="w-[450px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg ml-6 mt-8 mr-5 shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] " />;
+  return <div ref={chartRef} className="w-1/2 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg ml-6 mt-8 mr-5 " />;
 };
 
 export default GaugeChart;

@@ -159,7 +159,7 @@ const WaterConsumptionGraph = () => {
         };
     }, [chartData]);
 
-    return <div id="water-consumption-chart" className="w-[700px] h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-lg ml-6 mt-8 mr-4 "></div>;
+    return <div id="water-consumption-chart" className="w-[700px] h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-6 mt-8 mr-4 "></div>;
 };
 
 export default WaterConsumptionGraph;

@@ -3,6 +3,7 @@ import Selection_Dropdown from './component/Risk_Selection_Dropdown';
 import ReservoirMainContent from "./component/ReservoirMainContent";
 import FilterDropdown from "./component/FilterDropdown";
 import DistrictReservoirDropdown from "./component/DistrictReservoirDropdown.jsx"
+import Test from "./test.jsx";
 
 const ReservoirStatus = () => {
   return (
@@ -14,6 +15,7 @@ const ReservoirStatus = () => {
 
 
       {/* <Selection_Dropdown /> */}
+      {/* <Test /> */}
 
       <ReservoirMainContent />
     </div>

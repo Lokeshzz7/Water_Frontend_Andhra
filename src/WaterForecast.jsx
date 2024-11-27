@@ -107,7 +107,7 @@ function WaterManagementDashboard() {
                         </div>
                         <div>
                             <LinearGauge />
-                        </div>
+                        </div> 
                     </div>
                     <div className="flex flex-col flex-1 px-4">
                         <AndhraMap />

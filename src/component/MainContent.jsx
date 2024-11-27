@@ -1,52 +1,110 @@
-import React from 'react';
-import ScenarioSection from './Scenario_text_section';
-import GaugeChart from './charts/Score';
-import SideBar from './charts/SideBar';
+import React, { useState } from 'react';
 import ScenarioDropdown from './ScenarioDropdown';
 import ScenarioSlider from '../graph/ScenarioSlider';
-import WaterLinearCurrent from './WaterLinearCurrent';
 import LucGraph from '../graph/LucGraph';
-import WaterLinear from './WaterLinear';
-const MainContent = () => (
-  <main className="mt-2 max-md:max-w-full">
-    <div className='flex flex-row gap-3 w-1/2'>
-      <ScenarioDropdown />
-      <ScenarioSlider />
-    </div>
-    <div className="flex gap-5 mt-4 max-md:flex-col">
+import GaugeChart from './charts/Score';
+import SideBar from './charts/SideBar';
+import RangeSlider from '../graph/Slider';
 
-      {/* Left side  */}
-      <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
-            <section className="mt-17 w-full max-w-[1600px] max-md:max-w-full">
-                <div className="flex gap-8 max-md:flex-col">
-                    {/* <WaterUsageCard /> */}
-                    <WaterLinearCurrent />
-                    <WaterLinear />
+const MainContent = () => {
+  // State for the sliders
+  const [rainfall, setRainfall] = useState(50);
+  const [temperature, setTemperature] = useState(25);
+  const [population, setPopulation] = useState(100);
+
+  // Slider marks
+  const rainfallMarks = [
+    { value: 0, label: '0 mm' },
+    { value: 50, label: '50 mm' },
+    { value: 100, label: '100 mm' },
+  ];
+
+  const temperatureMarks = [
+    { value: 0, label: '0°C' },
+    { value: 20, label: '20°C' },
+    { value: 40, label: '40°C' },
+  ];
+
+  const populationMarks = [
+    { value: 0, label: '0 M' },
+    { value: 50, label: '50 M' },
+    { value: 100, label: '100 M' },
+  ];
+
+  return (
+    <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5 w-[1700px]">
+      <div className="flex flex-col justify-center items-center p-3 w-full">
+        <section className="flex flex-row w-full">
+          {/* Left section: Group of sliders */}
+          <div className="flex flex-col w-1/2">
+            <div className="flex flex-col justify-between gap-4 px-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue ml-5 mt-7 p-8 pl-10 ">
+              {/* Group of three sliders: Rainfall, Temperature, and Population */}
+              <div className="flex w-full">
+                <div className="flex flex-row gap-9 text-center align-baseline">
+                  <span className="text-lg font-bold text-white">Rainfall:</span>
+                  <RangeSlider
+                    value={rainfall}
+                    onChange={setRainfall}
+                    marks={rainfallMarks}
+                    step={10}
+                    min={0}
+                    max={100}
+                  />
+                  <span className="text-lg font-bold text-white">{rainfall} mm</span>
                 </div>
-              </section>
-              <section className="mt-17 w-full max-w-[1600px] max-md:max-w-full">
-                <div className="flex gap-8 max-md:flex-col">
-                    <LucGraph />
+              </div>
+              <div className="flex w-full">
+                <div className="flex flex-row gap-9 text-center align-baseline">
+                  <span className="text-lg font-bold text-white">Temperature:</span>
+                  <RangeSlider
+                    value={temperature}
+                    onChange={setTemperature}
+                    marks={temperatureMarks}
+                    step={5}
+                    min={0}
+                    max={40}
+                  />
+                  <span className="text-lg font-bold text-white">{temperature} °C</span>
                 </div>
-              </section>
-      </main>
-      {/* Right Side */}
-      <aside className="flex flex-col ml-5 w-[29%] max-md:ml-0 max-md:w-full">
-        <div className="flex flex-col grow mt-3 font-bold text-white max-md:mt-10">
-          <div className="px-14 pt-2.5 text-5xl tracking-tighter leading-none bg-stone-300 max-md:px-5 max-md:pb-28 max-md:text-4xl">
-            Scenario Score
+              </div>
+              <div className="flex w-full">
+                <div className="flex flex-row gap-9 text-center align-baseline">
+                  <span className="text-lg font-bold text-white">Population:</span>
+                  <RangeSlider
+                    value={population}
+                    onChange={setPopulation}
+                    marks={populationMarks}
+                    step={10}
+                    min={0}
+                    max={100}
+                  />
+                  <span className="text-lg font-bold text-white">{population} M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right section: GaugeChart */}
+          <div className="flex flex-col flex-1 px-4 w-full ">
             <GaugeChart />
           </div>
-          <div className="px-1 pt-5 pb-20 mt-7 text-4xl tracking-tighter leading-none bg-stone-300 max-md:pr-5 max-md:pb-28">
-            Factors affecting the scenario:
+        </section>
+
+        <section className="flex flex-row w-full mt-20">
+          {/* Left section: LucGraph */}
+          <div className="flex flex-col flex-1 px-4">
+            <LucGraph />
+          </div>
+
+          {/* Right section: SideBar */}
+          <div className="flex flex-col flex-1 px-4">
             <SideBar />
           </div>
-        </div>
-      </aside>
+        </section>
+      </div>
+    </main>
 
-
-    </div>
-  </main>
-);
+  );
+};
 
 export default MainContent;
