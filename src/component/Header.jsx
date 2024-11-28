@@ -21,7 +21,7 @@ const Header = ({ className = "" }) => {
   return (
     <header className={`relative w-full ${className} m-8`}>
       <div
-        className="flex items-center justify-between w-full max-w-screen-xl font-dm-sans font-bold bg-darkslateblue rounded-full px-6 shadow-md"
+        className="flex items-center justify-between w-[500px]  font-dm-sans font-bold bg-darkslateblue rounded-full px-6 shadow-md"
         style={{ minHeight: "80px" }}
       >
         {/* Dashboard Title */}
