@@ -5,6 +5,8 @@ import LucGraph from '../graph/LucGraph';
 import GaugeChart from './charts/Score';
 import SideBar from './charts/SideBar';
 import RangeSlider from '../graph/Slider';
+import Scenarioscore from '../graph/Scenarioscore';
+import DataCard from './DataCard';
 
 const MainContent = () => {
   // State for the sliders
@@ -82,12 +84,36 @@ const MainContent = () => {
                 </div>
               </div>
             </div>
+            <div className='flex flex-row gap-4 '>
+                                <div className="flex w-full h-40">
+                                    <DataCard
+                                        title="Water Inflow"
+                                        value={"N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                                <div className="flex w-full h-40">
+                                    <DataCard
+                                        title="Water Outflow"
+                                        value={"N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                                <div className="flex w-full h-40">
+                                    <DataCard
+                                        title="Water storage"
+                                        value={"N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                            </div>
           </div>
 
           {/* Right section: GaugeChart */}
-          <div className="flex flex-col flex-1 px-4 w-full ">
-            <GaugeChart />
+          <div className="flex flex-col flex-1 px-5 w-full ">
+            <Scenarioscore />
           </div>
+          
         </section>
 
         <section className="flex flex-row w-full mt-20">
