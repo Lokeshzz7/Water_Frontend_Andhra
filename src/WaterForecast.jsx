@@ -91,23 +91,40 @@ function WaterManagementDashboard() {
                 <FilterDropdown />
 
                 {/* District Dropdown */}
-                <DistrictDropdown
+                {/* <DistrictDropdown
                     selectedDistrict={selectedDistrict}
                     setSelectedDistrict={setSelectedDistrict}
-                />
+                /> */}
             </div>
 
             {/* Remaining content */}
             <div className="flex flex-col justify-center items-center p-3 w-full">
                 <section className="flex flex-row w-full">
-                    <div className="flex flex-col w-full">
-                        <div className="flex flex-wrap px-4">
-                            <DataCard title="Current Capacity" value={currentCapacity} unit="galH2O" />
-                            <DataCard title="Current Storage" value={currentStorage} unit="galH2O" />
+                    <div className="flex flex-row w-full">
+                        <div>
+                            <div className="flex flex-col w-full">
+                                <div className="flex flex-wrap px-4">
+                                    <DataCard title="Current Usage" value={500} />
+                                    <DataCard title="Past / Future Usage" value={400} />
+                                </div>
+                                <div>
+                                    <LinearGauge />
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <LinearGauge />
-                        </div> 
+                            <div className="flex flex-col w-full">
+                                <div className="flex flex-wrap px-4">
+                                    <DataCard title="Current Usage" value={500} />
+                                    <DataCard title="Past / Future Usage" value={400} />
+                                </div>
+                                <div>
+                                    <LinearGauge />
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div className="flex flex-col flex-1 px-4">
                         <AndhraMap />

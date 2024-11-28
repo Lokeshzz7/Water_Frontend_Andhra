@@ -17,7 +17,7 @@ const WaterManagementDashboard = () => {
           <div className="flex flex-col w-[50%] mb-10 max-md:ml-0 max-md:w-full">
             <RiskAssessment />
           </div>
-          <div className="flex flex-col ml-5 mb-20 h-full w-[50%] max-md:ml-0 max-md:w-full">
+          <div className="flex flex-col  mb-20 h-full w-[50%] max-md:ml-0 max-md:w-full">
             <DataVisualizations />
           </div>
         </div>

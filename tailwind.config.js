@@ -27,6 +27,8 @@ module.exports = {
     },
     fontSize: {
       sm: "14px",
+      lg: "16px",
+      xl : "26px",
       inherit: "inherit",
     },
     screens: {

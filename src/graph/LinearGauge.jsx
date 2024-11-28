@@ -85,7 +85,7 @@ const LinearGauge = () => {
             {percentages ? (
                 Object.entries(percentages).map(([category, percentage]) => (
                     <div key={category} className="flex items-center mb-4">
-                        <span className="ml-4 font-bold">{category}: {percentage}%</span>
+                        <span className=" text-sm font-bold">{category}: {percentage}%</span>
 
                         <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
                             <div

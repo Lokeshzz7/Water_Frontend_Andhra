@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
 
 const Header = ({ className = "" }) => {
-  const navigate = useNavigate();
-  const onLogOutClick = useCallback(() => {
-    localStorage.removeItem('userRole');
-    navigate("/");
-  }, [navigate]);
+  
 
   return (
     <header className={`relative w-full py-2 box-border ${className} mq450:mb-5`}>
@@ -18,17 +14,10 @@ const Header = ({ className = "" }) => {
         </div>
         {/* Greeting */}
         <div className="flex-1 text-center text-white text-[25px] hidden lg:block">
-          <span>Hello {localStorage.getItem('userRole')}</span>
+          <span>Hello </span>
         </div>
         {/* Log Out Button */}
-        <div className="absolute right-0">
-          <button
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-[20px]"
-            onClick={onLogOutClick}
-          >
-            Log Out
-          </button>
-        </div>
+        
       </div>
     </header>
   );

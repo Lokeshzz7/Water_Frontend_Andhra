@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const DataCard = ({ title, value, unit }) => {
+const DataCard = ({ title, value }) => {
 
   return (
-    <div className="flex flex-col  pt-2 mt-8  w-10/12 h-[100px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl max-md:px-5 max-md:mt-3">
-      <div className="flex flex-col w-[full] pl-9  ">
+    <div className="flex flex-col  pt-2 mt-8  w-full h-[100px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl max-md:px-5 max-md:mt-3">
+      <div className="flex flex-col w-[full] pl-3 pr-5 ">
         <div className="text-lg font-bold text-left">{title}</div>
         <div className="flex justify-between items-end ">
           {/* Left Side: Water Usage Value and Unit */}
-          <div className="flex items-baseline pl-4">
-            <div className="text-5xl font-bold text-blue-500">{value}</div>
-            <div className="text-xl font-semibold text-gray-500 ml-2">galH<sub>2</sub>O</div>
+          <div className="flex items-baseline pt-2 ">
+            <div className="text-xl font-bold text-blue-500">{value}</div>
+            <div className="text-sm font-semibold text-gray-500 ml-2">galH<sub>2</sub>O</div>
           </div>
 
           {/* Right Side: Legend */}

@@ -59,49 +59,53 @@ const ReservoirMainContent = () => {
             <div className="flex flex-col justify-center items-center p-3 w-full">
                 <section className="flex flex-row w-full">
                     <div className="flex flex-col w-full">
-                        <div className="flex flex-wrap justify-between gap-4 px-4">
+                        <div className="flex flex-row justify-between px-4 gap-10">
                             {/* Set a fixed width for DataCard to enforce layout */}
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Current Level"
-                                    value={reservoirData?.current_level || "N/A"}
-                                    unit="galH2O"
-                                />
+                            <div className='flex flex-col '>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Current Level"
+                                        value={reservoirData?.current_level || "N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Current Storage"
+                                        value={reservoirData?.current_storage || "N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Flood Cushion"
+                                        value={reservoirData?.flood_cushion || "N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
                             </div>
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Current Storage"
-                                    value={reservoirData?.current_storage || "N/A"}
-                                    unit="galH2O"
-                                />
-                            </div>
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Flood Cushion"
-                                    value={reservoirData?.flood_cushion || "N/A"}
-                                    unit="galH2O"
-                                />
-                            </div>
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Gross Capacity"
-                                    value={reservoirData?.gross_capacity || "N/A"}
-                                    unit="galH2O"
-                                />
-                            </div>
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Inflow"
-                                    value={reservoirData?.inflow || "N/A"}
-                                    unit="m³/s"
-                                />
-                            </div>
-                            <div className="flex w-[32%]">
-                                <DataCard
-                                    title="Outflow"
-                                    value={reservoirData?.outflow || "N/A"}
-                                    unit="m³/s"
-                                />
+                            <div className='flex flex-col '>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Gross Capacity"
+                                        value={reservoirData?.gross_capacity || "N/A"}
+                                        unit="galH2O"
+                                    />
+                                </div>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Inflow"
+                                        value={reservoirData?.inflow || "N/A"}
+                                        unit="m³/s"
+                                    />
+                                </div>
+                                <div className="flex w-full">
+                                    <DataCard
+                                        title="Outflow"
+                                        value={reservoirData?.outflow || "N/A"}
+                                        unit="m³/s"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -111,9 +115,9 @@ const ReservoirMainContent = () => {
                 </section>
 
                 <section className="flex flex-row w-full mt-20">
-                    <div className="flex flex-col flex-1 px-4">
+                    {/* <div className="flex flex-col flex-1 px-4">
                         <WaterConsumptionGraph />
-                    </div>
+                    </div> */}
                     <div className="flex flex-col flex-1 px-4">
                         <SpiderGraph />
                     </div>
