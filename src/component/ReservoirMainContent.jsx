@@ -115,9 +115,9 @@ const ReservoirMainContent = () => {
                 </section>
 
                 <section className="flex flex-row w-full mt-20">
-                    {/* <div className="flex flex-col flex-1 px-4">
+                    <div className="flex flex-col flex-1 px-4">
                         <WaterConsumptionGraph />
-                    </div> */}
+                    </div>
                     <div className="flex flex-col flex-1 px-4">
                         <SpiderGraph />
                     </div>

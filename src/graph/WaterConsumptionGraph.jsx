@@ -15,16 +15,13 @@ const WaterConsumptionGraph = () => {
         const selectedYear = parseInt(localStorage.getItem("selectedYear") || 2020, 10);
         const selectedIndex = parseInt(localStorage.getItem("selectedState") || 0, 10);
 
-        // Generate years for the current year and previous 4 years
         const years = Array.from({ length: 5 }, (_, i) => selectedYear - i).reverse();
 
-        // Filter and collect data for the selected index and range of years
         const filteredData = years.map((year) => {
             const yearData = data.find((item) => item.index === selectedIndex && item.year === year);
             return yearData || {};
         });
 
-        // Extract values for chart
         const waterStorage = filteredData.map((item) => item.currentStorage || 0);
         const waterCapacity = filteredData.map((item) => item.currentCapacity || 0);
         const waterLevel = filteredData.map((item) => item.waterLevel || 0);
@@ -40,10 +37,10 @@ const WaterConsumptionGraph = () => {
     };
 
     useEffect(() => {
-        fetchData(); // Fetch data initially when component mounts
+        fetchData();
 
         const handleStorageChange = () => {
-            fetchData(); // Re-fetch data if localStorage changes
+            fetchData();
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -54,7 +51,6 @@ const WaterConsumptionGraph = () => {
     }, []);
 
     useEffect(() => {
-        // Initialize the chart
         const chartDom = document.getElementById("water-consumption-chart");
         const myChart = echarts.init(chartDom);
 
@@ -62,11 +58,11 @@ const WaterConsumptionGraph = () => {
             title: {
                 text: "Water Consumption Trends",
                 textStyle: {
-                    color: "white", // Set title color to white
-                    fontWeight: "bold", // Set title font weight to bold
-                    fontSize: 24, // Optional: Set title font size
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: 24,
                 },
-                padding: [15, 0, 20, 20], // Add padding below the title (top, right, bottom, left)
+                padding: [15, 0, 20, 110],
             },
             tooltip: {
                 trigger: "axis",
@@ -74,8 +70,8 @@ const WaterConsumptionGraph = () => {
             legend: {
                 data: ["Water Storage", "Water Capacity", "Water Level", "Water Consumption"],
                 textStyle: {
-                    color: "white", // Set legend text color to white
-                    fontWeight: "bold", // Set legend text to bold
+                    color: "white",
+                    fontWeight: "bold",
                 },
                 top: "12%",
             },
@@ -92,8 +88,8 @@ const WaterConsumptionGraph = () => {
                         backgroundColor: "transparent"
                     },
                 },
-                itemSize: 18, // Optional: Adjust the size of toolbox icons
-                top: '1%',// Position the toolbox from the top (you can adjust this)
+                itemSize: 18,
+                top: '1%',
                 right: "2%",
             },
             xAxis: {
@@ -101,28 +97,28 @@ const WaterConsumptionGraph = () => {
                 boundaryGap: false,
                 data: chartData.years,
                 axisLabel: {
-                    color: "white", // Set x-axis label color to white
-                    fontWeight: "bold", // Make x-axis labels bold
+                    color: "white",
+                    fontWeight: "bold",
                 },
                 axisTick: {
-                    alignWithLabel: true, // Align ticks with labels
-                    length: 5, // Make ticks shorter
+                    alignWithLabel: true,
+                    length: 5,
                 },
             },
             yAxis: {
                 type: "value",
                 axisLabel: {
-                    color: "white", // Set y-axis label color to white
-                    fontWeight: "bold", // Make y-axis labels bold
+                    color: "white",
+                    fontWeight: "bold",
                     margin: 10,
                 },
                 axisTick: {
-                    length: 5, // Make ticks shorter
+                    length: 5,
                 },
                 splitLine: {
                     lineStyle: {
-                        type: "dashed", // Optional: Change split line style
-                        color: "white", // Set split line color to white
+                        type: "dashed",
+                        color: "white",
                     },
                 },
             },
@@ -150,16 +146,44 @@ const WaterConsumptionGraph = () => {
             ],
         };
 
-
         myChart.setOption(option);
 
-        // Cleanup on unmount
         return () => {
             myChart.dispose();
         };
     }, [chartData]);
 
-    return <div id="water-consumption-chart" className="w-[700px] h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-6 mt-8 mr-4 "></div>;
+    return (
+        <div className="relative">
+            {/* Tooltip Button */}
+            <div
+                className="absolute top-[30px] left-3 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('waterInfoTooltip'); // Updated id
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('waterInfoTooltip'); // Updated id
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+            </div>
+            {/* Tooltip Content */}
+            <div
+                id="waterInfoTooltip" // Updated id
+                className="absolute top-[70px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                style={{ display: 'none', width: '200px', pointerEvents: 'none' }}
+            >
+                This line chart shows the water storage, water capacity, water level, and consumption over the past years.
+            </div>
+            {/* Line Chart */}
+            <div
+                id="water-consumption-chart"
+                className="w-full h-[500px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-3 mt-8"
+            ></div>
+        </div>
+    );
 };
 
 export default WaterConsumptionGraph;

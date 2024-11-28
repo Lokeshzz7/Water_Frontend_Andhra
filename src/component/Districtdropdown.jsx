@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown } from "primereact/dropdown";
 
-const DistrictDropdown = ({ selectedDistrict, setSelectedDistrict }) => {
-    const [districts, setDistricts] = useState([]);
+const DistrictDropdown = () => {
+    const [districts, setDistricts] = useState([]); // Holds districts fetched from API
+    const [selectedDistrict, setSelectedDistrict] = useState(null); // Local state for selected district
     const [loadingDistricts, setLoadingDistricts] = useState(false);
 
     // Fetch districts on load
@@ -19,7 +20,7 @@ const DistrictDropdown = ({ selectedDistrict, setSelectedDistrict }) => {
                 setDistricts(districtOptions);
             } catch (error) {
                 console.error("Error fetching districts:", error);
-                setDistricts([]);
+                setDistricts([]); // Reset districts in case of an error
             } finally {
                 setLoadingDistricts(false);
             }
@@ -29,8 +30,8 @@ const DistrictDropdown = ({ selectedDistrict, setSelectedDistrict }) => {
     }, []);
 
     const handleDistrictChange = (districtId) => {
-        setSelectedDistrict(districtId);
-        localStorage.setItem("selectedDistrict", districtId);
+        setSelectedDistrict(districtId); // Update the state
+        localStorage.setItem("selectedDistrict", districtId); // Save the selected district ID to localStorage
     };
 
     return (
@@ -39,12 +40,12 @@ const DistrictDropdown = ({ selectedDistrict, setSelectedDistrict }) => {
                 <section className="button-container">
                     <div className="c-button c-button--gooey">
                         <Dropdown
-                            value={selectedDistrict}
-                            onChange={(e) => handleDistrictChange(e.value)}
-                            options={districts}
+                            value={selectedDistrict} // Controlled value for the dropdown
+                            onChange={(e) => handleDistrictChange(e.value)} // Handle change
+                            options={districts} // District options fetched from the API
                             placeholder={loadingDistricts ? "Loading districts..." : "Select District"}
                             className="dropdown-style"
-                            disabled={loadingDistricts || !districts.length}
+                            disabled={loadingDistricts || !districts.length} // Disable if loading or no options
                         />
                         <span className="c-button__blobs">
                             <div></div>

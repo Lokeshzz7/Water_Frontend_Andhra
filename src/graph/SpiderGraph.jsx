@@ -49,31 +49,33 @@ const SpiderGraph = () => {
         const option = {
             title: {
                 text: "Water Usage Radar Chart",
+                left: "center",
+                top: "5%",
                 textStyle: {
-                    color: "white", // Set title color to white
-                    fontWeight: "bold", // Set title font weight to bold
-                    fontSize: 18, // Optional: Set title font size
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: 18,
                 },
-                padding: [10, 0, 20, 20],
-
             },
             tooltip: {},
             legend: {
                 data: ["Water Usage"],
                 textStyle: {
-                    color: "white", // Set legend text color to white
-                    fontWeight: "bold", // Set legend text to bold
+                    color: "white",
+                    fontWeight: "bold",
                 },
-                padding: [10, 0, 20, 20],
+                orient: "vertical",
+                right: "2%",
+                top: "20%",
             },
             radar: {
-                indicator: indicators, // Keep the indicators as they are
-                radius: "60%", // Reduce the size of the radar chart (adjust as needed)
-                center: ["50%", "50%"], // Adjust the position of the radar within the chart container
+                indicator: indicators,
+                radius: "60%",
+                center: ["50%", "55%"],
                 axisLabel: {
                     textStyle: {
-                        color: "white", // Set indicator label color to white
-                        fontWeight: "bold", // Make indicator label text bold
+                        color: "white",
+                        fontWeight: "bold",
                     },
                 },
             },
@@ -90,15 +92,15 @@ const SpiderGraph = () => {
                 },
             ],
             toolbox: {
-                show: true, // Show the toolbox
+                show: true,
                 feature: {
                     saveAsImage: {
                         backgroundColor: "transparent"
                     },
                 },
-                itemSize: 18, // Optional: Adjust the size of toolbox icons
-                top: '1%',// Position the toolbox from the top (you can adjust this)
-                right: "2%", // Position the toolbox from the right (you can adjust this)
+                itemSize: 18,
+                top: '1%',
+                right: "2%",
             },
         };
 
@@ -110,14 +112,14 @@ const SpiderGraph = () => {
     };
 
     useEffect(() => {
-        fetchData(); // Fetch data initially when the component mounts
+        fetchData();
 
         if (usageData) {
-            analyzeData(); // Update the chart whenever `usageData` changes
+            analyzeData();
         }
 
         const handleStorageChange = () => {
-            fetchData(); // Re-fetch data when localStorage changes
+            fetchData();
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -128,10 +130,35 @@ const SpiderGraph = () => {
     }, [usageData]);
 
     return (
-        <div
-            id="spider-chart"
-            className="w-[750px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] text-white rounded-lg ml-6 mt-8 mr-4 s"
-        ></div>
+        <div className="relative">
+            {/* Tooltip Button */}
+            <div
+                className="absolute top-[30px] left-3 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('spiderInfoTooltip'); // Updated id
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('spiderInfoTooltip'); // Updated id
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+            </div>
+            {/* Tooltip Content */}
+            <div
+                id="spiderInfoTooltip" // Updated id
+                className="absolute top-[70px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                style={{ display: 'none', width: '200px', pointerEvents: 'none' }}
+            >
+                This radar chart shows the distribution of water usage across different sectors for the selected state and year.
+            </div>
+            {/* Radar Chart */}
+            <div
+                id="spider-chart"
+                className="w-full h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-3 mt-8"
+            ></div>
+        </div>
     );
 };
 

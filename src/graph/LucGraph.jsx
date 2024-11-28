@@ -3,7 +3,7 @@ import * as echarts from 'echarts';
 import axios from 'axios';
 
 const LucGraph = () => {
-    const [stateName, setStateName] = useState('');  // State to hold the name of the state
+    const [stateName, setStateName] = useState('');
     const [year, setYear] = useState(null);
 
     const states = [
@@ -47,80 +47,88 @@ const LucGraph = () => {
 
     const analyzeData = async () => {
         try {
-            // Retrieve state and year from localStorage
             const state = parseInt(localStorage.getItem('selectedState'), 10);
             const year = parseInt(localStorage.getItem('selectedYear'), 10);
             setYear(year);
 
-            console.log("Retrieved from localStorage - State:", state, "Year:", year);
-
-            // Find the state name from the `states` array
             const selectedState = states.find(stateObj => stateObj.value === state);
             if (selectedState) {
-                setStateName(selectedState.label); // Set the state name to the stateName state
+                setStateName(selectedState.label);
             }
 
             if (!isNaN(state) && !isNaN(year)) {
-                // Fetch data using the correct API endpoint
-                const response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_landuse/${state}/${year}`);
+                const response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_landuse/${year}`);
+                const stateData = response.data;
 
-                console.log("API Response:", response.data);
+                const values = [
+                    { name: 'Forest', value: stateData.forest_use || 0 },
+                    { name: 'Barren', value: stateData.barren_use || 0 },
+                    { name: 'Cropped', value: stateData.cropped_use || 0 },
+                    { name: 'Fallow', value: stateData.fallow_use || 0 },
+                    { name: 'Other', value: stateData.other_use || 0 },
+                ];
 
-                if (response.data) {
-                    const stateData = response.data;  // Directly access the response object
-                    console.log("Fetched Data:", stateData);
-
-                    // Convert the data into a format suitable for echarts (Pie chart format)
-                    const values = [
-                        { name: 'Forest', value: stateData.forest_use || 0 },
-                        { name: 'Barren', value: stateData.barren_use || 0 },
-                        { name: 'Cropped', value: stateData.cropped_use || 0 },
-                        { name: 'Fallow', value: stateData.fallow_use || 0 },
-                        { name: 'Other', value: stateData.other_use || 0 },
-                    ];
-
-                    // Set the chart options dynamically
-                    const option = {
-                        title: {
-                            text: 'Land Use Change (LUC)',
-                            subtext: `Data for State ${stateName}, Year ${year}`,  // Use stateName here
-                            left: 'center',
-                            top: '6%',
+                const option = {
+                    title: {
+                        text: 'Land Use Change (LUC)',
+                        subtext: `Data for State ${stateName}, Year ${year}`,
+                        left: 'center',
+                        top: '6%',
+                        textStyle: {
+                            color: '#ffffff',
                         },
-                        tooltip: {
-                            trigger: 'item',
+                        subtextStyle: {
+                            color: '#ffffff',
                         },
-                        legend: {
-                            orient: 'vertical',
-                            top: '5%',
-                            right: '10%',
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        textStyle: {
+                            color: '#ffffff',
                         },
-                        series: [
-                            {
-                                name: 'LUC Types',
-                                type: 'pie',
-                                radius: '60%',
-                                center: ['50%', '57%'],
-                                data: values,  // Use the dynamically fetched data
-                                emphasis: {
-                                    itemStyle: {
-                                        shadowBlur: 10,
-                                        shadowOffsetX: 0,
-                                        shadowColor: 'rgba(0, 0, 0, 0.5)',
-                                    },
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {
+                                title: 'Save as Image',
+                                name: `LUC_${stateName}_${year}`,
+                            },
+                        },
+                        iconStyle: {
+                            borderColor: '#ffffff',
+                        },
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        top: '5%',
+                        right: '10%',
+                        textStyle: {
+                            color: '#ffffff',
+                        },
+                    },
+                    series: [
+                        {
+                            name: 'LUC Types',
+                            type: 'pie',
+                            radius: '60%',
+                            center: ['50%', '57%'],
+                            data: values,
+                            label: {
+                                color: '#ffffff',
+                            },
+                            labelLine: {
+                                lineStyle: {
+                                    color: '#ffffff',
                                 },
                             },
-                        ],
-                    };
+                        },
+                    ],
+                };
 
-                    // Initialize the chart
-                    const chartDom = document.getElementById('lucChart');  // Get the DOM element for the chart
-                    if (chartDom) {
-                        const myChart = echarts.init(chartDom);
-                        myChart.setOption(option);  // Set the options
-                    }
-                } else {
-                    console.warn("No data found for the specified state and year.");
+                const chartDom = document.getElementById('lucChart');
+                if (chartDom) {
+                    const myChart = echarts.init(chartDom);
+                    myChart.setOption(option);
                 }
             }
         } catch (error) {
@@ -129,9 +137,8 @@ const LucGraph = () => {
     };
 
     useEffect(() => {
-        analyzeData(); // Initial load
+        analyzeData();
 
-        // Listen to `storage` event for changes in `selectedState` or `selectedYear`
         const handleStorageChange = () => {
             analyzeData();
         };
@@ -141,10 +148,32 @@ const LucGraph = () => {
         return () => {
             window.removeEventListener("storage", handleStorageChange);
         };
-    }, [stateName , year]);  // Add stateName as a dependency to trigger re-render
+    }, [stateName, year]);
 
     return (
-        <div id="lucChart" className="w-11/12 ml-5  shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-red-800 h-[454px] rounded-lg   "></div>  // The chart container where the graph will be displayed
+        <div className="relative">
+            <div
+                className="absolute  left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('infoTooltip');
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('infoTooltip');
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+                <div
+                    id="infoTooltip"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: 'none', width: '200px' }}
+                >
+                    This graph shows the distribution of land use changes for the selected state and year.
+                </div>
+            </div>
+            <div id="lucChart" className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg"></div>
+        </div>
     );
 };
 

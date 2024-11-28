@@ -10,78 +10,7 @@ import FilterDropdown from "./component/FilterDropdown.jsx";
 import DistrictDropdown from "./component/Districtdropdown.jsx";
 
 function WaterManagementDashboard() {
-    const [currentCapacity, setCurrentCapacity] = useState(null);
-    const [currentStorage, setCurrentStorage] = useState(null);
-    const [selectedStateIndex, setSelectedStateIndex] = useState(null);
-    const [selectedYear, setSelectedYear] = useState(null);
 
-    const [selectedDistrict, setSelectedDistrict] = useState(() => {
-        try {
-            return localStorage.getItem("selectedDistrict") || null;
-        } catch {
-            return null;
-        }
-    });
-
-    const [districts, setDistricts] = useState([]);
-    const [loadingDistricts, setLoadingDistricts] = useState(false);
-
-    const [selectedYearOption, setSelectedYearOption] = useState(null);
-    const yearOptions = [
-        { label: "2022", value: 2022 },
-        { label: "2023", value: 2023 },
-    ];
-
-    // Fetch districts on load
-    useEffect(() => {
-        const fetchDistricts = async () => {
-            setLoadingDistricts(true);
-            try {
-                const response = await fetch("http://127.0.0.1:8000/api/forecast/get-districts");
-                const data = await response.json();
-                const districtOptions = data.map((district) => ({
-                    label: district.name,
-                    value: district.id,
-                }));
-                setDistricts(districtOptions);
-            } catch (error) {
-                console.error("Error fetching districts:", error);
-                setDistricts([]);
-            } finally {
-                setLoadingDistricts(false);
-            }
-        };
-
-        fetchDistricts();
-    }, []);
-
-    const handleDistrictChange = (districtId) => {
-        setSelectedDistrict(districtId);
-        localStorage.setItem("selectedDistrict", districtId);
-    };
-
-    const handleYearChange = (year) => {
-        setSelectedYear(year);
-        localStorage.setItem("selectedYear", year);
-    };
-
-    useEffect(() => {
-        if (selectedStateIndex !== null && selectedYear !== null && data) {
-            const filteredData = data.find(
-                (item) =>
-                    item.index === selectedStateIndex &&
-                    item.year.toString() === selectedYear.toString()
-            );
-
-            if (filteredData) {
-                setCurrentCapacity(Math.trunc(filteredData.currentCapacity));
-                setCurrentStorage(Math.trunc(filteredData.currentStorage));
-            } else {
-                setCurrentCapacity(null);
-                setCurrentStorage(null);
-            }
-        }
-    }, [selectedStateIndex, selectedYear]);
 
     return (
         <main className="flex flex-col justify-evenly items-center py-9 bg-darkslateblue shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] max-md:px-5 overflow-hidden">
@@ -91,10 +20,7 @@ function WaterManagementDashboard() {
                 <FilterDropdown />
 
                 {/* District Dropdown */}
-                {/* <DistrictDropdown
-                    selectedDistrict={selectedDistrict}
-                    setSelectedDistrict={setSelectedDistrict}
-                /> */}
+                <DistrictDropdown/>
             </div>
 
             {/* Remaining content */}
@@ -132,6 +58,9 @@ function WaterManagementDashboard() {
                 </section>
 
                 <section className="flex flex-row w-full mt-20">
+                    <div className="flex flex-col flex-1 px-4">
+                        <LucGraph />
+                    </div>
                     <div className="flex flex-col flex-1 px-4">
                         <LucGraph />
                     </div>
