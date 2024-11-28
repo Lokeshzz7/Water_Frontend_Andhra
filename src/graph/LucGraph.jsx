@@ -69,13 +69,14 @@ const LucGraph = () => {
                 ];
 
                 const option = {
+                    backgroundColor: 'transparent', // Make the background transparent
                     title: {
                         text: 'Land Use Change (LUC)',
                         subtext: `Data for State ${stateName}, Year ${year}`,
                         left: 'center',
                         top: '6%',
                         textStyle: {
-                            color: '#ffffff',
+                            color: '#ffffff', // White text for contrast against the blue
                         },
                         subtextStyle: {
                             color: '#ffffff',
@@ -84,7 +85,7 @@ const LucGraph = () => {
                     tooltip: {
                         trigger: 'item',
                         textStyle: {
-                            color: '#ffffff',
+                            color: '#ffffff', // White text for tooltip
                         },
                     },
                     toolbox: {
@@ -92,10 +93,11 @@ const LucGraph = () => {
                             saveAsImage: {
                                 title: 'Save as Image',
                                 name: `LUC_${stateName}_${year}`,
+                                backgroundColor: 'transparent', // Set save image background to transparent
                             },
                         },
                         iconStyle: {
-                            borderColor: '#ffffff',
+                            borderColor: '#ffffff', // White border color for icons
                         },
                     },
                     legend: {
@@ -103,7 +105,7 @@ const LucGraph = () => {
                         top: '5%',
                         right: '10%',
                         textStyle: {
-                            color: '#ffffff',
+                            color: '#ffffff', // White text for the legend
                         },
                     },
                     series: [
@@ -114,11 +116,11 @@ const LucGraph = () => {
                             center: ['50%', '57%'],
                             data: values,
                             label: {
-                                color: '#ffffff',
+                                color: '#ffffff', // White label text
                             },
                             labelLine: {
                                 lineStyle: {
-                                    color: '#ffffff',
+                                    color: '#ffffff', // White label line color
                                 },
                             },
                         },
@@ -153,7 +155,7 @@ const LucGraph = () => {
     return (
         <div className="relative">
             <div
-                className="absolute  left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
                 onMouseEnter={() => {
                     const tooltip = document.getElementById('infoTooltip');
                     if (tooltip) tooltip.style.display = 'block';
@@ -172,7 +174,7 @@ const LucGraph = () => {
                     This graph shows the distribution of land use changes for the selected state and year.
                 </div>
             </div>
-            <div id="lucChart" className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg"></div>
+            <div id="lucChart" className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg"></div>
         </div>
     );
 };

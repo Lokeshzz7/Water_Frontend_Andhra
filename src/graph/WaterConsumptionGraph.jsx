@@ -1,156 +1,233 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
-import data from "../data/reservoir_fake_data.json"; // Replace with your actual JSON file
+
+// Helper function to normalize data
+const normalizeValue = (value) => {
+    if (value === -999 || value === "NA") {
+        return 0;
+    }
+    return value;
+};
 
 const WaterConsumptionGraph = () => {
     const [chartData, setChartData] = useState({
         years: [],
-        waterStorage: [],
-        waterCapacity: [],
-        waterLevel: [],
-        waterConsumption: [],
+        grossCapacity: [],
+        floodCushion: [],
+        currentStorage: [],
+        currentLevel: [],
     });
 
-    const fetchData = () => {
-        const selectedYear = parseInt(localStorage.getItem("selectedYear") || 2020, 10);
-        const selectedIndex = parseInt(localStorage.getItem("selectedState") || 0, 10);
+    const [apiData, setApiData] = useState([]); // To store raw API data for display
 
-        const years = Array.from({ length: 5 }, (_, i) => selectedYear - i).reverse();
+    // State for tracking selected reservoir and year
+    const [selectedReservoir, setSelectedReservoir] = useState(parseInt(localStorage.getItem(`selectedReservoir`) || '6'));
+    const [selectedYear, setSelectedYear] = useState(parseInt(localStorage.getItem(`selectedYear`) || '2023'));
 
-        const filteredData = years.map((year) => {
-            const yearData = data.find((item) => item.index === selectedIndex && item.year === year);
-            return yearData || {};
-        });
+    const fetchYearData = async (year, reservoirId) => {
+        try {
+            let response, data;
+            let url = "";
+            if (year < 2025) {
+                url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
+                response = await fetch(url);
+                data = await response.json();
+                console.log(`API Call: ${url} Response`, data); // Log the API call and response
 
-        const waterStorage = filteredData.map((item) => item.currentStorage || 0);
-        const waterCapacity = filteredData.map((item) => item.currentCapacity || 0);
-        const waterLevel = filteredData.map((item) => item.waterLevel || 0);
-        const waterConsumption = filteredData.map((item) => item.consumption || 0);
+                const monthOneData = data.find((reservoir) => reservoir.month === 1);
+                return {
+                    year,
+                    grossCapacity: normalizeValue(monthOneData?.gross_capacity),
+                    floodCushion: normalizeValue(monthOneData?.flood_cushion),
+                    currentStorage: normalizeValue(monthOneData?.current_storage),
+                    currentLevel: normalizeValue(monthOneData?.current_level),
+                };
+            } else {
+                url = `http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`;
+                response = await fetch(url);
+                data = await response.json();
+                console.log(`API Call: ${url} Response`, data); // Log the API call and response
 
-        setChartData({
-            years,
-            waterStorage,
-            waterCapacity,
-            waterLevel,
-            waterConsumption,
-        });
+                const predictionData = data[0];
+                return {
+                    year,
+                    grossCapacity: normalizeValue(predictionData?.gross_capacity),
+                    floodCushion: normalizeValue(predictionData?.flood_cushion),
+                    currentStorage: normalizeValue(predictionData?.current_storage),
+                    currentLevel: 0, // Predictions may not include water levels
+                };
+            }
+        } catch (error) {
+            console.error(`Error fetching data for year ${year}:`, error);
+            return {
+                year,
+                grossCapacity: 0,
+                floodCushion: 0,
+                currentStorage: 0,
+                currentLevel: 0,
+            };
+        }
     };
 
+    const fetchData = async () => {
+        // Calculate the year range: selected year and the 2 years before and after
+        const years = [
+            selectedYear - 2,
+            selectedYear - 1,
+            selectedYear,
+            selectedYear + 1,
+            selectedYear + 2
+        ];
+
+        console.log(`Fetching data for Reservoir ID: ${selectedReservoir}, Year Range: ${years[0]} to ${years[years.length - 1]}`);
+
+        // Fetch data for each of the 5 years
+        const fetchPromises = years.map((year) => fetchYearData(year, selectedReservoir));
+        const results = await Promise.all(fetchPromises);
+
+        // Log the results fetched for all years
+        console.log("Fetched Data for all Years:", results);
+
+        const grossCapacity = results.map((item) => item.grossCapacity);
+        const floodCushion = results.map((item) => item.floodCushion);
+        const currentStorage = results.map((item) => item.currentStorage);
+        const currentLevel = results.map((item) => item.currentLevel);
+
+        // Update the chart data state
+        setChartData({ years, grossCapacity, floodCushion, currentStorage, currentLevel });
+        setApiData(results); // Save raw data for display
+    };
+
+    // Fetch data whenever selectedReservoir or selectedYear changes
     useEffect(() => {
         fetchData();
+    }, [selectedReservoir, selectedYear]);
 
-        const handleStorageChange = () => {
-            fetchData();
-        };
-
-        window.addEventListener("storage", handleStorageChange);
-
-        return () => {
-            window.removeEventListener("storage", handleStorageChange);
-        };
-    }, []);
-
+    // Listen to changes in localStorage for selectedReservoir and selectedYear
     useEffect(() => {
-        const chartDom = document.getElementById("water-consumption-chart");
-        const myChart = echarts.init(chartDom);
+        const handleStorageChange = () => {
+            const newSelectedReservoir = parseInt(localStorage.getItem(`selectedReservoir`) || '6');
+            const newSelectedYear = parseInt(localStorage.getItem(`selectedYear`) || '2023');
 
-        const option = {
-            title: {
-                text: "Water Consumption Trends",
-                textStyle: {
-                    color: "white",
-                    fontWeight: "bold",
-                    fontSize: 24,
-                },
-                padding: [15, 0, 20, 110],
-            },
-            tooltip: {
-                trigger: "axis",
-            },
-            legend: {
-                data: ["Water Storage", "Water Capacity", "Water Level", "Water Consumption"],
-                textStyle: {
-                    color: "white",
-                    fontWeight: "bold",
-                },
-                top: "12%",
-            },
-            grid: {
-                left: "3%",
-                right: "4%",
-                bottom: "3%",
-                top: "25%",
-                containLabel: true,
-            },
-            toolbox: {
-                feature: {
-                    saveAsImage: {
-                        backgroundColor: "transparent"
-                    },
-                },
-                itemSize: 18,
-                top: '1%',
-                right: "2%",
-            },
-            xAxis: {
-                type: "category",
-                boundaryGap: false,
-                data: chartData.years,
-                axisLabel: {
-                    color: "white",
-                    fontWeight: "bold",
-                },
-                axisTick: {
-                    alignWithLabel: true,
-                    length: 5,
-                },
-            },
-            yAxis: {
-                type: "value",
-                axisLabel: {
-                    color: "white",
-                    fontWeight: "bold",
-                    margin: 10,
-                },
-                axisTick: {
-                    length: 5,
-                },
-                splitLine: {
-                    lineStyle: {
-                        type: "dashed",
-                        color: "white",
-                    },
-                },
-            },
-            series: [
-                {
-                    name: "Water Storage",
-                    type: "line",
-                    data: chartData.waterStorage,
-                },
-                {
-                    name: "Water Capacity",
-                    type: "line",
-                    data: chartData.waterCapacity,
-                },
-                {
-                    name: "Water Level",
-                    type: "line",
-                    data: chartData.waterLevel,
-                },
-                {
-                    name: "Water Consumption",
-                    type: "line",
-                    data: chartData.waterConsumption,
-                },
-            ],
+            if (newSelectedReservoir !== selectedReservoir) {
+                setSelectedReservoir(newSelectedReservoir);
+            }
+            if (newSelectedYear !== selectedYear) {
+                setSelectedYear(newSelectedYear);
+            }
         };
 
-        myChart.setOption(option);
+        window.addEventListener('storage', handleStorageChange);
 
         return () => {
-            myChart.dispose();
+            window.removeEventListener('storage', handleStorageChange);
         };
+    }, [selectedReservoir, selectedYear]);
+
+    // Initialize and update the chart with the fetched data
+    useEffect(() => {
+        if (chartData.years.length > 0) {
+            const chartDom = document.getElementById("water-consumption-chart");
+            const myChart = echarts.init(chartDom);
+
+            const option = {
+                title: {
+                    text: "Reservoir Data Over Time",
+                    left: "center",
+                    textStyle: {
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: 24,
+                    },
+                    padding: [15, 0, 20, 110],
+                },
+                tooltip: {
+                    trigger: "axis",
+                },
+                legend: {
+                    data: ["Gross Capacity", "Flood Cushion", "Current Storage", "Current Level"],
+                    textStyle: {
+                        color: "white",
+                        fontWeight: "bold",
+                    },
+                    top: "12%",
+                },
+                grid: {
+                    left: "3%",
+                    right: "4%",
+                    bottom: "3%",
+                    top: "25%",
+                    containLabel: true,
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {
+                            backgroundColor: "transparent"
+                        },
+                    },
+                    itemSize: 18,
+                    top: '1%',
+                    right: "2%",
+                },
+                xAxis: {
+                    type: "category",
+                    data: chartData.years,
+                    axisLabel: {
+                        color: "white",
+                        fontWeight: "bold",
+                    },
+                    axisTick: {
+                        alignWithLabel: true,
+                        length: 5,
+                    },
+                },
+                yAxis: {
+                    type: "value",
+                    axisLabel: {
+                        color: "white",
+                        fontWeight: "bold",
+                        margin: 10,
+                    },
+                    axisTick: {
+                        length: 5,
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            type: "dashed",
+                            color: "white",
+                        },
+                    },
+                },
+                series: [
+                    {
+                        name: "Gross Capacity",
+                        type: "line",
+                        data: chartData.grossCapacity,
+                    },
+                    {
+                        name: "Flood Cushion",
+                        type: "line",
+                        data: chartData.floodCushion,
+                    },
+                    {
+                        name: "Current Storage",
+                        type: "line",
+                        data: chartData.currentStorage,
+                    },
+                    {
+                        name: "Current Level",
+                        type: "line",
+                        data: chartData.currentLevel,
+                    },
+                ],
+            };
+
+            myChart.setOption(option);
+
+            return () => {
+                myChart.dispose();
+            };
+        }
     }, [chartData]);
 
     return (

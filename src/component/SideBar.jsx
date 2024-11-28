@@ -50,7 +50,7 @@ const Menu = ({ className = "" }) => {
     return (
         <>
             {isMobile && (<div
-                className={`fixed top-4 left-4 w-10 h-10 flex items-center justify-center text-white cursor-pointer z-50 ${isMobile ? 'shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-full' : 'right-7'} ${isMobile ? '' : 'absolute'}`}
+                className={`fixed top-4 left-4 w-10 h-10 flex items-center justify-center text-white cursor-pointer z-50 ${isMobile ? 'shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-full' : 'right-7'} ${isMobile ? '' : 'absolute'}`}
                 onClick={toggleSidebar}
             >
                 {isOpen ? (
@@ -71,10 +71,10 @@ const Menu = ({ className = "" }) => {
                         ? `fixed inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
                         } ${isOpen ? "w-[280px]" : "w-[60px]"}`
                         : `relative flex ${isOpen ? "w-[280px]" : "w-[60px]"}`
-                    } min-h-screen rounded-3xl shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue flex flex-col items-center pt-[27.6px] pb-7 pr-[30px] pl-7 box-border text-middle transition-all duration-300 ease-in-out ${className}`}
+                    } min-h-screen rounded-3xl shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component flex flex-col items-center pt-[27.6px] pb-7 pr-[30px] pl-7 box-border text-middle transition-all duration-300 ease-in-out ${className}`}
             >
                 <div
-                    className={`fixed top-4 left-4 w-10 h-10 flex items-center justify-center text-white cursor-pointer z-50 ${isMobile ? 'shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-full' : 'right-7'} ${isMobile ? '' : 'absolute'}`}
+                    className={`fixed top-4 left-4 w-10 h-10 flex items-center justify-center text-white cursor-pointer z-50 ${isMobile ? 'shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-full' : 'right-7'} ${isMobile ? '' : 'absolute'}`}
                     onClick={toggleSidebar}
                 >
                     {isOpen ? (

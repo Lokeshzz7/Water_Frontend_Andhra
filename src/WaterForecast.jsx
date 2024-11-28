@@ -8,6 +8,7 @@ import data from "../src/data/reservoir_fake_data.json";
 import DataCard from "../src/component/DataCard.jsx";
 import FilterDropdown from "./component/FilterDropdown.jsx";
 import DistrictDropdown from "./component/Districtdropdown.jsx";
+import RainfallGraph from "./graph/RainfallGraph.jsx";
 
 function WaterManagementDashboard() {
 
@@ -62,7 +63,7 @@ function WaterManagementDashboard() {
                         <LucGraph />
                     </div>
                     <div className="flex flex-col flex-1 px-4">
-                        <LucGraph />
+                        <RainfallGraph />
                     </div>
                 </section>
             </div>

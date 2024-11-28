@@ -33,18 +33,47 @@ const ReservoirMainContent = () => {
             if (selectedStateIndex === null || selectedYear === null) return;
 
             try {
-                const response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    const monthOneData = data.find((reservoir) => reservoir.month === 1);
-                    console.log("Data for month 1:", monthOneData); // Console log the data for the first month
-                    if (monthOneData) {
-                        setReservoirData(monthOneData);
+                let response;
+                let data;
+
+                if (selectedYear > 2024) {
+                    // Call the new API for years greater than 2024
+                    response = await fetch(`http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
+                    if (response.ok) {
+                        data = await response.json();
+                        console.log(`Data for year ${selectedYear}:`, data);
+
+                        // Set the reservoir data from prediction API
+                        if (data.length > 0) {
+                            const predictionData = data[0];
+                            setReservoirData({
+                                gross_capacity: predictionData.gross_capacity,
+                                current_storage: predictionData.current_storage,
+                                // Include any additional fields needed here
+                            });
+                        } else {
+                            console.error(`No data found for year ${selectedYear}`);
+                        }
                     } else {
-                        console.error("No data found for month 1");
+                        console.error("API response error:", response.statusText);
                     }
                 } else {
-                    console.error("API response error:", response.statusText);
+                    // Call the existing API for years less than or equal to 2024
+                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
+                    if (response.ok) {
+                        data = await response.json();
+                        console.log(`Data for year ${selectedYear}:`, data);
+
+                        // Assuming data for month 1 is needed
+                        const monthOneData = data.find((reservoir) => reservoir.month === 1);
+                        if (monthOneData) {
+                            setReservoirData(monthOneData);
+                        } else {
+                            console.error(`No data found for month 1 in year ${selectedYear}`);
+                        }
+                    } else {
+                        console.error("API response error:", response.statusText);
+                    }
                 }
             } catch (error) {
                 console.error("Error fetching reservoir data:", error);
@@ -61,7 +90,7 @@ const ReservoirMainContent = () => {
                     <div className="flex flex-col w-full">
                         <div className="flex flex-row justify-between px-4 gap-10">
                             {/* Set a fixed width for DataCard to enforce layout */}
-                            <div className='flex flex-col '>
+                            <div className="flex flex-col ">
                                 <div className="flex w-full">
                                     <DataCard
                                         title="Current Level"
@@ -84,7 +113,7 @@ const ReservoirMainContent = () => {
                                     />
                                 </div>
                             </div>
-                            <div className='flex flex-col '>
+                            <div className="flex flex-col ">
                                 <div className="flex w-full">
                                     <DataCard
                                         title="Gross Capacity"
@@ -118,9 +147,9 @@ const ReservoirMainContent = () => {
                     <div className="flex flex-col flex-1 px-4">
                         <WaterConsumptionGraph />
                     </div>
-                    <div className="flex flex-col flex-1 px-4">
+                    {/* <div className="flex flex-col flex-1 px-4">
                         <SpiderGraph />
-                    </div>
+                    </div> */}
                 </section>
             </div>
         </main>

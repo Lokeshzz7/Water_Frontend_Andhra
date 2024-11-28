@@ -39,7 +39,7 @@ const MainContent = () => {
         <section className="flex flex-row w-full">
           {/* Left section: Group of sliders */}
           <div className="flex flex-col w-1/2">
-            <div className="flex flex-col justify-between gap-4 px-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue ml-5 mt-7 p-8 pl-10 ">
+            <div className="flex flex-col justify-between gap-4 px-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component ml-5 mt-7 p-8 pl-10 ">
               {/* Group of three sliders: Rainfall, Temperature, and Population */}
               <div className="flex w-full">
                 <div className="flex flex-row gap-9 text-center align-baseline">

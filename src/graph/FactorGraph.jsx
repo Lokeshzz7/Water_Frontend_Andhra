@@ -243,7 +243,7 @@ const FactorGraph = () => {
     return (
         <div>
             {/* The div where the chart will be rendered */}
-            <div id="factor-graph" className="w-[680px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg ml-6 mt-8 mr-4  "></div>
+            <div id="factor-graph" className="w-[680px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg ml-6 mt-8 mr-4  "></div>
         </div>
     );
 };

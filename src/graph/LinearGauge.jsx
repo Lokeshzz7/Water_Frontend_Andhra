@@ -80,7 +80,7 @@ const LinearGauge = () => {
     }, []);
 
     return (
-        <div className="w-11/12 mt-5 ml-5 p-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl max-md:px-5 max-md:mt-3">
+        <div className="w-11/12 mt-5 ml-5 p-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
             <h2 className="mb-4 text-lg font-bold">Selected Water Usage Distribution</h2>
             {percentages ? (
                 Object.entries(percentages).map(([category, percentage]) => (

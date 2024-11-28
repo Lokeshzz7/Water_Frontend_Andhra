@@ -55,7 +55,7 @@ const SideBar = () => {
     };
   }, []);
 
-  return <div ref={chartRef} className="w-11/12  ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue h-[454px] rounded-lg   "></div>;
+  return <div ref={chartRef} className="w-11/12  ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg   "></div>;
 };
 
 export default SideBar;

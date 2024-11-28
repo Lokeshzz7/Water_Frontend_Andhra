@@ -10,6 +10,7 @@ module.exports = {
         },
         "secondary-grey-600": "#a3aed0",
         darkslateblue: "#111c44",
+        component: "#0b1437",
         white: "#fff",
         "primary-purple-blue-400": "#7551ff",
         gainsboro: "#d9d9d9",

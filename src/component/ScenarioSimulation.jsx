@@ -12,7 +12,7 @@ const ScenarioSimulation = () => {
     ];
 
     return (
-        <div className="flex overflow-hidden flex-col items-start px-4 py-5 mx-auto w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-3xl shadow-[13px_18px_26px_rgba(0,122,255,0.46)] max-md:pr-5 max-md:mt-10">
+        <div className="flex overflow-hidden flex-col items-start px-4 py-5 mx-auto w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl shadow-[13px_18px_26px_rgba(0,122,255,0.46)] max-md:pr-5 max-md:mt-10">
             <h3 className="text-base font-bold tracking-tight leading-loose text-indigo-900">Scenario simulations</h3>
             <div className="flex z-10 gap-3.5 items-end self-center mt-6 w-full">
                 {bars.map((bar, index) => (
@@ -22,7 +22,7 @@ const ScenarioSimulation = () => {
                     </div>
                 ))}
             </div>
-            <div className="flex overflow-hidden flex-col px-10 py-6 ml-4 w-full leading-loose whitespace-nowrap shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue rounded-2xl max-md:px-5 max-md:ml-2.5">
+            <div className="flex overflow-hidden flex-col px-10 py-6 ml-4 w-full leading-loose whitespace-nowrap shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-2xl max-md:px-5 max-md:ml-2.5">
                 <div className="flex gap-10 text-xs font-medium tracking-tight text-slate-400">
                     <div className="flex flex-1 gap-1.5">
                         <div className="flex shrink-0 self-start w-2 h-2 bg-indigo-600 rounded-full" />

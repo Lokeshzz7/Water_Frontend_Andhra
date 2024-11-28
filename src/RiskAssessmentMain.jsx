@@ -8,7 +8,7 @@ import DataVisualizations from './component/DataVisualizations';
 const WaterManagementDashboard = () => {
 
   return (
-    <main className="flex overflow-hidden flex-col px-8  max-md:px-5">
+    <main className="flex overflow-hidden flex-col   py-9 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue max-md:px-5">
       <FilterDropdown />
       {/* <Risk_Selection_Dropdown /> */}
       

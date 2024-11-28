@@ -82,7 +82,7 @@ const WaterLinear = () => {
 
     return (
         <div className="flex flex-col w-7/12 p-8 ">
-            <div className="flex flex-col items-center w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue p-6 rounded-lg shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] ">
+            <div className="flex flex-col items-center w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component p-6 rounded-lg shadow-[0px_8px_26px_rgba(0,122,255,0.46),-8px_0px_26px_rgba(0,122,255,0.46)] ">
                 {/* Water Usage Card Section */}
                 <div className="flex flex-col w-full mb-8">
                     <div className="text-lg font-bold text-left">{title}</div>
