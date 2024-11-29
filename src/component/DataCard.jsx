@@ -4,8 +4,8 @@ import axios from 'axios';
 const DataCard = ({ title, value }) => {
 
   return (
-    <div className="flex flex-col  pt-2 mt-8  w-full h-[100px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
-      <div className="flex flex-col w-[full] pl-3 pr-5 ">
+    <div className="flex flex-col  pt-2 mt-8  w-8/12 h-[100px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
+      <div className="flex flex-col w-18/12 pl-3 pr-5 ">
         <div className="text-lg font-bold text-left">{title}</div>
         <div className="flex justify-between items-end ">
           {/* Left Side: Water Usage Value and Unit */}

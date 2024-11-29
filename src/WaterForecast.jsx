@@ -9,7 +9,7 @@ import RainfallGraph from "./graph/RainfallGraph.jsx";
 import FilterDropdown from "./component/FilterDropdown.jsx";
 import DistrictDropdown from "./component/Districtdropdown.jsx";
 import FactorsAffectingGraph from "./graph/FactorsAffectiongGraph.jsx";
-import months from "./graph/monthsConsumptionGraph.jsx";
+import Months from "./graph/monthsConsumptionGraph.jsx";
 
 function WaterManagementDashboard() {
     const [currentYearData, setCurrentYearData] = useState(null);
@@ -73,9 +73,9 @@ function WaterManagementDashboard() {
     return (
         <main className="flex flex-col justify-evenly items-center py-9 bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">
             {/* Flex container for all dropdowns */}
-            <div className="flex flex-row gap-5 justify-start items-center w-full px-4">
+            <div className="flex flex-row  justify-start items-center w-full ">
                 <FilterDropdown />
-                <DistrictDropdown />
+                {/* <DistrictDropdown /> */}
             </div>
 
             {/* Remaining content */}
@@ -109,10 +109,10 @@ function WaterManagementDashboard() {
                             <LinearGauge />
                         </div>
                     </div>
-                    <div className="flex flex-col flex-1 px-4">
+                    <div className="flex flex-col flex-1 px-4 gap-10 mt-5">
                     
                             <FactorsAffectingGraph />
-                            {/* <months /> */}
+                            <Months />
                     </div>
                         {/*<AndhraMap />*/}
                 </section>

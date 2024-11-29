@@ -9,7 +9,7 @@ const RainfallGraph = () => {
 
     // Fetch and render chart data when districtId or year changes
     useEffect(() => {
-        const chartDom = document.getElementById('main');
+        const chartDom = document.getElementById('rainmonth');
         const myChart = echarts.init(chartDom);
 
         const fetchRainfallData = async () => {
@@ -18,21 +18,21 @@ const RainfallGraph = () => {
                     console.warn('No district or year found in localStorage');
                     return;
                 }
-        
+
                 // If the year is greater than 2024, always fetch 2023 data
                 const apiUrl =
                     year > 2024
                         ? `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/2023`
                         : `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/${year}`;
-                
+
                 const response = await axios.get(apiUrl);
                 const data = response.data;
-        
+
                 const months = [
                     'January', 'February', 'March', 'April', 'May', 'June',
                     'July', 'August', 'September', 'October', 'November', 'December'
                 ];
-        
+
                 const option = {
                     title: {
                         text: year > 2024
@@ -117,7 +117,7 @@ const RainfallGraph = () => {
                     },
                     series: [
                         {
-                            name: year > 2024 ? 'Expected Rainfall':'Normal Rainfall',
+                            name: year > 2024 ? 'Expected Rainfall' : 'Normal Rainfall',
                             type: 'line',
                             data: data.map(item => item.normal),
                             itemStyle: {
@@ -131,29 +131,29 @@ const RainfallGraph = () => {
                         },
                         ...(year <= 2024
                             ? [
-                                  {
-                                      name: 'Actual Rainfall',
-                                      type: 'line',
-                                      data: data.map(item => item.actual),
-                                      itemStyle: {
-                                          color: '#008080',
-                                      },
-                                      lineStyle: {
-                                          color: '#008080',
-                                          width: 3,
-                                      },
-                                      smooth: true,
-                                  },
-                              ]
+                                {
+                                    name: 'Actual Rainfall',
+                                    type: 'line',
+                                    data: data.map(item => item.actual),
+                                    itemStyle: {
+                                        color: '#008080',
+                                    },
+                                    lineStyle: {
+                                        color: '#008080',
+                                        width: 3,
+                                    },
+                                    smooth: true,
+                                },
+                            ]
                             : []),
                     ],
                 };
-        
+
                 myChart.setOption(option);
             } catch (error) {
                 console.error('Error fetching rainfall data:', error);
             }
-        };        
+        };
 
         fetchRainfallData();
 
@@ -212,7 +212,7 @@ const RainfallGraph = () => {
 
             {/* Chart container */}
             <div
-                id="main"
+                id="rainmonth"
                 className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[454px] rounded-lg"
             ></div>
         </div>

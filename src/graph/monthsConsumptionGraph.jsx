@@ -11,7 +11,6 @@ const MonthConsumptionGraph = () => {
         fetch(`http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`)
             .then((response) => response.json())
             .then((data) => {
-                // Filter the data to separate into categories for each country/region if necessary
                 const months = [
                     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
                 ];
@@ -22,7 +21,6 @@ const MonthConsumptionGraph = () => {
                 const industryData = [];
                 const domesticData = [];
 
-                // Process the raw data into format usable for ECharts
                 data.forEach((entry) => {
                     consumptionData.push(entry.consumption);
                     inflowData.push(entry.rainfall + entry.inflow_states);
@@ -31,9 +29,8 @@ const MonthConsumptionGraph = () => {
                     domesticData.push(entry.domestic);
                 });
 
-                // Update the state with the chart data
                 setChartData({
-                    months: months,
+                    months,
                     consumptionData,
                     inflowData,
                     irrigationData,
@@ -53,35 +50,28 @@ const MonthConsumptionGraph = () => {
     useEffect(() => {
         if (Object.keys(chartData).length === 0) return;
 
-        const chartDom = document.getElementById('main');
+        const chartDom = document.getElementById('monthmain');
         const myChart = echarts.init(chartDom);
 
         const option = {
-            dataset: [
-                {
-                    id: 'dataset_raw',
-                    source: chartData.months.map((month, index) => ({
-                        Year: month,
-                        Consumption: chartData.consumptionData[index],
-                        Inflow: chartData.inflowData[index],
-                        Irrigation: chartData.irrigationData[index],
-                        Industry: chartData.industryData[index],
-                        Domestic: chartData.domesticData[index],
-                    }))
+            backgroundColor: 'transparent',
+            textStyle: {
+                color: '#ffffff',
+            },
+            legend: {
+                data: ['Consumption', 'Inflow', 'Irrigation', 'Industry', 'Domestic'],
+                textStyle: {
+                    color: '#ffffff',
                 },
-                {
-                    id: 'dataset_consumption',
-                    fromDatasetId: 'dataset_raw',
-                    transform: {
-                        type: 'filter',
-                        config: {
-                            and: [{ dimension: 'Year', gte: 1950 }],
-                        }
-                    }
-                }
-            ],
+                top: '30px',
+            },
             title: {
                 text: `Consumption Data for ${selectedYear}`,
+                textStyle: {
+                    color: '#ffffff',
+                },
+                top: '5px',
+                left: 'center',
             },
             tooltip: {
                 trigger: 'axis',
@@ -90,80 +80,121 @@ const MonthConsumptionGraph = () => {
                 type: 'category',
                 nameLocation: 'middle',
                 data: chartData.months,
+                axisLabel: {
+                    color: '#ffffff',
+                },
             },
             yAxis: {
                 name: 'Consumption / Inflow',
+                nameLocation: 'middle', // Centers the label along the Y-axis
+                nameRotate: 90, // Rotates the label vertically
+                nameTextStyle: {
+                    color: '#ffffff', // Sets the label color
+                    fontSize: 14, // Optional: adjust font size
+                },
+                nameGap: 45,
+                axisLabel: {
+                    color: '#ffffff', // Sets the color of axis labels
+                },
             },
+
             series: [
                 {
+                    name: 'Consumption',
                     type: 'line',
-                    datasetId: 'dataset_consumption',
                     showSymbol: false,
-                    encode: {
-                        x: 'Year',
-                        y: 'Consumption',
-                        itemName: 'Year',
-                        tooltip: ['Consumption'],
+                    data: chartData.consumptionData,
+                    lineStyle: {
+                        width: 2,
                     },
                 },
                 {
+                    name: 'Inflow',
                     type: 'line',
-                    datasetId: 'dataset_consumption',
                     showSymbol: false,
-                    encode: {
-                        x: 'Year',
-                        y: 'Inflow',
-                        itemName: 'Year',
-                        tooltip: ['Inflow'],
+                    data: chartData.inflowData,
+                    lineStyle: {
+                        width: 2,
                     },
                 },
                 {
+                    name: 'Irrigation',
                     type: 'line',
-                    datasetId: 'dataset_consumption',
                     showSymbol: false,
-                    encode: {
-                        x: 'Year',
-                        y: 'Irrigation',
-                        itemName: 'Year',
-                        tooltip: ['Irrigation'],
+                    data: chartData.irrigationData,
+                    lineStyle: {
+                        width: 2,
                     },
                 },
                 {
+                    name: 'Industry',
                     type: 'line',
-                    datasetId: 'dataset_consumption',
                     showSymbol: false,
-                    encode: {
-                        x: 'Year',
-                        y: 'Industry',
-                        itemName: 'Year',
-                        tooltip: ['Industry'],
+                    data: chartData.industryData,
+                    lineStyle: {
+                        width: 2,
                     },
                 },
                 {
+                    name: 'Domestic',
                     type: 'line',
-                    datasetId: 'dataset_consumption',
                     showSymbol: false,
-                    encode: {
-                        x: 'Year',
-                        y: 'Domestic',
-                        itemName: 'Year',
-                        tooltip: ['Domestic'],
+                    data: chartData.domesticData,
+                    lineStyle: {
+                        width: 2,
                     },
                 }
             ],
+            toolbox: {
+                feature: {
+                    saveAsImage: {
+                        show: true,
+                        backgroundColor: 'transparent',
+                        title: 'Save as Image',
+                        iconStyle: {
+                            borderColor: '#ffffff',
+                        },
+                    },
+                },
+            },
         };
 
         myChart.setOption(option);
 
-        // Clean up on component unmount
         return () => {
             myChart.dispose();
         };
     }, [chartData]);
 
     return (
-        <div>
-            <div id="main" className="w-[600px] ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg"></div>
+        <div className="relative">
+            {/* Info button */}
+            <div
+                className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('monthTooltip');
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('monthTooltip');
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+                <div
+                    id="monthTooltip"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: 'none', width: '200px' }}
+                >
+                    This graph shows the distribution of consumption, inflow, and usage categories for the selected district and year.
+                </div>
+            </div>
+
+            {/* Chart container */}
+            <div
+                id="monthmain"
+                className="w-[700px] ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[300px] rounded-lg"
+            ></div>
         </div>
     );
 };
