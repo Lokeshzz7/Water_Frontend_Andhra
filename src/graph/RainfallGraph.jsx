@@ -54,7 +54,7 @@ const RainfallGraph = () => {
                         backgroundColor: 'rgba(0, 0, 0, 0.7)',
                     },
                     legend: {
-                        data: year > 2024 ? ['Normal Rainfall'] : ['Normal Rainfall', 'Actual Rainfall'],
+                        data: year > 2024 ? ['Expected Rainfall'] : ['Normal Rainfall', 'Actual Rainfall'],
                         textStyle: {
                             color: '#ffffff',
                         },
@@ -117,7 +117,7 @@ const RainfallGraph = () => {
                     },
                     series: [
                         {
-                            name: 'Normal Rainfall',
+                            name: year > 2024 ? 'Expected Rainfall':'Normal Rainfall',
                             type: 'line',
                             data: data.map(item => item.normal),
                             itemStyle: {

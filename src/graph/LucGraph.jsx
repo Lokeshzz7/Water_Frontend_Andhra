@@ -79,7 +79,7 @@ const LucGraph = () => {
             const option = {
                 backgroundColor: 'transparent', // Transparent background
                 title: {
-                    text: 'Land Use Change (LUC)',
+                    text: year>2024 ? 'Predicted Land Use Change (LUC)': 'Land Use Change (LUC)',
                     subtext: `Data for ${stateName}, Year ${year}`,
                     left: 'center',
                     top: '6%',
@@ -108,7 +108,7 @@ const LucGraph = () => {
                 legend: {
                     orient: 'vertical',
                     top: '5%',
-                    right: '10%',
+                    right: '5%',
                     textStyle: {
                         color: '#ffffff',
                     },

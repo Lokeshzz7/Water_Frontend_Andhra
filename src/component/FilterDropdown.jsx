@@ -13,7 +13,7 @@ const FilterDropdown = () => {
 
   // Updated states array with id, name, and value properties
   const states = [
-    { id: "IN-AP", name: "Andhra Pradesh", value: 1 },
+    { id: "IN-AP", name: "Andhra Pradesh", value: 16 },
     // { id: "IN-AR", name: "Arunachal Pradesh", value: 2 },
     // { id: "IN-AS", name: "Assam", value: 3 },
     // { id: "IN-BR", name: "Bihar", value: 4 },
