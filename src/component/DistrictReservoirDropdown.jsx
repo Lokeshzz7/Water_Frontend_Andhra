@@ -4,7 +4,7 @@ import { Dropdown } from "primereact/dropdown";
 const DistrictReservoirDropdown = () => {
     const [selectedDistrict, setSelectedDistrict] = useState(() => {
         try {
-            return localStorage.getItem("selectedDistrict") || null;  // Just get the string directly
+            return localStorage.getItem("selectedDistrict") || null;
         } catch {
             return null;
         }
@@ -18,51 +18,45 @@ const DistrictReservoirDropdown = () => {
         }
     });
 
-    const [districts, setDistricts] = useState([]);
     const [reservoirs, setReservoirs] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const fetchDistricts = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch("http://127.0.0.1:8000/api/forecast/get-districts");
-                const data = await response.json();
-                console.log("Fetched Districts Data:", data);
-                if (data && Array.isArray(data)) {
-                    // Map to the format expected for the Dropdown
-                    const districtOptions = data.map((district) => ({
-                        label: district.name,
-                        value: district.id,
-                    }));
-                    setDistricts(districtOptions);
-                } else {
-                    console.warn("No districts found in response.");
-                    setDistricts([]);
-                }
-            } catch (error) {
-                console.error("Error fetching districts:", error);
-                setDistricts([]);
-            } finally {
-                setLoading(false);
-            }
-        };
+    const districts = [
+        { id: 1, name: "Anakapalli" },
+        { id: 2, name: "Annamayya" },
+        { id: 3, name: "Ananthapuramu" },
+        { id: 4, name: "Alluri Sitharama Raju" },
+        { id: 5, name: "Bapatla" },
+        { id: 6, name: "Chittoor" },
+        { id: 7, name: "East Godavari" },
+        { id: 8, name: "Eluru" },
+        { id: 9, name: "Guntur" },
+        { id: 10, name: "Kurnool" },
+        { id: 11, name: "Kakinada" },
+        { id: 12, name: "Konaseema" },
+        { id: 13, name: "Krishna" },
+        { id: 14, name: "Nandyal" },
+        { id: 15, name: "NTR" },
+        { id: 16, name: "Palnadu" },
+        { id: 17, name: "Parvathipuram Manyam" },
+        { id: 18, name: "Prakasam" },
+        { id: 19, name: "Sri Sathya Sai" },
+        { id: 20, name: "Sri Potti Sriramulu Nellore" },
+        { id: 21, name: "Srikakulam" },
+        { id: 22, name: "Tirupati" },
+        { id: 23, name: "Visakhapatnam" },
+        { id: 24, name: "Vizianagaram" },
+        { id: 25, name: "West Godavari" },
+        { id: 26, name: "Y.S.R Kadapa" },
+    ];
 
-        fetchDistricts();
-
-        // Listen to `storage` event for changes in `selectedDistrict`
-        const handleStorageChange = () => {
-            if (selectedDistrict) {
-                fetchReservoirs(selectedDistrict); // Re-fetch reservoirs if district changes
-            }
-        };
-
-        window.addEventListener("storage", handleStorageChange);
-
-        return () => {
-            window.removeEventListener("storage", handleStorageChange);
-        };
-    }, []);
+    const handleDistrictChange = (districtId) => {
+        setSelectedDistrict(districtId);
+        setSelectedReservoir(null);
+        localStorage.setItem("selectedDistrict", districtId);
+        window.dispatchEvent(new Event("storage")); // Trigger storage event
+        fetchReservoirs(districtId); // Fetch reservoirs for the selected district
+    };
 
     const fetchReservoirs = async (districtId) => {
         setLoading(true);
@@ -74,10 +68,9 @@ const DistrictReservoirDropdown = () => {
             console.log("Fetched Reservoirs Data:", data);
 
             if (data && Array.isArray(data)) {
-                // Map to the format expected for the Dropdown
                 const reservoirOptions = data.map((reservoir) => ({
                     label: reservoir.name,
-                    value: reservoir.id,  // Store the reservoir id here
+                    value: reservoir.id,
                 }));
                 setReservoirs(reservoirOptions);
             } else {
@@ -92,21 +85,28 @@ const DistrictReservoirDropdown = () => {
         }
     };
 
-    const handleDistrictChange = (districtId) => {
-        setSelectedDistrict(districtId);
-        setSelectedReservoir(null); // Reset reservoir selection
-        localStorage.setItem("selectedDistrict", districtId); // Store district id
-        window.dispatchEvent(new Event("storage"));
-    };
-
     const handleReservoirChange = (reservoirId) => {
         setSelectedReservoir(reservoirId);
-        localStorage.setItem("selectedReservoir", reservoirId); // Store reservoir id
-        window.dispatchEvent(new Event("storage"));
+        localStorage.setItem("selectedReservoir", reservoirId);
+        window.dispatchEvent(new Event("storage")); // Trigger storage event
     };
 
+    useEffect(() => {
+        const handleStorageChange = () => {
+            if (selectedDistrict) {
+                fetchReservoirs(selectedDistrict);
+            }
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+
+        return () => {
+            window.removeEventListener("storage", handleStorageChange);
+        };
+    }, [selectedDistrict]);
+
     const districtOptions = useMemo(
-        () => districts.map((d) => ({ label: d.label, value: d.value })),
+        () => districts.map((d) => ({ label: d.name, value: d.id })),
         [districts]
     );
 
@@ -121,12 +121,11 @@ const DistrictReservoirDropdown = () => {
                     <section className="button-container">
                         <div className="c-button c-button--gooey">
                             <Dropdown
-                                value={selectedDistrict}
-                                onChange={(e) => handleDistrictChange(e.value)}
-                                options={districtOptions}
-                                placeholder={loading ? "Loading districts..." : "Select District"}
-                                className="dropdown-style"
-                                disabled={loading || !districtOptions.length}
+                               value={selectedDistrict}
+                               onChange={(e) => handleDistrictChange(e.value)}
+                               options={districtOptions}
+                               placeholder="Select District"
+                               classname="dropdown-style"
                             />
                             <span className="c-button__blobs">
                                 <div></div>
@@ -144,8 +143,8 @@ const DistrictReservoirDropdown = () => {
                                     loading
                                         ? "Loading reservoirs..."
                                         : selectedDistrict
-                                            ? "Select Reservoir"
-                                            : "Select a District First"
+                                        ? "Select Reservoir"
+                                        : "Select a District First"
                                 }
                                 className="dropdown-style"
                                 disabled={loading || !reservoirOptions.length}
