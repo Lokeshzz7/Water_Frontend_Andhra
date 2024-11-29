@@ -62,10 +62,22 @@ const LucGraph = () => {
                 return;
             }
 
-            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
-            const response = await axios.get(apiUrl);
+            // Define common logic to call both APIs
+            const fetchLandUseData = async (url) => {
+                const response = await axios.get(url);
+                return response.data[0]; // Assume we always get one object in the response
+            };
 
-            const data = response.data[0]; // Assume we always get one object in the response
+            let data;
+            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
+            if (year < 2023) {
+                // For years less than 2023, call the second API
+                const landUseUrl = `http://127.0.0.1:8000/api/forecast/get_landuse/${districtId}/${year}/`;
+                data = await fetchLandUseData(landUseUrl);
+            } else {
+                // For years 2023 and above, call the first API
+                data = await fetchLandUseData(apiUrl);
+            }
 
             const values = [
                 { name: 'Built-up', value: data.built_up || 0 },
@@ -79,7 +91,7 @@ const LucGraph = () => {
             const option = {
                 backgroundColor: 'transparent', // Transparent background
                 title: {
-                    text: year>2024 ? 'Predicted Land Use Change (LUC)': 'Land Use Change (LUC)',
+                    text: year > 2024 ? 'Predicted Land Use Change (LUC)' : 'Land Use Change (LUC)',
                     subtext: `Data for ${stateName}, Year ${year}`,
                     left: 'center',
                     top: '6%',
@@ -176,6 +188,24 @@ const LucGraph = () => {
                     style={{ display: 'none', width: '200px' }}
                 >
                     This graph shows the distribution of land use changes for the selected district and year.
+                    <br /><hr />
+                    <b>Built up</b><br />
+                    Represents areas with human-made structures such as buildings, roads, and other infrastructure.
+                    <br /><hr />
+                    <b>Agriculture</b><br />
+                    Covers land primarily used for farming activities, including crops and pastures.
+                    <br /><hr />
+                    <b>Forest</b><br />
+                    Includes areas covered by dense vegetation and forests.
+                    <br /><hr />
+                    <b>Wasteland</b><br />
+                    Refers to degraded or underutilized land that is not productive for agriculture or habitation.
+                    {/* <br /><hr /> */}
+                    {/* <b>Wetlands</b><br />
+                    Encompasses water-saturated land such as marshes, swamps, and bogs.
+                    <br /><hr /> */}
+                    {/* <b>Waterbodies</b><br />
+                    Includes lakes, rivers, reservoirs, and other permanent water features. */}
                 </div>
             </div>
             <div id="lucChart" className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg"></div>

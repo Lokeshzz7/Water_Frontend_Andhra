@@ -11,7 +11,7 @@ const DataCard = ({ title, value }) => {
           {/* Left Side: Water Usage Value and Unit */}
           <div className="flex items-baseline pt-2 ">
             <div className="text-xl font-bold text-blue-500">{value}</div>
-            <div className="text-sm font-semibold text-gray-500 ml-2">galH<sub>2</sub>O</div>
+            <div className="text-sm font-semibold text-gray-500 ml-2">TMC<sub></sub></div>
           </div>
 
           {/* Right Side: Legend */}
