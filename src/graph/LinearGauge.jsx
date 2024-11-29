@@ -12,7 +12,6 @@ const LinearGauge = () => {
             // Get necessary values from localStorage
             const districtId = localStorage.getItem('selectedDistrict'); // e.g., "25"
             const year = localStorage.getItem('selectedYear'); // e.g., "2024"
-
             if (!districtId || !year) {
                 console.warn('District ID or year not found in localStorage.');
                 setUsageData(null);

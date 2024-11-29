@@ -271,25 +271,41 @@ const StateMap = () => {
 
   return (
     <div className="flex w-full h-[500px]">
-      <div className="w-1/4 h-full bg-gray-800 text-white p-4 border-r">
-        <div className="mt-4">
-          {selectedItem && selectedItem.type === "state" && (
-            <>
-              <p>
-                <strong>State:</strong> {selectedItem.name}
-              </p>
-              <p>
-                <strong>Number of Reservoirs:</strong>{" "}
-                {stateReservoirCount}
-              </p>
-            </>
-          )}
-        </div>
-      </div>
+            <div id="chartdiv" ref={chartRef} className="w-3/4 h-full" />
 
-      <div id="chartdiv" ref={chartRef} className="w-3/4 h-full" />
-    </div>
-  );
+            <div className="w-1/4 h-full bg-transparent text-white p-4 border-l">
+                {selectedItem ? (
+                    selectedItem.type === "reservoir" ? (
+                        <>
+                            <h2 className="text-xl font-bold mb-2">Reservoir Details</h2>
+                            <p><strong>Name:</strong> {selectedItem.title}</p>
+                            <p><strong>Capacity:</strong> {selectedItem.capacity} MCM</p>
+                            <button
+                                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                onClick={() => setSelectedItem(null)}
+                            >
+                                Close
+                            </button>
+                        </>
+                    ) : selectedItem.type === "state" ? (
+                        <>
+                            <h2 className="text-xl font-bold mb-2">State Details</h2>
+                            <p><strong>State:</strong> {selectedItem.name}</p>
+                            <p><strong>Number of Reservoirs:</strong> {stateReservoirCount}</p>
+                            <button
+                                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                onClick={() => setSelectedItem(null)}
+                            >
+                                Close
+                            </button>
+                        </>
+                    ) : null
+                ) : (
+                    <p>Select a state or reservoir for details.</p>
+                )}
+            </div>
+        </div>
+    );
 };
 
 export default StateMap;

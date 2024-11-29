@@ -8,6 +8,8 @@ import LucGraph from "./graph/LucGraph";
 import RainfallGraph from "./graph/RainfallGraph.jsx";
 import FilterDropdown from "./component/FilterDropdown.jsx";
 import DistrictDropdown from "./component/Districtdropdown.jsx";
+import FactorsAffectingGraph from "./graph/FactorsAffectiongGraph.jsx";
+import months from "./graph/monthsConsumptionGraph.jsx";
 
 function WaterManagementDashboard() {
     const [currentYearData, setCurrentYearData] = useState(null);
@@ -108,8 +110,11 @@ function WaterManagementDashboard() {
                         </div>
                     </div>
                     <div className="flex flex-col flex-1 px-4">
-                        <AndhraMap />
+                    
+                            <FactorsAffectingGraph />
+                            {/* <months /> */}
                     </div>
+                        {/*<AndhraMap />*/}
                 </section>
 
                 <section className="flex flex-row w-full mt-20">
