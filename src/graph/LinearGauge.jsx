@@ -7,63 +7,71 @@ const LinearGauge = () => {
     const [percentages, setPercentages] = useState(null);
     const [title, setTitle] = useState('Water Usage Prediction');
 
-    const fetchData = () => {
+    const fetchData = async () => {
         try {
-            const selectedState = parseInt(localStorage.getItem('selectedState'), 10);
-            const selectedYear = parseInt(localStorage.getItem('selectedYear'), 10);
-            const currentYear = new Date().getFullYear();
+            // Get necessary values from localStorage
+            const districtId = localStorage.getItem('selectedDistrict'); // e.g., "25"
+            const year = localStorage.getItem('selectedYear'); // e.g., "2024"
 
-            if (!isNaN(selectedState) && !isNaN(selectedYear)) {
-                let rawData;
+            if (!districtId || !year) {
+                console.warn('District ID or year not found in localStorage.');
+                setUsageData(null);
+                setPercentages(null);
+                return;
+            }
 
-                if (selectedYear < currentYear) {
-                    setTitle('Past Water Usage'); // Title for past or current year
-                } else {
-                    setTitle('Water Usage Prediction'); // Title for future year
-                }
+            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${year}/`;
 
-                // Retrieve data from the JSON file
-                const stateData = waterUsageData[selectedState];
-                if (stateData) {
-                    rawData = stateData[selectedYear];
-                }
+            const response = await fetch(apiUrl);
 
-                if (!rawData) {
-                    console.warn('Data not found for the selected state and year.');
-                    setUsageData(null);
-                    setPercentages(null);
-                    return;
-                }
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data: ${response.statusText}`);
+            }
 
-                const mappedData = {
-                    Domestic: rawData.Domestic,
-                    Industrial: rawData.Industrial,
-                    Irrigation: rawData.Irrigation,
-                };
+            const data = await response.json();
 
-                setUsageData(mappedData);
+            // Filter for month 1
+            const januaryData = data.find(item => item.month === 1);
 
-                // Calculate the total water usage
-                const totalUsage = Object.values(mappedData).reduce((acc, value) => acc + value, 0);
-                setWaterUsage({ title: 'Water Usage Prediction', value: totalUsage.toFixed(2) });
+            if (!januaryData) {
+                console.warn('Data for month 1 not found.');
+                setUsageData(null);
+                setPercentages(null);
+                return;
+            }
 
-                // Calculate percentages for the linear gauge
-                if (totalUsage > 0) {
-                    const calculatedPercentages = Object.fromEntries(
-                        Object.entries(mappedData).map(([key, value]) => [
-                            key,
-                            ((value / totalUsage) * 100).toFixed(2),
-                        ])
-                    );
-                    setPercentages(calculatedPercentages);
-                } else {
-                    setPercentages(null);
-                }
+            // Extract relevant fields
+            const mappedData = {
+                Domestic: januaryData.domestic,
+                Industrial: januaryData.industry,
+                Irrigation: januaryData.irrigation,
+            };
+
+            setUsageData(mappedData);
+
+            // Calculate the total water usage
+            const totalUsage = Object.values(mappedData).reduce((acc, value) => acc + value, 0);
+            setWaterUsage({ title: 'Water Usage Prediction', value: totalUsage.toFixed(2) });
+
+            // Calculate percentages for the linear gauge
+            if (totalUsage > 0) {
+                const calculatedPercentages = Object.fromEntries(
+                    Object.entries(mappedData).map(([key, value]) => [
+                        key,
+                        ((value / totalUsage) * 100).toFixed(2),
+                    ])
+                );
+                setPercentages(calculatedPercentages);
+            } else {
+                setPercentages(null);
             }
         } catch (error) {
-            console.error('Error processing data:', error);
+            console.error('Error fetching or processing data:', error);
+            setUsageData(null);
+            setPercentages(null);
         }
     };
+
 
     useEffect(() => {
         fetchData(); // Fetch data initially when component mounts

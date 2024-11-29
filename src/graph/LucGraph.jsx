@@ -72,7 +72,7 @@ const LucGraph = () => {
                     backgroundColor: 'transparent', // Make the background transparent
                     title: {
                         text: 'Land Use Change (LUC)',
-                        subtext: `Data for State ${stateName}, Year ${year}`,
+                        subtext: `Data for State Andra Pradesh, Year ${year}`,
                         left: 'center',
                         top: '6%',
                         textStyle: {
@@ -85,7 +85,7 @@ const LucGraph = () => {
                     tooltip: {
                         trigger: 'item',
                         textStyle: {
-                            color: '#ffffff', // White text for tooltip
+                            color: 'black', // White text for tooltip
                         },
                     },
                     toolbox: {

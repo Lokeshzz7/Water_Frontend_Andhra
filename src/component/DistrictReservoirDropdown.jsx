@@ -114,27 +114,25 @@ const DistrictReservoirDropdown = () => {
         return reservoirs.map((r) => ({ label: r.label, value: r.value }));
     }, [reservoirs]);
 
+    const selectedDistrictName = useMemo(() => {
+        const district = districts.find((d) => d.id === parseInt(selectedDistrict));
+        return district ? district.name : "Select District";
+    }, [selectedDistrict, districts]);
+
     return (
         <div className="container mx-auto px-4">
             <section className="flex flex-wrap gap-5 justify-start items-center w-full text-2xl tracking-tight leading-none text-black whitespace-nowrap max-w-[1382px]">
-                <section className="filter-dropdown-container">
+                <section className="filter-dropdown-container gap-30">
                     <section className="button-container">
-                        <div className="c-button c-button--gooey">
                             <Dropdown
-                               value={selectedDistrict}
-                               onChange={(e) => handleDistrictChange(e.value)}
-                               options={districtOptions}
-                               placeholder="Select District"
-                               classname="dropdown-style"
+                                value={selectedDistrict}
+                                onChange={(e) => handleDistrictChange(e.value)}
+                                options={districtOptions}
+                                placeholder={selectedDistrictName}
+                                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/2 text-red-900"
                             />
-                            <span className="c-button__blobs">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </span>
-                        </div>
+                            
 
-                        <div className="c-button c-button--gooey">
                             <Dropdown
                                 value={selectedReservoir}
                                 onChange={(e) => handleReservoirChange(e.value)}
@@ -143,18 +141,13 @@ const DistrictReservoirDropdown = () => {
                                     loading
                                         ? "Loading reservoirs..."
                                         : selectedDistrict
-                                        ? "Select Reservoir"
-                                        : "Select a District First"
+                                            ? "Select Reservoir"
+                                            : "Select a District First"
                                 }
-                                className="dropdown-style"
+                                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/2 text-red-900 ml-5"
                                 disabled={loading || !reservoirOptions.length}
                             />
-                            <span className="c-button__blobs">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </span>
-                        </div>
+                            
                     </section>
                 </section>
             </section>
