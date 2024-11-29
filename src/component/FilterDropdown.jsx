@@ -43,10 +43,10 @@ const FilterDropdown = () => {
     // { id: "IN-WB", name: "West Bengal", value: 28 },
   ];
 
-  const years = Array.from({ length: 100 }).map((_, i) => ({
-    label: `Year ${2044 - i}`,
-    value: 2044 - i,
-  }));
+  const years = Array.from({ length: 16 }).map((_, i) => ({
+    label: `Year ${2029 - i}`,
+    value: 2029 - i,
+  }));
 
   const handleStateChange = (stateValue) => {
     setSelectedState(stateValue);

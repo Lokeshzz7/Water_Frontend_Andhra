@@ -47,91 +47,95 @@ const LucGraph = () => {
 
     const analyzeData = async () => {
         try {
-            const state = parseInt(localStorage.getItem('selectedState'), 10);
-            const year = parseInt(localStorage.getItem('selectedYear'), 10);
+            const districtId = localStorage.getItem('selectedDistrict'); // Get district ID from localStorage
+            const year = localStorage.getItem('selectedYear'); // Get year from localStorage
             setYear(year);
 
+            const state = parseInt(localStorage.getItem('selectedState'), 10);
             const selectedState = states.find(stateObj => stateObj.value === state);
             if (selectedState) {
                 setStateName(selectedState.label);
             }
 
-            if (!isNaN(state) && !isNaN(year)) {
-                const response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_landuse/${year}`);
-                const stateData = response.data;
+            if (!districtId || !year) {
+                console.warn('District ID or year not found in localStorage.');
+                return;
+            }
 
-                const values = [
-                    { name: 'Forest', value: stateData.forest_use || 0 },
-                    { name: 'Barren', value: stateData.barren_use || 0 },
-                    { name: 'Cropped', value: stateData.cropped_use || 0 },
-                    { name: 'Fallow', value: stateData.fallow_use || 0 },
-                    { name: 'Other', value: stateData.other_use || 0 },
-                ];
+            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
+            const response = await axios.get(apiUrl);
 
-                const option = {
-                    backgroundColor: 'transparent', // Make the background transparent
-                    title: {
-                        text: 'Land Use Change (LUC)',
-                        subtext: `Data for State Andra Pradesh, Year ${year}`,
-                        left: 'center',
-                        top: '6%',
-                        textStyle: {
-                            color: '#ffffff', // White text for contrast against the blue
+            const data = response.data[0]; // Assume we always get one object in the response
+
+            const values = [
+                { name: 'Built-up', value: data.built_up || 0 },
+                { name: 'Agriculture', value: data.agriculture || 0 },
+                { name: 'Forest', value: data.forest || 0 },
+                { name: 'Wasteland', value: data.wasteland || 0 },
+                { name: 'Wetlands', value: data.wetlands || 0 },
+                { name: 'Waterbodies', value: data.waterbodies || 0 },
+            ];
+
+            const option = {
+                backgroundColor: 'transparent', // Transparent background
+                title: {
+                    text: 'Land Use Change (LUC)',
+                    subtext: `Data for ${stateName}, Year ${year}`,
+                    left: 'center',
+                    top: '6%',
+                    textStyle: {
+                        color: '#ffffff',
+                    },
+                    subtextStyle: {
+                        color: '#ffffff',
+                    },
+                },
+                tooltip: {
+                    trigger: 'item',
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {
+                            title: 'Save as Image',
+                            name: `LUC_${stateName}_${year}`,
+                            backgroundColor: 'transparent',
                         },
-                        subtextStyle: {
+                    },
+                    iconStyle: {
+                        borderColor: '#ffffff',
+                    },
+                },
+                legend: {
+                    orient: 'vertical',
+                    top: '5%',
+                    right: '10%',
+                    textStyle: {
+                        color: '#ffffff',
+                    },
+                },
+                series: [
+                    {
+                        name: 'LUC Types',
+                        type: 'pie',
+                        radius: '60%',
+                        center: ['50%', '57%'],
+                        data: values,
+                        label: {
                             color: '#ffffff',
                         },
-                    },
-                    tooltip: {
-                        trigger: 'item',
-                        textStyle: {
-                            color: 'black', // White text for tooltip
-                        },
-                    },
-                    toolbox: {
-                        feature: {
-                            saveAsImage: {
-                                title: 'Save as Image',
-                                name: `LUC_${stateName}_${year}`,
-                                backgroundColor: 'transparent', // Set save image background to transparent
+                        labelLine: {
+                            lineStyle: {
+                                color: '#ffffff',
                             },
                         },
-                        iconStyle: {
-                            borderColor: '#ffffff', // White border color for icons
-                        },
                     },
-                    legend: {
-                        orient: 'vertical',
-                        top: '5%',
-                        right: '10%',
-                        textStyle: {
-                            color: '#ffffff', // White text for the legend
-                        },
-                    },
-                    series: [
-                        {
-                            name: 'LUC Types',
-                            type: 'pie',
-                            radius: '60%',
-                            center: ['50%', '57%'],
-                            data: values,
-                            label: {
-                                color: '#ffffff', // White label text
-                            },
-                            labelLine: {
-                                lineStyle: {
-                                    color: '#ffffff', // White label line color
-                                },
-                            },
-                        },
-                    ],
-                };
+                ],
+            };
 
-                const chartDom = document.getElementById('lucChart');
-                if (chartDom) {
-                    const myChart = echarts.init(chartDom);
-                    myChart.setOption(option);
-                }
+            const chartDom = document.getElementById('lucChart');
+            if (chartDom) {
+                const myChart = echarts.init(chartDom);
+                myChart.setOption(option);
             }
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -171,7 +175,7 @@ const LucGraph = () => {
                     className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
                     style={{ display: 'none', width: '200px' }}
                 >
-                    This graph shows the distribution of land use changes for the selected state and year.
+                    This graph shows the distribution of land use changes for the selected district and year.
                 </div>
             </div>
             <div id="lucChart" className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg"></div>
