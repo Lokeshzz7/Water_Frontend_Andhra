@@ -18,19 +18,26 @@ const RainfallGraph = () => {
                     console.warn('No district or year found in localStorage');
                     return;
                 }
-
-                const apiUrl = `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/${year}`;
+        
+                // If the year is greater than 2024, always fetch 2023 data
+                const apiUrl =
+                    year > 2024
+                        ? `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/2023`
+                        : `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/${year}`;
+                
                 const response = await axios.get(apiUrl);
                 const data = response.data;
-
+        
                 const months = [
                     'January', 'February', 'March', 'April', 'May', 'June',
                     'July', 'August', 'September', 'October', 'November', 'December'
                 ];
-
+        
                 const option = {
                     title: {
-                        text: `Normal and Actual Rainfall for ${year}`,
+                        text: year > 2024
+                            ? `Expected Rainfall for ${year}`
+                            : `Normal and Actual Rainfall for ${year}`,
                         left: 'center',
                         textStyle: {
                             color: '#ffffff',
@@ -47,7 +54,7 @@ const RainfallGraph = () => {
                         backgroundColor: 'rgba(0, 0, 0, 0.7)',
                     },
                     legend: {
-                        data: ['Normal Rainfall', 'Actual Rainfall'],
+                        data: year > 2024 ? ['Normal Rainfall'] : ['Normal Rainfall', 'Actual Rainfall'],
                         textStyle: {
                             color: '#ffffff',
                         },
@@ -122,34 +129,38 @@ const RainfallGraph = () => {
                             },
                             smooth: true,
                         },
-                        {
-                            name: 'Actual Rainfall',
-                            type: 'line',
-                            data: data.map(item => item.actual),
-                            itemStyle: {
-                                color: '#008080',
-                            },
-                            lineStyle: {
-                                color: '#008080',
-                                width: 3,
-                            },
-                            smooth: true,
-                        },
+                        ...(year <= 2024
+                            ? [
+                                  {
+                                      name: 'Actual Rainfall',
+                                      type: 'line',
+                                      data: data.map(item => item.actual),
+                                      itemStyle: {
+                                          color: '#008080',
+                                      },
+                                      lineStyle: {
+                                          color: '#008080',
+                                          width: 3,
+                                      },
+                                      smooth: true,
+                                  },
+                              ]
+                            : []),
                     ],
                 };
-
+        
                 myChart.setOption(option);
             } catch (error) {
                 console.error('Error fetching rainfall data:', error);
             }
-        };
+        };        
 
         fetchRainfallData();
 
         return () => {
             myChart.dispose();
         };
-    }, [districtId, year]); // Depend on districtId and year to trigger re-renders
+    }, [districtId, year]);
 
     // Listen for changes in localStorage and update state
     useEffect(() => {
