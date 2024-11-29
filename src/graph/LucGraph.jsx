@@ -62,10 +62,22 @@ const LucGraph = () => {
                 return;
             }
 
-            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
-            const response = await axios.get(apiUrl);
+            // Define common logic to call both APIs
+            const fetchLandUseData = async (url) => {
+                const response = await axios.get(url);
+                return response.data[0]; // Assume we always get one object in the response
+            };
 
-            const data = response.data[0]; // Assume we always get one object in the response
+            let data;
+            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
+            if (year < 2023) {
+                // For years less than 2023, call the second API
+                const landUseUrl = `http://127.0.0.1:8000/api/forecast/get_landuse/${districtId}/${year}/`;
+                data = await fetchLandUseData(landUseUrl);
+            } else {
+                // For years 2023 and above, call the first API
+                data = await fetchLandUseData(apiUrl);
+            }
 
             const values = [
                 { name: 'Built-up', value: data.built_up || 0 },
@@ -79,7 +91,7 @@ const LucGraph = () => {
             const option = {
                 backgroundColor: 'transparent', // Transparent background
                 title: {
-                    text: year>2024 ? 'Predicted Land Use Change (LUC)': 'Land Use Change (LUC)',
+                    text: year > 2024 ? 'Predicted Land Use Change (LUC)' : 'Land Use Change (LUC)',
                     subtext: `Data for ${stateName}, Year ${year}`,
                     left: 'center',
                     top: '6%',
