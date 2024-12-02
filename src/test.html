@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Page - Water Management Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto py-8">
+        <header class="bg-blue-500 text-white p-6 rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold">Reports - Water Management Dashboard</h1>
+            <p class="text-sm">Graphical analysis and insights based on selected parameters</p>
+        </header>
+
+        <!-- Key Visuals Section -->
+        <section class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Key Visuals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Yearly Water Consumption Trends -->
+                <div>
+                    <h3 class="font-semibold mb-2">Yearly Water Consumption Trends</h3>
+                    <canvas id="yearlyConsumptionChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This chart illustrates the annual water consumption in millions of liters
+                        (ML) from 2018 to 2022, showing trends over the years. This helps identify fluctuations in
+                        consumption due to various factors like climate and policy changes.</p>
+                    <p class="text-sm mt-2">*Insight: A significant increase in 2020 indicates potential overuse or
+                        shifting weather patterns.</p>
+                    <p class="text-sm mt-2">*Mitigation: Initiatives such as public awareness programs for water
+                        conservation can be effective during peak usage years.</p>
+                </div>
+                <!-- Reservoir Performance Metrics -->
+                <div>
+                    <h3 class="font-semibold mb-2">Reservoir Performance Metrics</h3>
+                    <canvas id="reservoirPerformanceChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This bar chart showcases the current water storage versus the total gross
+                        capacity of reservoirs, providing insights into current utilization rates.</p>
+                    <p class="text-sm mt-2">*Insight: If storage is below 70% capacity, it suggests potential water
+                        scarcity risks.</p>
+                    <p class="text-sm mt-2">*Mitigation: Increase reservoir capacity or implement efficient water
+                        transfer methods during dry seasons to prevent shortages.</p>
+                </div>
+                <!-- Monthly Water Consumption Analysis -->
+                <div>
+                    <h3 class="font-semibold mb-2">Monthly Water Consumption Analysis</h3>
+                    <canvas id="monthlyConsumptionChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This bar chart displays the monthly water consumption, helping to identify
+                        high-consumption periods and low-demand months for better resource management.</p>
+                    <p class="text-sm mt-2">*Insight: Higher usage in summer months suggests increased agricultural or
+                        domestic demand.</p>
+                    <p class="text-sm mt-2">*Mitigation: Encourage water-saving practices during peak consumption months
+                        to minimize the risk of shortages.</p>
+                </div>
+                <!-- Scenario Analysis Outcomes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Scenario Analysis Outcomes</h3>
+                    <canvas id="scenarioAnalysisChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This line chart evaluates potential outcomes under different scenarios by
+                        comparing current water storage with projected figures. It helps anticipate the impact of policy
+                        decisions and extreme events.</p>
+                    <p class="text-sm mt-2">*Insight: Scenario B shows a potential deficit that requires urgent
+                        intervention.</p>
+                    <p class="text-sm mt-2">*Mitigation: Initiate water-saving strategies and infrastructure
+                        improvements to adapt to the potential outcomes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Assessment Overview -->
+        <section class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Risk Assessment Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Risk Scores by Region -->
+                <div>
+                    <h3 class="font-semibold mb-2">Risk Scores by Region</h3>
+                    <canvas id="riskScoreChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This doughnut chart categorizes regions based on risk levels: Low, Medium,
+                        and High, highlighting areas that may require targeted interventions.</p>
+                    <p class="text-sm mt-2">*Insight: Regions with high risk scores are more vulnerable to water
+                        shortages or quality issues.</p>
+                    <p class="text-sm mt-2">*Mitigation: Implement targeted investments in water infrastructure and
+                        establish policies to lower risk levels.</p>
+                </div>
+                <!-- Contributing Risk Factors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Contributing Risk Factors</h3>
+                    <canvas id="riskFactorsChart" class="w-full h-64"></canvas>
+                    <p class="text-sm mt-2">This bar chart shows the contribution of factors such as rainfall,
+                        population growth, and land use to overall risk levels. Analyzing these factors helps in
+                        planning and mitigating risks effectively.</p>
+                    <p class="text-sm mt-2">*Insight: Rapid population growth increases water demand, elevating the risk
+                        score for certain regions.</p>
+                    <p class="text-sm mt-2">*Mitigation: Implement urban planning and water-efficient technologies to
+                        manage the effects of population growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generate PDF Report -->
+        <section class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Generate PDF Report</h2>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+                onclick="generatePDF()">Download Report</button>
+            <p class="text-sm mt-2">Click this button to download a comprehensive PDF report summarizing the key
+                insights and data from the dashboard.</p>
+        </section>
+    </div>
+
+    <!-- JavaScript for Chart.js and PDF generation -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPDF/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        // Initialize charts with placeholder data
+        const yearlyConsumptionChart = new Chart(document.getElementById('yearlyConsumptionChart'), {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Yearly Water Consumption (ML)',
+                    data: [90, 100, 120, 130, 110],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Water Consumption (ML)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const reservoirPerformanceChart = new Chart(document.getElementById('reservoirPerformanceChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Current Storage', 'Gross Capacity'],
+                datasets: [{
+                    label: 'Reservoir Metrics',
+                    data: [150, 200],
+                    backgroundColor: ['#34d399', '#3b82f6'],
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Metrics'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Volume (ML)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const monthlyConsumptionChart = new Chart(document.getElementById('monthlyConsumptionChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Monthly Water Consumption (ML)',
+                    data: [10, 15, 18, 22, 25, 28, 30, 30, 24, 19, 14, 12],
+                    backgroundColor: '#3b82f6',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Water Consumption (ML)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const scenarioAnalysisChart = new Chart(document.getElementById('scenarioAnalysisChart'), {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2026', '2027', '2028'],
+                datasets: [{
+                    label: 'Projected Storage',
+                    data: [150, 140, 130, 120, 110],
+                    borderColor: '#e11d48',
+                    backgroundColor: 'rgba(225, 29, 72, 0.2)',
+                    fill: true,
+                }, {
+                    label: 'Current Storage',
+                    data: [150, 150, 150, 150, 150],
+                    borderColor: '#34d399',
+                    backgroundColor: 'rgba(52, 211, 153, 0.2)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Volume (ML)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const riskScoreChart = new Chart(document.getElementById('riskScoreChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Low Risk', 'Medium Risk', 'High Risk'],
+                datasets: [{
+                    label: 'Region Risk Scores',
+                    data: [30, 40, 30],
+                    backgroundColor: ['#34d399', '#facc15', '#e11d48'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const riskFactorsChart = new Chart(document.getElementById('riskFactorsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Rainfall', 'Population Growth', 'Land Use', 'Infrastructure'],
+                datasets: [{
+                    label: 'Contributing Risk Factors',
+                    data: [20, 35, 25, 20],
+                    backgroundColor: '#facc15',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Factors'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Contribution (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            pdf.text('Water Management Dashboard Report', 10, 10);
+            pdf.text('Generated insights and data visualization', 10, 20);
+
+            // Example for adding charts as images (use appropriate conversion for your case)
+            pdf.text('Chart 1: Yearly Water Consumption Trends', 10, 30);
+            pdf.addImage('data:image/png;base64,...', 'PNG', 10, 40, 180, 100);
+
+            pdf.save('water_management_report.pdf');
+        }
+    </script>
+</body>
+
+</html>

@@ -79,7 +79,7 @@ const FactorsGraph = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative h-0">
       {/* Info button */}
       <div
         className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
@@ -105,7 +105,7 @@ const FactorsGraph = () => {
       {/* Chart container */}
       <div
         id="FactorMain"
-        className="w-[700px] ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[300px] rounded-lg"
+        className="w-[650px] ml-6  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
       ></div>
     </div>
   );

@@ -76,9 +76,9 @@ const RainfallGraph = () => {
                     },
                     grid: {
                         top: 100,
-                        left: '10%',
-                        right: '10%',
-                        bottom: '10%',
+                        left: '5%',
+                        right: '5%',
+                        bottom: '5%',
                         containLabel: true,
                     },
                     xAxis: {
@@ -187,7 +187,7 @@ const RainfallGraph = () => {
     }, [districtId, year]); // Watch for districtId and year changes
 
     return (
-        <div key={chartKey} className="relative">
+        <div key={chartKey} className="relative h-0">
             {/* Info button */}
             <div
                 className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
@@ -213,7 +213,7 @@ const RainfallGraph = () => {
             {/* Chart container */}
             <div
                 id="rainmonth"
-                className="w-11/12 ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[454px] rounded-lg"
+                className="w-[655px] ml-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
             ></div>
         </div>
     );

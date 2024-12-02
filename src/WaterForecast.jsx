@@ -71,61 +71,61 @@ function WaterManagementDashboard() {
     }, []);
 
     return (
-        <main className="flex flex-col justify-evenly items-center py-9 bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">
-            {/* Flex container for all dropdowns */}
-            <div className="flex flex-row  justify-start items-center w-full ">
+        <main className="flex flex-col justify-evenly items-center pt-5  bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">
+            {/* Flex container for dropdowns */}
+            <div className="flex flex-row justify-start items-center w-full">
                 <FilterDropdown />
                 {/* <DistrictDropdown /> */}
             </div>
 
-            {/* Remaining content */}
-            <div className="flex flex-col justify-center items-center p-3 w-full">
-                <section className="flex flex-row w-full">
+            {/* First section */}
+            <section className="flex flex-row w-full mt-8">
+                <div className="flex flex-row w-full p-2  ">
                     <div className="flex flex-row w-full">
-                        <div className="flex flex-col w-full">
-                            <div className="flex flex-wrap px-4">
-                                <DataCard
-                                    title="Current Consumption (2024)"
-                                    value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading..."}
-                                />
-                                <DataCard
-                                    title="Current Inflow (2024)"
-                                    value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading..."}
-                                />
-                            </div>
-                            <CurrentLinearGauge />
+                        <div className="flex flex-wrap pl-4 ">
+                            <DataCard
+                                title="Current Consumption (2024)"
+                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading..."}
+                            />
+                            <DataCard
+                                title="Current Inflow (2024)"
+                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading..."}
+                            />
                         </div>
-                        <div className="flex flex-col w-full">
-                            <div className="flex flex-wrap px-4">
-                                <DataCard
-                                    title="Future Consumption"
-                                    value={futureYearData ? futureYearData.consumption.toFixed(2) : "Loading..."}
-                                />
-                                <DataCard
-                                    title="Future Inflow"
-                                    value={futureYearData ? futureYearData.inflow.toFixed(2) : "Loading..."}
-                                />
-                            </div>
-                            <LinearGauge />
+                        <CurrentLinearGauge />
+                    </div>
+                    <div className="flex flex-row w-full ">
+                        <div className="flex flex-wrap   ">
+                            <DataCard
+                                title="Future Consumption"
+                                value={futureYearData ? futureYearData.consumption.toFixed(2) : "Loading..."}
+                            />
+                            <DataCard
+                                title="Future Inflow"
+                                value={futureYearData ? futureYearData.inflow.toFixed(2) : "Loading..."}
+                            />
                         </div>
+                        <LinearGauge />
                     </div>
-                    <div className="flex flex-col flex-1 px-4 gap-10 mt-5">
-                    
-                            <FactorsAffectingGraph />
-                            <Months />
-                    </div>
-                        {/*<AndhraMap />*/}
-                </section>
+                </div>
+            </section>
 
-                <section className="flex flex-row w-full mt-20">
-                    <div className="flex flex-col flex-1 px-4">
-                        <LucGraph />
-                    </div>
-                    <div className="flex flex-col flex-1 px-4">
-                        <RainfallGraph />
-                    </div>
-                </section>
-            </div>
+            {/* Second section */}
+            <section className="flex flex-row w-full  ">
+                <div className="flex flex-row flex-1 p-3 gap-7   ">
+                    <FactorsAffectingGraph />
+                    <Months />
+                </div>
+            </section>
+
+            {/* Third section */}
+            <section className="flex flex-row w-full  ">
+                <div className="flex flex-row flex-1 p-3 gap-7 ">
+                    <LucGraph />
+
+                    <RainfallGraph />
+                </div>
+            </section>
         </main>
     );
 }

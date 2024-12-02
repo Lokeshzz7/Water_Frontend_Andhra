@@ -193,7 +193,7 @@ const MonthConsumptionGraph = () => {
             {/* Chart container */}
             <div
                 id="monthmain"
-                className="w-[700px] ml-5 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[300px] rounded-lg"
+                className="w-[655px] ml-2  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
             ></div>
         </div>
     );
