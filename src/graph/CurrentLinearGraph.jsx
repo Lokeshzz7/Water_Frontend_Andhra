@@ -6,8 +6,11 @@ const CurrentLinearGauge = () => {
     const [usageData, setUsageData] = useState(null);
     const [percentages, setPercentages] = useState(null);
     const [title, setTitle] = useState('Water Usage Prediction');
+    const [loading, setLoading] = useState(false); // State for loading
+    const [initialLoad, setInitialLoad] = useState(true); // State for initial load
 
     const fetchData = async () => {
+        setLoading(true); // Set loading to true before the API call
         try {
             // Get necessary values from localStorage
             const districtId = localStorage.getItem('selectedDistrict'); // e.g., "25"
@@ -17,6 +20,8 @@ const CurrentLinearGauge = () => {
                 console.warn('District ID or year not found in localStorage.');
                 setUsageData(null);
                 setPercentages(null);
+                setLoading(false); // Set loading to false when data is not found
+                setInitialLoad(false); // Mark the initial load as complete
                 return;
             }
 
@@ -37,6 +42,8 @@ const CurrentLinearGauge = () => {
                 console.warn('Data for month 1 not found.');
                 setUsageData(null);
                 setPercentages(null);
+                setLoading(false); // Set loading to false when data is not found
+                setInitialLoad(false); // Mark the initial load as complete
                 return;
             }
 
@@ -69,15 +76,20 @@ const CurrentLinearGauge = () => {
             console.error('Error fetching or processing data:', error);
             setUsageData(null);
             setPercentages(null);
+        } finally {
+            setLoading(false); // Set loading to false after the fetch is complete
+            setInitialLoad(false); // Mark the initial load as complete
         }
     };
-
 
     useEffect(() => {
         fetchData(); // Fetch data initially when component mounts
 
         const handleStorageChange = () => {
-            fetchData(); // Re-fetch data if localStorage changes
+            // Only fetch new data if the storage change triggers an update but not for the first load
+            if (!initialLoad) {
+                fetchData();
+            }
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -85,33 +97,37 @@ const CurrentLinearGauge = () => {
         return () => {
             window.removeEventListener("storage", handleStorageChange);
         };
-    }, []);
+    }, [initialLoad]);
 
     return (
         <div className="w-11/12  mt-8 mr-9 p-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
-            <h2 className="mb-4 text-xl font-bold mt-4 ">Selected Water Usage Distribution</h2>
-            {percentages ? (
-                Object.entries(percentages).map(([category, percentage]) => (
-                    <div key={category} className="flex items-center mb-8 ">
-                        <span className=" text-lg font-bold  text-[#f19cbb]">{category}: {percentage}%</span>
-
-                        <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
-                            <div
-                                className="fill h-full rounded"
-                                style={{
-                                    width: `${percentage}%`,
-                                    background: {
-                                        Domestic: '#4CAF50',
-                                        Industrial: '#f44336',
-                                        Irrigation: '#00BCD4',
-                                    }[category],
-                                }}
-                            />
-                        </div>
-                    </div>
-                ))
+            <h2 className="mb-6 text-xl font-bold mt-3 ">Current Water Usage Distribution (2024)</h2>
+            {loading && initialLoad ? (
+                <p>Loading...</p> // Show loading message only during the initial load
             ) : (
-                <p>No data to display</p>
+                percentages ? (
+                    Object.entries(percentages).map(([category, percentage]) => (
+                        <div key={category} className="flex items-center mb-8 ">
+                            <span className=" text-lg font-bold  text-[#f19cbb]">{category}: {percentage}%</span>
+
+                            <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
+                                <div
+                                    className="fill h-full rounded"
+                                    style={{
+                                        width: `${percentage}%`,
+                                        background: {
+                                            Domestic: '#4CAF50',
+                                            Industrial: '#f44336',
+                                            Irrigation: '#00BCD4',
+                                        }[category],
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>No data to display</p>
+                )
             )}
         </div>
     );

@@ -21,7 +21,7 @@ const FactorsGraph = () => {
         textStyle: {
           color: '#ffffff',
         },
-        top: '30px',
+        top: '30px',  
       },
       tooltip: {
         textStyle: {

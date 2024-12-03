@@ -2,12 +2,41 @@ import React, { useState, useEffect } from 'react';
 import DataCard from './DataCard.jsx';
 import AndhraMap from '../map/AndhraMap.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
-import SpiderGraph from '../graph/SpiderGraph.jsx';
 
 const ReservoirMainContent = () => {
     const [reservoirData, setReservoirData] = useState(null);
     const [selectedStateIndex, setSelectedStateIndex] = useState(null);
     const [selectedYear, setSelectedYear] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    // Reservoir mapping data
+    const reservoirList = [
+        { "name": "SRISAILAM R", "id": 1 },
+        { "name": "NAGARJUNA SAGAR", "id": 2 },
+        { "name": "PULICHINTHALA PROJECT", "id": 3 },
+        { "name": "PRAKASAM BARRAGE", "id": 4 },
+        { "name": "YELERU", "id": 5 },
+        { "name": "BRAHMAMSAGAR", "id": 6 },
+        { "name": "TANDAVA", "id": 7 },
+        { "name": "GUNDLAKAMMA", "id": 8 },
+        { "name": "THOTAPALLI BARRAGE", "id": 9 },
+        { "name": "GOTTA BARRAGE", "id": 10 },
+        { "name": "SOMASILA", "id": 11 },
+        { "name": "KANDALERU", "id": 12 },
+        { "name": "GANDIKOTA", "id": 13 },
+        { "name": "VELOGODU BALANCING", "id": 14 },
+        { "name": "PENNA AHOBILAM BALANCING", "id": 15 },
+        { "name": "CHITRAVATI BALANCING", "id": 16 },
+        { "name": "MYLAVARAM(PENNAR)", "id": 17 },
+        { "name": "PAIDIPALEM BALANCING", "id": 18 },
+        { "name": "SARVARAJA SAGAR", "id": 19 },
+        { "name": "ALAGANURU BALANCING", "id": 20 },
+        { "name": "VAMIKONDA SAGAR", "id": 21 },
+        { "name": "YELLANUR SR2", "id": 22 },
+        { "name": "THIMMAPURAM SR1", "id": 23 }
+    ]
+    
+        ;
 
     // Function to load data from localStorage
     const loadFromLocalStorage = () => {
@@ -27,56 +56,66 @@ const ReservoirMainContent = () => {
         };
     }, []);
 
+    // Get the reservoir name based on selectedStateIndex
+    const getReservoirName = () => {
+        const reservoir = reservoirList.find((item) => item.id === selectedStateIndex);
+        return reservoir ? reservoir.name : "Unknown";
+    };
+
     // Fetch data from API
     useEffect(() => {
         const fetchReservoirData = async () => {
             if (selectedStateIndex === null || selectedYear === null) return;
+
+            setLoading(true);
 
             try {
                 let response;
                 let data;
 
                 if (selectedYear > 2024) {
-                    // Call the new API for years greater than 2024
                     response = await fetch(`http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
-                    if (response.ok) {
-                        data = await response.json();
-                        console.log(`Data for year ${selectedYear}:`, data);
+                } else {
+                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
+                }
 
-                        // Set the reservoir data from prediction API
-                        if (data.length > 0) {
-                            const predictionData = data[0];
-                            setReservoirData({
-                                gross_capacity: predictionData.gross_capacity,
-                                current_storage: predictionData.current_storage,
-                                // Include any additional fields needed here
-                            });
-                        } else {
-                            console.error(`No data found for year ${selectedYear}`);
-                        }
+                if (response.ok) {
+                    data = await response.json();
+                    if (data.length > 0) {
+                        let totalCurrentLevel = 0;
+                        let totalCurrentStorage = 0;
+                        let totalFloodCushion = 0;
+                        let totalGrossCapacity = 0;
+                        let totalInflow = 0;
+                        let totalOutflow = 0;
+
+                        data.forEach((monthData) => {
+                            if (monthData.current_level !== -999) totalCurrentLevel += monthData.current_level;
+                            if (monthData.current_storage !== -999) totalCurrentStorage += monthData.current_storage;
+                            if (monthData.flood_cushion !== -999) totalFloodCushion += monthData.flood_cushion;
+                            if (monthData.gross_capacity !== -999) totalGrossCapacity += monthData.gross_capacity;
+                            if (monthData.inflow !== -999) totalInflow += monthData.inflow;
+                            if (monthData.outflow !== -999) totalOutflow += monthData.outflow;
+                        });
+
+                        setReservoirData({
+                            current_level: totalCurrentLevel.toFixed(2),
+                            current_storage: totalCurrentStorage.toFixed(2),
+                            flood_cushion: totalFloodCushion.toFixed(2),
+                            gross_capacity: totalGrossCapacity.toFixed(2),
+                            inflow: totalInflow.toFixed(2),
+                            outflow: totalOutflow.toFixed(2),
+                        });
                     } else {
-                        console.error("API response error:", response.statusText);
+                        console.error(`No data found for year ${selectedYear}`);
                     }
                 } else {
-                    // Call the existing API for years less than or equal to 2024
-                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
-                    if (response.ok) {
-                        data = await response.json();
-                        console.log(`Data for year ${selectedYear}:`, data);
-
-                        // Assuming data for month 1 is needed
-                        const monthOneData = data.find((reservoir) => reservoir.month === 1);
-                        if (monthOneData) {
-                            setReservoirData(monthOneData);
-                        } else {
-                            console.error(`No data found for month 1 in year ${selectedYear}`);
-                        }
-                    } else {
-                        console.error("API response error:", response.statusText);
-                    }
+                    console.error("API response error:", response.statusText);
                 }
             } catch (error) {
                 console.error("Error fetching reservoir data:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
@@ -89,52 +128,39 @@ const ReservoirMainContent = () => {
                 <section className="flex flex-row w-full">
                     <div className="flex flex-col w-full">
                         <div className="flex flex-row justify-between px-4 gap-10">
-                            {/* Set a fixed width for DataCard to enforce layout */}
-                            <div className="flex flex-col ">
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Current Level"
-                                        value={reservoirData?.current_level || "N/A"}
-                                        unit="galH2O"
-                                    />
-                                </div>
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Current Storage"
-                                        value={reservoirData?.current_storage || "N/A"}
-                                        unit="galH2O"
-                                    />
-                                </div>
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Flood Cushion"
-                                        value={reservoirData?.flood_cushion || "N/A"}
-                                        unit="galH2O"
-                                    />
-                                </div>
+                            <div className="flex flex-col">
+                                <DataCard
+                                    title={`Current Level (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.current_level || "N/A")}
+                                    unit="galH2O"
+                                />
+                                <DataCard
+                                    title={`Current Storage (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.current_storage || "N/A")}
+                                    unit="galH2O"
+                                />
+                                <DataCard
+                                    title={`Flood Cushion (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
+                                    unit="galH2O"
+                                />
                             </div>
-                            <div className="flex flex-col ">
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Gross Capacity"
-                                        value={reservoirData?.gross_capacity || "N/A"}
-                                        unit="galH2O"
-                                    />
-                                </div>
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Inflow"
-                                        value={reservoirData?.inflow || "N/A"}
-                                        unit="m³/s"
-                                    />
-                                </div>
-                                <div className="flex w-full">
-                                    <DataCard
-                                        title="Outflow"
-                                        value={reservoirData?.outflow || "N/A"}
-                                        unit="m³/s"
-                                    />
-                                </div>
+                            <div className="flex flex-col">
+                                <DataCard
+                                    title={`Gross Capacity (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.gross_capacity || "N/A")}
+                                    unit="galH2O"
+                                />
+                                <DataCard
+                                    title={`Inflow (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.inflow || "N/A")}
+                                    unit="m³/s"
+                                />
+                                <DataCard
+                                    title={`Outflow (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
+                                    unit="m³/s"
+                                />
                             </div>
                         </div>
                     </div>
@@ -147,9 +173,6 @@ const ReservoirMainContent = () => {
                     <div className="flex flex-col flex-1 px-4">
                         <WaterConsumptionGraph />
                     </div>
-                    {/* <div className="flex flex-col flex-1 px-4">
-                        <SpiderGraph />
-                    </div> */}
                 </section>
             </div>
         </main>

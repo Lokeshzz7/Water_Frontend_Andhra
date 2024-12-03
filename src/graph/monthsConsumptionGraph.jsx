@@ -7,26 +7,37 @@ const MonthConsumptionGraph = () => {
     const [selectedYear, setSelectedYear] = useState(localStorage.getItem('selectedYear'));
 
     // Function to fetch and transform the data from the API
+    // Function to fetch and transform the data from the API
+    // Function to fetch and transform the data from the API
     const fetchMonthData = (districtId, selectedYear) => {
-        fetch(`http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`)
+        const apiEndpoint = parseInt(selectedYear, 10) > 2024
+            ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`
+            : `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+
+        fetch(apiEndpoint)
             .then((response) => response.json())
             .then((data) => {
                 const months = [
                     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
                 ];
 
-                const consumptionData = [];
-                const inflowData = [];
-                const irrigationData = [];
-                const industryData = [];
-                const domesticData = [];
+                // Initialize arrays with 0s for each month
+                const consumptionData = new Array(12).fill(0);
+                const inflowData = new Array(12).fill(0);
+                const irrigationData = new Array(12).fill(0);
+                const industryData = new Array(12).fill(0);
+                const domesticData = new Array(12).fill(0);
 
+                // Populate arrays with actual data based on month value
                 data.forEach((entry) => {
-                    consumptionData.push(entry.consumption);
-                    inflowData.push(entry.rainfall + entry.inflow_states);
-                    irrigationData.push(entry.irrigation);
-                    industryData.push(entry.industry);
-                    domesticData.push(entry.domestic);
+                    const monthIndex = entry.month - 1; // Convert month (1-12) to zero-based index (0-11)
+                    if (monthIndex >= 0 && monthIndex < 12) {
+                        consumptionData[monthIndex] = entry.consumption || 0;
+                        inflowData[monthIndex] = (entry.rainfall + entry.inflow_states) || 0;
+                        irrigationData[monthIndex] = entry.irrigation || 0;
+                        industryData[monthIndex] = entry.industry || 0;
+                        domesticData[monthIndex] = entry.domestic || 0;
+                    }
                 });
 
                 setChartData({
@@ -41,10 +52,23 @@ const MonthConsumptionGraph = () => {
             .catch((error) => console.error("Error fetching month data:", error));
     };
 
+
+
     // Re-fetch data when districtId or selectedYear changes
     useEffect(() => {
         fetchMonthData(districtId, selectedYear);
     }, [districtId, selectedYear]);
+
+    useEffect(() => {
+        const handleStorageChange = () => {
+            setDistrictId(localStorage.getItem('selectedDistrict'));
+            setSelectedYear(localStorage.getItem('selectedYear'));
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        return () => window.removeEventListener('storage', handleStorageChange);
+    }, []);
+
 
     // Initialize ECharts and set option for the chart
     useEffect(() => {
@@ -52,6 +76,11 @@ const MonthConsumptionGraph = () => {
 
         const chartDom = document.getElementById('monthmain');
         const myChart = echarts.init(chartDom);
+
+        const isFutureYear = parseInt(selectedYear, 10) > 2024;
+        const titleText = isFutureYear
+            ? `Predicted Consumption Data for ${selectedYear}`
+            : `Consumption Data for ${selectedYear}`;
 
         const option = {
             backgroundColor: 'transparent',
@@ -66,7 +95,7 @@ const MonthConsumptionGraph = () => {
                 top: '30px',
             },
             title: {
-                text: `Consumption Data for ${selectedYear}`,
+                text: titleText,
                 textStyle: {
                     color: '#ffffff',
                 },

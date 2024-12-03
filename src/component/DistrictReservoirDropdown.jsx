@@ -124,13 +124,13 @@ const DistrictReservoirDropdown = () => {
             <section className="flex flex-wrap gap-5 justify-start items-center w-full text-2xl tracking-tight leading-none text-black whitespace-nowrap max-w-[1382px]">
                 <section className="filter-dropdown-container gap-30">
                     <section className="button-container">
-                            <Dropdown
+                            {/* <Dropdown
                                 value={selectedDistrict}
                                 onChange={(e) => handleDistrictChange(e.value)}
                                 options={districtOptions}
                                 placeholder={selectedDistrictName}
                                 className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/2 text-red-900"
-                            />
+                            /> */}
                             
 
                             <Dropdown
