@@ -41,12 +41,13 @@ const ReservoirHealth = () => {
     const option = {
       title: {
         text: "Risk Score",
+        left: "center",
         textStyle: {
           color: "white", // Set title color to white
           fontWeight: "bold", // Set title font weight to bold
           fontSize: 25, // Optional: Set title font size
         },
-        padding: [20, 0, 20, 40], // Add padding below the title (top, right, bottom, left)
+        padding: [0, 0, 90, 40], // Add padding below the title (top, right, bottom, left)
       },
       tooltip: {
         trigger: "item", // Trigger tooltip on item hover
@@ -87,9 +88,9 @@ const ReservoirHealth = () => {
             backgroundColor: "transparent"
           },
         },
-        
+
         itemSize: 18, // Optional: Adjust the size of toolbox icons
-        top: "4%", // Position the toolbox from the top (you can adjust this)
+        top: "1%", // Position the toolbox from the top (you can adjust this)
         right: "5%", // Position the toolbox from the right (you can adjust this)
       },
       series: [
@@ -97,8 +98,8 @@ const ReservoirHealth = () => {
           type: "gauge",
           startAngle: 180,
           endAngle: 0,
-          center: ["50%", "75%"],
-          radius: "80%",
+          center: ["50%", "80%"],
+          radius: "110%",
           min: 0,
           max: 1,
           splitNumber: 8,
@@ -189,7 +190,9 @@ const ReservoirHealth = () => {
     };
   }, [riskScore]);
 
-  return <div id="reservoir-health-chart" className="w-[400px] h-[454px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-lg  mt-8 mr-4 "></div>;
+  return <div id="reservoir-health-chart"
+    className="w-[650px] ml-3  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+  ></div>;
 };
 
 export default ReservoirHealth;

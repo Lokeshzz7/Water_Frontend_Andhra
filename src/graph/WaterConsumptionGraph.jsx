@@ -234,7 +234,7 @@ const WaterConsumptionGraph = () => {
         <div className="relative">
             {/* Tooltip Button */}
             <div
-                className="absolute top-[30px] left-3 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                className="absolute top-[10px] left-3 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
                 onMouseEnter={() => {
                     const tooltip = document.getElementById('waterInfoTooltip'); // Updated id
                     if (tooltip) tooltip.style.display = 'block';
@@ -257,7 +257,7 @@ const WaterConsumptionGraph = () => {
             {/* Line Chart */}
             <div
                 id="water-consumption-chart"
-                className="w-full h-[500px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-3 mt-8"
+                className="w-full h-[330px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-3 pt-4"
             ></div>
         </div>
     );

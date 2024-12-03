@@ -208,7 +208,11 @@ const LucGraph = () => {
                     Includes lakes, rivers, reservoirs, and other permanent water features. */}
                 </div>
             </div>
-            <div id="lucChart" className="w-[650px] ml-6  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"></div>
+            <div id="lucChart" 
+            className="w-[650px] ml-6  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+            >
+
+            </div>
         </div>
     );
 };

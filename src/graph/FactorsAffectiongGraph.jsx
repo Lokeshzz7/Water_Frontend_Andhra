@@ -79,7 +79,7 @@ const FactorsGraph = () => {
   }, []);
 
   return (
-    <div className="relative h-0">
+    <div className="relative ">
       {/* Info button */}
       <div
         className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"

@@ -50,10 +50,10 @@ const GaugeChart = () => {
       const _panelImageURL =
         "https://echarts.apache.org/examples/data/asset/img/custom-gauge-panel.png";
       const _valOnRadianMax = 100;
-      const _outerRadius = 180;
-      const _innerRadius = 150;
-      const _pointerInnerRadius = 40;
-      const _insidePanelRadius = 140;
+      const _outerRadius = 130;
+      const _innerRadius = 100;
+      const _pointerInnerRadius = 30;
+      const _insidePanelRadius = 110;
 
       function renderItem(params, api) {
         const valOnRadian = api.value(1);
@@ -220,13 +220,13 @@ const GaugeChart = () => {
         radiusAxis: {
           type: "value",
           show: false,
-          
+
         },
         polar: {},
         title: {
           text: "Risk Score", // Set the title text
           left: "center", // Center the title
-          top: "20px", // Adjust vertical position
+          top: "-5px", // Adjust vertical position
           textStyle: {
             color: "white", // Set title color to white
             fontSize: 18, // Set title font size
@@ -240,7 +240,7 @@ const GaugeChart = () => {
             renderItem,
           },
         ],
-        
+
       };
 
       chartInstance.current.setOption(option);
@@ -253,7 +253,37 @@ const GaugeChart = () => {
     };
   }, [value]);
 
-  return <div ref={chartRef} className="w-1/2 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg ml-6 mt-8 mr-5 " />;
+  return (
+    <div className="relative">
+      {/* Tooltip Button */}
+      <div
+        className="absolute top-[10px] left-6 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+        onMouseEnter={() => {
+          const tooltip = document.getElementById('ScenarioInfoTooltip'); // Updated id
+          if (tooltip) tooltip.style.display = 'block';
+        }}
+        onMouseLeave={() => {
+          const tooltip = document.getElementById('ScenarioInfoTooltip'); // Updated id
+          if (tooltip) tooltip.style.display = 'none';
+        }}
+      >
+        ℹ️
+      </div>
+      {/* Tooltip Content */}
+      <div
+        id="ScenarioInfoTooltip" // Updated id
+        className="absolute top-[70px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+        style={{ display: 'none', width: '200px', pointerEvents: 'none' }}
+      >
+        This line chart shows the water storage, water capacity, water level, and consumption over the past years.
+      </div>
+
+      <div
+        ref={chartRef}
+        className="w-[600px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[330px] rounded-lg ml-6 pt-4 mr-5"
+      />
+    </div>
+  );
 };
 
 export default GaugeChart;

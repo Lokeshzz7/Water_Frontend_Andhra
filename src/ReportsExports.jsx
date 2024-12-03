@@ -4,6 +4,8 @@ import 'primereact/resources/primereact.min.css';         // PrimeReact core
 import 'primeicons/primeicons.css';
 import Selection_Dropdown from './component/Selection_Dropdown.jsx'
 import Reports from "./component/reports.jsx";
+import DistrictDropdown from "./component/Districtdropdown.jsx";
+import FilterDropdown from "./component/FilterDropdown.jsx";
 
 
 function ReportsExports() {
@@ -12,8 +14,10 @@ function ReportsExports() {
   const items = Array.from({ length: 100000 }).map((_, i) => ({ label: `Item #${i}`, value: i }));
 
   return (
-    <main className="flex overflow-hidden flex-col px-8  shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component max-md:px-5">
-      <Selection_Dropdown />
+    <main className="flex flex-col justify-evenly items-center pt-5 bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">
+      {/* <DistrictDropdown /> */}
+      {/* <Selection_Dropdown /> */}
+      <FilterDropdown />
       <Reports />
     </main>
   );
