@@ -1,0 +1,174 @@
+[
+    {
+      "title": "Srisailam Reservoir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.8971772, 16.0861287]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Nagarjuna Sagar",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.3124022, 16.5759672]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Pulichinthala Project",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.05666699999999, 16.770833]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Prakasam Barrage",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.603335, 16.5020777]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Yeleru Reservoir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [82.06795199999999, 17.3281998]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Brahmamsagar Reservoir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.8892146, 14.7802661]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Tandava Reservoir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [82.45902819999999, 17.6489319]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Gundlakamma Reservoir",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9822126, 15.6879212]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    },
+    {
+      "title": "Gotta Barrage",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [83.962147, 18.6887708]
+      },
+      "state": "Andhra Pradesh",
+      "PIC": "AP01HH0142",
+      "latitude": "16° 46' 15\"",
+      "longitude": "80° 03' 24\"",
+      "height": 37.24,
+      "type": "Dam",
+      "dam_incharge": "Chief Engineer, KDS, Vijayawada, Water Resources Department",
+      "district": "",
+      "gross_storage": 1295.29,
+      "live_storage": 1047.67,
+      "commissioning_date": 2004,
+      "purpose": "Irrigation"
+    }
+  ]
+  

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import resData from "./reservoir_data_full.json";
+import resData from "../data/Andhra_Res.json";
 import DataCard from "../component/DataCard";
 
 const StateMap = () => {
@@ -202,7 +202,19 @@ const StateMap = () => {
 
       circle.events.on("click", (event) => {
         const dataItem = event.target.dataItem;
-        setSelectedItem({ type: "reservoir", ...dataItem.dataContext });
+        const dataContext = dataItem.dataContext;
+  // Set the selected item correctly
+  setSelectedItem({
+    type: "reservoir", 
+    title: dataContext.title,
+    purpose: dataContext.purpose,
+    height: dataContext.height,
+    gross_storage: dataContext.gross_storage,
+    live_storage: dataContext.live_storage,
+    commissioning_date: dataContext.commissioning_date,
+    dam_incharge: dataContext.dam_incharge,
+  });
+  console.log(dataContext);
       });
 
       return window.am5.Bullet.new(root, { sprite: circle });
@@ -210,54 +222,8 @@ const StateMap = () => {
 
     reservoirSeries.data.setAll(resData);
 
-    const states = [
-      { id: "IN-AP", name: "Andhra Pradesh" },
-      { id: "IN-AR", name: "Arunachal Pradesh" },
-      { id: "IN-AS", name: "Assam" },
-      { id: "IN-BR", name: "Bihar" },
-      { id: "IN-CT", name: "Chhattisgarh" },
-      { id: "IN-GA", name: "Goa" },
-      { id: "IN-GJ", name: "Gujarat" },
-      { id: "IN-HR", name: "Haryana" },
-      { id: "IN-HP", name: "Himachal Pradesh" },
-      { id: "IN-JH", name: "Jharkhand" },
-      { id: "IN-KA", name: "Karnataka" },
-      { id: "IN-KL", name: "Kerala" },
-      { id: "IN-MP", name: "Madhya Pradesh" },
-      { id: "IN-MH", name: "Maharashtra" },
-      { id: "IN-MN", name: "Manipur" },
-      { id: "IN-ML", name: "Meghalaya" },
-      { id: "IN-MZ", name: "Mizoram" },
-      { id: "IN-NL", name: "Nagaland" },
-      { id: "IN-OR", name: "Odisha" },
-      { id: "IN-PB", name: "Punjab" },
-      { id: "IN-RJ", name: "Rajasthan" },
-      { id: "IN-SK", name: "Sikkim" },
-      { id: "IN-TN", name: "Tamil Nadu" },
-      { id: "IN-TG", name: "Telangana" },
-      { id: "IN-TR", name: "Tripura" },
-      { id: "IN-UP", name: "Uttar Pradesh" },
-      { id: "IN-UT", name: "Uttarakhand" },
-      { id: "IN-WB", name: "West Bengal" },
-    ];
-    setStateList(states);
-
+    
     setIsLoading(false);
-  };
-  const handleStateSelection = (stateId) => {
-    const selectedState = stateList.find((state) => state.id === stateId);
-    if (selectedState) {
-      setSelectedState(stateId);
-      setSelectedItem({ type: "state", name: selectedState.name });
-      updateStateReservoirCount(selectedState.name);
-
-      // Programmatically zoom to the selected state
-      const dataItem = polygonSeriesRef.current.getDataItemById(stateId);
-      if (dataItem) {
-        polygonSeriesRef.current.zoomToDataItem(dataItem); // Correct method here
-        setCurrentZoomState(dataItem);
-      }
-    }
   };
 
   useEffect(() => {
@@ -275,75 +241,30 @@ const StateMap = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleStorageChange = (e) => {
-      // Custom event listener
-      if (e.detail && e.detail.key === "StateMapId") {
-        const stateMapId = e.detail.value;
-        if (stateList.length > 0) {
-          handleStateSelection(stateMapId);
-        }
-      }
-    };
-
-    // Add custom event listener
-    window.addEventListener("localStorageChange", handleStorageChange);
-
-    // Modify localStorage setting to trigger custom event
-    const originalSetItem = localStorage.setItem;
-    localStorage.setItem = function (key, value) {
-      const event = new CustomEvent("localStorageChange", {
-        detail: { key, value }
-      });
-      window.dispatchEvent(event);
-
-      // Call the original setItem method
-      originalSetItem.apply(this, arguments);
-    };
-
-    // Check initial localStorage value
-    const initialStateMapId = localStorage.getItem("StateMapId");
-    if (initialStateMapId && stateList.length > 0) {
-      handleStateSelection(initialStateMapId);
-    }
-
-    return () => {
-      window.removeEventListener("localStorageChange", handleStorageChange);
-      // Restore original setItem method
-      localStorage.setItem = originalSetItem;
-    };
-  }, [stateList]); // Include stateList as a dependency if you need it to re-run based on changes
-
-
-
-
   return (
     <div className="flex w-full h-[500px]">
       <div id="chartdiv" ref={chartRef} className="w-[60%] h-full" />
-      <div className="w-[40%] h-full bg-transparent text-white p-4 border-l">
+      <div className="w-auto h-full bg-transparent text-white p-4 border-l">
         {selectedItem ? (
           selectedItem.type === "reservoir" ? (
             <div className="flex w-full h-40">
-              <DataCard title={`Reservoir: ${selectedItem.title}`} value="N/A" />
-              {/*<button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                onClick={() => setSelectedItem(null)}
-              >
-                Close
-              </button>*/}
+              <DataCard title={`Reservoir: ${selectedItem.title}`} value={selectedItem.type} />
+              <div>
+                <p><strong>Type:</strong> {selectedItem.type}</p>
+                <p><strong>Purpose:</strong> {selectedItem.purpose}</p>
+                <p><strong>Height:</strong> {selectedItem.height} meters</p>
+                <p><strong>Gross Storage:</strong> {selectedItem.gross_storage} MCM</p>
+                <p><strong>Live Storage:</strong> {selectedItem.live_storage} MCM</p>
+                <p><strong>Commissioning Date:</strong> {selectedItem.commissioning_date}</p>
+                <p><strong>Dam Incharge:</strong> {selectedItem.dam_incharge}</p>
+              </div>
             </div>
           ) : selectedItem.type === "state" ? (
             <div className="flex w-full h-40">
-            <DataCard
-              title={`State: ${selectedItem.name}`}
-              value={`Reservoirs: ${stateReservoirCount}`}
-            />
-              {/*<button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                onClick={() => setSelectedItem(null)}
-              >
-                Close
-              </button>*/}
+              <DataCard
+                title={`State: ${selectedItem.name}`}
+                value={`Reservoirs: ${stateReservoirCount}`}
+              />
             </div>
           ) : null
         ) : (
@@ -355,4 +276,3 @@ const StateMap = () => {
 };
 
 export default StateMap;
-
