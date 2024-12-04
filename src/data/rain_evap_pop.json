@@ -1,0 +1,938 @@
+{
+    "3": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 6.2,
+            "Normal Rainfall": 1.76,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 4.35,
+            "Normal Rainfall": 0.92,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 3.41,
+            "Normal Rainfall": 2.19,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 4.8,
+            "Normal Rainfall": 12.9,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 37.2,
+            "Normal Rainfall": 37.37,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 78.9,
+            "Normal Rainfall": 61.7,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 64.48,
+            "Normal Rainfall": 65.33,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 101.99,
+            "Normal Rainfall": 85.2,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 81.3,
+            "Normal Rainfall": 119.43,
+            "Population": 512976.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 98.89,
+            "Normal Rainfall": 102.09,
+            "Population": 512976.0
+        }
+    ],
+    "6": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 23.56,
+            "Normal Rainfall": 4.92,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 15.37,
+            "Normal Rainfall": 2.99,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 9.92,
+            "Normal Rainfall": 10.15,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 4.5,
+            "Normal Rainfall": 22.4,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 40.3,
+            "Normal Rainfall": 69.16,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 86.4,
+            "Normal Rainfall": 82.56,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 92.69,
+            "Normal Rainfall": 105.61,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 122.14,
+            "Normal Rainfall": 127.24,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 90.6,
+            "Normal Rainfall": 161.67,
+            "Population": 7299469.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 113.15,
+            "Normal Rainfall": 159.33,
+            "Population": 7299469.0
+        }
+    ],
+    "7": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 23.87,
+            "Normal Rainfall": 9.55,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 11.89,
+            "Normal Rainfall": 7.53,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 10.23,
+            "Normal Rainfall": 15.51,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 6.9,
+            "Normal Rainfall": 22.07,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 51.46,
+            "Normal Rainfall": 86.85,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 101.7,
+            "Normal Rainfall": 124.05,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 113.15,
+            "Normal Rainfall": 252.0,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 141.98,
+            "Normal Rainfall": 247.68,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 140.7,
+            "Normal Rainfall": 181.1,
+            "Population": 8056796.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 146.63,
+            "Normal Rainfall": 175.5,
+            "Population": 8056796.0
+        }
+    ],
+    "9": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 19.84,
+            "Normal Rainfall": 7.96,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 9.57,
+            "Normal Rainfall": 9.52,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 5.27,
+            "Normal Rainfall": 9.93,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 3.9,
+            "Normal Rainfall": 13.19,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 46.5,
+            "Normal Rainfall": 62.41,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 79.2,
+            "Normal Rainfall": 101.9,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 102.3,
+            "Normal Rainfall": 167.24,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 124.93,
+            "Normal Rainfall": 169.78,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 128.4,
+            "Normal Rainfall": 153.44,
+            "Population": 7363368.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 125.24,
+            "Normal Rainfall": 136.51,
+            "Population": 7363368.0
+        }
+    ],
+    "13": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 18.6,
+            "Normal Rainfall": 7.09,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 8.99,
+            "Normal Rainfall": 10.08,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 4.96,
+            "Normal Rainfall": 11.38,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 3.0,
+            "Normal Rainfall": 14.07,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 42.16,
+            "Normal Rainfall": 57.33,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 85.5,
+            "Normal Rainfall": 96.77,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 94.24,
+            "Normal Rainfall": 198.79,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 115.01,
+            "Normal Rainfall": 198.92,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 112.2,
+            "Normal Rainfall": 172.66,
+            "Population": 6403522.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 115.01,
+            "Normal Rainfall": 190.32,
+            "Population": 6403522.0
+        }
+    ],
+    "10": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 4.96,
+            "Normal Rainfall": 3.18,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 2.9,
+            "Normal Rainfall": 1.56,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 2.79,
+            "Normal Rainfall": 5.91,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 6.6,
+            "Normal Rainfall": 16.58,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 43.71,
+            "Normal Rainfall": 40.92,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 85.2,
+            "Normal Rainfall": 78.62,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 87.73,
+            "Normal Rainfall": 90.96,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 119.04,
+            "Normal Rainfall": 117.73,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 115.2,
+            "Normal Rainfall": 122.78,
+            "Population": 6994978.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 108.81,
+            "Normal Rainfall": 111.71,
+            "Population": 6994978.0
+        }
+    ],
+    "18": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 17.98,
+            "Normal Rainfall": 11.35,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 10.44,
+            "Normal Rainfall": 4.37,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 6.51,
+            "Normal Rainfall": 10.89,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 4.2,
+            "Normal Rainfall": 13.67,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 39.37,
+            "Normal Rainfall": 51.84,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 75.3,
+            "Normal Rainfall": 59.53,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 93.0,
+            "Normal Rainfall": 90.19,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 109.12,
+            "Normal Rainfall": 94.66,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 116.4,
+            "Normal Rainfall": 142.58,
+            "Population": 7693049.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 105.09,
+            "Normal Rainfall": 217.95,
+            "Population": 7693049.0
+        }
+    ],
+    "20": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 23.25,
+            "Normal Rainfall": 12.52,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 12.76,
+            "Normal Rainfall": 5.45,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 9.61,
+            "Normal Rainfall": 5.18,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 4.5,
+            "Normal Rainfall": 11.75,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 29.45,
+            "Normal Rainfall": 54.64,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 72.9,
+            "Normal Rainfall": 52.96,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 101.68,
+            "Normal Rainfall": 85.68,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 93.93,
+            "Normal Rainfall": 85.48,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 84.6,
+            "Normal Rainfall": 113.78,
+            "Population": 4873201.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 78.74,
+            "Normal Rainfall": 272.61,
+            "Population": 4873201.0
+        }
+    ],
+    "21": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 11.47,
+            "Normal Rainfall": 6.12,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 6.67,
+            "Normal Rainfall": 19.83,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 12.71,
+            "Normal Rainfall": 19.97,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 11.4,
+            "Normal Rainfall": 30.53,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 34.72,
+            "Normal Rainfall": 102.07,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 61.2,
+            "Normal Rainfall": 140.28,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 69.13,
+            "Normal Rainfall": 188.04,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 91.76,
+            "Normal Rainfall": 192.48,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 92.7,
+            "Normal Rainfall": 208.77,
+            "Population": 7976448.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 87.73,
+            "Normal Rainfall": 195.04,
+            "Population": 7976448.0
+        }
+    ],
+    "23": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 22.01,
+            "Normal Rainfall": 12.19,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 13.34,
+            "Normal Rainfall": 12.99,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 9.3,
+            "Normal Rainfall": 16.93,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 21.0,
+            "Normal Rainfall": 24.84,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 64.79,
+            "Normal Rainfall": 92.71,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 100.8,
+            "Normal Rainfall": 112.99,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 101.37,
+            "Normal Rainfall": 141.3,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 121.52,
+            "Normal Rainfall": 185.15,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 130.8,
+            "Normal Rainfall": 175.54,
+            "Population": 5840047.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 132.99,
+            "Normal Rainfall": 241.53,
+            "Population": 5840047.0
+        }
+    ],
+    "24": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 17.98,
+            "Normal Rainfall": 9.18,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 11.6,
+            "Normal Rainfall": 16.46,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 15.81,
+            "Normal Rainfall": 18.02,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 18.9,
+            "Normal Rainfall": 30.37,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 57.66,
+            "Normal Rainfall": 115.31,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 85.2,
+            "Normal Rainfall": 127.35,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 104.47,
+            "Normal Rainfall": 173.41,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 136.4,
+            "Normal Rainfall": 193.32,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 138.0,
+            "Normal Rainfall": 197.46,
+            "Population": 4245961.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 131.13,
+            "Normal Rainfall": 181.97,
+            "Population": 4245961.0
+        }
+    ],
+    "25": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 26.04,
+            "Normal Rainfall": 9.78,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 9.57,
+            "Normal Rainfall": 8.7,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 9.61,
+            "Normal Rainfall": 14.34,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 5.4,
+            "Normal Rainfall": 20.04,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 43.4,
+            "Normal Rainfall": 73.03,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 90.9,
+            "Normal Rainfall": 115.6,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 110.67,
+            "Normal Rainfall": 250.04,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 140.12,
+            "Normal Rainfall": 257.86,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 132.3,
+            "Normal Rainfall": 197.22,
+            "Population": 6747321.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 139.19,
+            "Normal Rainfall": 210.86,
+            "Population": 6747321.0
+        }
+    ],
+    "26": [
+        {
+            "Year": 2024.0,
+            "Month": 1.0,
+            "Total Evaporation": 18.91,
+            "Normal Rainfall": 1.74,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 2.0,
+            "Total Evaporation": 11.31,
+            "Normal Rainfall": 0.93,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 3.0,
+            "Total Evaporation": 6.51,
+            "Normal Rainfall": 2.49,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 4.0,
+            "Total Evaporation": 3.9,
+            "Normal Rainfall": 13.48,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 5.0,
+            "Total Evaporation": 36.58,
+            "Normal Rainfall": 37.28,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 6.0,
+            "Total Evaporation": 81.6,
+            "Normal Rainfall": 69.9,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 7.0,
+            "Total Evaporation": 83.7,
+            "Normal Rainfall": 99.9,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 8.0,
+            "Total Evaporation": 97.34,
+            "Normal Rainfall": 121.63,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 9.0,
+            "Total Evaporation": 84.0,
+            "Normal Rainfall": 128.86,
+            "Population": 4920905.0
+        },
+        {
+            "Year": 2024.0,
+            "Month": 10.0,
+            "Total Evaporation": 97.65,
+            "Normal Rainfall": 135.28,
+            "Population": 4920905.0
+        }
+    ]
+}
