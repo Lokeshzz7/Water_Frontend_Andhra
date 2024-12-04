@@ -200,6 +200,128 @@
       "purpose": "Irrigation"
     },
     {
+        "title": "GUNDLAKAMMA RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                79.9822126,
+                15.6879212
+            ]
+        },
+        "PIC": "AP01MH0156",
+      "latitude": "15° 40' 56\"",
+      "longitude": "79° 58' 25\"",
+      "height": "23.34 Meters",
+      "type_of_dam": "Dam",
+      "dam_incharge": "Chief Engineer, Projects, Ongole, Water Resources Department",
+      "gross_storage": "109 MCM",
+      "live_storage": "69 MCM",
+      "commissioning_date": "2013",
+      "purpose": "Irrigation"
+    },
+    {
+        "title": "GOTTA BARRAGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                83.962147,
+                18.6887708
+            ]
+        },
+        "PIC": "AP01MH0164",
+      "latitude": "18° 41' 19.68\"",
+      "longitude": "83° 57' 43.56\"",
+      "height": "20.42 Meters",
+      "type_of_dam": "Dam",
+      "dam_incharge": "Chief Engineer, North Coast, Visakhapatnam, Water Resources Department",
+      "gross_storage": "17.329 MCM",
+      "live_storage": "17.27 MCM",
+      "commissioning_date": "1977",
+      "purpose": "Irrigation"
+    },
+    {
+        "title": "VELOGODU BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.6171753,
+                15.7349984
+            ]
+        },
+        "PIC": "AP01MH0150",
+        "latitude": "15° 43' 27\"",
+        "longitude": "78° 35' 27\"",
+        "height": "28 Meters",
+        "type_of_dam": "Dam",
+        "dam_incharge": "Chief Engineer, Projects, Kurnool, Water Resources Department",
+        "district": "Nandyal",
+        "gross_storage": "16.95 MCM",
+        "live_storage": "16.905 MCM",
+        "commissioning_date": "1996",
+        "purpose": "Irrigation"
+    },
+    {
+        "title": "CHITRAVATI BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                77.948165,
+                14.5465668
+            ]
+        },
+        "PIC": "AP01HH0160",
+      "latitude": "14° 33' 37\"",
+      "longitude": "77° 57' 37\"",
+      "height": "36.5 Meters",
+      "type_of_dam": "Dam",
+      "dam_incharge": "Chief Engineer, Projects, Kadapa, Water Resources Department",
+      "district": "Y.S.R",
+      "gross_storage": "289.636 MCM",
+      "live_storage": "288.39 MCM",
+      "commissioning_date": "2008",
+      "purpose": "Irrigation"
+    },
+    {
+        "title": "MYLAVARAM(PENNAR) RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                80.6414006,
+                16.7560489
+            ]
+        },
+        "PIC": "AP01MH0058",
+      "latitude": "14° 50' 58\"",
+      "longitude": "78° 20' 27\"",
+      "height": "24 Meters",
+      "type_of_dam": "Dam",
+      "dam_incharge": "Chief Engineer, Projects, Kadapa, Water Resources Department",
+      "gross_storage": "283 MCM",
+      "live_storage": "265 MCM",
+      "commissioning_date": "1983",
+      "purpose": "Irrigation"
+    },
+    {
+        "title": "ALAGANURU BALANCING RESERVOIR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                78.401286,
+                15.7119964
+            ]
+        },
+        "PIC": "AP01MH0154",
+      "latitude": "15° 42' 58\"",
+      "longitude": "78° 24' 59\"",
+      "height": "22 Meters",
+      "type_of_dam": "Dam",
+      "dam_incharge": "Chief Engineer, Projects, Kurnool, Water Resources Department",
+      "gross_storage": "84 MCM",
+      "live_storage": "84 MCM",
+      "commissioning_date": "2004",
+      "purpose": "Irrigation"
+    },
+    {
       "name": "Penna Ahobilam (Dr. K.S.P.A.B.R.)",
       "title": "PENNA AHOBILAM BALANCING RESERVOIR",
       "geometry": {
