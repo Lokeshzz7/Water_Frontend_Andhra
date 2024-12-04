@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import resData from "../data/Andhra_Res.json";
-import DataCard from "../component/DataCard";
+import ScenarioDataCard from "../component/ScenarioDataCard";
 
 const StateMap = () => {
   const chartRef = useRef(null);
@@ -203,18 +203,18 @@ const StateMap = () => {
       circle.events.on("click", (event) => {
         const dataItem = event.target.dataItem;
         const dataContext = dataItem.dataContext;
-  // Set the selected item correctly
-  setSelectedItem({
-    type: "reservoir", 
-    title: dataContext.title,
-    purpose: dataContext.purpose,
-    height: dataContext.height,
-    gross_storage: dataContext.gross_storage,
-    live_storage: dataContext.live_storage,
-    commissioning_date: dataContext.commissioning_date,
-    dam_incharge: dataContext.dam_incharge,
-  });
-  console.log(dataContext);
+        // Set the selected item correctly
+        setSelectedItem({
+          type: "reservoir",
+          title: dataContext.title,
+          purpose: dataContext.purpose,
+          height: dataContext.height,
+          gross_storage: dataContext.gross_storage,
+          live_storage: dataContext.live_storage,
+          commissioning_date: dataContext.commissioning_date,
+          dam_incharge: dataContext.dam_incharge,
+        });
+        console.log(dataContext);
       });
 
       return window.am5.Bullet.new(root, { sprite: circle });
@@ -222,7 +222,7 @@ const StateMap = () => {
 
     reservoirSeries.data.setAll(resData);
 
-    
+
     setIsLoading(false);
   };
 
@@ -242,26 +242,29 @@ const StateMap = () => {
   }, []);
 
   return (
-    <div className="flex w-full h-[500px]">
-      <div id="chartdiv" ref={chartRef} className="w-[60%] h-full" />
-      <div className="w-auto h-full bg-transparent text-white p-4 border-l">
+    <div className="flex w-full h-[500px] gap-14">
+      <div id="chartdiv" ref={chartRef} className="flex-3 h-full w-[700px]" />
+      <div className="flex-1 h-full w-[600px]  bg-transparent text-white p-4 border-l">
         {selectedItem ? (
           selectedItem.type === "reservoir" ? (
             <div className="flex w-full h-40">
-              <DataCard title={`Reservoir: ${selectedItem.title}`} value={selectedItem.type} />
-              <div>
-                <p><strong>Type:</strong> {selectedItem.type}</p>
-                <p><strong>Purpose:</strong> {selectedItem.purpose}</p>
-                <p><strong>Height:</strong> {selectedItem.height} meters</p>
-                <p><strong>Gross Storage:</strong> {selectedItem.gross_storage} MCM</p>
-                <p><strong>Live Storage:</strong> {selectedItem.live_storage} MCM</p>
-                <p><strong>Commissioning Date:</strong> {selectedItem.commissioning_date}</p>
-                <p><strong>Dam Incharge:</strong> {selectedItem.dam_incharge}</p>
-              </div>
+              <ScenarioDataCard
+                title={`Reservoir: ${selectedItem.title}`}
+                value={selectedItem.type}
+                details={{
+                  Type: selectedItem.type,
+                  Purpose: selectedItem.purpose,
+                  Height: `${selectedItem.height} meters`,
+                  Gross_Storage: `${selectedItem.gross_storage} MCM`,
+                  Live_Storage: `${selectedItem.live_storage} MCM`,
+                  Commissioning_Date: selectedItem.commissioning_date,
+                  Dam_Incharge: selectedItem.dam_incharge,
+                }}
+              />
             </div>
           ) : selectedItem.type === "state" ? (
             <div className="flex w-full h-40">
-              <DataCard
+              <ScenarioDataCard
                 title={`State: ${selectedItem.name}`}
                 value={`Reservoirs: ${stateReservoirCount}`}
               />
@@ -273,6 +276,8 @@ const StateMap = () => {
       </div>
     </div>
   );
+
+
 };
 
 export default StateMap;

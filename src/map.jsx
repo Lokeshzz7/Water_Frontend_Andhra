@@ -9,7 +9,7 @@ const map = () => {
             <div className='mt-9'>
                 <MapDropdown />
             </div>
-            <div className='ml-4  mt-7 w-[800px]'>
+            <div className='ml-4  mt-7 w-full'>
                 <StateMap />
             </div>
         </div>
