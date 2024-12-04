@@ -27,22 +27,22 @@ const Reports = () => {
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Reservoir Performance Metrics</h3>
                         <ReservoirPerformanceChart />
-                        <div className='mt-5'>
+                        {/* <div className='mt-5'>
                             <p className="text-sm mt-2 ml-6 ">This bar chart showcases the current water storage versus the total gross capacity of reservoirs, providing insights into current utilization rates.</p>
                             <p className="text-sm mt-2 ml-6 ">*Insight: If storage is below 70% capacity, it suggests potential water scarcity risks.</p>
                             <p className="text-sm mt-2 ml-6 ">*Mitigation: Increase reservoir capacity or implement efficient water transfer methods during dry seasons to prevent shortages.</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Monthly Water Consumption Analysis */}
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-2 ">Monthly Water Consumption Analysis</h3>
                         <MonthlyConsumptionChart />
-                        <div className='mt-5'>
+                        {/* <div className='mt-5'>
                             <p className="text-sm mt-2 ml-2 ">This bar chart displays the monthly water consumption, helping to identify high-consumption periods and low-demand months for better resource management.</p>
                             <p className="text-sm mt-2 ml-2 ">*Insight: Higher usage in summer months suggests increased agricultural or domestic demand.</p>
                             <p className="text-sm mt-2 ml-2 ">*Mitigation: Encourage water-saving practices during peak consumption months to minimize the risk of shortages.</p>
-                        </div>
+                        </div> */}
                     </div>
 
 
@@ -56,22 +56,22 @@ const Reports = () => {
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-4">Yearly Water Consumption Trends</h3>
                         <WaterConsumptionGraph />
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                             <p className="text-sm mt-2 ml-4">This chart illustrates the annual water consumption in millions of liters (ML) from 2018 to 2022, showing trends over the years. This helps identify fluctuations in consumption due to various factors like climate and policy changes.</p>
                             <p className="text-sm mt-2 ml-4">*Insight: A significant increase in 2020 indicates potential overuse or shifting weather patterns.</p>
                             <p className="text-sm mt-2 ml-4">*Mitigation: Initiatives such as public awareness programs for water conservation can be effective during peak usage years.</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Scenario Analysis Outcomes */}
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3>
                         <ScenarioAnalysisChart />
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This line chart evaluates potential outcomes under different scenarios by comparing current water storage with projected figures. It helps anticipate the impact of policy decisions and extreme events.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Scenario B shows a potential deficit that requires urgent intervention.</p>
                             <p className="text-sm mt-2 ml-6">*Mitigation: Initiate water-saving strategies and infrastructure improvements to adapt to the potential outcomes.</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -83,21 +83,21 @@ const Reports = () => {
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Contributing Risk Factors</h3>
                         <RiskFactorsChart />
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This bar chart shows the contribution of factors such as rainfall, population growth, and land use to overall risk levels. Analyzing these factors helps in planning and mitigating risks effectively.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Rapid population growth increases water demand, elevating the risk score for certain regions.</p>
                             <p className="text-sm mt-2 ml-6">*Mitigation: Implement urban planning and water-efficient technologies to manage the effects of population growth.</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Risk Scores by Region</h3>
                         <ReservoirHealth />
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This doughnut chart categorizes regions based on risk levels: Low, Medium, and High, highlighting areas that may require targeted interventions.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Regions with high risk scores are more vulnerable to water shortages or quality issues.</p>
                             <p className="text-sm mt-2 ml-6">*Mitigation: Implement targeted investments in water infrastructure and establish policies to lower risk levels.</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Contributing Risk Factors */}

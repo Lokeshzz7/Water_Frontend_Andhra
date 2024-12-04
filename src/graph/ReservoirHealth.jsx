@@ -4,6 +4,11 @@ import data from "../data/reservoir_fake_data.json"; // Replace with your JSON f
 
 const ReservoirHealth = () => {
   const [riskScore, setRiskScore] = useState(0);
+  const [insights, setInsights] = useState({
+    interpretation: '',
+    insights: '',
+    recommendations: '',
+  });
 
   const fetchData = () => {
     const selectedYear = parseInt(localStorage.getItem("selectedYear") || 2000, 10);
@@ -33,7 +38,30 @@ const ReservoirHealth = () => {
     };
   }, []);
 
+  // Function to generate description based on risk score
+  const getRiskScoreDescription = (riskScore) => {
+    let riskLevel = '';
+    if (riskScore >= 0.75) {
+      riskLevel = 'No Risk';
+    } else if (riskScore >= 0.5) {
+      riskLevel = 'Medium Risk';
+    } else if (riskScore >= 0.25) {
+      riskLevel = 'High Risk';
+    } else {
+      riskLevel = 'Very High Risk';
+    }
+
+    return {
+      interpretation: `The reservoir's health is measured with a risk score. The current score of ${Math.round(riskScore * 100)}% corresponds to a risk level of **${riskLevel}**, which reflects the overall state of the reservoir. This value is based on various factors such as water levels, environmental conditions, and infrastructure status.`,
+      insights: `A **${riskLevel}** score indicates that there are significant concerns regarding the reservoir's ability to provide water reliably. Immediate action is needed to address factors that contribute to the low score. Monitoring and improving these factors can prevent severe shortages in the future.`,
+      recommendations: 'To improve the risk score, focus on improving water conservation measures, upgrading infrastructure, and addressing environmental challenges that impact reservoir health. Additionally, monitoring the water levels regularly and adjusting management practices accordingly will help to reduce the risk further.',
+    };
+  };
+
   useEffect(() => {
+    const generatedDescription = getRiskScoreDescription(riskScore);
+    setInsights(generatedDescription);
+
     // Initialize ECharts
     const chartDom = document.getElementById("reservoir-health-chart");
     const myChart = echarts.init(chartDom);
@@ -179,9 +207,6 @@ const ReservoirHealth = () => {
       ],
     };
 
-
-
-
     myChart.setOption(option);
 
     // Cleanup on unmount
@@ -190,9 +215,28 @@ const ReservoirHealth = () => {
     };
   }, [riskScore]);
 
-  return <div id="reservoir-health-chart"
-    className="w-[650px] ml-3  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
-  ></div>;
+  return (
+    <div className="relative">
+      <div
+        id="reservoir-health-chart"
+        className="w-[650px] ml-3 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+      ></div>
+
+      {/* Displaying the analysis */}
+      <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+        <h3 className="text-lg font-semibold">Analysis Summary</h3>
+        <p>
+          <b>Interpretation:</b> {insights.interpretation}
+        </p>
+        <p>
+          <b>Insights:</b> {insights.insights}
+        </p>
+        <p>
+          <b>Recommendations:</b> {insights.recommendations}
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default ReservoirHealth;

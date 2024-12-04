@@ -19,10 +19,16 @@ const WaterConsumptionGraph = () => {
     });
 
     const [apiData, setApiData] = useState([]); // To store raw API data for display
+    const [interpretation, setInterpretation] = useState("");
+    const [insights, setInsights] = useState("");
+    const [recommendations, setRecommendations] = useState("");
 
-    // State for tracking selected reservoir and year
-    const [selectedReservoir, setSelectedReservoir] = useState(parseInt(localStorage.getItem(`selectedReservoir`) || '6'));
-    const [selectedYear, setSelectedYear] = useState(parseInt(localStorage.getItem(`selectedYear`) || '2023'));
+    const [selectedReservoir, setSelectedReservoir] = useState(
+        parseInt(localStorage.getItem(`selectedReservoir`) || "6")
+    );
+    const [selectedYear, setSelectedYear] = useState(
+        parseInt(localStorage.getItem(`selectedYear`) || "2023")
+    );
 
     const fetchYearData = async (year, reservoirId) => {
         try {
@@ -32,7 +38,6 @@ const WaterConsumptionGraph = () => {
                 url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
                 response = await fetch(url);
                 data = await response.json();
-                console.log(`API Call: ${url} Response`, data); // Log the API call and response
 
                 const monthOneData = data.find((reservoir) => reservoir.month === 1);
                 return {
@@ -46,7 +51,6 @@ const WaterConsumptionGraph = () => {
                 url = `http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`;
                 response = await fetch(url);
                 data = await response.json();
-                console.log(`API Call: ${url} Response`, data); // Log the API call and response
 
                 const predictionData = data[0];
                 return {
@@ -58,7 +62,6 @@ const WaterConsumptionGraph = () => {
                 };
             }
         } catch (error) {
-            console.error(`Error fetching data for year ${year}:`, error);
             return {
                 year,
                 grossCapacity: 0,
@@ -70,44 +73,53 @@ const WaterConsumptionGraph = () => {
     };
 
     const fetchData = async () => {
-        // Calculate the year range: selected year and the 2 years before and after
         const years = [
             selectedYear - 2,
             selectedYear - 1,
             selectedYear,
             selectedYear + 1,
-            selectedYear + 2
+            selectedYear + 2,
         ];
 
-        console.log(`Fetching data for Reservoir ID: ${selectedReservoir}, Year Range: ${years[0]} to ${years[years.length - 1]}`);
-
-        // Fetch data for each of the 5 years
         const fetchPromises = years.map((year) => fetchYearData(year, selectedReservoir));
         const results = await Promise.all(fetchPromises);
-
-        // Log the results fetched for all years
-        console.log("Fetched Data for all Years:", results);
 
         const grossCapacity = results.map((item) => item.grossCapacity);
         const floodCushion = results.map((item) => item.floodCushion);
         const currentStorage = results.map((item) => item.currentStorage);
         const currentLevel = results.map((item) => item.currentLevel);
 
-        // Update the chart data state
         setChartData({ years, grossCapacity, floodCushion, currentStorage, currentLevel });
-        setApiData(results); // Save raw data for display
+        setApiData(results);
+
+        // Generate insights dynamically
+        const totalStorage = currentStorage.reduce((sum, value) => sum + value, 0);
+        const avgStorage = (totalStorage / currentStorage.length).toFixed(2);
+
+        const maxStorage = Math.max(...currentStorage);
+        const minStorage = Math.min(...currentStorage);
+        const maxYear = years[currentStorage.indexOf(maxStorage)];
+        const minYear = years[currentStorage.indexOf(minStorage)];
+
+        setInterpretation(
+            `This line chart represents water reservoir data for the selected reservoir over a 5-year period. The data includes Gross Capacity, Flood Cushion, Current Storage, and Current Level.`
+        );
+        setInsights(
+            `The year with the highest storage was ${maxYear} (${maxStorage} units), and the year with the lowest storage was ${minYear} (${minStorage} units). The average storage across the 5 years is ${avgStorage} units.`
+        );
+        setRecommendations(
+            `Consider strategies to improve storage during years with low storage (${minYear}) and enhance flood cushion mechanisms in years with high storage (${maxYear}).`
+        );
     };
 
-    // Fetch data whenever selectedReservoir or selectedYear changes
     useEffect(() => {
         fetchData();
     }, [selectedReservoir, selectedYear]);
 
-    // Listen to changes in localStorage for selectedReservoir and selectedYear
     useEffect(() => {
         const handleStorageChange = () => {
-            const newSelectedReservoir = parseInt(localStorage.getItem(`selectedReservoir`) || '6');
-            const newSelectedYear = parseInt(localStorage.getItem(`selectedYear`) || '2023');
+            const newSelectedReservoir = parseInt(localStorage.getItem(`selectedReservoir`) || "6");
+            const newSelectedYear = parseInt(localStorage.getItem(`selectedYear`) || "2023");
 
             if (newSelectedReservoir !== selectedReservoir) {
                 setSelectedReservoir(newSelectedReservoir);
@@ -117,14 +129,12 @@ const WaterConsumptionGraph = () => {
             }
         };
 
-        window.addEventListener('storage', handleStorageChange);
-
+        window.addEventListener("storage", handleStorageChange);
         return () => {
-            window.removeEventListener('storage', handleStorageChange);
+            window.removeEventListener("storage", handleStorageChange);
         };
     }, [selectedReservoir, selectedYear]);
 
-    // Initialize and update the chart with the fetched data
     useEffect(() => {
         if (chartData.years.length > 0) {
             const chartDom = document.getElementById("water-consumption-chart");
@@ -162,11 +172,11 @@ const WaterConsumptionGraph = () => {
                 toolbox: {
                     feature: {
                         saveAsImage: {
-                            backgroundColor: "transparent"
+                            backgroundColor: "transparent",
                         },
                     },
                     itemSize: 18,
-                    top: '1%',
+                    top: "1%",
                     right: "2%",
                 },
                 xAxis: {
@@ -232,33 +242,38 @@ const WaterConsumptionGraph = () => {
 
     return (
         <div className="relative">
-            {/* Tooltip Button */}
             <div
                 className="absolute top-[10px] left-3 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
                 onMouseEnter={() => {
-                    const tooltip = document.getElementById('waterInfoTooltip'); // Updated id
-                    if (tooltip) tooltip.style.display = 'block';
+                    const tooltip = document.getElementById("waterInfoTooltip");
+                    if (tooltip) tooltip.style.display = "block";
                 }}
                 onMouseLeave={() => {
-                    const tooltip = document.getElementById('waterInfoTooltip'); // Updated id
-                    if (tooltip) tooltip.style.display = 'none';
+                    const tooltip = document.getElementById("waterInfoTooltip");
+                    if (tooltip) tooltip.style.display = "none";
                 }}
             >
                 ℹ️
             </div>
-            {/* Tooltip Content */}
             <div
-                id="waterInfoTooltip" // Updated id
+                id="waterInfoTooltip"
                 className="absolute top-[70px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
-                style={{ display: 'none', width: '200px', pointerEvents: 'none' }}
+                style={{ display: "none", width: "200px", pointerEvents: "none" }}
             >
                 This line chart shows the water storage, water capacity, water level, and consumption over the past years.
             </div>
-            {/* Line Chart */}
             <div
                 id="water-consumption-chart"
                 className="w-full h-[330px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] rounded-lg ml-3 pt-4"
             ></div>
+
+            {/* Graph Insights Section */}
+            <div className="mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+                <h3 className="text-lg font-semibold">Graph Insights</h3>
+                <p><b>Interpretation:</b> {interpretation}</p>
+                <p><b>Insights:</b> {insights}</p>
+                <p><b>Recommendations:</b> {recommendations}</p>
+            </div>
         </div>
     );
 };

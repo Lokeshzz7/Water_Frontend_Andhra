@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
-import data from "../data/risk_assessment_fake_data.json";
 
 const GaugeChart = () => {
   const chartRef = useRef(null);
@@ -8,9 +7,13 @@ const GaugeChart = () => {
   const [value, setValue] = useState(0);
   const [stateName, setStateName] = useState("");
   const [year, setYear] = useState("");
+  const [insights, setInsights] = useState({
+    interpretation: "",
+    insights: "",
+    recommendations: "",
+  });
 
-  // Function to analyze data based on local storage values
-  const analyzeData = () => {
+  const fetchDataAndAnalyze = () => {
     const selectedState = localStorage.getItem("selectedState");
     const selectedYear = localStorage.getItem("selectedYear");
 
@@ -18,21 +21,63 @@ const GaugeChart = () => {
     setYear(selectedYear || "");
 
     if (selectedState && selectedYear) {
-      const matchingData = data.find(
-        (item) =>
-          item.index === parseInt(selectedState) && item.year === parseInt(selectedYear)
+      // Mock fetch function to simulate API call
+      const mockFetchRiskData = () => ({
+        risk_factor: 65,
+        rainfall: 110,
+        evaporation: 70,
+        population: 4,
+      });
+
+      const data = mockFetchRiskData(); // Replace this with an actual API fetch
+      setValue(data.risk_factor);
+
+      const description = generateDescription(
+        data.risk_factor,
+        data.rainfall,
+        data.evaporation,
+        data.population
       );
-      setValue(matchingData ? matchingData.risk_factor : 0);
+
+      setInsights({
+        interpretation: description.interpretation,
+        insights: description.insights,
+        recommendations: description.recommendations,
+      });
     }
   };
-  console.log("macthiing data ; " + value);
 
-  // Effect to listen for localStorage changes
+  const generateDescription = (score, rainfall, evaporation, population) => {
+    let interpretation, insights, recommendations;
+
+    if (score < 50) {
+      interpretation =
+        "This gauge chart indicates a significant risk in water management for the selected state and year.";
+      insights = `The low score (${score}%) reflects insufficient rainfall (${rainfall} mm), high evaporation (${evaporation} mm), and increasing population (${population}% growth).`;
+      recommendations =
+        "Prioritize water conservation efforts and implement strategies to reduce evaporation and manage demand.";
+    } else if (score >= 50 && score <= 75) {
+      interpretation =
+        "This gauge chart represents moderate water management conditions for the selected state and year.";
+      insights = `The moderate score (${score}%) suggests average rainfall (${rainfall} mm), with high evaporation (${evaporation} mm) and growing population (${population}% growth) contributing to challenges.`;
+      recommendations =
+        "Focus on improving water usage efficiency and addressing evaporation rates.";
+    } else {
+      interpretation =
+        "This gauge chart highlights optimal water management conditions for the selected state and year.";
+      insights = `The high score (${score}%) is supported by adequate rainfall (${rainfall} mm), sustainable evaporation levels (${evaporation} mm), and manageable population growth (${population}%).`;
+      recommendations =
+        "Continue monitoring water resource conditions to sustain the favorable balance.";
+    }
+
+    return { interpretation, insights, recommendations };
+  };
+
   useEffect(() => {
-    analyzeData(); // Initial load
+    fetchDataAndAnalyze(); // Initial data fetch
 
     const handleStorageChange = () => {
-      analyzeData();
+      fetchDataAndAnalyze();
     };
 
     window.addEventListener("storage", handleStorageChange);
@@ -40,207 +85,29 @@ const GaugeChart = () => {
     return () => {
       window.removeEventListener("storage", handleStorageChange);
     };
-  }, [stateName, year]);
+  }, []);
 
   useEffect(() => {
     if (chartRef.current) {
-      // Initialize the chart
       chartInstance.current = echarts.init(chartRef.current);
 
-      const _panelImageURL =
-        "https://echarts.apache.org/examples/data/asset/img/custom-gauge-panel.png";
-      const _valOnRadianMax = 100;
-      const _outerRadius = 130;
-      const _innerRadius = 100;
-      const _pointerInnerRadius = 30;
-      const _insidePanelRadius = 110;
-
-      function renderItem(params, api) {
-        const valOnRadian = api.value(1);
-        const coords = api.coord([api.value(0), valOnRadian]);
-        const polarEndRadian = coords[3];
-        const imageStyle = {
-          image: _panelImageURL,
-          x: params.coordSys.cx - _outerRadius,
-          y: params.coordSys.cy - _outerRadius,
-          width: _outerRadius * 2,
-          height: _outerRadius * 2,
-        };
-        return {
-          type: "group",
-          children: [
-            {
-              type: "image",
-              style: imageStyle,
-              clipPath: {
-                type: "sector",
-                shape: {
-                  cx: params.coordSys.cx,
-                  cy: params.coordSys.cy,
-                  r: _outerRadius,
-                  r0: _innerRadius,
-                  startAngle: 0,
-                  endAngle: -polarEndRadian,
-                  transition: "endAngle",
-                  enterFrom: { endAngle: 0 },
-                },
-              },
-            },
-            {
-              type: "image",
-              style: imageStyle,
-              clipPath: {
-                type: "polygon",
-                shape: {
-                  points: makePointerPoints(params, polarEndRadian),
-                },
-                extra: {
-                  polarEndRadian: polarEndRadian,
-                  transition: "polarEndRadian",
-                  enterFrom: { polarEndRadian: 0 },
-                },
-                during: function (apiDuring) {
-                  apiDuring.setShape(
-                    "points",
-                    makePointerPoints(
-                      params,
-                      apiDuring.getExtra("polarEndRadian")
-                    )
-                  );
-                },
-              },
-            },
-            {
-              type: "circle",
-              shape: {
-                cx: params.coordSys.cx,
-                cy: params.coordSys.cy,
-                r: _insidePanelRadius,
-              },
-              style: {
-                fill: "#fff",
-                shadowBlur: 25,
-                shadowOffsetX: 0,
-                shadowOffsetY: 0,
-                shadowColor: "rgba(76,107,167,0.4)",
-              },
-            },
-            {
-              type: "text",
-              extra: {
-                valOnRadian: valOnRadian,
-                transition: "valOnRadian",
-                enterFrom: { valOnRadian: 0 },
-              },
-              style: {
-                text: makeText(valOnRadian),
-                fontSize: 50,
-                fontWeight: 700,
-                x: params.coordSys.cx,
-                y: params.coordSys.cy,
-                fill: "rgb(0,50,190)",
-                align: "center",
-                verticalAlign: "middle",
-                enterFrom: { opacity: 0 },
-              },
-              during: function (apiDuring) {
-                apiDuring.setStyle(
-                  "text",
-                  makeText(apiDuring.getExtra("valOnRadian"))
-                );
-              },
-            },
-          ],
-        };
-      }
-
-      function convertToPolarPoint(renderItemParams, radius, radian) {
-        return [
-          Math.cos(radian) * radius + renderItemParams.coordSys.cx,
-          -Math.sin(radian) * radius + renderItemParams.coordSys.cy,
-        ];
-      }
-
-      function makePointerPoints(renderItemParams, polarEndRadian) {
-        return [
-          convertToPolarPoint(renderItemParams, _outerRadius, polarEndRadian),
-          convertToPolarPoint(
-            renderItemParams,
-            _outerRadius,
-            polarEndRadian + Math.PI * 0.03
-          ),
-          convertToPolarPoint(
-            renderItemParams,
-            _pointerInnerRadius,
-            polarEndRadian
-          ),
-        ];
-      }
-
-      function makeText(valOnRadian) {
-        return ((valOnRadian / _valOnRadianMax) * 100).toFixed(0) + "%";
-      }
-
       const option = {
-        animationEasing: "quarticInOut",
-        animationDuration: 1000,
-        animationDurationUpdate: 1000,
-        animationEasingUpdate: "quarticInOut",
-        dataset: {
-          source: [[1, value]],
-        },
-        tooltip: {
-          trigger: "item", // Show the tooltip when hovering over the item
-          formatter: function (params) {
-            // Customize the tooltip content
-            const riskFactor = value.toFixed(2);
-            return `
-                  <div>
-                      <strong>Risk Score</strong><br/>
-                      <strong>Value:</strong> ${riskFactor}%<br/>
-                      <strong>State:</strong> ${stateName}<br/>
-                      <strong>Year:</strong> ${year}
-                  </div>
-              `;
-          },
-          backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark background for the tooltip
-          borderColor: "#fff", // White border color
-          borderWidth: 1, // Border width
-          textStyle: {
-            color: "#fff", // Set tooltip text color to white
-            fontSize: 14, // Font size for the tooltip
-          },
-        }, angleAxis: {
-          type: "value",
-          startAngle: 0,
-          show: false,
-          min: 0,
-          max: _valOnRadianMax,
-        },
-        radiusAxis: {
-          type: "value",
-          show: false,
-
-        },
-        polar: {},
-        title: {
-          text: "Risk Score", // Set the title text
-          left: "center", // Center the title
-          top: "-5px", // Adjust vertical position
-          textStyle: {
-            color: "white", // Set title color to white
-            fontSize: 18, // Set title font size
-            fontWeight: "bold", // Set title font weight to bold
-          },
-        },
         series: [
           {
-            type: "custom",
-            coordinateSystem: "polar",
-            renderItem,
+            type: "gauge",
+            startAngle: 225,
+            endAngle: -45,
+            min: 0,
+            max: 100,
+            pointer: { show: true },
+            detail: {
+              formatter: "{value} %",
+              fontSize: 20,
+              color: "auto",
+            },
+            data: [{ value, name: "Risk Score" }],
           },
         ],
-
       };
 
       chartInstance.current.setOption(option);
@@ -255,33 +122,43 @@ const GaugeChart = () => {
 
   return (
     <div className="relative">
-      {/* Tooltip Button */}
       <div
         className="absolute top-[10px] left-6 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
         onMouseEnter={() => {
-          const tooltip = document.getElementById('ScenarioInfoTooltip'); // Updated id
-          if (tooltip) tooltip.style.display = 'block';
+          const tooltip = document.getElementById("ScenarioInfoTooltip");
+          if (tooltip) tooltip.style.display = "block";
         }}
         onMouseLeave={() => {
-          const tooltip = document.getElementById('ScenarioInfoTooltip'); // Updated id
-          if (tooltip) tooltip.style.display = 'none';
+          const tooltip = document.getElementById("ScenarioInfoTooltip");
+          if (tooltip) tooltip.style.display = "none";
         }}
       >
         ℹ️
       </div>
-      {/* Tooltip Content */}
       <div
-        id="ScenarioInfoTooltip" // Updated id
+        id="ScenarioInfoTooltip"
         className="absolute top-[70px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
-        style={{ display: 'none', width: '200px', pointerEvents: 'none' }}
+        style={{ display: "none", width: "200px", pointerEvents: "none" }}
       >
-        This line chart shows the water storage, water capacity, water level, and consumption over the past years.
+        This gauge chart shows the risk assessment score for the selected state and year.
       </div>
 
       <div
         ref={chartRef}
         className="w-[600px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[330px] rounded-lg ml-6 pt-4 mr-5"
       />
+      <div className="mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+        <h3 className="text-lg font-semibold">Analysis Summary</h3>
+        <p>
+          <b>Interpretation:</b> {insights.interpretation}
+        </p>
+        <p>
+          <b>Insights:</b> {insights.insights}
+        </p>
+        <p>
+          <b>Recommendations:</b> {insights.recommendations}
+        </p>
+      </div>
     </div>
   );
 };
