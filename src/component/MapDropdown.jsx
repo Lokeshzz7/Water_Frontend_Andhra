@@ -82,13 +82,13 @@ const FilterDropdown = () => {
           />
 
 
-          <Dropdown
+          {/* <Dropdown
             value={selectedYear}
             onChange={(e) => handleYearChange(e.value)}
             options={years}
             placeholder="Select Year"
             className="dropdown-style rounded-xl p-3 font-bold text-4xl  bg-slate-100 w-1/2 "
-          />
+          /> */}
 
           {/* <div className="c-button c-button--gooey">
               <Dropdown

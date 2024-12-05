@@ -18,7 +18,7 @@ function WaterManagementDashboard() {
     const [loadingFutureYear, setLoadingFutureYear] = useState(false); // Added loading state for future year
     const [Year, setYear] = useState(null); // State for selected year
 
-    
+
     const fetchHistoricalYearData = (districtId, selectedYear) => {
         setLoadingFutureYear(true); // Set loading state for future year
         fetch(`http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`)
@@ -211,7 +211,8 @@ function WaterManagementDashboard() {
             {/* Second section */}
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
-                    <FactorsAffectingGraph />
+                    <LucGraph />
+
                     <Months />
                 </div>
             </section>
@@ -219,8 +220,9 @@ function WaterManagementDashboard() {
             {/* Third section */}
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
-                    <LucGraph />
                     <RainfallGraph />
+                    <FactorsAffectingGraph />
+
                 </div>
             </section>
         </main>
