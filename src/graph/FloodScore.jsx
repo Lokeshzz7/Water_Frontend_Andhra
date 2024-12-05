@@ -1,0 +1,174 @@
+import React, { useEffect } from "react";
+import * as echarts from "echarts";
+
+const FloodScore = ({ FloodScore }) => {
+    useEffect(() => {
+        const calculatePercentage = (value, maxValue) => Math.min(1, Math.max(0, value / maxValue));
+
+        // Normalize droughtScore to a percentage
+        const maxValue = 100; // Replace with your actual maximum value
+        const normalizedScore = calculatePercentage(FloodScore, maxValue);
+
+        // Initialize ECharts
+        const chartDom = document.getElementById("FloodChart");
+        const myChart = echarts.init(chartDom);
+
+        const option = {
+            title: {
+                text: "Flood Score",
+                left: "center",
+                textStyle: {
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: 25,
+                },
+                padding: [0, 0, 90, 40],
+            },
+            tooltip: {
+                trigger: "item",
+                formatter: function (params) {
+                    const riskScore = params.value * 100; // Convert to percentage
+                    let riskLevel = "";
+                    if (params.value >= 0.75) {
+                        riskLevel = "No Risk";
+                    } else if (params.value >= 0.5) {
+                        riskLevel = "Medium Risk";
+                    } else if (params.value >= 0.25) {
+                        riskLevel = "High Risk";
+                    } else {
+                        riskLevel = "Very High Risk";
+                    }
+
+                    return `
+            <div>
+              <strong>Risk Score:</strong> ${Math.round(riskScore)}%<br/>
+              <strong>Risk Level:</strong> ${riskLevel}
+            </div>
+          `;
+                },
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
+                borderColor: "#fff",
+                borderWidth: 1,
+                textStyle: {
+                    color: "#fff",
+                    fontSize: 14,
+                },
+                showDelay: 0,
+                hideDelay: 200,
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    saveAsImage: {
+                        backgroundColor: "transparent",
+                    },
+                },
+                itemSize: 18,
+                top: "1%",
+                right: "5%",
+            },
+            series: [
+                {
+                    type: "gauge",
+                    startAngle: 180,
+                    endAngle: 0,
+                    center: ["50%", "80%"],
+                    radius: "110%",
+                    min: 0,
+                    max: 1,
+                    splitNumber: 8,
+                    axisLine: {
+                        lineStyle: {
+                            width: 6,
+                            color: [
+                                [0.25, "#FF6E76"],
+                                [0.5, "#FDDD60"],
+                                [0.75, "#58D9F9"],
+                                [1, "#7CFFB2"],
+                            ],
+                        },
+                    },
+                    pointer: {
+                        icon: "path://M12.8,0.7l12,40.1H0.7L12.8,0.7z",
+                        length: "12%",
+                        width: 20,
+                        offsetCenter: [0, "-60%"],
+                        itemStyle: {
+                            color: "auto",
+                        },
+                    },
+                    axisTick: {
+                        length: 12,
+                        lineStyle: {
+                            color: "auto",
+                            width: 2,
+                        },
+                    },
+                    splitLine: {
+                        length: 20,
+                        lineStyle: {
+                            color: "auto",
+                            width: 5,
+                        },
+                    },
+                    axisLabel: {
+                        color: "white",
+                        fontSize: 15,
+                        distance: -50,
+                        rotate: "tangential",
+                        formatter: function (value) {
+                            if (value === 0.875) {
+                                return "No Risk";
+                            } else if (value === 0.625) {
+                                return "Medium Risk";
+                            } else if (value === 0.375) {
+                                return "High Risk";
+                            } else if (value === 0.125) {
+                                return "Very High Risk";
+                            }
+                            return "";
+                        },
+                    },
+                    title: {
+                        offsetCenter: [0, "-10%"],
+                        fontSize: 20,
+                        color: "white",
+                    },
+                    detail: {
+                        fontSize: 30,
+                        offsetCenter: [0, "-35%"],
+                        valueAnimation: true,
+                        formatter: function (value) {
+                            return `${Math.round(value * 100)}/100`;
+                        },
+                        color: "white",
+                    },
+                    data: [
+                        {
+                            value: normalizedScore,
+                            name: "Reservoir Health Score",
+                        },
+                    ],
+                },
+            ],
+        };
+
+        myChart.setOption(option);
+
+        // Cleanup on unmount
+        return () => {
+            myChart.dispose();
+        };
+    }, [FloodScore]);
+
+    return (
+        <div className="relative">
+            <div
+                id="FloodChart"
+                className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg">
+            </div>
+        </div>
+    );
+};
+
+export default FloodScore;

@@ -14,7 +14,7 @@ export default function RangeSlider({
     ariaLabel = "Custom marks"
 }) {
     return (
-        <Box sx={{ width: 300 }}>
+        <Box sx={{ width: 450 }}>
             <Slider
                 aria-label={ariaLabel}
                 value={value}
