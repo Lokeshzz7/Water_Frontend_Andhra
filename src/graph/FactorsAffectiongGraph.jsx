@@ -147,7 +147,7 @@ const FactorsGraph = () => {
       
 
       {/* Insights and Recommendations Section */}
-      <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+      {/* <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold">Analysis Summary</h3>
         <p>
           <b>Interpretation:</b> {insights.interpretation}
@@ -158,7 +158,7 @@ const FactorsGraph = () => {
         <p>
           <b>Recommendations:</b> {insights.recommendations}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

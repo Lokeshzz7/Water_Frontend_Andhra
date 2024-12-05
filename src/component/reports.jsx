@@ -1,10 +1,10 @@
 import React from 'react';
-import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx'; // Placeholder import
-import ReservoirPerformanceChart from '../graph/LucGraph.jsx'; // Placeholder import
-import MonthlyConsumptionChart from '../graph/monthsConsumptionGraph.jsx'; // Placeholder import
-import ScenarioAnalysisChart from '../graph/Scenarioscore.jsx'; // Placeholder import
-import ReservoirHealth from '../graph/ReservoirHealth.jsx'; // Placeholder import
-import RiskFactorsChart from '../graph/FactorsAffectiongGraph.jsx'; // Placeholder import
+import WaterConsumptionGraph from '../graph/report_graph/ReportWaterConsumptionGraph.jsx'; // Placeholder import
+import ReservoirPerformanceChart from '../graph/report_graph/ReportLucGraph.jsx'; // Placeholder import
+import MonthlyConsumptionChart from '../graph/report_graph/ReportMonthConsumtionGraph.jsx'; // Placeholder import
+import ScenarioAnalysisChart from '../graph/report_graph/ReportScenarioGraph.jsx'; // Placeholder import
+import ReservoirHealth from '../graph/report_graph/ReportReservoirHealth.jsx'; // Placeholder import
+import RiskFactorsChart from '../graph/report_graph/ReportFactorGraph.jsx'; // Placeholder import
 
 const Reports = () => {
     // Function to generate PDF (you'll need to implement the actual PDF generation logic)

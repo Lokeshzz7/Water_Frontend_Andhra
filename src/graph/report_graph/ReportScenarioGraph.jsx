@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
 
-const GaugeChart = () => {
+const ReportScenarioGraph = () => {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
   const [value, setValue] = useState(0);
@@ -147,7 +147,7 @@ const GaugeChart = () => {
         ref={chartRef}
         className="w-[600px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[330px] rounded-lg ml-6 pt-4 mr-5"
       />
-      {/* <div className="mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+      <div className="mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold">Analysis Summary</h3>
         <p>
           <b>Interpretation:</b> {insights.interpretation}
@@ -158,9 +158,9 @@ const GaugeChart = () => {
         <p>
           <b>Recommendations:</b> {insights.recommendations}
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default GaugeChart;
+export default ReportScenarioGraph;

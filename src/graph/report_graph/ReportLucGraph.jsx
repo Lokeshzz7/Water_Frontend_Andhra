@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import axios from 'axios';
 
-const LucGraph = () => {
+const ReportLucGraph = () => {
     const [stateName, setStateName] = useState('');
     const [year, setYear] = useState(null);
     const [riskScore, setRiskScore] = useState(0); // Track the risk score or similar metric.
@@ -170,10 +170,10 @@ const LucGraph = () => {
                 className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg">
             </div>
 
-            
+
 
             {/* Displaying the analysis */}
-            {/* <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+            <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
                 <h3 className="text-lg font-semibold">Analysis Summary</h3>
                 <p>
                     <b>Interpretation:</b> {insights.interpretation}
@@ -184,9 +184,9 @@ const LucGraph = () => {
                 <p>
                     <b>Recommendations:</b> {insights.recommendations}
                 </p>
-            </div> */}
+            </div>
         </div>
     );
 };
 
-export default LucGraph;
+export default ReportLucGraph;

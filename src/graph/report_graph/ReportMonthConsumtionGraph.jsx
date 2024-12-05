@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
 
-const MonthConsumptionGraph = () => {
+const ReportMonthConsumptionGraph = () => {
     const [chartData, setChartData] = useState({});
     const [districtId, setDistrictId] = useState(localStorage.getItem("selectedDistrict"));
     const [selectedYear, setSelectedYear] = useState(localStorage.getItem("selectedYear"));
-    const [noData, setNoData] = useState(false);
+    const [interpretation, setInterpretation] = useState("");
+    const [insights, setInsights] = useState("");
+    const [recommendations, setRecommendations] = useState("");
 
+    // Function to fetch and transform the data from the API
     const fetchMonthData = (districtId, selectedYear) => {
-        if (parseInt(selectedYear, 10) < 2024) {
-            setNoData(true);
-            setChartData({});
-            return;
-        }
-
         const apiEndpoint =
             parseInt(selectedYear, 10) > 2024
                 ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`
@@ -22,12 +19,6 @@ const MonthConsumptionGraph = () => {
         fetch(apiEndpoint)
             .then((response) => response.json())
             .then((data) => {
-                if (!data || data.length === 0) {
-                    setNoData(true);
-                    setChartData({});
-                    return;
-                }
-
                 const months = [
                     "Jan",
                     "Feb",
@@ -69,12 +60,28 @@ const MonthConsumptionGraph = () => {
                     domesticData,
                 });
 
-                setNoData(false); // Data is available
+                // Generate insights dynamically
+                const totalConsumption = consumptionData.reduce((sum, value) => sum + value, 0);
+                const totalInflow = inflowData.reduce((sum, value) => sum + value, 0);
+                const avgConsumption = (totalConsumption / 12).toFixed(2);
+                const avgInflow = (totalInflow / 12).toFixed(2);
+
+                const maxConsumption = Math.max(...consumptionData);
+                const maxInflow = Math.max(...inflowData);
+                const peakMonth = months[consumptionData.indexOf(maxConsumption)];
+                const inflowPeakMonth = months[inflowData.indexOf(maxInflow)];
+
+                setInterpretation(
+                    `This line chart represents the monthly water usage and inflow data for ${selectedYear}. It highlights key usage categories such as Irrigation, Industry, and Domestic consumption.`
+                );
+                setInsights(
+                    `The highest consumption was observed in ${peakMonth} (${maxConsumption} units), and the highest inflow occurred in ${inflowPeakMonth} (${maxInflow} units). The average monthly consumption is ${avgConsumption} units, while the average inflow is ${avgInflow} units.`
+                );
+                setRecommendations(
+                    `Focus on improving water conservation strategies during high-consumption months like ${peakMonth}. Additionally, optimize storage mechanisms during peak inflow months like ${inflowPeakMonth} to reduce wastage.`
+                );
             })
-            .catch((error) => {
-                console.error("Error fetching month data:", error);
-                setNoData(true); // Set no data on error
-            });
+            .catch((error) => console.error("Error fetching month data:", error));
     };
 
     useEffect(() => {
@@ -92,7 +99,7 @@ const MonthConsumptionGraph = () => {
     }, []);
 
     useEffect(() => {
-        if (Object.keys(chartData).length === 0 || noData) return;
+        if (Object.keys(chartData).length === 0) return;
 
         const chartDom = document.getElementById("monthmain");
         const myChart = echarts.init(chartDom);
@@ -169,24 +176,42 @@ const MonthConsumptionGraph = () => {
         return () => {
             myChart.dispose();
         };
-    }, [chartData, noData]);
+    }, [chartData]);
 
     return (
         <div className="relative">
-            {noData ? (
+            <div
+                className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById("monthTooltip");
+                    if (tooltip) tooltip.style.display = "block";
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById("monthTooltip");
+                    if (tooltip) tooltip.style.display = "none";
+                }}
+            >
+                ℹ️
                 <div
-                    className="w-[655px] ml-2 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+                    id="monthTooltip"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: "none", width: "200px" }}
                 >
-                    No data available for the year {selectedYear}.
+                    This graph shows the distribution of consumption, inflow, and usage categories for the selected district and year.
                 </div>
-            ) : (
-                <div
-                    id="monthmain"
-                    className="w-[655px] ml-2 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
-                ></div>
-            )}
+            </div>
+            <div
+                id="monthmain"
+                className="w-[655px] ml-2  pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+            ></div>
+            <div className="mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+                <h3 className="text-lg font-semibold">Graph Insights</h3>
+                <p><b>Interpretation:</b> {interpretation}</p>
+                <p><b>Insights:</b> {insights}</p>
+                <p><b>Recommendations:</b> {recommendations}</p>
+            </div>
         </div>
     );
 };
 
-export default MonthConsumptionGraph;
+export default ReportMonthConsumptionGraph;

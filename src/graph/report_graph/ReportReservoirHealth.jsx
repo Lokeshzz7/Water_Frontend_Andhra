@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
-import data from "../data/reservoir_fake_data.json"; // Replace with your JSON file path
+import data from "../../data/reservoir_fake_data.json"; // Replace with your JSON file path
 
-const ReservoirHealth = () => {
+const ReportReservoirHealth = () => {
   const [riskScore, setRiskScore] = useState(0);
   const [insights, setInsights] = useState({
     interpretation: '',
@@ -223,7 +223,7 @@ const ReservoirHealth = () => {
       ></div>
 
       {/* Displaying the analysis */}
-      {/* <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
+      <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold">Analysis Summary</h3>
         <p>
           <b>Interpretation:</b> {insights.interpretation}
@@ -234,9 +234,9 @@ const ReservoirHealth = () => {
         <p>
           <b>Recommendations:</b> {insights.recommendations}
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default ReservoirHealth;
+export default ReportReservoirHealth;
