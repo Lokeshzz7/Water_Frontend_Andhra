@@ -76,34 +76,34 @@ const Reports = () => {
                 </div>
             </section>
 
-            {/* Third Section */}
+            {/* Third Section
             <section className="flex flex-row w-full mt-8">
                 <div className="flex flex-row w-full p-3 gap-7">
-                    {/* Risk Scores by Region */}
+                    Risk Scores by Region 
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Contributing Risk Factors</h3>
                         <RiskFactorsChart />
-                        {/* <div className="mt-5">
+                        <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This bar chart shows the contribution of factors such as rainfall, population growth, and land use to overall risk levels. Analyzing these factors helps in planning and mitigating risks effectively.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Rapid population growth increases water demand, elevating the risk score for certain regions.</p>
                             <p className="text-sm mt-2 ml-6">*Mitigation: Implement urban planning and water-efficient technologies to manage the effects of population growth.</p>
-                        </div> */}
+                        </div>
                     </div>
 
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Risk Scores by Region</h3>
                         <ReservoirHealth />
-                        {/* <div className="mt-5">
+                        <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This doughnut chart categorizes regions based on risk levels: Low, Medium, and High, highlighting areas that may require targeted interventions.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Regions with high risk scores are more vulnerable to water shortages or quality issues.</p>
                             <p className="text-sm mt-2 ml-6">*Mitigation: Implement targeted investments in water infrastructure and establish policies to lower risk levels.</p>
-                        </div> */}
+                        </div>
                     </div>
 
-                    {/* Contributing Risk Factors */}
+                    Contributing Risk Factors
                     
                 </div>
-            </section>
+            </section> */}
 
             {/* Generate PDF Report Section */}
             <section className="mt-6 bg-darkslateblue p-6 rounded-lg shadow-md text-white">

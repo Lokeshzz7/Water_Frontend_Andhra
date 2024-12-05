@@ -147,7 +147,7 @@ const DroughtScore = ({ droughtScore }) => {
                     data: [
                         {
                             value: normalizedScore,
-                            name: "Reservoir Health Score",
+                            name: "Score",
                         },
                     ],
                 },

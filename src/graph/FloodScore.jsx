@@ -146,7 +146,7 @@ const FloodScore = ({ FloodScore }) => {
                     data: [
                         {
                             value: normalizedScore,
-                            name: "Reservoir Health Score",
+                            name: "Score",
                         },
                     ],
                 },
