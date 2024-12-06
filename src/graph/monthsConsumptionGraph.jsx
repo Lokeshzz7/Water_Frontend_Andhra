@@ -173,6 +173,26 @@ const MonthConsumptionGraph = () => {
 
     return (
         <div className="relative">
+            <div
+                className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById("monthTooltip");
+                    if (tooltip) tooltip.style.display = "block";
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById("monthTooltip");
+                    if (tooltip) tooltip.style.display = "none";
+                }}
+            >
+                ℹ️
+                <div
+                    id="monthTooltip"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: "none", width: "200px" }}
+                >
+                    This graph shows the distribution of consumption, inflow, and usage categories for the selected district and year.
+                </div>
+            </div>
             {noData ? (
                 <div
                     className="w-[655px] ml-2 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"

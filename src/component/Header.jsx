@@ -20,9 +20,9 @@ const Header = ({ className = "" }) => {
   // Get the current page name or a default
   const currentPage = pageNames[location.pathname] || "Dashboard";
   return (
-    <header className={`relative w-full ${className} m-8`}>
+    <header className={`relative w-full ${className} m-3`}>
       <div
-        className="flex items-center justify-between w-[1600px]  font-dm-sans font-bold bg-component rounded-full px-6 shadow-md"
+        className="flex items-center justify-between w-[1800px]  font-dm-sans font-bold bg-component rounded-full px-6 shadow-md"
         style={{ minHeight: "80px" }}
       >
         {/* Dashboard Title */}
@@ -32,12 +32,14 @@ const Header = ({ className = "" }) => {
           <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-[30px]">
             Return Zero
           </span>
-        <LanguageSwitcher/>
+        
         </div>
         {/* Current Page Name */}
         <div className="flex-1 text-center text-white text-[25px] hidden lg:block">
           <span>{currentPage}</span>
         </div>
+
+        <div className="flex"><LanguageSwitcher/></div>
       </div>
     </header>
   );

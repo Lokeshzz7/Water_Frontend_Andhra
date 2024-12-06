@@ -163,14 +163,26 @@ const LucGraph = () => {
                     className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
                     style={{ display: 'none', width: '200px' }}
                 >
-                    {/* Tooltip content remains the same */}
+                    This graph shows the distribution of land use changes for the selected district and year.
+                    <br /><hr />
+                    <b>Built up</b><br />
+                    Represents areas with human-made structures such as buildings, roads, and other infrastructure.
+                    <br /><hr />
+                    <b>Agriculture</b><br />
+                    Covers land primarily used for farming activities, including crops and pastures.
+                    <br /><hr />
+                    <b>Forest</b><br />
+                    Includes areas covered by dense vegetation and forests.
+                    <br /><hr />
+                    <b>Wasteland</b><br />
+                    Refers to degraded or underutilized land that is not productive for agriculture or habitation.
                 </div>
             </div>
             <div id="lucChart"
                 className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg">
             </div>
 
-            
+
 
             {/* Displaying the analysis */}
             {/* <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
