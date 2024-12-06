@@ -34,7 +34,6 @@ const FilterDropdown = () => {
     // Additional states can be added here
   ];
 
-  // District data for reservoir page
   const districtDataReservoirPage = [
     { id: 3, name: "Anantapur" },
     { id: 7, name: "East Godavari" },
@@ -49,7 +48,6 @@ const FilterDropdown = () => {
     { id: 24, name: "Vizianagaram" },
   ];
 
-  // District data for other pages
   const districtDataAllPages = [
     { id: 3, name: "Anantapur" },
     { id: 6, name: "Chittoor" },
@@ -66,8 +64,8 @@ const FilterDropdown = () => {
     { id: 25, name: "West Godavari" },
   ];
 
-  // Detect if we are on the reservoir page
   const isReservoirPage = window.location.pathname === "/reservoirstatus";
+  const isScenarioPlanningPage = window.location.pathname === "/scenarioplanning";
 
   const years = Array.from({ length: 16 }).map((_, i) => ({
     label: `Year ${2029 - i}`,
@@ -203,13 +201,15 @@ const FilterDropdown = () => {
             />
           )}
 
-          <Dropdown
-            value={selectedYear}
-            onChange={(e) => handleYearChange(e.value)}
-            options={years}
-            placeholder="Select Year"
-            className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/3"
-          />
+          {!isScenarioPlanningPage && (
+            <Dropdown
+              value={selectedYear}
+              onChange={(e) => handleYearChange(e.value)}
+              options={years}
+              placeholder="Select Year"
+              className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/3"
+            />
+          )}
         </section>
       </section>
     </div>
