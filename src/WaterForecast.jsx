@@ -173,7 +173,6 @@ function WaterManagementDashboard() {
                 <FilterDropdown />
                 {/* <DistrictDropdown /> */}
             </div>
-
             {/* First section */}
             <section className="flex flex-row w-full mt-8">
                 <div className="flex flex-row w-full p-2">

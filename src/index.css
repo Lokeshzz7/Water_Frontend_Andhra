@@ -16,13 +16,40 @@ body {
     font-family: Arial, sans-serif; /* Optional: Set a consistent font */
 
 }
+
+
 body, html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
+#google_translate_element{
+  @apply hidden
+}
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc{
+  @apply hidden
+}
+.skiptranslate:hover{
+  display: none !important;
+  visibility: hidden !important;
+}
+.VIpgJd-yAWNEb-L7lbkb{
+  @apply hidden hover:hidden
+}
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54 {
+  all: unset;
+}
 
+.VIpgJd-yAWNEb-hvhgNd{
+  @apply hidden
+}
+#goog-gt-tt{
+  @apply hidden
+}
 
+iframe{
+  @apply hidden
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

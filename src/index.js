@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { GlobalStateProvider } from "./context/GlobalStateContext"; // Import the GlobalStateProvider
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -20,30 +20,45 @@ import SideBar from "./component/SideBar.jsx";
 import { Navigate } from "react-router-dom";
 
 
-const root = createRoot(document.getElementById("root"));
+async function enableMocking() {
+  if (process.env.NODE_ENV !== 'development') {
+    return;
+  }
 
-root.render(
-  <React.StrictMode>
-    <GlobalStateProvider>
-      {" "}
-      {/* Wrap the Router with GlobalStateProvider to provide global state */}
-      <Router>
-        <Header />
-        <div className="w-full flex flex-row items-start justify-start gap-[32px]  mq1000:pl-5 mq1000:pr-5 mq1000:box-border mq725:gap-[16px]">
-          <SideBar />
-          <Routes>
-            <Route path="/" element={<Navigate to="/waterforecast" />} />
-            <Route path="/waterforecast" element={<WaterForecast />} />
-            <Route path="/reservoirstatus" element={<ReservoirStatus />} />
-            <Route path="/riskassessment" element={<RiskAssessment />} />
-            <Route path="/scenarioplanning" element={<ScenarioPlanning />} />
-            <Route path="/reports" element={<ReportsExports />} />
-            <Route path="/map" element={<Map />} />
-          </Routes>
-        </div>
-      </Router>
-    </GlobalStateProvider>
-  </React.StrictMode>
-);
+  const { worker } = await import('./mocks/browser');
+  return worker.start();
+}
 
-reportWebVitals();
+// The root element where the app will be rendered
+const rootElement = document.getElementById("root");
+
+// Wrap the rendering process inside enableMocking() and start the app after mocking is enabled
+enableMocking().then(() => {
+  const root = createRoot(rootElement);
+
+  root.render(
+    <React.StrictMode>
+      <GlobalStateProvider>
+        {/* Wrap the Router with GlobalStateProvider to provide global state */}
+        <Router>
+          <Header />
+          <div className="w-full flex flex-row items-start justify-start gap-[32px]  mq1000:pl-5 mq1000:pr-5 mq1000:box-border mq725:gap-[16px]">
+            <SideBar />
+            <Routes>
+              <Route path="/" element={<Navigate to="/waterforecast" />} />
+              <Route path="/waterforecast" element={<WaterForecast />} />
+              <Route path="/reservoirstatus" element={<ReservoirStatus />} />
+              <Route path="/riskassessment" element={<RiskAssessment />} />
+              <Route path="/scenarioplanning" element={<ScenarioPlanning />} />
+              <Route path="/reports" element={<ReportsExports />} />
+              <Route path="/map" element={<Map />} />
+            </Routes>
+          </div>
+        </Router>
+      </GlobalStateProvider>
+    </React.StrictMode>
+  );
+
+  // Optionally, report web vitals if needed
+  reportWebVitals();
+});
