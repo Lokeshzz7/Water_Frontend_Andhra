@@ -49,7 +49,7 @@ const LanguageSwitcher = () => {
                 id="language-selector"
                 value={selectedLanguage}
                 onChange={handleLanguageChange}
-                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-full"
+                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-full mt-5"
             >
                 {languageConfig.languages.map((lang) => (
                     <option key={lang.name} value={lang.name}>
