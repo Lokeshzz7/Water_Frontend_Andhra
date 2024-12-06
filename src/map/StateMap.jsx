@@ -12,7 +12,10 @@ const StateMap = () => {
   const [stateReservoirCount, setStateReservoirCount] = useState(null);
   const [stateList, setStateList] = useState([]);
   const [selectedState, setSelectedState] = useState(null);
+  const [weatherData, setWeatherData] = useState(null);
 
+  const WEATHER_API_KEY = "760f3040d76d43098cf30956242811";
+  const WEATHER_API_URL = "https://api.weatherapi.com/v1/forecast.json";
   const scripts = [
     "https://cdn.amcharts.com/lib/5/index.js",
     "https://cdn.amcharts.com/lib/5/map.js",
@@ -53,6 +56,29 @@ const StateMap = () => {
     "Ladakh": { latMin: 32.0, latMax: 36.5, lonMin: 76.0, lonMax: 80.0 },
     "Delhi": { latMin: 28.4, latMax: 28.9, lonMin: 76.8, lonMax: 77.3 }
   };
+  const fetchWeatherData = async (lat, lon) => {
+    try {
+      const response = await fetch(
+        `${WEATHER_API_URL}?key=${WEATHER_API_KEY}&q=${lat},${lon}&aqi=no`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setWeatherData({
+          temperature: data.current.temp_c,
+          condition: data.current.condition.text,
+          humidity: data.current.humidity,
+          windSpeed: data.current.wind_kph,
+          pressure:data.current.pressure_mb,
+          precipitation:data.current.precip_mm,
+        });
+      } else {
+        console.error("Error fetching weather data:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+    }
+  };
+
 
   const updateStateReservoirCount = (stateName) => {
     const boundaries = stateBoundaries[stateName];
@@ -199,11 +225,16 @@ const StateMap = () => {
         stroke: window.am5.color(0xffffff),
         strokeWidth: 2,
       });
+      
 
       circle.events.on("click", (event) => {
         const dataItem = event.target.dataItem;
         const dataContext = dataItem.dataContext;
         // Set the selected item correctly
+        const [lon, lat] = dataContext.geometry.coordinates;
+
+        // Fetch weather data for the reservoir
+        fetchWeatherData(lat, lon);
         setSelectedItem({
           type: "reservoir",
           title: dataContext.title,
@@ -242,33 +273,44 @@ const StateMap = () => {
   }, []);
 
   return (
-    <div className="flex w-full h-[500px] gap-14">
+    <div className="flex w-full h-[750px] gap-12">
       <div id="chartdiv" ref={chartRef} className="flex-3 h-full w-[700px]" />
-      <div className="flex-1 h-full w-[600px]  bg-transparent text-white p-4 border-l">
+      <div className="flex-1 h-full w-[600px] bg-transparent text-white p-2 border-l">
         {selectedItem ? (
           selectedItem.type === "reservoir" ? (
-            <div className="flex w-full h-40">
+            <div className="flex flex-col w-full">
               <ScenarioDataCard
                 title={`Reservoir: ${selectedItem.title}`}
-                value={selectedItem.type}
-                details={{
-                  Type: selectedItem.type,
-                  Purpose: selectedItem.purpose,
-                  Height: `${selectedItem.height} meters`,
-                  Gross_Storage: `${selectedItem.gross_storage} MCM`,
-                  Live_Storage: `${selectedItem.live_storage} MCM`,
-                  Commissioning_Date: selectedItem.commissioning_date,
-                  Dam_Incharge: selectedItem.dam_incharge,
-                }}
+                value={`Type: ${selectedItem.type}`}
+                
               />
+              {weatherData && (
+                <div className="mt-4 p-2 bg-gray-800 rounded">
+                  <h3 className="text-lg font-semibold">Details:</h3>
+      
+                    <p>Purpose: {selectedItem.purpose}</p>
+                    <p>Height: {selectedItem.height} meters</p>
+                    <p>Gross_Storage:{selectedItem.gross_storage}</p>
+                    <p>Live_Storage:{selectedItem.live_storage} </p>
+                    <p>Commissioning_Date: {selectedItem.commissioning_date}</p>
+                    <p>Dam_Incharge: {selectedItem.dam_incharge}</p>
+            
+      
+                  <h3 className="text-lg font-semibold">Weather Information:</h3>
+                  <p>Temperature: {weatherData.temperature}°C</p>
+                  <p>Condition: {weatherData.condition}</p>
+                  <p>Humidity: {weatherData.humidity}%</p>
+                  <p>Wind Speed: {weatherData.windSpeed} kph</p>
+                  <p>Pressure:{weatherData.pressure} mg</p>
+                  <p>Precipitation:{weatherData.precipitation} mm</p>
+                </div>
+              )}
             </div>
           ) : selectedItem.type === "state" ? (
-            <div className="flex w-full h-40">
-              <ScenarioDataCard
-                title={`State: ${selectedItem.name}`}
-                value={`Reservoirs: ${stateReservoirCount}`}
-              />
-            </div>
+            <ScenarioDataCard
+              title={`State: ${selectedItem.name}`}
+              value={`Reservoirs: ${stateReservoirCount}`}
+            />
           ) : null
         ) : (
           <p>Select a state or reservoir for details.</p>
@@ -276,8 +318,6 @@ const StateMap = () => {
       </div>
     </div>
   );
-
-
 };
 
 export default StateMap;
