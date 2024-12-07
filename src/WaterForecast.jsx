@@ -181,11 +181,11 @@ function WaterManagementDashboard() {
                         <div className="flex flex-wrap pl-4">
                             <DataCard
                                 title="Current Consumption (2024)"
-                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "N/A"}
+                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading..."}
                             />
                             <DataCard
                                 title="Current Inflow (2024)"
-                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "N/A"}
+                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading..."}
                             />
                         </div>
                         <CurrentLinearGauge />
