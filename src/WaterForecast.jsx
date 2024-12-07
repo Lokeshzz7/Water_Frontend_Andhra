@@ -220,7 +220,7 @@ function WaterManagementDashboard() {
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
                     <RainfallGraph />
-                    <FactorsAffectingGraph />
+                    {/* <FactorsAffectingGraph /> */}
 
                 </div>
             </section>

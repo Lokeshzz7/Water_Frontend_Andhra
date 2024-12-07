@@ -25,7 +25,7 @@ const Reports = () => {
                 <div className="flex flex-row flex-1 p-3 gap-7 ">
                     {/* Reservoir Performance Metrics */}
                     <div className="flex flex-col w-1/2">
-                        <h3 className="font-semibold mb-4 ml-6">Reservoir Performance Metrics</h3>
+                        <h3 className="font-semibold mb-4 ml-6">Land Use Distribution </h3>
                         <ReservoirPerformanceChart />
                         {/* <div className='mt-5'>
                             <p className="text-sm mt-2 ml-6 ">This bar chart showcases the current water storage versus the total gross capacity of reservoirs, providing insights into current utilization rates.</p>
@@ -65,8 +65,8 @@ const Reports = () => {
 
                     {/* Scenario Analysis Outcomes */}
                     <div className="flex flex-col w-1/2">
-                        <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3>
-                        <ScenarioAnalysisChart />
+                        {/* <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3> */}
+                        {/* <ScenarioAnalysisChart /> */}
                         {/* <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This line chart evaluates potential outcomes under different scenarios by comparing current water storage with projected figures. It helps anticipate the impact of policy decisions and extreme events.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Scenario B shows a potential deficit that requires urgent intervention.</p>

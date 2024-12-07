@@ -34,11 +34,15 @@ const MainContent = () => {
   const [rainfall, setRainfall] = useState(50);
   const [evaporation, setEvaporation] = useState(25);
   const [population, setPopulation] = useState(100);
+  const [inflow, setInflow] = useState(5000);
+  const [outflow, setOutflow] = useState(5000);
   const [rainfallMarks, setRainfallMarks] = useState([]);
   const [evaporationMarks, setEvaporationMarks] = useState([]);
   const [populationMarks, setPopulationMarks] = useState([]);
   const [responseData, setResponseData] = useState({});
   const [responseMessage, setResponseMessage] = useState('');
+  const [InflowMarks, setInflowMarks] = useState([]);
+  const [OutFlowMarks, setOutFlowMarks] = useState([]);
 
   useEffect(() => {
     const initializeSliders = () => {
@@ -61,23 +65,19 @@ const MainContent = () => {
       const avgEvaporation = (evaporationValues.reduce((a, b) => a + b, 0) / evaporationValues.length).toFixed(2);
       const avgPopulation = (populationValues.reduce((a, b) => a + b, 0) / populationValues.length).toFixed(0);
 
-      const minRainfall = Math.min(...rainfallValues) - 50;
       const maxRainfall = Math.max(...rainfallValues) + 50;
-
-      const minEvaporation = Math.min(...evaporationValues) - 50;
       const maxEvaporation = Math.max(...evaporationValues) + 50;
-
       const minPopulation = Math.min(...populationValues) - 10000;
       const maxPopulation = Math.max(...populationValues) + 10000;
 
       setRainfallMarks([
-        { value: minRainfall, label: `${minRainfall.toFixed(2)} mm` },
+        { value: 0, label: '0 mm' },
         { value: avgRainfall, label: `${avgRainfall} mm` },
         { value: maxRainfall, label: `${maxRainfall.toFixed(2)} mm` },
       ]);
 
       setEvaporationMarks([
-        { value: minEvaporation, label: `${minEvaporation.toFixed(2)} mm` },
+        { value: 0, label: '0 mm' },
         { value: avgEvaporation, label: `${avgEvaporation} mm` },
         { value: maxEvaporation, label: `${maxEvaporation.toFixed(2)} mm` },
       ]);
@@ -87,15 +87,29 @@ const MainContent = () => {
         { value: avgPopulation, label: `${avgPopulation} M` },
         { value: maxPopulation, label: `${maxPopulation} M` },
       ]);
+      setInflowMarks([
+        { value: 0, label: '0 M' },
+        { value: 5000, label: `${5000} M` },
+        { value: 10000, label: `${10000} M` },
+
+      ])
+      setOutFlowMarks([
+        { value: 0, label: '0 M' },
+        { value: 5000, label: `${5000} M` },
+        { value: 10000, label: `${10000} M` },
+
+      ])
 
       setRainfall(Number(avgRainfall));
       setEvaporation(Number(avgEvaporation));
       setPopulation(Number(avgPopulation));
+      setInflow(5000);
+      setOutflow(5000);
+
     };
 
     initializeSliders();
   }, [selectedDistrict]);
-
 
   const handleApply = async () => {
     try {
@@ -104,7 +118,7 @@ const MainContent = () => {
         return;
       }
 
-      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${population}&district_id=${selectedDistrict}`;
+      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${population}&inflow=${inflow}&outflow=${outflow}&district_id=${selectedDistrict}`;
       const response = await fetch(apiUrl, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
 
       if (response.ok) {
@@ -122,10 +136,9 @@ const MainContent = () => {
 
   return (
     <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
-
       <section className="flex flex-row w-full">
         <div className="flex flex-col w-full">
-          <div className="flex flex-col gap-4 px-2 shadow bg-component ml-5  p-8 pl-10 w-[650px] h-[330px]">
+          <div className="flex flex-col gap-4 px-2 shadow bg-component ml-5 p-8 pl-10 w-[650px] h-[450px]">
             <div className="flex w-full">
               <span className="text-lg font-bold text-white mr-11">Rainfall:</span>
               <RangeSlider
@@ -133,7 +146,7 @@ const MainContent = () => {
                 onChange={setRainfall}
                 marks={rainfallMarks}
                 step={10}
-                min={rainfallMarks[0]?.value || 0}
+                min={0}
                 max={rainfallMarks[2]?.value || 100}
               />
             </div>
@@ -144,7 +157,7 @@ const MainContent = () => {
                 onChange={setEvaporation}
                 marks={evaporationMarks}
                 step={5}
-                min={evaporationMarks[0]?.value || 0}
+                min={0}
                 max={evaporationMarks[2]?.value || 40}
               />
             </div>
@@ -159,29 +172,50 @@ const MainContent = () => {
                 max={populationMarks[2]?.value || 1000000}
               />
             </div>
+            <div className="flex w-full">
+              <span className="text-lg font-bold text-white mr-6">Inflow:</span>
+              <RangeSlider
+                value={inflow}
+                onChange={setInflow}
+                marks={InflowMarks}
+                step={500}
+                min={0}
+                max={10000}
+              />
+            </div>
+            <div className="flex w-full">
+              <span className="text-lg font-bold text-white mr-6">Outflow:</span>
+              <RangeSlider
+                value={outflow}
+                onChange={setOutflow}
+                marks={OutFlowMarks}
+                step={500}
+                min={0}
+                max={10000}
+              />
+            </div>
             <button onClick={handleApply} className="bg-blue-500 text-white">Apply</button>
             {responseMessage && <p>{responseMessage}</p>}
           </div>
         </div>
-
-        <div className="flex flex-col flex-1 px-4">
-          <FloodScore FloodScore={responseData["Drought Score"] ?? 0} />
-        </div>
-
-      </section>
-
-      <section className="flex flex-row w-full mt-8" >
         <div className="flex flex-col w-full">
           {responseData && (
             <>
               <div className="flex flex-row justify-between px-4 ">
-                <div className="flex flex-col">   
-                  <ScenarioCard title="SPEI" value={responseData.SPEI ?? 'N/A'} unit="" />
+                <div className="flex flex-col">
+                  {/* <ScenarioCard title="SPEI" value={responseData.SPEI ?? 'N/A'} unit="" /> */}
                   <ScenarioCard title="Drought Risk" value={responseData["Drought Risk"] ?? 'N/A'} unit="" />
                   <ScenarioCard
                     title="Adjusted Inflow"
                     value={responseData["Adjusted Inflow"] !== undefined && responseData["Adjusted Inflow"] !== null
                       ? responseData["Adjusted Inflow"].toFixed(2)
+                      : 'N/A'}
+                    unit="Mm³"
+                  />
+                  <ScenarioCard
+                    title="Storage Change"
+                    value={responseData["Storage Change"] !== undefined && responseData["Storage Change"] !== null
+                      ? responseData["Storage Change"].toFixed(2)
                       : 'N/A'}
                     unit="Mm³"
                   />
@@ -195,34 +229,28 @@ const MainContent = () => {
                       : 'N/A'}
                     unit="Mm³"
                   />
-                  <ScenarioCard
+                  {/* <ScenarioCard
                     title="Storage Change"
                     value={responseData["Storage Change"] !== undefined && responseData["Storage Change"] !== null
                       ? responseData["Storage Change"].toFixed(2)
                       : 'N/A'}
                     unit="Mm³"
-                  />
+                  /> */}
                 </div>
-                {/* <ScenarioCard
-                  title="Drought Score"
-                  value={responseData["Drought Score"] !== undefined && responseData["Drought Score"] !== null
-                    ? responseData["Drought Score"].toFixed(2)
-                    : 'N/A'}
-                  unit=""
-                />
-                <ScenarioCard
-                  title="Flood Score"
-                  value={responseData["Flood Score"] !== undefined && responseData["Flood Score"] !== null
-                    ? responseData["Flood Score"].toFixed(2)
-                    : 'N/A'}
-                  unit=""
-                /> */}
-
               </div>
             </>
           )}
         </div>
 
+
+      </section>
+
+      <section className="flex flex-row w-full mt-8" >
+
+        <div className="flex flex-col flex-1 px-4">
+          <FloodScore FloodScore={responseData["Flood Score"] ?? 0} />
+          {/* Add other components as necessary */}
+        </div>
         <div className="flex flex-col flex-1 px-4">
           <DroughtScore droughtScore={responseData["Drought Score"] ?? 0} />
         </div>

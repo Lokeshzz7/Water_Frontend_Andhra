@@ -44,12 +44,11 @@ const LanguageSwitcher = () => {
 
     return (
         <div>
-            <label htmlFor="language-selector">Language: </label>
             <select
                 id="language-selector"
                 value={selectedLanguage}
                 onChange={handleLanguageChange}
-                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-full mt-5"
+                className="dropdown-style rounded-xl p-3 font-bold text-4xl bg-slate-100 w-[150px] "
             >
                 {languageConfig.languages.map((lang) => (
                     <option key={lang.name} value={lang.name}>

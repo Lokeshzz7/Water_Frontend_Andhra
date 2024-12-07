@@ -187,7 +187,7 @@ const RainfallGraph = () => {
     }, [districtId, year]); // Watch for districtId and year changes
 
     return (
-        <div key={chartKey} className="relative h-0">
+        <div key={chartKey} className="relative ">
             {/* Info button */}
             <div
                 className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
