@@ -31,7 +31,7 @@ const DroughtScore = ({ droughtScore }) => {
                     const riskScore = params.value * 100; // Convert to percentage
                     let riskLevel = "";
                     if (params.value >= 0.75) {
-                        riskLevel = "No Risk";
+                        riskLevel = "Low Risk";
                     } else if (params.value >= 0.5) {
                         riskLevel = "Medium Risk";
                     } else if (params.value >= 0.25) {
@@ -125,7 +125,7 @@ const DroughtScore = ({ droughtScore }) => {
                             } else if (value === 0.375) {
                                 return "Medium Risk";
                             } else if (value === 0.125) {
-                                return "No Risk";
+                                return "Low Risk";
                             }
                             return "";
                         },
@@ -164,6 +164,25 @@ const DroughtScore = ({ droughtScore }) => {
 
     return (
         <div className="relative">
+            <div
+                className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('InfoDroughtScore');
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('InfoDroughtScore');
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+                <div
+                    id="InfoDroughtScore"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: 'none', width: '200px' }}
+                >
+A drought score is a numerical metric indicating the severity or likelihood of drought in an area, based on factors like rainfall deficit, soil moisture, temperature, and water availability. It aids in assessing water scarcity risks and resource management.                </div>
+            </div>
             <div
                 id="reservoir-health-chart"
                 className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg">

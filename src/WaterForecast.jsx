@@ -181,11 +181,13 @@ function WaterManagementDashboard() {
                         <div className="flex flex-wrap pl-4">
                             <DataCard
                                 title="Current Consumption (2024)"
-                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "N/A"}
+                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading"}
+                                unit={"TMC"}
                             />
                             <DataCard
                                 title="Current Inflow (2024)"
-                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "N/A"}
+                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading"}
+                                unit={"Cusecs"}
                             />
                         </div>
                         <CurrentLinearGauge />
@@ -196,10 +198,12 @@ function WaterManagementDashboard() {
                             <DataCard
                                 title={Year < 2024 ? `Past Year Consumption (${Year})` : `Future Year Consumption (${Year})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.consumption.toFixed(2) : "N/A")}
+                                unit={"TMC"}
                             />
                             <DataCard
                                 title={Year < 2024 ? `Past Year Inflow (${Year})` : `Future Year Inflow (${Year})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
+                                unit={"Cusecs"}
                             />
                         </div>
                         <LinearGauge />

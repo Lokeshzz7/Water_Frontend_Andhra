@@ -169,7 +169,7 @@ const ReportScenarioGraph = () => {
                             fontSize: 20,
                             color: "white",
                         },
-                        data: [{ value, name: "Risk Score" }],
+                        data: [{ value, name: "Scenario Score" }],
                     },
                 ],
             };

@@ -313,7 +313,7 @@ const StateMap = () => {
             />
           ) : null
         ) : (
-          <p>Select a state or reservoir for details.</p>
+          <p>Select a reservoir for details.</p>
         )}
       </div>
     </div>
