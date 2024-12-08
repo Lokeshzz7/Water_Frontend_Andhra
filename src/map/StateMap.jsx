@@ -273,8 +273,8 @@ const StateMap = () => {
   }, []);
 
   return (
-    <div className="flex w-full h-[750px] gap-12">
-      <div id="chartdiv" ref={chartRef} className="flex-3 h-full w-[700px]" />
+    <div className="flex w-full h-screen gap-12">
+      <div id="chartdiv" ref={chartRef} className="flex-3 h-full w-[600px]" />
       <div className="flex-1 h-full w-[600px] bg-transparent text-white p-2 border-l">
         {selectedItem ? (
           selectedItem.type === "reservoir" ? (
@@ -285,18 +285,18 @@ const StateMap = () => {
                 
               />
               {weatherData && (
-                <div className="mt-4 p-2 bg-gray-800 rounded">
-                  <h3 className="text-lg font-semibold">Details:</h3>
+                <div className="mt-4 p-2 bg-component rounded shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] p-4">
+                  <h1 className="text-xl font-semibold">Details: <span className="ml-2 text-sm text-gray-500">Month-long data, updated for Decmember</span></h1>
       
                     <p>Purpose: {selectedItem.purpose}</p>
-                    <p>Height: {selectedItem.height} meters</p>
-                    <p>Gross_Storage:{selectedItem.gross_storage}</p>
+                    <p>Height: {selectedItem.height} meters </p>
+                    <p>Gross_Storage:{selectedItem.gross_storage} </p>
                     <p>Live_Storage:{selectedItem.live_storage} </p>
                     <p>Commissioning_Date: {selectedItem.commissioning_date}</p>
                     <p>Dam_Incharge: {selectedItem.dam_incharge}</p>
             
       
-                  <h3 className="text-lg font-semibold">Weather Information:</h3>
+                  <h3 className="text-xl font-semibold">Weather Information: <span className="ml-2 text-sm text-gray-500">Updated Today </span></h3>
                   <p>Temperature: {weatherData.temperature}°C</p>
                   <p>Condition: {weatherData.condition}</p>
                   <p>Humidity: {weatherData.humidity}%</p>
