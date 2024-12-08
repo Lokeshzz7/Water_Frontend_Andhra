@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import DataCard from './DataCard.jsx';
 import AndhraMap from '../map/AndhraMap.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
+import ReservoirStatus from '../ReservoirStatus.jsx';
+import ReservoirHealth from '../graph/ReservoirHealth.jsx';
 
 const ReservoirMainContent = () => {
     const [reservoirData, setReservoirData] = useState(null);
@@ -166,7 +168,8 @@ const ReservoirMainContent = () => {
                         </div>
                     </div>
                     <div className="flex flex-col flex-1 px-4">
-                        <AndhraMap />
+                        {/* <AndhraMap /> */}
+                        <ReservoirHealth />
                     </div>
                 </section>
 

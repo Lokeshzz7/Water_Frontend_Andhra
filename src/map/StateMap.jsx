@@ -68,8 +68,8 @@ const StateMap = () => {
           condition: data.current.condition.text,
           humidity: data.current.humidity,
           windSpeed: data.current.wind_kph,
-          pressure:data.current.pressure_mb,
-          precipitation:data.current.precip_mm,
+          pressure: data.current.pressure_mb,
+          precipitation: data.current.precip_mm,
         });
       } else {
         console.error("Error fetching weather data:", response.statusText);
@@ -225,7 +225,7 @@ const StateMap = () => {
         stroke: window.am5.color(0xffffff),
         strokeWidth: 2,
       });
-      
+
 
       circle.events.on("click", (event) => {
         const dataItem = event.target.dataItem;
@@ -282,29 +282,29 @@ const StateMap = () => {
               <ScenarioDataCard
                 title={`Reservoir: ${selectedItem.title}`}
                 value={`Type: ${selectedItem.type}`}
-                
+
               />
               {weatherData && (
                 <div className="mt-4 p-2 bg-component rounded shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] p-4">
-                  <h1 className="text-xl font-semibold">Details: <span className="ml-2 text-sm text-gray-500">Month-long data, updated for Decmember</span></h1>
-      
-                    <p>Purpose: {selectedItem.purpose}</p>
-                    <p>Height: {selectedItem.height} meters </p>
-                    <p>Gross_Storage:{selectedItem.gross_storage} </p>
-                    <p>Live_Storage:{selectedItem.live_storage} </p>
-                    <p>Commissioning_Date: {selectedItem.commissioning_date}</p>
-                    <p>Dam_Incharge: {selectedItem.dam_incharge}</p>
-            
-      
-                  <h3 className="text-xl font-semibold">Weather Information: <span className="ml-2 text-sm text-gray-500">Updated Today </span></h3>
+                  <h1 className="text-xl font-semibold">Details: <span className="ml-2 text-sm text-gray-500">Month-long data, updated for December</span></h1>
+
+                  <p>Purpose: {selectedItem.purpose}</p>
+                  <p>Height: {selectedItem.height} meters </p>
+                  <p>Gross Storage: {(selectedItem.gross_storage)} TMC </p>
+                  <p>Live Storage: {(selectedItem.live_storage)} TMC </p>
+                  <p>Commissioning Date: {selectedItem.commissioning_date}</p>
+                  <p>Dam Incharge: {selectedItem.dam_incharge}</p>
+
+                  <h3 className="text-xl font-semibold">Weather Information: <span className="ml-2 text-sm text-gray-500">Updated Today</span></h3>
                   <p>Temperature: {weatherData.temperature}°C</p>
                   <p>Condition: {weatherData.condition}</p>
                   <p>Humidity: {weatherData.humidity}%</p>
                   <p>Wind Speed: {weatherData.windSpeed} kph</p>
-                  <p>Pressure:{weatherData.pressure} mg</p>
-                  <p>Precipitation:{weatherData.precipitation} mm</p>
+                  <p>Pressure: {weatherData.pressure} mg</p>
+                  <p>Precipitation: {weatherData.precipitation} mm</p>
                 </div>
               )}
+
             </div>
           ) : selectedItem.type === "state" ? (
             <ScenarioDataCard
