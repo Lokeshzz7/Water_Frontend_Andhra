@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
-import data from "../data/reservoir_fake_data.json"; // Replace with your JSON file path
 
 const ReservoirHealth = () => {
   const [riskScore, setRiskScore] = useState(0);
@@ -10,33 +9,46 @@ const ReservoirHealth = () => {
     recommendations: '',
   });
 
-  const fetchData = () => {
+  // Function to fetch data from API
+  const fetchData = async () => {
+    const selectedReservoir = JSON.parse(localStorage.getItem("selectedReservoir"));
     const selectedYear = parseInt(localStorage.getItem("selectedYear") || 2000, 10);
-    const selectedIndex = parseInt(localStorage.getItem("selectedState") || 0, 10);
 
-    // Find the data matching the selected year and index
-    const filteredData = data.find((item) => item.year === selectedYear && item.index === selectedIndex);
+    if (!selectedReservoir) {
+      console.log("No selected reservoir found in localStorage.");
+      return; // If no selected reservoir, exit
+    }
 
-    if (filteredData && filteredData.riskScore) {
-      setRiskScore(filteredData.riskScore / 10); // Normalize riskScore to fit the 0-1 scale
-    } else {
-      setRiskScore(0); // Default to 0 if no matching data is found
+    const { reservoir_id } = selectedReservoir;
+
+    // Log the API URL that is being called
+    const apiUrl = `/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}`;
+    console.log(`Calling API with URL: ${apiUrl}`);
+
+    try {
+      // Fetch data from the API
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        // If the response is not ok, throw an error
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      console.log("response : " + response);
+      const data = await response.json(); // Parse the JSON response
+      console.log("API Response:", data); // Log the API response
+
+      // If the response contains the predicted_score, update the state
+      if (data.predicted_score !== undefined) {
+        setRiskScore(data.predicted_score / 100); // Normalize to a 0-1 scale
+      } else {
+        console.error("No predicted_score in the response:", data);
+        setRiskScore(0); // Default to 0 if no score is found
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setRiskScore(90); // Default to 0 in case of an error
     }
   };
-
-  useEffect(() => {
-    fetchData(); // Fetch data when component mounts
-
-    const handleStorageChange = () => {
-      fetchData(); // Re-fetch data if localStorage changes
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
 
   // Function to generate description based on risk score
   const getRiskScoreDescription = (riskScore) => {
@@ -58,6 +70,23 @@ const ReservoirHealth = () => {
     };
   };
 
+  // Effect to fetch data on mount and update insights
+  useEffect(() => {
+    fetchData(); // Fetch data when component mounts  
+
+    // Re-fetch data if localStorage changes
+    const handleStorageChange = () => {
+      fetchData(); // Re-fetch data when localStorage changes
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
+  // Effect to update insights based on risk score
   useEffect(() => {
     const generatedDescription = getRiskScoreDescription(riskScore);
     setInsights(generatedDescription);
@@ -71,16 +100,16 @@ const ReservoirHealth = () => {
         text: "Risk Score",
         left: "center",
         textStyle: {
-          color: "white", // Set title color to white
-          fontWeight: "bold", // Set title font weight to bold
-          fontSize: 25, // Optional: Set title font size
+          color: "white",
+          fontWeight: "bold",
+          fontSize: 25,
         },
-        padding: [0, 0, 90, 40], // Add padding below the title (top, right, bottom, left)
+        padding: [0, 0, 90, 40],
       },
       tooltip: {
-        trigger: "item", // Trigger tooltip on item hover
+        trigger: "item",
         formatter: function (params) {
-          const riskScore = params.value * 100; // Convert to percentage
+          const riskScore = params.value * 100;
           let riskLevel = "";
           if (params.value >= 0.75) {
             riskLevel = "No Risk";
@@ -99,27 +128,24 @@ const ReservoirHealth = () => {
             </div>
           `;
         },
-        backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark background for the tooltip
-        borderColor: "#fff", // White border color
-        borderWidth: 1, // Border width
+        backgroundColor: "rgba(0, 0, 0, 0.7)",
+        borderColor: "#fff",
+        borderWidth: 1,
         textStyle: {
-          color: "#fff", // Set tooltip text color to white
-          fontSize: 14, // Font size for the tooltip
+          color: "#fff",
+          fontSize: 14,
         },
-        showDelay: 0,  // Delay before tooltip appears
-        hideDelay: 200, // Delay before tooltip disappears
       },
       toolbox: {
-        show: true, // Show the toolbox
+        show: true,
         feature: {
           saveAsImage: {
             backgroundColor: "transparent"
           },
         },
-
-        itemSize: 18, // Optional: Adjust the size of toolbox icons
-        top: "1%", // Position the toolbox from the top (you can adjust this)
-        right: "5%", // Position the toolbox from the right (you can adjust this)
+        itemSize: 18,
+        top: "1%",
+        right: "5%",
       },
       series: [
         {
@@ -166,7 +192,7 @@ const ReservoirHealth = () => {
             },
           },
           axisLabel: {
-            color: "white", // Set axis labels color to white
+            color: "white",
             fontSize: 15,
             distance: -50,
             rotate: "tangential",
@@ -186,7 +212,7 @@ const ReservoirHealth = () => {
           title: {
             offsetCenter: [0, "-10%"],
             fontSize: 20,
-            color: "white", // Set title color to white
+            color: "white",
           },
           detail: {
             fontSize: 30,
@@ -195,11 +221,11 @@ const ReservoirHealth = () => {
             formatter: function (value) {
               return `${Math.round(value * 100)}/100`;
             },
-            color: "white", // Set the value color to white
+            color: "white",
           },
           data: [
             {
-              value: riskScore, // Make sure this is a valid number
+              value: riskScore,
               name: "Reservoir Health Score",
             },
           ],
@@ -221,20 +247,6 @@ const ReservoirHealth = () => {
         id="reservoir-health-chart"
         className="w-[650px] ml-3 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
       ></div>
-
-      {/* Displaying the analysis */}
-      {/* <div className="ml-6 mt-4 text-white p-4 bg-[#1a2238] rounded-lg shadow-lg">
-        <h3 className="text-lg font-semibold">Analysis Summary</h3>
-        <p>
-          <b>Interpretation:</b> {insights.interpretation}
-        </p>
-        <p>
-          <b>Insights:</b> {insights.insights}
-        </p>
-        <p>
-          <b>Recommendations:</b> {insights.recommendations}
-        </p>
-      </div> */}
     </div>
   );
 };

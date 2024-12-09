@@ -3,7 +3,7 @@ import WaterConsumptionGraph from '../graph/report_graph/ReportWaterConsumptionG
 import ReservoirPerformanceChart from '../graph/report_graph/ReportLucGraph.jsx'; // Placeholder import
 import MonthlyConsumptionChart from '../graph/report_graph/ReportMonthConsumtionGraph.jsx'; // Placeholder import
 import ScenarioAnalysisChart from '../graph/report_graph/ReportScenarioGraph.jsx'; // Placeholder import
-import ReservoirHealth from '../graph/report_graph/ReportReservoirHealth.jsx'; // Placeholder import
+import ReportReservoirHealth from '../graph/report_graph/ReportReservoirHealth.jsx'; // Placeholder import
 import RiskFactorsChart from '../graph/report_graph/ReportFactorGraph.jsx'; // Placeholder import
 
 const Reports = () => {
@@ -92,7 +92,7 @@ const Reports = () => {
 
                     <div className="flex flex-col w-1/2">
                         <h3 className="font-semibold mb-4 ml-6">Risk Scores by Region</h3>
-                        <ReservoirHealth />
+                        <ReportReservoirHealth />
                         <div className="mt-5">
                             <p className="text-sm mt-2 ml-6">This doughnut chart categorizes regions based on risk levels: Low, Medium, and High, highlighting areas that may require targeted interventions.</p>
                             <p className="text-sm mt-2 ml-6">*Insight: Regions with high risk scores are more vulnerable to water shortages or quality issues.</p>

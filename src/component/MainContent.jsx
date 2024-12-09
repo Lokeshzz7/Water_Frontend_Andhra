@@ -118,7 +118,7 @@ const MainContent = () => {
         return;
       }
 
-      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${population}&inflow=${inflow}&outflow=${outflow}&district_id=${selectedDistrict}`;
+      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${1e6}&inflow=${inflow}&outflow=${outflow}&district_id=${selectedDistrict}`;
       const response = await fetch(apiUrl, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
 
       if (response.ok) {
@@ -161,7 +161,7 @@ const MainContent = () => {
                 max={evaporationMarks[2]?.value || 40}
               />
             </div>
-            <div className="flex w-full">
+            {/* <div className="flex w-full">
               <span className="text-lg font-bold text-white mr-6">Population:</span>
               <RangeSlider
                 value={population}
@@ -171,7 +171,7 @@ const MainContent = () => {
                 min={populationMarks[0]?.value || 0}
                 max={populationMarks[2]?.value || 1000000}
               />
-            </div>
+            </div> */}
             <div className="flex w-full">
               <span className="text-lg font-bold text-white mr-6">Inflow:</span>
               <RangeSlider
@@ -210,14 +210,14 @@ const MainContent = () => {
                     value={responseData["Adjusted Inflow"] !== undefined && responseData["Adjusted Inflow"] !== null
                       ? responseData["Adjusted Inflow"].toFixed(2)
                       : 'N/A'}
-                    unit="Mm³"
+                    unit="Cusecs"
                   />
                   <ScenarioCard
                     title="Storage Change"
                     value={responseData["Storage Change"] !== undefined && responseData["Storage Change"] !== null
                       ? responseData["Storage Change"].toFixed(2)
                       : 'N/A'}
-                    unit="Mm³"
+                    unit="TMC"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -227,7 +227,7 @@ const MainContent = () => {
                     value={responseData["Adjusted Outflow"] !== undefined && responseData["Adjusted Outflow"] !== null
                       ? responseData["Adjusted Outflow"].toFixed(2)
                       : 'N/A'}
-                    unit="Mm³"
+                    unit="Cusecs"
                   />
                   {/* <ScenarioCard
                     title="Storage Change"

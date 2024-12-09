@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import DataCard from './DataCard.jsx';
 import AndhraMap from '../map/AndhraMap.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
+import ReservoirStatus from '../ReservoirStatus.jsx';
+import ReservoirHealth from '../graph/ReservoirHealth.jsx';
 
 const ReservoirMainContent = () => {
     const [reservoirData, setReservoirData] = useState(null);
@@ -129,43 +131,45 @@ const ReservoirMainContent = () => {
                     <div className="flex flex-col w-full">
                         <div className="flex flex-row justify-between px-4 gap-10">
                             <div className="flex flex-col">
+                            <DataCard
+                                    title={`Gross Capacity (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.gross_capacity || "N/A")}
+                                    unit="TMC"
+                                />
                                 <DataCard
                                     title={`Current Level (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.current_level || "N/A")}
-                                    unit="galH2O"
-                                />
-                                <DataCard
-                                    title={`Current Storage (${getReservoirName()} - ${selectedYear || "Year"})`}
-                                    value={loading ? "Loading..." : (reservoirData?.current_storage || "N/A")}
-                                    unit="galH2O"
-                                />
-                                <DataCard
-                                    title={`Flood Cushion (${getReservoirName()} - ${selectedYear || "Year"})`}
-                                    value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
-                                    unit="galH2O"
-                                />
-                            </div>
-                            <div className="flex flex-col">
-                                <DataCard
-                                    title={`Gross Capacity (${getReservoirName()} - ${selectedYear || "Year"})`}
-                                    value={loading ? "Loading..." : (reservoirData?.gross_capacity || "N/A")}
-                                    unit="galH2O"
+                                    unit="Ft"
                                 />
                                 <DataCard
                                     title={`Inflow (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.inflow || "N/A")}
-                                    unit="m³/s"
+                                    unit="Cusecs"
                                 />
+                            </div>
+                            <div className="flex flex-col">
+                            <DataCard
+                                    title={`Current Storage (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.current_storage || "N/A")}
+                                    unit="TMC"
+                                />
+                                <DataCard
+                                    title={`Flood Cushion (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
+                                    unit="TMC"
+                                />
+                                
                                 <DataCard
                                     title={`Outflow (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
-                                    unit="m³/s"
+                                    unit="Cusecs"
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col flex-1 px-4">
-                        <AndhraMap />
+                        {/* <AndhraMap /> */}
+                        <ReservoirHealth />
                     </div>
                 </section>
 

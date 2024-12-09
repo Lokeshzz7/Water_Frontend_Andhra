@@ -7,7 +7,7 @@ const map = () => {
     return (
         <div>
             <div className='mt-9'>
-                <MapDropdown />
+                {/* <MapDropdown /> */}
             </div>
             <div className='ml-4  mt-7 w-full'>
                 <StateMap />
