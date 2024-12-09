@@ -164,12 +164,26 @@ const ReservoirMainContent = () => {
                                     value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
                                     unit="Cusecs"
                                 />
+                                
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col flex-1 px-4">
                         {/* <AndhraMap /> */}
                         <ReservoirHealth />
+                        <div className='flex flex-row justify-evenly px-4 gap-10'>
+                        <DataCard
+                                    title={`Age (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
+                                    unit="Years"
+                                />
+                                
+                                <DataCard
+                                    title={`Siltation (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
+                                    unit="TMC"
+                                />
+                        </div>
                     </div>
                 </section>
 

@@ -82,11 +82,11 @@ const FactorsGraph = () => {
         right: 10,
       },
       dataset: {
-        dimensions: ['factor', '2015', '2016', '2017'],
+        dimensions: ['factor', '2023', '2024'],
         source: [
-          { factor: 'Population', 2015: 43.3, 2016: 85.8, 2017: 93.7 },
-          { factor: 'Temperature', 2015: 83.1, 2016: 73.4, 2017: 55.1 },
-          { factor: 'Rainfall', 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+          { factor: 'Population', 2023: 43.3,2024: 93.7 },
+          { factor: 'Temperature', 2023: 83.1, 2024: 55.1 },
+          { factor: 'Rainfall', 2023: 86.4, 2024: 82.5 },
         ],
       },
       xAxis: {
@@ -101,7 +101,6 @@ const FactorsGraph = () => {
         },
       },
       series: [
-        { type: 'bar' },
         { type: 'bar' },
         { type: 'bar' },
       ],

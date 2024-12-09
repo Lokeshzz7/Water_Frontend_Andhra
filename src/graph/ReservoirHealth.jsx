@@ -124,7 +124,7 @@ const ReservoirHealth = () => {
 
     const option = {
       title: {
-        text: "Reservoir Health Score",
+        text: "Reservoir Score",
         left: "center",
         textStyle: {
           color: "white",
@@ -139,13 +139,13 @@ const ReservoirHealth = () => {
           const riskScore = params.value * 100;
           let riskLevel = "";
           if (params.value >= 0.75) {
-            riskLevel = "Very High Risk";
+            riskLevel = "Very Good";
           } else if (params.value >= 0.5) {
-            riskLevel = "High Risk";
+            riskLevel = "Good";
           } else if (params.value >= 0.25) {
-            riskLevel = "Medium Risk";
+            riskLevel = "Medium";
           } else {
-            riskLevel = "Low Risk";
+            riskLevel = "Low";
           }
 
           return `
@@ -225,13 +225,13 @@ const ReservoirHealth = () => {
             rotate: "tangential",
             formatter: function (value) {
               if (value === 0.875) {
-                return "Very High Risk";
+                return "Very Good";
               } else if (value === 0.625) {
-                return "High Risk";
+                return "Good";
               } else if (value === 0.375) {
-                return "Medium Risk";
+                return "Medium";
               } else if (value === 0.125) {
-                return "Low Risk";
+                return "Low";
               }
               return "";
             },
@@ -253,7 +253,7 @@ const ReservoirHealth = () => {
           data: [
             {
               value: riskScore,
-              name: "Reservoir Health Score",
+              name: "Reservoir Score",
             },
           ],
         },
@@ -272,7 +272,7 @@ const ReservoirHealth = () => {
     <div className="relative">
       <div
         id="reservoir-health-chart"
-        className="w-[650px] ml-3 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"
+        className="w-[650px] ml-3 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg mb-8"
       ></div>
     </div>
   );

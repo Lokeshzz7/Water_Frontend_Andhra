@@ -280,9 +280,7 @@ const StateMap = () => {
           selectedItem.type === "reservoir" ? (
             <div className="flex flex-col w-full">
               <ScenarioDataCard
-                title={`Reservoir: ${selectedItem.title}`}
-                value={`Type: ${selectedItem.type}`}
-
+                title={`${selectedItem.title}`}
               />
               {weatherData && (
                 <div className="mt-4 p-2 bg-component rounded shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] p-4">
@@ -290,10 +288,10 @@ const StateMap = () => {
 
                   <p>Purpose: {selectedItem.purpose}</p>
                   <p>Height: {selectedItem.height} meters </p>
-                  <p>Gross Storage: {(selectedItem.gross_storage)} TMC </p>
-                  <p>Live Storage: {(selectedItem.live_storage)} TMC </p>
+                  <p>Gross Storage: {(selectedItem.gross_storage)} </p>
+                  <p>Live Storage: {(selectedItem.live_storage)}</p>
                   <p>Commissioning Date: {selectedItem.commissioning_date}</p>
-                  <p>Dam Incharge: {selectedItem.dam_incharge}</p>
+                  <p>Incharge: {selectedItem.dam_incharge}</p>
 
                   <h3 className="text-xl font-semibold">Weather Information: <span className="ml-2 text-sm text-gray-500">Updated Today</span></h3>
                   <p>Temperature: {weatherData.temperature}°C</p>
@@ -313,7 +311,7 @@ const StateMap = () => {
             />
           ) : null
         ) : (
-          <p>Select a reservoir for details.</p>
+          <p>Select a state or reservoir for details.</p>
         )}
       </div>
     </div>

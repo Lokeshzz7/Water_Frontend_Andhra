@@ -83,20 +83,20 @@ const MainContent = () => {
       ]);
 
       setPopulationMarks([
-        { value: minPopulation, label: `${minPopulation} M` },
-        { value: avgPopulation, label: `${avgPopulation} M` },
-        { value: maxPopulation, label: `${maxPopulation} M` },
+        { value: minPopulation, label: `${minPopulation} Cusecs` },
+        { value: avgPopulation, label: `${avgPopulation} Cucecs` },
+        { value: maxPopulation, label: `${maxPopulation} Cucecs` },
       ]);
       setInflowMarks([
-        { value: 0, label: '0 M' },
-        { value: 5000, label: `${5000} M` },
-        { value: 10000, label: `${10000} M` },
+        { value: 0, label: '0 Cusecs' },
+        { value: 5000, label: `${5000} Cusecs` },
+        { value: 10000, label: `${10000} Cusecs` },
 
       ])
       setOutFlowMarks([
-        { value: 0, label: '0 M' },
-        { value: 5000, label: `${5000} M` },
-        { value: 10000, label: `${10000} M` },
+        { value: 0, label: '0 Cusecs' },
+        { value: 5000, label: `${5000} Cusecs` },
+        { value: 10000, label: `${10000} Cusecs` },
 
       ])
 
@@ -138,7 +138,7 @@ const MainContent = () => {
     <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
       <section className="flex flex-row w-full">
         <div className="flex flex-col w-full">
-          <div className="flex flex-col gap-4 px-2 shadow bg-component ml-5 p-8 pl-10 w-[650px] h-[450px]">
+          <div className="flex flex-col gap-4 shadow bg-component ml-9 p-8 pl-8 w-[650px] h-[370px]">
             <div className="flex w-full">
               <span className="text-lg font-bold text-white mr-11">Rainfall:</span>
               <RangeSlider
@@ -194,8 +194,8 @@ const MainContent = () => {
                 max={10000}
               />
             </div>
-            <button onClick={handleApply} className="bg-blue-500 text-white">Apply</button>
-            {responseMessage && <p>{responseMessage}</p>}
+            <button onClick={handleApply} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Apply</button>
+            {responseMessage && <p></p>}
           </div>
         </div>
         <div className="flex flex-col w-full">

@@ -196,12 +196,12 @@ function WaterManagementDashboard() {
                         {/* Past / Future */}
                         <div className="flex flex-wrap">
                             <DataCard
-                                title={Year < 2024 ? `Past Year Consumption (${Year})` : `Future Year Consumption (${Year})`}
+                                title={Year < 2024 ? `Past Consumption (${Year})` : `Predicted Consumption (${Year})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.consumption.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title={Year < 2024 ? `Past Year Inflow (${Year})` : `Future Year Inflow (${Year})`}
+                                title={Year < 2024 ? `Past Inflow (${Year})` : `Predicted Inflow (${Year})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
                                 unit={"Cusecs"}
                             />
@@ -224,7 +224,7 @@ function WaterManagementDashboard() {
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
                     <RainfallGraph />
-                    {/* <FactorsAffectingGraph /> */}
+                    <FactorsAffectingGraph />
 
                 </div>
             </section>
