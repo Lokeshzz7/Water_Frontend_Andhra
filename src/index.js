@@ -18,6 +18,7 @@ import Map from "./map.jsx";
 import Home from "./Home.jsx";
 import SideBar from "./component/SideBar.jsx";
 import { Navigate } from "react-router-dom";
+import ImportsMain from "./ImportsMain.jsx";
 
 
 async function enableMocking() {
@@ -51,6 +52,7 @@ enableMocking().then(() => {
               <Route path="/riskassessment" element={<RiskAssessment />} />
               <Route path="/scenarioplanning" element={<ScenarioPlanning />} />
               <Route path="/reports" element={<ReportsExports />} />
+              <Route path="/imports" element={<ImportsMain/>} />
               <Route path="/map" element={<Map />} />
             </Routes>
           </div>
