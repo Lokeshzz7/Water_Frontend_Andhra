@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
 
 const ReservoirHealth = () => {
+  const [CurrentYearData, SetCurrentYearData] = useState([]); // Initially empty array
   const [riskScore, setRiskScore] = useState(0);
   const [insights, setInsights] = useState({
     interpretation: '',
@@ -19,11 +20,30 @@ const ReservoirHealth = () => {
       return; // If no selected reservoir, exit
     }
 
-    const { reservoir_id } = selectedReservoir;
-
     // Log the API URL that is being called
-    const apiUrl = `/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}`;
-    console.log(`Calling API with URL: ${apiUrl}`);
+    const CurrentapiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=2024&reservoir_id=${selectedReservoir}`;
+    console.log(`Calling API with URL: ${CurrentapiUrl}`);
+    const Currentresponse = await fetch(CurrentapiUrl);
+    const CurrentData = await Currentresponse.json();
+    console.log("Current Data : ", CurrentData);
+    SetCurrentYearData(CurrentData); // Set the data in the state
+
+    // Construct the API URL based on the year selected
+    let apiUrl;
+    if (selectedYear > 2024) {
+      // Destructure values after setting the current year data
+      const { mean_storage, flood_cushion, rainfall, evaporation, siltation, capacity, age } = CurrentData;
+      if (mean_storage == null || flood_cushion == null || rainfall == null || evaporation == null || siltation == null || capacity == null || age == null) {
+        console.error("One or more required values are missing in CurrentData:", CurrentData);
+        return;
+      }
+      console.log("sdjfhjsdfh ", CurrentData);
+      let updatedAge = age + (selectedYear - 2024);
+      apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}&mean-storage=${mean_storage}&flood-cushion=${flood_cushion}&rainfall=${rainfall}&evaporation=${evaporation}&siltation=${siltation}&capacity=${capacity}&age=${updatedAge}`;
+      console.log(" 2024 > ai rul  :" + apiUrl);
+    } else {
+      apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}`;
+    }
 
     try {
       // Fetch data from the API
@@ -33,20 +53,20 @@ const ReservoirHealth = () => {
         // If the response is not ok, throw an error
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      console.log("response : " + response);
       const data = await response.json(); // Parse the JSON response
       console.log("API Response:", data); // Log the API response
+      console.log("Score : " + data.score);
 
       // If the response contains the predicted_score, update the state
-      if (data.predicted_score !== undefined) {
-        setRiskScore(data.predicted_score / 100); // Normalize to a 0-1 scale
+      if (data.score !== undefined) {
+        setRiskScore(data.score / 100); // Normalize to a 0-1 scale
       } else {
         console.error("No predicted_score in the response:", data);
         setRiskScore(0); // Default to 0 if no score is found
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-      setRiskScore(90); // Default to 0 in case of an error
+      setRiskScore(9); // Default to 0 in case of an error
     }
   };
 
@@ -84,7 +104,14 @@ const ReservoirHealth = () => {
     return () => {
       window.removeEventListener("storage", handleStorageChange);
     };
-  }, []);
+  }, []); // Empty dependency array, this effect runs once after the first render
+
+  // Effect to log the updated CurrentYearData after it's set
+  useEffect(() => {
+    if (CurrentYearData.length > 0) {
+      console.log("Updated Current Data:", CurrentYearData);
+    }
+  }, [CurrentYearData]); // This effect will run when CurrentYearData changes
 
   // Effect to update insights based on risk score
   useEffect(() => {

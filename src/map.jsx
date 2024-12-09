@@ -6,9 +6,9 @@ import MapDropdown from './component/MapDropdown.jsx';
 const map = () => {
     return (
         <div>
-            <div className='mt-9'>
-                {/* <MapDropdown /> */}
-            </div>
+            {/* <div className='mt-9'>
+                <MapDropdown />
+            </div> */}
             <div className='ml-4  mt-7 w-full'>
                 <StateMap />
             </div>
