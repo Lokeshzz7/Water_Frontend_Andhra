@@ -32,14 +32,14 @@ const ReservoirHealth = () => {
     let apiUrl;
     if (selectedYear > 2024) {
       // Destructure values after setting the current year data
-      const { mean_storage, flood_cushion, rainfall, evaporation, siltation, capacity, age } = CurrentData;
+      const { mean_storage, flood_cushion, rainfall, evaporation, siltation, capacity, age , population } = CurrentData;
       if (mean_storage == null || flood_cushion == null || rainfall == null || evaporation == null || siltation == null || capacity == null || age == null) {
         console.error("One or more required values are missing in CurrentData:", CurrentData);
         return;
       }
       console.log("sdjfhjsdfh ", CurrentData);
       let updatedAge = age + (selectedYear - 2024);
-      apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}&mean-storage=${mean_storage}&flood-cushion=${flood_cushion}&rainfall=${rainfall}&evaporation=${evaporation}&siltation=${siltation}&capacity=${capacity}&age=${updatedAge}`;
+      apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}&mean-storage=${mean_storage}&flood-cushion=${flood_cushion}&rainfall=${rainfall}&evaporation=${evaporation}&siltation=${siltation}&capacity=${capacity}&age=${updatedAge}&population=${population}`;
       console.log(" 2024 > ai rul  :" + apiUrl);
     } else {
       apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?year=${selectedYear}&reservoir_id=${selectedReservoir}`;
@@ -55,14 +55,14 @@ const ReservoirHealth = () => {
       }
       const data = await response.json(); // Parse the JSON response
       console.log("API Response:", data); // Log the API response
-      console.log("Score : " + data.score);
+      console.log("Score : " + data.predicted_score);
 
       // If the response contains the predicted_score, update the state
-      if (data.score !== undefined) {
-        setRiskScore(data.score / 100); // Normalize to a 0-1 scale
+      if (selectedYear > 2024) {
+        setRiskScore(data.predicted_score / 100); // Normalize to a 0-1 scale
       } else {
-        console.error("No predicted_score in the response:", data);
-        setRiskScore(0); // Default to 0 if no score is found
+        // console.error("No predicted_score in the response:", data);
+        setRiskScore(data.score / 100); // Default to 0 if no score is found
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -124,7 +124,7 @@ const ReservoirHealth = () => {
 
     const option = {
       title: {
-        text: "Risk Score",
+        text: "Reservoir Health Score",
         left: "center",
         textStyle: {
           color: "white",
@@ -139,13 +139,13 @@ const ReservoirHealth = () => {
           const riskScore = params.value * 100;
           let riskLevel = "";
           if (params.value >= 0.75) {
-            riskLevel = "No Risk";
-          } else if (params.value >= 0.5) {
-            riskLevel = "Medium Risk";
-          } else if (params.value >= 0.25) {
-            riskLevel = "High Risk";
-          } else {
             riskLevel = "Very High Risk";
+          } else if (params.value >= 0.5) {
+            riskLevel = "High Risk";
+          } else if (params.value >= 0.25) {
+            riskLevel = "Medium Risk";
+          } else {
+            riskLevel = "Low Risk";
           }
 
           return `
@@ -188,10 +188,10 @@ const ReservoirHealth = () => {
             lineStyle: {
               width: 6,
               color: [
-                [0.25, "#FF6E76"],
-                [0.5, "#FDDD60"],
-                [0.75, "#58D9F9"],
-                [1, "#7CFFB2"],
+                [0.25, "#7CFFB2"],
+                [0.5, "#58D9F9"],
+                [0.75, "#FDDD60"],
+                [1, "#FF6E76"],
               ],
             },
           },
@@ -225,13 +225,13 @@ const ReservoirHealth = () => {
             rotate: "tangential",
             formatter: function (value) {
               if (value === 0.875) {
-                return "No Risk";
-              } else if (value === 0.625) {
-                return "Medium Risk";
-              } else if (value === 0.375) {
-                return "High Risk";
-              } else if (value === 0.125) {
                 return "Very High Risk";
+              } else if (value === 0.625) {
+                return "High Risk";
+              } else if (value === 0.375) {
+                return "Medium Risk";
+              } else if (value === 0.125) {
+                return "Low Risk";
               }
               return "";
             },
