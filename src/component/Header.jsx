@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
+import logo from "../data/logo2.png"; // Imported logo
 
 const Header = ({ className = "" }) => {
   const location = useLocation();
@@ -25,11 +26,19 @@ const Header = ({ className = "" }) => {
         className="flex items-center justify-between font-dm-sans font-bold bg-component rounded-full px-6 shadow-md"
         style={{ minHeight: "80px" }}
       >
-        {/* Dashboard Title */}
-        <div className="text-white text-xl">
-          <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-[30px]">
-            Return Zero
-          </span>
+        {/* Logo and Dashboard Title */}
+        <div className="flex items-center">
+          
+          <div className="text-white text-xl">
+            <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-[30px]">
+              Return Zero
+            </span>
+          </div>
+          <img
+            src={logo} // Use the imported logo
+            alt="Logo"
+            className="h-16 mr-2" // Adjust size and margin as needed
+          />
         </div>
 
         {/* Current Page Name */}
