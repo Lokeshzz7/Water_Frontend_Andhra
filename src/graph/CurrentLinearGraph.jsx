@@ -121,7 +121,7 @@ const CurrentLinearGauge = () => {
                         return (
                             <div key={category} className="flex items-center mb-8">
                                 <span className="text-lg font-bold text-[#f19cbb]">
-                                    {category}: {value} ({percentage}%) {/* Show exact value and percentage */}
+                                    {category}: {value} TMC({percentage}%) {/* Show exact value and percentage */}
                                 </span>
 
                                 <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">

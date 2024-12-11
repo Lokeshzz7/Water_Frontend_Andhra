@@ -48,7 +48,7 @@ const Header = ({ className = "" }) => {
 
         {/* Language Switcher */}
         <div className="ml-auto">
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
         </div>
       </div>
     </header>
