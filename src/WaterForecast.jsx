@@ -16,6 +16,7 @@ function WaterManagementDashboard() {
     const [loadingCurrentYear, setLoadingCurrentYear] = useState(false);
     const [loadingFutureYear, setLoadingFutureYear] = useState(false);
     const [year, setYear] = useState(null);
+    const [month, setMonth] = useState(null);
 
     const fetchHistoricalYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingFutureYear(true);
@@ -28,18 +29,17 @@ function WaterManagementDashboard() {
             })
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {
-                    // Assuming data[i].month corresponds to month index 0-11, i.e., 0 = January, 11 = December
-                    const monthData = data[selectedMonth - 1]; // Get the month data based on the selected month
+                    const monthData = data[selectedMonth - 1];
                     if (monthData) {
                         setFutureYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall + monthData.inflow_state, // Correctly combine inflow and rainfall
+                            inflow: monthData.rainfall + monthData.inflow_state,
                         });
                     } else {
-                        console.error('No data found for the selected month.');
+                        console.error("No data found for the selected month.");
                     }
                 } else {
-                    console.error('No data found for the selected year.');
+                    console.error("No data found for the selected year.");
                 }
             })
             .catch((error) => console.error("Error fetching historical year data:", error))
@@ -52,18 +52,17 @@ function WaterManagementDashboard() {
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {
-                    // Assuming data[i].month corresponds to month index 0-11, i.e., 0 = January, 11 = December
-                    const monthData = data[selectedMonth - 1]; // Get the month data based on the selected month
+                    const monthData = data[selectedMonth - 1];
                     if (monthData) {
                         setFutureYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall + monthData.inflow_states, // Correctly combine inflow and rainfall
+                            inflow: monthData.rainfall + monthData.inflow_states,
                         });
                     } else {
-                        console.error('No data found for the selected month.');
+                        console.error("No data found for the selected month.");
                     }
                 } else {
-                    console.error('No data found for the selected year.');
+                    console.error("No data found for the selected year.");
                 }
             })
             .catch((error) => console.error("Error fetching future year data:", error))
@@ -76,24 +75,22 @@ function WaterManagementDashboard() {
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {
-                    // Assuming data[i].month corresponds to month index 0-11, i.e., 0 = January, 11 = December
-                    const monthData = data[selectedMonth - 1]; // Get the month data based on the selected month
+                    const monthData = data[selectedMonth - 1];
                     if (monthData) {
                         setCurrentYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall , // Correctly combine inflow and rainfall
+                            inflow: monthData.rainfall,
                         });
                     } else {
-                        console.error('No data found for the selected month.');
+                        console.error("No data found for the selected month.");
                     }
                 } else {
-                    console.error('No data found for the selected year.');
+                    console.error("No data found for the selected year.");
                 }
             })
             .catch((error) => console.error("Error fetching current year data:", error))
             .finally(() => setLoadingCurrentYear(false));
     };
-
 
     useEffect(() => {
         const districtId = localStorage.getItem("selectedDistrict");
@@ -106,6 +103,7 @@ function WaterManagementDashboard() {
         }
 
         setYear(selectedYear);
+        setMonth(selectedMonth);
 
         fetchCurrentYearData(districtId, selectedYear, selectedMonth);
         if (selectedYear < 2024) {
@@ -120,33 +118,30 @@ function WaterManagementDashboard() {
             const districtId = localStorage.getItem("selectedDistrict");
             const selectedYear = parseInt(localStorage.getItem("selectedYear"), 10);
             const selectedMonth = parseInt(localStorage.getItem("selectedMonth"), 10);
-    
+
             if (!districtId || !selectedYear) {
                 console.error("District or Year is missing in localStorage");
                 return;
             }
-    
+
             setYear(selectedYear);
-    
+            setMonth(selectedMonth);
+
             setLoadingCurrentYear(true);
             setLoadingFutureYear(true);
-    
-            // Fetch current year data
+
             fetchCurrentYearData(districtId, selectedYear, selectedMonth);
-    
-            // Fetch historical or future data based on the year
             if (selectedYear < 2024) {
                 fetchHistoricalYearData(districtId, selectedYear, selectedMonth);
             } else {
                 fetchFutureYearData(districtId, selectedYear, selectedMonth);
             }
         };
-    
+
         window.addEventListener("storage", handleStorageChange);
-    
+
         return () => window.removeEventListener("storage", handleStorageChange);
     }, []);
-    
 
     return (
         <main className="flex flex-col justify-evenly items-center pt-5 bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">
@@ -158,13 +153,13 @@ function WaterManagementDashboard() {
                     <div className="flex flex-row w-full">
                         <div className="flex flex-wrap pl-4">
                             <DataCard
-                                title=" Consumption (2024)"
-                                value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading..."}
+                                title={` Consumption (2024-${month}) `}
+                                value={loadingCurrentYear ? "Loading..." : (currentYearData ? currentYearData.consumption.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title=" Inflow (2024)"
-                                value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading..."}
+                                title={` Inflow (2024-${month})`}
+                                value={loadingCurrentYear ? "Loading..." : (currentYearData ? currentYearData.inflow.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                         </div>
@@ -173,12 +168,12 @@ function WaterManagementDashboard() {
                     <div className="flex flex-row w-full">
                         <div className="flex flex-wrap">
                             <DataCard
-                                title={`Past Consumption (${year})` }
+                                title={`Past Consumption (${year}-${month})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.consumption.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title={`Past Inflow (${year})` }
+                                title={`Past Inflow (${year}-${month})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />

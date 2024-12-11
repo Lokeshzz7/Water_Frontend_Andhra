@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-import LanguageSwitcher from "./LanguageSwitcher.jsx";
 import logo from "../data/logo2.png"; // Imported logo
-
+import LanguageSwitcher from "./LanguageSwitcher.jsx";
 const Header = ({ className = "" }) => {
   const location = useLocation();
 
@@ -28,7 +27,6 @@ const Header = ({ className = "" }) => {
       >
         {/* Logo and Dashboard Title */}
         <div className="flex items-center">
-          
           <div className="text-white text-xl">
             <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-[30px]">
               Return Zero
@@ -46,9 +44,18 @@ const Header = ({ className = "" }) => {
           <span>{currentPage}</span>
         </div>
 
-        {/* Language Switcher */}
-        <div className="ml-auto">
-          {/* <LanguageSwitcher /> */}
+        {/* Right Side Buttons */}
+        <div className="ml-auto flex items-center">
+        <LanguageSwitcher />
+          {/* Linktree Button */}
+          <a
+            href="https://www.hopp.bio/bhuvanesh24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 focus:outline-none"
+          >
+            Ref data Links
+          </a>
         </div>
       </div>
     </header>

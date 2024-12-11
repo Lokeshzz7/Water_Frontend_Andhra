@@ -6,6 +6,7 @@ const LinearGauge = () => {
     const [percentages, setPercentages] = useState(null);
     const [title, setTitle] = useState('Water Usage Prediction');
     const [loading, setLoading] = useState(false); // New state for loading
+    const[month,setmonth]=useState(null);
 
     const fetchData = async () => {
         setLoading(true); // Set loading to true before the API call
@@ -25,9 +26,10 @@ const LinearGauge = () => {
 
             // Set the title based on the year
             if (parseInt(year) <= 2024) {
-                setTitle(`Past Water Usage Distribution (${year})`);
+                setTitle(`Past Water Usage Distribution (${year}-${month})`);
+
             } else {
-                setTitle(`Past Water Usage Distribution (${year})`);
+                setTitle(`Past Water Usage Distribution (${year}-${month})`);
             }
 
             // Determine which API endpoint to use based on the year

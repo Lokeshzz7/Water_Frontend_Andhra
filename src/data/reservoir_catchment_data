@@ -1,0 +1,22 @@
+[
+    { "id": 1, "reservoir_name": "SRISAILAM R", "catchment_area": 206030 },
+    { "id": 2, "reservoir_name": "NAGARJUNA SAGAR", "catchment_area": 215194 },
+    { "id": 4, "reservoir_name": "PRAKASAM BARRAGE", "catchment_area": 251372 },
+    { "id": 5, "reservoir_name": "YELERU", "catchment_area": 2232 },
+    { "id": 6, "reservoir_name": "BRAHMAMSAGAR", "catchment_area": 240 },
+    { "id": 7, "reservoir_name": "TANDAVA", "catchment_area": 467 },
+    { "id": 8, "reservoir_name": "GUNDLAKAMMA", "catchment_area": 8195 },
+    { "id": 9, "reservoir_name": "THOTAPALLI BARRAGE", "catchment_area": 4455 },
+    { "id": 10, "reservoir_name": "GOTTA BARRAGE", "catchment_area": 10830 },
+    { "id": 11, "reservoir_name": "SOMASILA", "catchment_area": 50492.5 },
+    { "id": 12, "reservoir_name": "KANDALERU", "catchment_area": 4306 },
+    { "id": 14, "reservoir_name": "VELOGODU BALANCING", "catchment_area": 218.40 },
+    { "id": 16, "reservoir_name": "CHITRAVATI BALANCING", "catchment_area": 5431 },
+    { "id": 17, "reservoir_name": "MYLAVARAM(PENNAR)", "catchment_area": 19197 },
+    { "id": 18, "reservoir_name": "PAIDIPALEM BALANCING", "catchment_area": 20 },
+    { "id": 20, "reservoir_name": "ALAGANURU BALANCING", "catchment_area": 66 },
+    { "id": 21, "reservoir_name": "VAMIKONDA SAGAR", "catchment_area": 40 },
+    { "id": 22, "reservoir_name": "YELLANUR SR2", "catchment_area": 50 }
+]
+
+

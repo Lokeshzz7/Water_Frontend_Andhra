@@ -25,9 +25,9 @@ const CurrentLinearGauge = () => {
 
             // Set the title based on the year
             if (parseInt(year) <= 2024) {
-                setTitle(` Water Usage Distribution (${2024})`);
+                setTitle(` Water Usage Distribution (${2024}-${month})`);
             } else {
-                setTitle(`Water Usage Distribution (${2024})`);
+                setTitle(`Water Usage Distribution (${2024}-${month})`);
             }
 
             // Determine which API endpoint to use based on the year
