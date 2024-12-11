@@ -32,10 +32,15 @@ const ReservoirHealth = () => {
     let apiUrl;
     if (selectedYear > 2024) {
       // Destructure values after setting the current year data
-      const { mean_storage, flood_cushion, rainfall, evaporation, siltation, capacity, age , population } = CurrentData;
-      if (mean_storage == null || flood_cushion == null || rainfall == null || evaporation == null || siltation == null || capacity == null || age == null) {
-        console.error("One or more required values are missing in CurrentData:", CurrentData);
-        return;
+      const { mean_storage, flood_cushion, rainfall, evaporation, siltation, capacity, age , population } = CurrentData.data;
+      console.log("mean_storage : " , mean_storage);
+      console.log(flood_cushion);
+      // if (mean_storage == null || flood_cushion == null || rainfall == null || evaporation == null || siltation == null || capacity == null || age == null) {
+      //   console.error("One or more required values are missing in CurrentData:", CurrentData);
+      //   return;
+      // }
+      if(mean_storage == null){
+        console.log("oifhfjskdfnksdf");
       }
       console.log("sdjfhjsdfh ", CurrentData);
       let updatedAge = age + (selectedYear - 2024);
@@ -66,7 +71,7 @@ const ReservoirHealth = () => {
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-      setRiskScore(9); // Default to 0 in case of an error
+      setRiskScore(0.09); // Default to 0 in case of an error
     }
   };
 

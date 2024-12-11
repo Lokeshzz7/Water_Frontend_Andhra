@@ -3,13 +3,6 @@ import * as echarts from "echarts";
 
 const DroughtScore = ({ droughtScore }) => {
     useEffect(() => {
-        // Function to calculate percentage
-        const calculatePercentage = (value, maxValue) => Math.min(1, Math.max(0, value / maxValue));
-
-        // Normalize droughtScore to a percentage
-        const maxValue = 200; // Replace with your actual maximum value
-        const normalizedScore = calculatePercentage(droughtScore, maxValue); // Ensure score is between 0-1
-
         // Initialize ECharts
         const chartDom = document.getElementById("reservoir-health-chart");
         const myChart = echarts.init(chartDom);
@@ -28,13 +21,13 @@ const DroughtScore = ({ droughtScore }) => {
             tooltip: {
                 trigger: "item",
                 formatter: function (params) {
-                    const riskScore = params.value * 100; // Convert to percentage
+                    const riskScore = params.value; // Use the score directly
                     let riskLevel = "";
-                    if (params.value >= 0.75) {
+                    if (riskScore <= 25) {
                         riskLevel = "Low Risk";
-                    } else if (params.value >= 0.5) {
+                    } else if (riskScore <= 50) {
                         riskLevel = "Medium Risk";
-                    } else if (params.value >= 0.25) {
+                    } else if (riskScore <= 75) {
                         riskLevel = "High Risk";
                     } else {
                         riskLevel = "Very High Risk";
@@ -42,7 +35,7 @@ const DroughtScore = ({ droughtScore }) => {
 
                     return `
                         <div>
-                            <strong>Risk Score:</strong> ${Math.round(riskScore)}%<br/>
+                            <strong>Risk Score:</strong> ${Math.round(riskScore)}<br/>
                             <strong>Risk Level:</strong> ${riskLevel}
                         </div>
                     `;
@@ -76,16 +69,16 @@ const DroughtScore = ({ droughtScore }) => {
                     center: ["50%", "80%"],
                     radius: "110%",
                     min: 0,
-                    max: 1,
+                    max: 100, // The score range is 0-100
                     splitNumber: 8,
                     axisLine: {
                         lineStyle: {
                             width: 6,
                             color: [
-                                [0.25, "#7CFFB2"],
-                                [0.5, "#58D9F9"],
-                                [0.75, "#FDDD60"],
-                                [1, "#FF6E76"],
+                                [0.25, "#7CFFB2"], // 0-25 Low Risk
+                                [0.5, "#58D9F9"], // 26-50 Medium Risk
+                                [0.75, "#FDDD60"], // 51-75 High Risk
+                                [1, "#FF6E76"], // 76-100 Very High Risk
                             ],
                         },
                     },
@@ -118,14 +111,14 @@ const DroughtScore = ({ droughtScore }) => {
                         distance: -50,
                         rotate: "tangential",
                         formatter: function (value) {
-                            if (value === 0.875) {
-                                return "Very High Risk";
-                            } else if (value === 0.625) {
-                                return "High Risk";
-                            } else if (value === 0.375) {
-                                return "Medium Risk";
-                            } else if (value === 0.125) {
+                            if (value === 12.5) {
                                 return "Low Risk";
+                            } else if (value === 37.5) {
+                                return "Medium Risk";
+                            } else if (value === 62.5) {
+                                return "High Risk";
+                            } else if (value === 87.5) {
+                                return "Very High Risk";
                             }
                             return "";
                         },
@@ -140,13 +133,13 @@ const DroughtScore = ({ droughtScore }) => {
                         offsetCenter: [0, "-35%"],
                         valueAnimation: true,
                         formatter: function (value) {
-                            return `${Math.round(value * 100)}/100`;
+                            return `${Math.round(value)}/100`; // Use the raw score directly
                         },
                         color: "white",
                     },
                     data: [
                         {
-                            value: normalizedScore,
+                            value: droughtScore, // Directly use droughtScore
                             name: "Score",
                         },
                     ],
@@ -181,7 +174,8 @@ const DroughtScore = ({ droughtScore }) => {
                     className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
                     style={{ display: 'none', width: '200px' }}
                 >
-A drought score is a numerical metric indicating the severity or likelihood of drought in an area, based on factors like rainfall deficit, soil moisture, temperature, and water availability. It aids in assessing water scarcity risks and resource management.                </div>
+A drought score is a numerical metric indicating the severity or likelihood of drought in an area, based on factors like rainfall deficit, soil moisture, temperature, and water availability. It aids in assessing water scarcity risks and resource management.
+                </div>
             </div>
             <div
                 id="reservoir-health-chart"

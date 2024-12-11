@@ -20,6 +20,12 @@ const FilterDropdown = () => {
       : null;
   });
 
+  const [selectedMonth, setSelectedMonth] = useState(() => {
+    return localStorage.getItem("selectedMonth")
+      ? parseInt(localStorage.getItem("selectedMonth"))
+      : null;
+  });
+
   const [selectedReservoir, setSelectedReservoir] = useState(() => {
     return localStorage.getItem("selectedReservoir")
       ? parseInt(localStorage.getItem("selectedReservoir"))
@@ -66,11 +72,27 @@ const FilterDropdown = () => {
 
   const isReservoirPage = window.location.pathname === "/reservoirstatus";
   const isScenarioPlanningPage = window.location.pathname === "/scenarioplanning";
+  const isWaterForecastPage = window.location.pathname.startsWith("/waterforecast");
 
   const years = Array.from({ length: 16 }).map((_, i) => ({
     label: `Year ${2029 - i}`,
     value: 2029 - i,
   }));
+
+  const months = [
+    { label: "January", value: "1" },
+    { label: "February", value: "2" },
+    { label: "March", value: "3" },
+    { label: "April", value: "4" },
+    { label: "May", value: "5" },
+    { label: "June", value: "6" },
+    { label: "July", value: "7" },
+    { label: "August", value: "8" },
+    { label: "September", value: "9" },
+    { label: "October", value: "10" },
+    { label: "November", value: "11" },
+    { label: "December", value: "12" },
+  ];
 
   const fetchReservoirs = async (districtId) => {
     if (!districtId) return;
@@ -137,23 +159,17 @@ const FilterDropdown = () => {
     window.dispatchEvent(new Event("storage"));
   };
 
+  const handleMonthChange = (monthValue) => {
+    setSelectedMonth(monthValue);
+    localStorage.setItem("selectedMonth", monthValue);
+    window.dispatchEvent(new Event("storage"));
+  };
+
   useEffect(() => {
     if (isReservoirPage && selectedDistrict !== null) {
       fetchReservoirs(selectedDistrict);
     }
   }, [selectedDistrict, isReservoirPage]);
-
-  const selectedStateName =
-    states.find((s) => s.value === selectedState)?.name || "Not Selected";
-  const selectedDistrictName =
-    (isReservoirPage
-      ? districtDataReservoirPage
-      : districtDataAllPages
-    ).find((d) => d.id === selectedDistrict)?.name || "Not Selected";
-  const selectedYearLabel = selectedYear ? `Year ${selectedYear}` : "Not Selected";
-  const selectedReservoirName =
-    reservoirOptions.find((r) => r.value === selectedReservoir)?.label ||
-    "Not Selected";
 
   return (
     <div className="container mx-auto px-4">
@@ -198,6 +214,16 @@ const FilterDropdown = () => {
               }
               className="dropdown-style ml-5 mr-5 rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/3"
               disabled={loading || !reservoirOptions.length}
+            />
+          )}
+
+          {isWaterForecastPage && (
+            <Dropdown
+              value={selectedMonth}
+              onChange={(e) => handleMonthChange(e.value)}
+              options={months}
+              placeholder="Select Month"
+              className="dropdown-style ml-5 mr-5 rounded-xl p-3 font-bold text-4xl bg-slate-100 w-1/3 text-red-900"
             />
           )}
 

@@ -123,6 +123,7 @@ const MainContent = () => {
 
       if (response.ok) {
         const data = await response.json();
+        console.log("Score : " , data);
         setResponseData(data);
         setResponseMessage('Data retrieved successfully!');
       } else {
