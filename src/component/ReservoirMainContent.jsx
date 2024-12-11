@@ -136,21 +136,21 @@ const ReservoirMainContent = () => {
                                     value={loading ? "Loading..." : (reservoirData?.gross_capacity || "N/A")}
                                     unit="TMC"
                                 />
-                                <DataCard
+                                {/* <DataCard
                                     title={`Current Level (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.current_level || "N/A")}
                                     unit="Ft"
-                                />
+                                /> */}
                                 {/* <DataCard
                                     title={`Inflow (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.inflow || "N/A")}
                                     unit="Cusecs"
                                 /> */}
-                                <DataCard
+                                {/* <DataCard
                                     title={`Age (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
                                     unit="Years"
-                                />
+                                /> */}
                             </div>
                             <div className="flex flex-col">
                             <DataCard
@@ -158,22 +158,22 @@ const ReservoirMainContent = () => {
                                     value={loading ? "Loading..." : (reservoirData?.current_storage || "N/A")}
                                     unit="TMC"
                                 />
-                                <DataCard
+                                {/* <DataCard
                                     title={`Flood Cushion (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.flood_cushion || "N/A")}
                                     unit="TMC"
-                                />
+                                /> */}
                                 
                                 {/* <DataCard
                                     title={`Outflow (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
                                     unit="Cusecs"
                                 /> */}
-                                <DataCard
+                                {/* <DataCard
                                     title={`Siltation (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.outflow || "N/A")}
                                     unit="TMC"
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>

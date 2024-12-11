@@ -120,27 +120,33 @@ function WaterManagementDashboard() {
             const districtId = localStorage.getItem("selectedDistrict");
             const selectedYear = parseInt(localStorage.getItem("selectedYear"), 10);
             const selectedMonth = parseInt(localStorage.getItem("selectedMonth"), 10);
-
+    
             if (!districtId || !selectedYear) {
                 console.error("District or Year is missing in localStorage");
                 return;
             }
+    
             setYear(selectedYear);
-
+    
             setLoadingCurrentYear(true);
             setLoadingFutureYear(true);
-
+    
+            // Fetch current year data
+            fetchCurrentYearData(districtId, selectedYear, selectedMonth);
+    
+            // Fetch historical or future data based on the year
             if (selectedYear < 2024) {
                 fetchHistoricalYearData(districtId, selectedYear, selectedMonth);
             } else {
                 fetchFutureYearData(districtId, selectedYear, selectedMonth);
             }
         };
-
+    
         window.addEventListener("storage", handleStorageChange);
-
+    
         return () => window.removeEventListener("storage", handleStorageChange);
     }, []);
+    
 
     return (
         <main className="flex flex-col justify-evenly items-center pt-5 bg-darkslateblue shadow-lg max-md:px-5 overflow-hidden">

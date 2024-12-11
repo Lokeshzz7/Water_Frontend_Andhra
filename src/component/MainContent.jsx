@@ -88,15 +88,15 @@ const MainContent = () => {
         { value: maxPopulation, label: `${maxPopulation} Cucecs` },
       ]);
       setInflowMarks([
-        { value: 0, label: '0 Cusecs' },
-        { value: 5000, label: `${5000} Cusecs` },
-        { value: 10000, label: `${10000} Cusecs` },
+        { value: 0, label: '0 TMC' },
+        { value: 5000, label: `${50} TMC` },
+        { value: 10000, label: `${100} TMC` },
 
       ])
       setOutFlowMarks([
-        { value: 0, label: '0 Cusecs' },
-        { value: 5000, label: `${5000} Cusecs` },
-        { value: 10000, label: `${10000} Cusecs` },
+        { value: 0, label: '0 TMC' },
+        { value: 5000, label: `${50} TMC` },
+        { value: 10000, label: `${100} TMC` },
 
       ])
 
@@ -211,12 +211,12 @@ const MainContent = () => {
                     value={responseData["Adjusted Inflow"] !== undefined && responseData["Adjusted Inflow"] !== null
                       ? responseData["Adjusted Inflow"].toFixed(2)
                       : 'N/A'}
-                    unit="Cusecs"
+                    unit="TMC"
                   />
                   <ScenarioCard
                     title="Storage Change"
                     value={responseData["Storage Change"] !== undefined && responseData["Storage Change"] !== null
-                      ? responseData["Storage Change"].toFixed(2)
+                      ? (responseData["Storage Change"]/100).toFixed(2)
                       : 'N/A'}
                     unit="TMC"
                   />
@@ -228,7 +228,7 @@ const MainContent = () => {
                     value={responseData["Adjusted Outflow"] !== undefined && responseData["Adjusted Outflow"] !== null
                       ? responseData["Adjusted Outflow"].toFixed(2)
                       : 'N/A'}
-                    unit="Cusecs"
+                    unit="TMC"
                   />
                   {/* <ScenarioCard
                     title="Storage Change"
