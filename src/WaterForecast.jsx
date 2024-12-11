@@ -167,12 +167,12 @@ function WaterManagementDashboard() {
                     <div className="flex flex-row w-full">
                         <div className="flex flex-wrap">
                             <DataCard
-                                title={year < 2024 ? `Past Consumption (${year})` : `Predicted Consumption (${year})`}
+                                title={`Past Consumption (${year})` }
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.consumption.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title={year < 2024 ? `Past Inflow (${year})` : `Predicted Inflow (${year})`}
+                                title={`Past Inflow (${year})` }
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
