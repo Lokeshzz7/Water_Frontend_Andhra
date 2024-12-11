@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import waterUsageData from '../data/modified_usage_json_converted.json'; // Import your JSON file
 
 const CurrentLinearGauge = () => {
     const [waterUsage, setWaterUsage] = useState({ title: 'Water Usage Prediction', value: 0 });
     const [usageData, setUsageData] = useState(null);
     const [percentages, setPercentages] = useState(null);
     const [title, setTitle] = useState('Water Usage Prediction');
-    const [loading, setLoading] = useState(false); // State for loading
-    const [initialLoad, setInitialLoad] = useState(true); // State for initial load
+    const [loading, setLoading] = useState(false); // New state for loading
 
     const fetchData = async () => {
         setLoading(true); // Set loading to true before the API call
@@ -15,17 +13,26 @@ const CurrentLinearGauge = () => {
             // Get necessary values from localStorage
             const districtId = localStorage.getItem('selectedDistrict'); // e.g., "25"
             const year = localStorage.getItem('selectedYear'); // e.g., "2024"
+            const month = localStorage.getItem("selectedMonth"); // Get the selected month
 
-            if (!districtId || !year) {
-                console.warn('District ID or year not found in localStorage.');
+            if (!districtId || !year || !month) {
+                console.warn('District ID, year, or month not found in localStorage.');
                 setUsageData(null);
                 setPercentages(null);
                 setLoading(false); // Set loading to false when data is not found
-                setInitialLoad(false); // Mark the initial load as complete
                 return;
             }
 
-            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/2024/`;
+            // Set the title based on the year
+            if (parseInt(year) <= 2024) {
+                setTitle(` Water Usage Distribution (${2024})`);
+            } else {
+                setTitle(`Water Usage Distribution (${2024})`);
+            }
+
+            // Determine which API endpoint to use based on the year
+            const apiUrl =  `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/2024/`
+;
 
             const response = await fetch(apiUrl);
 
@@ -35,50 +42,55 @@ const CurrentLinearGauge = () => {
 
             const data = await response.json();
 
-            // Filter for month 1
-            const januaryData = data.find(item => item.month === 1);
-
-            if (!januaryData) {
-                console.warn('Data for month 1 not found.');
+            if (!data || data.length === 0) {
+                console.warn('No data returned from API.');
                 setUsageData(null);
                 setPercentages(null);
-                setLoading(false); // Set loading to false when data is not found
-                setInitialLoad(false); // Mark the initial load as complete
+                setLoading(false); // Set loading to false when data is not returned
                 return;
             }
 
-            // Extract relevant fields
-            const mappedData = {
-                Domestic: januaryData.domestic,
-                Industrial: januaryData.industry,
-                Irrigation: januaryData.irrigation,
-            };
+            // Process data to calculate totals for the selected month
+            const monthData = data.find(item => item.month === parseInt(month)); // Find the selected month data
+            if (!monthData) {
+                console.error('No data found for the selected month.');
+                setUsageData(null);
+                setPercentages(null);
+                setLoading(false);
+                return;
+            }
 
-            setUsageData(mappedData);
+            // Set the usage data for each category
+            const { domestic, industry, irrigation, consumption } = monthData;
+            setUsageData({
+                Domestic: domestic,
+                Industrial: industry,
+                Irrigation: irrigation,
+            });
 
-            // Calculate the total water usage
-            const totalUsage = Object.values(mappedData).reduce((acc, value) => acc + value, 0);
-            setWaterUsage({ title: 'Water Usage Prediction', value: totalUsage.toFixed(2) });
-
-            // Calculate percentages for the linear gauge
-            if (totalUsage > 0) {
-                const calculatedPercentages = Object.fromEntries(
-                    Object.entries(mappedData).map(([key, value]) => [
-                        key,
-                        ((value / totalUsage) * 100).toFixed(2),
-                    ])
-                );
+            // Calculate the total consumption and percentages
+            if (consumption > 0) {
+                const calculatedPercentages = {
+                    Domestic: ((domestic / consumption) * 100).toFixed(2),
+                    Industrial: ((industry / consumption) * 100).toFixed(2),
+                    Irrigation: ((irrigation / consumption) * 100).toFixed(2),
+                };
                 setPercentages(calculatedPercentages);
             } else {
                 setPercentages(null);
             }
+
+            // Set the water usage based on the total consumption for the selected month
+            setWaterUsage({
+                title: 'Total Water Consumption',
+                value: consumption.toFixed(2),
+            });
         } catch (error) {
             console.error('Error fetching or processing data:', error);
             setUsageData(null);
             setPercentages(null);
         } finally {
             setLoading(false); // Set loading to false after the fetch is complete
-            setInitialLoad(false); // Mark the initial load as complete
         }
     };
 
@@ -86,10 +98,7 @@ const CurrentLinearGauge = () => {
         fetchData(); // Fetch data initially when component mounts
 
         const handleStorageChange = () => {
-            // Only fetch new data if the storage change triggers an update but not for the first load
-            if (!initialLoad) {
-                fetchData();
-            }
+            fetchData(); // Re-fetch data if localStorage changes
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -97,34 +106,40 @@ const CurrentLinearGauge = () => {
         return () => {
             window.removeEventListener("storage", handleStorageChange);
         };
-    }, [initialLoad]);
+    }, []);
 
     return (
-        <div className="w-11/12  mt-8 mr-9 p-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
-            <h2 className="mb-6 text-xl font-bold mt-3 ">Current Water Usage Distribution (2024)</h2>
-            {loading && initialLoad ? (
-                <p>Loading...</p> // Show loading message only during the initial load
+        <div className="w-11/12 mr-10 mt-8 p-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component rounded-3xl max-md:px-5 max-md:mt-3">
+            <h2 className="mb-6 text-xl font-bold mt-3">{title}</h2>
+            {loading ? (
+                <p>Loading...</p> // Show loading message if loading is true
             ) : (
                 percentages ? (
-                    Object.entries(percentages).map(([category, percentage]) => (
-                        <div key={category} className="flex items-center mb-8 ">
-                            <span className=" text-lg font-bold  text-[#f19cbb]">{category}: {percentage}%</span>
+                    Object.entries(percentages).map(([category, percentage]) => {
+                        // Get the exact value for each category
+                        const value = usageData[category]; // This will give the exact value of the category
+                        return (
+                            <div key={category} className="flex items-center mb-8">
+                                <span className="text-lg font-bold text-[#f19cbb]">
+                                    {category}: {value} ({percentage}%) {/* Show exact value and percentage */}
+                                </span>
 
-                            <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
-                                <div
-                                    className="fill h-full rounded"
-                                    style={{
-                                        width: `${percentage}%`,
-                                        background: {
-                                            Domestic: '#4CAF50',
-                                            Industrial: '#f44336',
-                                            Irrigation: '#00BCD4',
-                                        }[category],
-                                    }}
-                                />
+                                <div className="bar w-full h-4 bg-gray-200 rounded overflow-hidden">
+                                    <div
+                                        className="fill h-full rounded"
+                                        style={{
+                                            width: `${percentage}%`,
+                                            background: {
+                                                Domestic: '#4CAF50',
+                                                Industrial: '#f44336',
+                                                Irrigation: '#00BCD4',
+                                            }[category],
+                                        }}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ))
+                        );
+                    })
                 ) : (
                     <p>No data to display</p>
                 )

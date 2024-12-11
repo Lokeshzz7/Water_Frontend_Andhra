@@ -7,75 +7,73 @@ const MonthConsumptionGraph = () => {
     const [selectedYear, setSelectedYear] = useState(localStorage.getItem("selectedYear"));
     const [noData, setNoData] = useState(false);
 
-    const fetchMonthData = (districtId, selectedYear) => {
-        if (parseInt(selectedYear, 10) < 2024) {
-            setNoData(true);
-            setChartData({});
-            return;
-        }
-
-        const apiEndpoint =
-            parseInt(selectedYear, 10) > 2024
-                ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`
-                : `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
-
-        fetch(apiEndpoint)
-            .then((response) => response.json())
-            .then((data) => {
-                if (!data || data.length === 0) {
-                    setNoData(true);
-                    setChartData({});
-                    return;
+    const fetchMonthData = async (districtId, selectedYear) => {
+        console.log("Starting to fetch data...");
+        
+        
+    
+        const apiEndpoint = `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+        console.log(`Fetching data from API: ${apiEndpoint}`);
+        
+        try {
+            const response = await fetch(apiEndpoint); // Using await here
+            console.log("API response received.");
+    
+            const data = await response.json();
+            console.log("API data parsed:", data);
+    
+            if (!data || data.length === 0) {
+                console.log("No data found in response.");
+                setNoData(true);
+                setChartData({});
+                return;
+            }
+    
+            // Defining months and empty data arrays
+            const months = [
+                "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+            ];
+            const consumptionData = new Array(12).fill(0);
+            const inflowData = new Array(12).fill(0);
+            const irrigationData = new Array(12).fill(0);
+            const industryData = new Array(12).fill(0);
+            const domesticData = new Array(12).fill(0);
+    
+            // Populating the data arrays
+            data.forEach((entry) => {
+                const monthIndex = entry.month - 1;  // Adjust for 0-indexed array
+                if (monthIndex >= 0 && monthIndex < 12) {
+                    console.log(`Processing month: ${entry.month}`);
+                    console.log(`Consumption: ${entry.consumption}, Inflow: ${entry.rainfall}, Irrigation: ${entry.irrigation}, Industry: ${entry.industry}, Domestic: ${entry.domestic}`);
+                    
+                    consumptionData[monthIndex] = entry.consumption || 0;
+                    inflowData[monthIndex] = entry.rainfall || 0;
+                    irrigationData[monthIndex] = entry.irrigation || 0;
+                    industryData[monthIndex] = entry.industry || 0;
+                    domesticData[monthIndex] = entry.domestic || 0;
                 }
-
-                const months = [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec",
-                ];
-
-                const consumptionData = new Array(12).fill(0);
-                const inflowData = new Array(12).fill(0);
-                const irrigationData = new Array(12).fill(0);
-                const industryData = new Array(12).fill(0);
-                const domesticData = new Array(12).fill(0);
-
-                data.forEach((entry) => {
-                    const monthIndex = entry.month - 1;
-                    if (monthIndex >= 0 && monthIndex < 12) {
-                        consumptionData[monthIndex] = entry.consumption || 0;
-                        inflowData[monthIndex] = (entry.rainfall + entry.inflow_states) || 0;
-                        irrigationData[monthIndex] = entry.irrigation || 0;
-                        industryData[monthIndex] = entry.industry || 0;
-                        domesticData[monthIndex] = entry.domestic || 0;
-                    }
-                });
-
-                setChartData({
-                    months,
-                    consumptionData,
-                    inflowData,
-                    irrigationData,
-                    industryData,
-                    domesticData,
-                });
-
-                setNoData(false); // Data is available
-            })
-            .catch((error) => {
-                console.error("Error fetching month data:", error);
-                setNoData(true); // Set no data on error
             });
+    
+            // Update chartData state
+            setChartData({
+                months,
+                consumptionData,
+                inflowData,
+                irrigationData,
+                industryData,
+                domesticData,
+            });
+    
+            setNoData(false); // Data is available
+            console.log("Data has been successfully processed and set in state.");
+    
+        } catch (error) {
+            console.error("Error fetching month data:", error);
+            setNoData(true); // Set no data on error
+        }
     };
+    
+    
 
     useEffect(() => {
         fetchMonthData(districtId, selectedYear);

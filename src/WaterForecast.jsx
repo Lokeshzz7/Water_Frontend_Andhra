@@ -45,7 +45,7 @@ function WaterManagementDashboard() {
             .catch((error) => console.error("Error fetching historical year data:", error))
             .finally(() => setLoadingFutureYear(false));
     };
-    
+
     const fetchFutureYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingFutureYear(true);
         fetch(`http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`)
@@ -69,10 +69,10 @@ function WaterManagementDashboard() {
             .catch((error) => console.error("Error fetching future year data:", error))
             .finally(() => setLoadingFutureYear(false));
     };
-    
+
     const fetchCurrentYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingCurrentYear(true);
-        fetch(`http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/2024`)
+        fetch(`http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/2024`)
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {
@@ -81,7 +81,7 @@ function WaterManagementDashboard() {
                     if (monthData) {
                         setCurrentYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall + monthData.inflow_states, // Correctly combine inflow and rainfall
+                            inflow: monthData.rainfall , // Correctly combine inflow and rainfall
                         });
                     } else {
                         console.error('No data found for the selected month.');
@@ -93,7 +93,7 @@ function WaterManagementDashboard() {
             .catch((error) => console.error("Error fetching current year data:", error))
             .finally(() => setLoadingCurrentYear(false));
     };
-    
+
 
     useEffect(() => {
         const districtId = localStorage.getItem("selectedDistrict");
@@ -152,14 +152,14 @@ function WaterManagementDashboard() {
                     <div className="flex flex-row w-full">
                         <div className="flex flex-wrap pl-4">
                             <DataCard
-                                title="Current Consumption (2024)"
+                                title=" Consumption (2024)"
                                 value={currentYearData ? currentYearData.consumption.toFixed(2) : "Loading..."}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title="Current Inflow (2024)"
+                                title=" Inflow (2024)"
                                 value={currentYearData ? currentYearData.inflow.toFixed(2) : "Loading..."}
-                                unit={"Cusecs"}
+                                unit={"TMC"}
                             />
                         </div>
                         <CurrentLinearGauge />
@@ -174,7 +174,7 @@ function WaterManagementDashboard() {
                             <DataCard
                                 title={year < 2024 ? `Past Inflow (${year})` : `Predicted Inflow (${year})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
-                                unit={"Cusecs"}
+                                unit={"TMC"}
                             />
                         </div>
                         <LinearGauge />
@@ -190,7 +190,7 @@ function WaterManagementDashboard() {
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
                     <RainfallGraph />
-                    <FactorsAffectingGraph />
+                    {/* <FactorsAffectingGraph /> */}
                 </div>
             </section>
         </main>
