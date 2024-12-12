@@ -74,10 +74,27 @@ const FilterDropdown = () => {
   const isScenarioPlanningPage = window.location.pathname === "/scenarioplanning";
   const isWaterForecastPage = window.location.pathname.startsWith("/waterforecast");
 
-  const years = Array.from({ length: 16 }).map((_, i) => ({
-    label: `Year ${2028 - i}`,
-    value: 2028 - i,
-  }));
+
+  // Generate years based on the condition
+  const years = isWaterForecastPage
+    ? [
+      ...Array.from({ length: 5 }).map((_, i) => ({
+        label: `Year ${2029- i}`,
+        value: 2029 - i,
+      })),
+      ...Array.from({ length: 10 }).map((_, i) => ({
+        label: `Year ${2023 - i}`,
+        value: 2023 - i,
+      })),
+      
+    ]
+    : Array.from({ length: 16 }).map((_, i) => ({
+      label: `Year ${2028 - i}`,
+      value: 2028 - i,
+    }));
+
+
+
 
   const months = [
     { label: "January", value: "1" },

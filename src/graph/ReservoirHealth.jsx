@@ -124,7 +124,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
 
       const option = {
         title: {
-          text: "Reservoir Score",
+          text: "Reservoir Efficiency Score",
           left: "center",
           textStyle: {
             color: "white",
@@ -225,13 +225,13 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
               rotate: "tangential",
               formatter: function (value) {
                 if (value === 0.875) {
-                  return "Very Good";
-                } else if (value === 0.625) {
-                  return "Good";
-                } else if (value === 0.375) {
-                  return "Medium";
-                } else if (value === 0.125) {
                   return "Low";
+                } else if (value === 0.625) {
+                  return "Medium";
+                } else if (value === 0.375) {
+                  return "Good";
+                } else if (value === 0.125) {
+                  return "Very Good";
                 }
                 return "";
               },
@@ -253,7 +253,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
             data: [
               {
                 value: riskScore,
-                name: "Reservoir Score",
+                name: "Reservoir Efficiency Score",
               },
             ],
           },
