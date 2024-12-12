@@ -64,47 +64,6 @@ const ReservoirMainContent = () => {
     };
 
     useEffect(() => {
-        const fetchReservoirData = async () => {
-            if (selectedStateIndex === null || selectedYear === null || selectedMonth === null) return;
-
-            setLoading(true);
-
-            try {
-                let response;
-                let data;
-
-                if (selectedYear > 2024) {
-                    response = await fetch(`http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
-                } else {
-                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
-                }
-
-                if (response.ok) {
-                    data = await response.json();
-                    if (data.length > 0) {
-                        const monthData = data.find(month => month.month === selectedMonth);
-                        if (monthData) {
-                            setReservoirData({
-                                current_storage: monthData.current_storage.toFixed(2),
-                                flood_cushion: monthData.flood_cushion.toFixed(2),
-                                gross_capacity: monthData.gross_capacity.toFixed(2),
-                                outflow: monthData.outflow.toFixed(2),
-                            });
-                        }
-                    }
-                }
-
-            } catch (error) {
-                console.error("Error fetching reservoir data:", error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchReservoirData();
-    }, [selectedStateIndex, selectedYear, selectedMonth]);
-
-    useEffect(() => {
         const fetchReservoirAge = async () => {
             if (selectedStateIndex === null || selectedYear === null || selectedDistrict === null || selectedMonth === null) return;
 
@@ -125,6 +84,50 @@ const ReservoirMainContent = () => {
 
         fetchReservoirAge();
     }, [selectedStateIndex, selectedYear, selectedDistrict, selectedMonth]);
+
+    useEffect(() => {
+        const fetchReservoirData = async () => {
+            if (selectedStateIndex === null || selectedYear === null || selectedMonth === null) return;
+
+            setLoading(true);
+
+            try {
+                let response;
+                let data;
+
+                if (selectedYear > 2024) {
+                    response = await fetch(`http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
+                } else {
+                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
+                }
+
+                if (response.ok) {
+                    data = await response.json();
+                    if (data.length > 0) {
+                        console.log("past data : " , data);
+                        const monthData = data.find(month => month.month === selectedMonth);
+                        console.log("month Data ; "  , monthData);
+                        if (monthData) {
+                            setReservoirData({
+                                current_storage: monthData.current_storage.toFixed(2),
+                                gross_capacity: monthData.gross_capacity.toFixed(2),
+                                flood_cushion: (monthData.gross_capacity- monthData.current_storage).toFixed(2),
+                            });
+                        }
+                    }
+                }
+
+            } catch (error) {
+                console.error("Error fetching reservoir data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchReservoirData();
+    }, [selectedStateIndex, selectedYear, selectedMonth]);
+
+    
 
     return (
         <main className="flex overflow-hidden flex-col justify-evenly items-center px-5 py-9 max-md:px-5">
@@ -151,7 +154,7 @@ const ReservoirMainContent = () => {
                             </div>
                             <div className="flex flex-col">
                                 <DataCard
-                                    title={`Current Storage (${getReservoirName()} - ${selectedYear || "Year"})`}
+                                    title={` Storage (${getReservoirName()} - ${selectedYear || "Year"})`}
                                     value={loading ? "Loading..." : (reservoirData?.current_storage || "N/A")}
                                     unit="TMC"
                                 />

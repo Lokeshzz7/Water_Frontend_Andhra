@@ -29,10 +29,16 @@ const WaterConsumptionGraph = () => {
     // Fetch data for the selected reservoir and year (for 12 months)
     const fetchMonthlyData = async (year, reservoirId) => {
         try {
-            const url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
+            let url;
+            if (year < 2025) {
+                url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
+            }
+            else{
+                url = `http://localhost:8000/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`
+            }
             const response = await fetch(url);
             const data = await response.json();
-
+            console.log("data isdhfkasjhfjksn ; " , data);
             if (data.length === 12) {
                 // Successfully received 12 months of data
                 const months = [];
