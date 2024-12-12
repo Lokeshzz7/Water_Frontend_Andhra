@@ -14,7 +14,7 @@ const StateMap = () => {
   const [selectedState, setSelectedState] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
 
-  const WEATHER_API_KEY = "760f3040d76d43098cf30956242811";
+  const WEATHER_API_KEY = "77ed054ea5084e15a3484917241212";
   const WEATHER_API_URL = "https://api.weatherapi.com/v1/forecast.json";
   const scripts = [
     "https://cdn.amcharts.com/lib/5/index.js",

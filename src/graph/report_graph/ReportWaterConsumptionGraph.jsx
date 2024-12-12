@@ -33,12 +33,12 @@ const WaterConsumptionGraph = () => {
             if (year < 2025) {
                 url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
             }
-            else{
+            else {
                 url = `http://localhost:8000/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`
             }
             const response = await fetch(url);
             const data = await response.json();
-            console.log("data isdhfkasjhfjksn ; " , data);
+            console.log("data isdhfkasjhfjksn ; ", data);
             if (data.length === 12) {
                 // Successfully received 12 months of data
                 const months = [];
@@ -232,8 +232,6 @@ const WaterConsumptionGraph = () => {
                 <h3 className="font-bold text-xl mt-4 mb-2">Insights</h3>
                 <p>{insights}</p>
 
-                <h3 className="font-bold text-xl mt-4 mb-2">Recommendations</h3>
-                <p>{recommendations}</p>
             </div>
         </div>
     );

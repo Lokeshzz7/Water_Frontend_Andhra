@@ -13,9 +13,7 @@ window.__GOOGLE_TRANSLATION_CONFIG__ = {
         { title: 'اردو', name: 'ur' },
         { title: 'ଓଡ଼ିଆ', name: 'or' },
         { title: 'অসমীয়া', name: 'as' },
-        { title: 'Español', name: 'es' },
-        { title: 'Français', name: 'fr' },
-        { title: 'Deutsch', name: 'de' }
+        
     ],
     defaultLanguage: 'en',
 };

@@ -193,9 +193,6 @@ const ReportLucGraph = () => {
                 <p>
                     <b>Insights:</b> {insights.insights}
                 </p>
-                <p>
-                    <b>Recommendations:</b> {insights.recommendations}
-                </p>
             </div>
         </div>
     );

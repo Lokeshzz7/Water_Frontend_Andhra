@@ -208,7 +208,6 @@ const ReportMonthConsumptionGraph = () => {
                 <h3 className="text-lg font-semibold">Graph Insights</h3>
                 <p><b>Interpretation:</b> {interpretation}</p>
                 <p><b>Insights:</b> {insights}</p>
-                <p><b>Recommendations:</b> {recommendations}</p>
             </div>
         </div>
     );

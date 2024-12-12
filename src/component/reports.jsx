@@ -4,6 +4,7 @@ import WaterConsumptionGraph from '../graph/report_graph/ReportWaterConsumptionG
 import ReservoirPerformanceChart from '../graph/report_graph/ReportLucGraph.jsx';
 import MonthlyConsumptionChart from '../graph/report_graph/ReportMonthConsumtionGraph.jsx';
 import ScenarioAnalysisChart from '../graph/report_graph/ReportScenarioGraph.jsx';
+import ReportFactorGraph from '../graph/report_graph/ReportFactorGraph.jsx';
 
 const Reports = () => {
     const pdfExportComponent = useRef(null);
@@ -62,6 +63,9 @@ const Reports = () => {
                                 <WaterConsumptionGraph />
                             </div>
                             <div className="flex flex-col w-1/2">
+                                <h3 className="font-semibold mb-4 ml-6">Factors Affecting Consumption</h3>
+
+                                <ReportFactorGraph />
                                 {/* <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3> */}
                                 {/* <ScenarioAnalysisChart /> */}
                             </div>

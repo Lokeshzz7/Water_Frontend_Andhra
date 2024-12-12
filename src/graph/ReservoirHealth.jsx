@@ -124,7 +124,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
 
       const option = {
         title: {
-          text: "Reservoir Efficiency Score",
+          text: "Reservoir Score",
           left: "center",
           textStyle: {
             color: "white",
@@ -253,7 +253,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
             data: [
               {
                 value: riskScore,
-                name: "Reservoir Efficiency Score",
+                name: "Reservoir Score",
               },
             ],
           },
@@ -271,6 +271,27 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
 
   return (
     <div className="relative">
+       <div
+                className="absolute left-7 z-[100] text-white p-1 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('symbol');
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('symbol');
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+                <div
+                    id="symbol"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: 'none', width: '200px' }}
+                >
+                    This graph shows the distribution of factors affecting risk for the selected district and year.
+                </div>
+            </div>
+
       <div
         id="reservoir-health-chart"
         className="w-[650px] ml-3 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg mb-8"
