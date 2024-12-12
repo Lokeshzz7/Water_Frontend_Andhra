@@ -15,7 +15,22 @@ const ReservoirMainContent = () => {
     const reservoirList = [
         { "name": "SRISAILAM R", "id": 1, "catchment_area": 206030 },
         { "name": "NAGARJUNA SAGAR", "id": 2, "catchment_area": 215194 },
-        //... other reservoirs
+        { "name": "PRAKASAM BARRAGE", "id": 4, "catchment_area": 251372 },
+        { "name": "YELERU", "id": 5, "catchment_area": 2232 },
+        { "name": "BRAHMAMSAGAR", "id": 6, "catchment_area": 240 },
+        { "name": "TANDAVA", "id": 7, "catchment_area": 467 },
+        { "name": "GUNDLAKAMMA", "id": 8, "catchment_area": 8195 },
+        { "name": "THOTAPALLI BARRAGE", "id": 9, "catchment_area": 4455 },
+        { "name": "GOTTA BARRAGE", "id": 10, "catchment_area": 10830 },
+        { "name": "SOMASILA", "id": 11, "catchment_area": 50492.5 },
+        { "name": "KANDALERU", "id": 12, "catchment_area": 4306 },
+        { "name": "VELOGODU BALANCING", "id": 14, "catchment_area": 218.40 },
+        { "name": "CHITRAVATI BALANCING", "id": 16, "catchment_area": 5431 },
+        { "name": "MYLAVARAM(PENNAR)", "id": 17, "catchment_area": 19197 },
+        { "name": "PAIDIPALEM BALANCING", "id": 18, "catchment_area": 20 },
+        { "name": "ALAGANURU BALANCING", "id": 20, "catchment_area": 66 },
+        { "name": "VAMIKONDA SAGAR", "id": 21, "catchment_area": 40 },
+        { "name": "YELLANUR SR2", "id": 22, "catchment_area": 50 }
     ];
 
     const loadFromLocalStorage = () => {
