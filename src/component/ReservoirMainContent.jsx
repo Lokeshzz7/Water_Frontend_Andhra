@@ -149,13 +149,15 @@ const ReservoirMainContent = () => {
                         </div>
                     </div>
                     <div className="flex flex-col flex-1 px-4">
-
+                        {reservoirData ? (
                             <ReservoirHealth
                                 current_storage={reservoirData.current_storage}
                                 flood_cushion={reservoirData.flood_cushion}
                                 gross_capacity={reservoirData.gross_capacity}
                             />
-                        
+                        ) : (
+                            null // Remove "Loading..." placeholder
+                        )}
                     </div>
                 </section>
 
