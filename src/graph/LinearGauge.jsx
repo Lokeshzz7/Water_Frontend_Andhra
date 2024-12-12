@@ -23,17 +23,19 @@ const LinearGauge = () => {
                 setLoading(false); // Set loading to false when data is not found
                 return;
             }
-
+            let apiUrl;
             // Set the title based on the year
             if (parseInt(year) <= 2024) {
-                setTitle(`Past Water Usage Distribution (${year}-${month})`);
+                setTitle(` Water Usage Distribution (${year}-${month})`);
+                apiUrl =  `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${year}/`;
 
             } else {
-                setTitle(`Past Water Usage Distribution (${year}-${month})`);
+                setTitle(`Water Usage Distribution (${year}-${month})`);
+                apiUrl = `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${year}/`;
             }
 
             // Determine which API endpoint to use based on the year
-            const apiUrl = `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${year}/`
+             
 
             const response = await fetch(apiUrl);
 
@@ -60,8 +62,8 @@ const LinearGauge = () => {
                 setLoading(false);
                 return;
             }
-
-            // Set the usage data for each category
+            console.log("Month data ; " , monthData);
+            // Set the usage data f         or each category
             const { domestic, industry, irrigation, consumption } = monthData;
             setUsageData({
                 Domestic: domestic,

@@ -33,7 +33,7 @@ function WaterManagementDashboard() {
                     if (monthData) {
                         setFutureYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall + monthData.inflow_state,
+                            inflow: monthData.rainfall ,
                         });
                     } else {
                         console.error("No data found for the selected month.");
@@ -56,7 +56,7 @@ function WaterManagementDashboard() {
                     if (monthData) {
                         setFutureYearData({
                             consumption: monthData.consumption,
-                            inflow: monthData.rainfall + monthData.inflow_states,
+                            inflow: monthData.rainfall ,
                         });
                     } else {
                         console.error("No data found for the selected month.");
@@ -168,12 +168,12 @@ function WaterManagementDashboard() {
                     <div className="flex flex-row w-full">
                         <div className="flex flex-wrap">
                             <DataCard
-                                title={`Past Consumption (${year}-${month})`}
+                                title={` Consumption (${year}-${month})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.consumption.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
                             <DataCard
-                                title={`Past Inflow (${year}-${month})`}
+                                title={` Inflow (${year}-${month})`}
                                 value={loadingFutureYear ? "Loading..." : (futureYearData ? futureYearData.inflow.toFixed(2) : "N/A")}
                                 unit={"TMC"}
                             />
@@ -191,7 +191,7 @@ function WaterManagementDashboard() {
             <section className="flex flex-row w-full">
                 <div className="flex flex-row flex-1 p-3 gap-7">
                     <RainfallGraph />
-                    {/* <FactorsAffectingGraph /> */}
+                    <FactorsAffectingGraph />
                 </div>
             </section>
         </main>
