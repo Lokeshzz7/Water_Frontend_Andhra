@@ -46,7 +46,7 @@ const Header = ({ className = "" }) => {
 
         {/* Right Side Buttons */}
         <div className="ml-auto flex items-center">
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
           {/* Linktree Button */}
           <a
             href="https://www.hopp.bio/bhuvanesh24"

@@ -62,7 +62,7 @@ const Reports = () => {
                                 <WaterConsumptionGraph />
                             </div>
                             <div className="flex flex-col w-1/2">
-                                <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3>
+                                {/* <h3 className="font-semibold mb-4 ml-6">Scenario Analysis Outcomes</h3> */}
                                 {/* <ScenarioAnalysisChart /> */}
                             </div>
                         </div>
