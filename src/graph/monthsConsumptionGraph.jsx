@@ -9,10 +9,11 @@ const MonthConsumptionGraph = () => {
 
     const fetchMonthData = async (districtId, selectedYear) => {
         console.log("Starting to fetch data...");
-        
-        
-    
-        const apiEndpoint = `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+
+        const apiEndpoint = selectedYear > 2024
+      ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}/`
+      : `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+
         console.log(`Fetching data from API: ${apiEndpoint}`);
         
         try {
@@ -34,7 +35,6 @@ const MonthConsumptionGraph = () => {
                 "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
             ];
             const consumptionData = new Array(12).fill(0);
-            const inflowData = new Array(12).fill(0);
             const irrigationData = new Array(12).fill(0);
             const industryData = new Array(12).fill(0);
             const domesticData = new Array(12).fill(0);
@@ -44,10 +44,9 @@ const MonthConsumptionGraph = () => {
                 const monthIndex = entry.month - 1;  // Adjust for 0-indexed array
                 if (monthIndex >= 0 && monthIndex < 12) {
                     console.log(`Processing month: ${entry.month}`);
-                    console.log(`Consumption: ${entry.consumption}, Inflow: ${entry.rainfall}, Irrigation: ${entry.irrigation}, Industry: ${entry.industry}, Domestic: ${entry.domestic}`);
+                    console.log(`Consumption: ${entry.consumption} ,Irrigation: ${entry.irrigation}, Industry: ${entry.industry}, Domestic: ${entry.domestic}`);
                     
                     consumptionData[monthIndex] = entry.consumption || 0;
-                    inflowData[monthIndex] = entry.rainfall || 0;
                     irrigationData[monthIndex] = entry.irrigation || 0;
                     industryData[monthIndex] = entry.industry || 0;
                     domesticData[monthIndex] = entry.domestic || 0;
@@ -58,7 +57,6 @@ const MonthConsumptionGraph = () => {
             setChartData({
                 months,
                 consumptionData,
-                inflowData,
                 irrigationData,
                 industryData,
                 domesticData,
@@ -144,7 +142,6 @@ const MonthConsumptionGraph = () => {
             },
             series: [
                 { name: "Consumption", type: "line", data: chartData.consumptionData },
-                { name: "Inflow", type: "line", data: chartData.inflowData },
                 { name: "Irrigation", type: "line", data: chartData.irrigationData },
                 { name: "Industry", type: "line", data: chartData.industryData },
                 { name: "Domestic", type: "line", data: chartData.domesticData },
