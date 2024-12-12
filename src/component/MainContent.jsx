@@ -89,14 +89,14 @@ const MainContent = () => {
       ]);
       setInflowMarks([
         { value: 0, label: '0 TMC' },
-        { value: 5000, label: `${50} TMC` },
-        { value: 10000, label: `${100} TMC` },
+        { value: 50, label: `${50} TMC` },
+        { value: 100, label: `${100} TMC` },
 
       ])
       setOutFlowMarks([
         { value: 0, label: '0 TMC' },
-        { value: 5000, label: `${50} TMC` },
-        { value: 10000, label: `${100} TMC` },
+        { value: 50, label: `${50} TMC` },
+        { value: 100, label: `${100} TMC` },
 
       ])
 
@@ -118,7 +118,7 @@ const MainContent = () => {
         return;
       }
 
-      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${1e6}&inflow=${inflow}&outflow=${outflow}&district_id=${selectedDistrict}`;
+      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${1e6}&inflow=${(inflow*100)}&outflow=${(outflow*100)}&district_id=${selectedDistrict}`;
       const response = await fetch(apiUrl, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
 
       if (response.ok) {
@@ -179,9 +179,9 @@ const MainContent = () => {
                 value={inflow}
                 onChange={setInflow}
                 marks={InflowMarks}
-                step={500}
+                step={5}
                 min={0}
-                max={10000}
+                max={100}
               />
             </div>
             <div className="flex w-full">
@@ -190,9 +190,9 @@ const MainContent = () => {
                 value={outflow}
                 onChange={setOutflow}
                 marks={OutFlowMarks}
-                step={500}
+                step={5}
                 min={0}
-                max={10000}
+                max={100}
               />
             </div>
             <button onClick={handleApply} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Apply</button>
