@@ -188,10 +188,10 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
               lineStyle: {
                 width: 6,
                 color: [
-                  [0.25, "#7CFFB2"],
-                  [0.5, "#58D9F9"],
-                  [0.75, "#FDDD60"],
-                  [1, "#FF6E76"],
+                  [0.25, "#FF6E76"],
+                  [0.5, "#FDDD60"],
+                  [0.75, "#58D9F9"],
+                  [1, "#7CFFB2"],
                 ],
               },
             },
@@ -225,13 +225,13 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
               rotate: "tangential",
               formatter: function (value) {
                 if (value === 0.875) {
-                  return "Low";
-                } else if (value === 0.625) {
-                  return "Medium";
-                } else if (value === 0.375) {
-                  return "Good";
-                } else if (value === 0.125) {
                   return "Very Good";
+                } else if (value === 0.625) {
+                  return "Good";
+                } else if (value === 0.375) {
+                  return "Medium";
+                } else if (value === 0.125) {
+                  return "Low";
                 }
                 return "";
               },
