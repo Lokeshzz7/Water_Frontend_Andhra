@@ -50,10 +50,10 @@ const GaugeChart = () => {
       const _panelImageURL =
         "https://echarts.apache.org/examples/data/asset/img/custom-gauge-panel.png";
       const _valOnRadianMax = 100;
-      const _outerRadius = 180;
-      const _innerRadius = 150;
-      const _pointerInnerRadius = 40;
-      const _insidePanelRadius = 140;
+      const _outerRadius = 140;
+      const _innerRadius = 90;
+      const _pointerInnerRadius = 25
+      const _insidePanelRadius = 130;
 
       function renderItem(params, api) {
         const valOnRadian = api.value(1);
@@ -220,13 +220,13 @@ const GaugeChart = () => {
         radiusAxis: {
           type: "value",
           show: false,
-          
+
         },
         polar: {},
         title: {
           text: "Risk Score", // Set the title text
           left: "center", // Center the title
-          top: "20px", // Adjust vertical position
+          top: "1px", // Adjust vertical position
           textStyle: {
             color: "white", // Set title color to white
             fontSize: 18, // Set title font size
@@ -240,7 +240,7 @@ const GaugeChart = () => {
             renderItem,
           },
         ],
-        
+
       };
 
       chartInstance.current.setOption(option);
@@ -253,7 +253,32 @@ const GaugeChart = () => {
     };
   }, [value]);
 
-  return <div ref={chartRef} className="w-1/2 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg ml-6 mt-8 mr-5 " />;
+  return (
+    <div className="relative">
+      <div
+        className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+        onMouseEnter={() => {
+          const tooltip = document.getElementById('RiskScore');
+          if (tooltip) tooltip.style.display = 'block';
+        }}
+        onMouseLeave={() => {
+          const tooltip = document.getElementById('RiskScore');
+          if (tooltip) tooltip.style.display = 'none';
+        }}
+      >
+        ℹ️
+        <div
+          id="RiskScore"
+          className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+          style={{ display: 'none', width: '200px' }}
+        >
+          A flood score is a numerical metric that quantifies the likelihood of flooding in a specific area, considering factors like rainfall, terrain, water flow, and infrastructure. It helps in risk assessment and planning for flood prevention and response.
+        </div>
+      </div>
+      <div ref={chartRef} className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg" />;
+
+    </div>
+  );
 };
 
 export default GaugeChart;

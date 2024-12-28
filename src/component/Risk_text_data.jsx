@@ -92,27 +92,27 @@ const RiskAssessment = () => {
   }, [stateName, year]); // Dependencies are stateName and year, so it will re-run when they change
 
   return (
-    <section className="flex flex-col items-start pt-7 pr-20 pb-36 pl-8 w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-full rounded-lg ml-6 mt-8 mr-4   text-white max-md:px-5 max-md:pb-24 max-md:mt-9 max-md:max-w-full">
-      <h2 className="text-6xl font-bold max-md:text-4xl text-center text-white">Risk Assessment</h2>
+    <section className="flex flex-col items-start p-2 w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-full rounded-lg ml-6 mt-1 mr-4   text-white max-md:px-5 max-md:pb-24 max-md:mt-9 max-md:max-w-full">
+      <h2 className="text-6xl ml-[240px] font-bold max-md:text-4xl text-center text-white">Risk Assessment</h2>
 
-      <div className="mt-2 text-lg max-md:max-w-full text-white">
-        <div className="mt-6 text-white">
-          <p className="text-4xl font-bold p-6">
+      <div className=" text-lg max-md:max-w-full text-white">
+        <div className="mt-2 text-white">
+          <p className="text-[30px] m-0  font-bold ">
             Risk level: <span className={`font-semibold ${riskLevelClass}`}>{riskLevel}</span>
           </p>
         </div>
         {riskInfo ? (
           <>
             <div className=" pl-6">
-              <p className="text-3xl font-bold text-blue-800">RISK :</p>
-              <p className="text-xl font-bold text-white">{riskInfo.risk}</p>
-              <p className="text-3xl mt-3 font-bold text-blue-800">Cause :</p>
-              <p className=" text-xl font-bold text-white">{riskInfo.cause}</p>
+              <p className="text-xl font-bold text-blue-800">RISK :</p>
+              <p className="text-lg font-bold text-white">{riskInfo.risk}</p>
+              <p className="text-xl mt-3 font-bold text-blue-800">Cause :</p>
+              <p className=" text-lg font-bold text-white">{riskInfo.cause}</p>
               <div className="mt-4">
-                <p className="text-3xl mt-3 font-bold text-blue-700">Mitigation:</p>
+                <p className="text-xl mt-3 font-bold text-blue-700">Mitigation:</p>
                 <ul className="list-disc pl-6 mt-2 space-y-2 font-bold black">
                   {riskInfo.mitigation.map((mitigation, index) => (
-                    <li key={index} className="text-xl">{mitigation}</li>
+                    <li key={index} className="text-lg">{mitigation}</li>
                   ))}
                 </ul>
               </div>

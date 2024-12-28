@@ -12,7 +12,7 @@ const FactorGraph = () => {
         const loadFromLocalStorage = () => {
             const stateIndex = parseInt(localStorage.getItem('selectedState'), 10);
             const year = parseInt(localStorage.getItem('selectedYear'), 10);
-            
+
             setSelectedStateIndex(stateIndex);
             setSelectedYear(year);
         };
@@ -79,7 +79,7 @@ const FactorGraph = () => {
             grid: {
                 containLabel: true,
                 right: '20%', // Move the entire chart (including labels) to the left by 10%
-                top: '20%',
+                top: '30%',
             },
             xAxis: {
                 name: 'Factor Value',
@@ -141,7 +141,7 @@ const FactorGraph = () => {
                         },
                         backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark background for the tooltip
                         borderColor: '#fff', // White border color
-                        borderWidth: 1, // Border width
+                        borderWidth: 2, // Border width
                         textStyle: {
                             color: '#fff', // Set tooltip text color to white
                             fontSize: 14, // Font size for the tooltip
@@ -149,70 +149,18 @@ const FactorGraph = () => {
                     },
                 },
             ],
-
-
-
-
-
             toolbox: {
                 show: true, // Show the toolbox
                 feature: {
                     saveAsImage: {
                         backgroundColor: 'transparent',
                     },
-                    myInfoButton: { // Custom info button
-                        show: true,
-                        title: 'Info', // Button title
-                        icon: 'path://M256 0C114.84 0 0 114.84 0 256s114.84 256 256 256 256-114.84 256-256S397.16 0 256 0zM256 448C132.48 448 48 363.52 48 256S132.48 64 256 64s208 84.48 208 192-84.48 192-208 192zM256 176c-13.28 0-24 10.72-24 24s10.72 24 24 24 24-10.72 24-24-10.72-24-24-24zM256 272c-13.28 0-24 10.72-24 24s10.72 24 24 24 24-10.72 24-24-10.72-24-24-24z',
-                        onclick: function (params, event) {
-                            // Check if the event is available
-                            if (!event || !event.currentTarget) {
-                                console.error('Event object or currentTarget is missing.');
-                                return;
-                            }
-
-                            // Use currentTarget for more stability
-                            const infoButton = event.currentTarget;
-                            const rect = infoButton.getBoundingClientRect();
-
-                            // Create an info box
-                            const infoBox = document.createElement('div');
-                            infoBox.style.position = 'absolute';
-                            infoBox.style.backgroundColor = 'white';
-                            infoBox.style.color = 'black';
-                            infoBox.style.padding = '15px';
-                            infoBox.style.borderRadius = '5px';
-                            infoBox.style.zIndex = 9999;
-                            infoBox.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.1)';
-                            infoBox.style.fontSize = '12px';
-                            infoBox.style.width = '250px';
-                            infoBox.style.top = `${rect.top + rect.height + 10}px`; // Position below the button
-                            infoBox.style.left = `${rect.left}px`; // Align with the button
-
-                            // Content of the info box
-                            infoBox.innerHTML = `
-                    <strong>Graph Information</strong><br/>
-                    This graph visualizes the relationship between different factors and their values over time.<br/>
-                    It helps to analyze trends and patterns.
-                `;
-
-                            // Add the info box to the body
-                            document.body.appendChild(infoBox);
-
-                            // Automatically hide the info box after 5 seconds
-                            setTimeout(() => {
-                                document.body.removeChild(infoBox);
-                            }, 5000);
-                        },
-                    },
+                   
                 },
                 itemSize: 18, // Optional: Adjust the size of toolbox icons
                 top: '1%', // Position the toolbox from the top (you can adjust this)
                 right: '2%', // Position the toolbox from the right (you can adjust this)
             },
-
-
-
 
             title: {
                 text: 'Factors Affecting',
@@ -242,8 +190,28 @@ const FactorGraph = () => {
 
     return (
         <div>
+            <div
+                className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
+                onMouseEnter={() => {
+                    const tooltip = document.getElementById('RiskFactors');
+                    if (tooltip) tooltip.style.display = 'block';
+                }}
+                onMouseLeave={() => {
+                    const tooltip = document.getElementById('RiskFactors');
+                    if (tooltip) tooltip.style.display = 'none';
+                }}
+            >
+                ℹ️
+                <div
+                    id="RiskFactors"
+                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    style={{ display: 'none', width: '200px' }}
+                >
+                    A flood score is a numerical metric that quantifies the likelihood of flooding in a specific area, considering factors like rainfall, terrain, water flow, and infrastructure. It helps in risk assessment and planning for flood prevention and response.
+                </div>
+            </div>
             {/* The div where the chart will be rendered */}
-            <div id="factor-graph" className="w-[680px] shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-[454px] rounded-lg ml-6 mt-8 mr-4  "></div>
+            <div id="factor-graph" className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"></div>
         </div>
     );
 };
