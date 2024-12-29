@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DataCard from './DataCard.jsx';
 import WaterConsumptionGraph from '../graph/WaterConsumptionGraph.jsx';
 import ReservoirHealth from '../graph/ReservoirHealth.jsx';
+import {BASE_URL} from '../Config.js'
 
 const ReservoirMainContent = () => {
     const [reservoirData, setReservoirData] = useState(null);
@@ -68,7 +69,7 @@ const ReservoirMainContent = () => {
             if (selectedStateIndex === null || selectedYear === null || selectedDistrict === null || selectedMonth === null) return;
 
             try {
-                const CurrentapiUrl = `http://127.0.0.1:8000/api/reservoir/get-score-data?year=${selectedYear}&reservoir_id=${selectedStateIndex}&district_id=${selectedDistrict}&month=${selectedMonth}`;
+                const CurrentapiUrl = `${BASE_URL}/api/reservoir/get-score-data?year=${selectedYear}&reservoir_id=${selectedStateIndex}&district_id=${selectedDistrict}&month=${selectedMonth}`;
                 const response = await fetch(CurrentapiUrl);
 
                 if (response.ok) {
@@ -96,9 +97,9 @@ const ReservoirMainContent = () => {
                 let data;
 
                 if (selectedYear > 2024) {
-                    response = await fetch(`http://127.0.0.1:8000/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
+                    response = await fetch(`${BASE_URL}/api/reservoir/get-reservoir-prediction/${selectedStateIndex}/${selectedYear}`);
                 } else {
-                    response = await fetch(`http://localhost:8000/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
+                    response = await fetch(`${BASE_URL}/api/reservoir/get-reservoir-by-id/${selectedStateIndex}/${selectedYear}`);
                 }
 
                 if (response.ok) {

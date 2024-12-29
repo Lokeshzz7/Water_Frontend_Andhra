@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../Config.js'
 
 const FloodScore = ({ FloodScore }) => {
     useEffect(() => {

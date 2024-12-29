@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Dropdown } from "primereact/dropdown";
+import {BASE_URL} from '../Config.js'
 
 const DistrictReservoirDropdown = () => {
     const [selectedDistrict, setSelectedDistrict] = useState(() => {
@@ -62,7 +63,7 @@ const DistrictReservoirDropdown = () => {
         setLoading(true);
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/reservoir/get-all-reservoirs/${districtId}`
+                `${BASE_URL}/api/reservoir/get-all-reservoirs/${districtId}`
             );
             const data = await response.json();
             console.log("Fetched Reservoirs Data:", data);

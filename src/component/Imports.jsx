@@ -1,5 +1,6 @@
 import React from 'react';
 import UploadButton from './UploadButton';
+import {BASE_URL} from '../Config.js'
 
 const Imports = () => {
     // Function to generate PDF (you'll need to implement the actual PDF generation logic)

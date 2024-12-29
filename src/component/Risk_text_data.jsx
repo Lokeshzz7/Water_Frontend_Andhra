@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {BASE_URL} from '../Config.js'
 
 const RiskAssessment = () => {
   const [riskInfo, setRiskInfo] = useState(null);
@@ -18,7 +19,7 @@ const RiskAssessment = () => {
       setYear(selectedMonth || "");
 
       // API call to get the risk data based on district, year, and month
-      const response = await fetch(`http://127.0.0.1:8000/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`);
+      const response = await fetch(`${BASE_URL}/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`);
       const data = await response.json();
       console.log("api :", response);
       console.log("data ;", data);

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../../Config.js'
 
 // Mock function to generate risk data for districts
 const mockFetchDistrictRiskData = () => {

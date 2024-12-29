@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 import ScenarioSlider from '../graph/ScenarioSlider'; // Import the ScenarioSlider component
+import {BASE_URL} from '../Config.js'
 
 const ScenarioDropdown = () => {
   const [selectedOption, setSelectedOption] = useState(() => {

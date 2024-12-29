@@ -5,6 +5,7 @@ import ScenarioCard from './ScenarioCard';
 import jsonData from '../data/rain_evap_pop.json'; // Adjust the path to your JSON file
 import DroughtScore from '../graph/DroughtScore';
 import FloodScore from '../graph/FloodScore';
+import {BASE_URL} from '../Config.js'
 
 const useLocalStorage = (key, initialValue) => {
   const [value, setValue] = useState(() => {
@@ -118,7 +119,7 @@ const MainContent = () => {
         return;
       }
 
-      const apiUrl = `http://127.0.0.1:8000/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${1e6}&inflow=${(inflow*100)}&outflow=${(outflow*100)}&district_id=${selectedDistrict}`;
+      const apiUrl = `${BASE_URL}/api/scenario/get-simulation/?evaporation=${evaporation}&rainfall=${rainfall}&population=${1e6}&inflow=${(inflow*100)}&outflow=${(outflow*100)}&district_id=${selectedDistrict}`;
       const response = await fetch(apiUrl, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
 
       if (response.ok) {

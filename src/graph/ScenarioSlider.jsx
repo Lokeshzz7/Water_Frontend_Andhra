@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Slider, Typography, Box } from '@mui/material';
+import {BASE_URL} from '../Config.js'
 
 const ScenarioSlider = () => {
   const [value, setValue] = useState(0);

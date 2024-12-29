@@ -1,4 +1,5 @@
 import React from 'react';
+import {BASE_URL} from '../Config.js'
 
 const LegendItem = ({ color, label }) => (
   <div className={`flex gap-2.5 mt-1.5 rounded-sm ${label === 'Agriculture' ? 'w-[82px]' : label === 'Doesmetic' ? 'w-20' : 'w-[58px]'}`}>

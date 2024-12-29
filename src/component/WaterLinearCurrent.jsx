@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {BASE_URL} from '../Config.js'
 
 const WaterLinearCurrent = () => {
     const [waterUsage, setWaterUsage] = useState({ title: 'Current Water Usage ', value: 0 });
@@ -17,7 +18,7 @@ const WaterLinearCurrent = () => {
 
 
                 // POST request for future year
-                const response = await axios.post("http://127.0.0.1:8000/api/forecast/predict/", {
+                const response = await axios.post(`${BASE_URL}/api/forecast/predict/`, {
                     state_idx: selectedState,
                     target_year: 2024,
                 });

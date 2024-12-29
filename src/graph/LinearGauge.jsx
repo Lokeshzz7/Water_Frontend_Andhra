@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {BASE_URL} from '../Config.js'
 
 const LinearGauge = () => {
     const [waterUsage, setWaterUsage] = useState({ title: 'Water Usage Prediction', value: 0 });
@@ -27,11 +28,11 @@ const LinearGauge = () => {
             // Set the title based on the year
             if (parseInt(year) <= 2024) {
                 setTitle(` Water Usage Distribution (${year}-${month})`);
-                apiUrl =  `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${year}/`;
+                apiUrl =  `${BASE_URL}/api/forecast/get-usage/${districtId}/${year}/`;
 
             } else {
                 setTitle(`Water Usage Distribution (${year}-${month})`);
-                apiUrl = `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${year}/`;
+                apiUrl = `${BASE_URL}/api/forecast/predict-usage/${districtId}/${year}/`;
             }
 
             // Determine which API endpoint to use based on the year

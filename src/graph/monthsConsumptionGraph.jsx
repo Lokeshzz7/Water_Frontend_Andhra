@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../Config.js'
 
 const MonthConsumptionGraph = () => {
     const [chartData, setChartData] = useState({});
@@ -11,8 +12,8 @@ const MonthConsumptionGraph = () => {
         console.log("Starting to fetch data...");
 
         const apiEndpoint = selectedYear > 2024
-      ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}/`
-      : `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+      ? `${BASE_URL}/api/forecast/predict-usage/${districtId}/${selectedYear}/`
+      : `${BASE_URL}/api/forecast/get-usage/${districtId}/${selectedYear}/`;
 
         console.log(`Fetching data from API: ${apiEndpoint}`);
         

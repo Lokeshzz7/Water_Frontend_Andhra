@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import resData from "./reservoir_data_full.json"; // Adjust the path to where your resData is located
-
+import {BASE_URL} from '../Config.js'
 const StateMap = () => {
     const chartRef = useRef(null);
     const rootRef = useRef(null);

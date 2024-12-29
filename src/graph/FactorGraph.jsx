@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import data from '../data/risk_assessment_fake_data.json'; // Assuming the data is imported
+import {BASE_URL} from '../Config.js'
 
 const FactorGraph = () => {
     const [factorsData, setFactorsData] = useState({});

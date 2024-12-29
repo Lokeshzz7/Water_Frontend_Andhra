@@ -1,4 +1,5 @@
 import React from 'react';
+import {BASE_URL} from '../Config.js'
 
 const ScenarioCard = ({ title, value, unit, legend }) => {
 

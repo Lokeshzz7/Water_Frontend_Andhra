@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ExportsDrop from './ExportsDrop.jsx';
+import {BASE_URL} from '../Config.js'
 
 const Exports = () => {
     // State for loading
@@ -21,8 +22,7 @@ const Exports = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/forecast/get-exports/${district}/${year}/${month}/`);
-            console.log("api : " , api);
+            const response = await fetch(`${BASE_URL}/api/forecast/get-exports/${district}/${year}/${month}/`);
             if (!response.ok) {
                 throw new Error('Failed to fetch CSV data');
             }

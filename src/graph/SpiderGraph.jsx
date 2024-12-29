@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
 import data from "../data/reservoir_fake_data.json"; // Replace with the correct JSON file name
+import {BASE_URL} from '../Config.js'
 
 const SpiderGraph = () => {
     const [usageData, setUsageData] = useState(null);

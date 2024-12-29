@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../../Config.js'
 
 const GaugeChart = () => {
   const chartRef = useRef(null);
@@ -23,7 +24,7 @@ const GaugeChart = () => {
       try {
         // Fetch data from the API
         const response = await fetch(
-          `http://127.0.0.1:8000/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`
+          `${BASE_URL}/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`
         );
         const data = await response.json();
 

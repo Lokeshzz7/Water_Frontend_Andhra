@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import {BASE_URL} from '../Config.js'
 
 const COOKIE_NAME = "googtrans";
 

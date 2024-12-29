@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as echarts from 'echarts';
+import {BASE_URL} from '../../Config.js'
 
 const FactorsGraph = () => {
     const [selectedYear, setSelectedYear] = useState(localStorage.getItem('selectedYear') || '');
@@ -27,13 +28,13 @@ const FactorsGraph = () => {
         try {
             // Fetch data for selected year
             const selectedYearResponse = await fetch(
-                `http://127.0.0.1:8000/api/forecast/get-factors/${selectedDistrict}/${selectedYear}/${selectedMonth}/`
+                `${BASE_URL}/api/forecast/get-factors/${selectedDistrict}/${selectedYear}/${selectedMonth}/`
             );
             const selectedYearData = await selectedYearResponse.json();
 
             // Fetch data for 2024
             const year2024Response = await fetch(
-                `http://127.0.0.1:8000/api/forecast/get-factors/${selectedDistrict}/2024/${selectedMonth}/`
+                `${BASE_URL}/api/forecast/get-factors/${selectedDistrict}/2024/${selectedMonth}/`
             );
             const year2024Data = await year2024Response.json();
 

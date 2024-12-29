@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../Config.js'
 
 const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }) => {
   const [CurrentYearData, SetCurrentYearData] = useState([]); // Initially empty array
@@ -24,7 +25,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
     }
 
     // Log the API URL that is being called
-    const CurrentapiUrl = `http://127.0.0.1:8000/api/reservoir/get-score-data?year=${selectedYear}&reservoir_id=${selectedReservoir}&district_id=${selectedDistrict}&month=${selectedMonth}`;
+    const CurrentapiUrl = `${BASE_URL}/api/reservoir/get-score-data?year=${selectedYear}&reservoir_id=${selectedReservoir}&district_id=${selectedDistrict}&month=${selectedMonth}`;
     console.log(`Calling API with URL: ${CurrentapiUrl}`);
     const Currentresponse = await fetch(CurrentapiUrl);
     const CurrentData = await Currentresponse.json();
@@ -41,7 +42,7 @@ const ReservoirHealth = ({ current_storage  , flood_cushion  , gross_capacity  }
     }
 
     // Construct the API URL based on the year selected
-    const apiUrl = `http://127.0.0.1:8000/api/reservoir/get-score?current_storage=${current_storage}&gross_capacity=${gross_capacity}&siltation=${silt}&flood_cushion=${flood_cushion}&evaporation=${evaporation}&rainfall=${rainfall}&age=${age_final}&design_life=100`;
+    const apiUrl = `${BASE_URL}/api/reservoir/get-score?current_storage=${current_storage}&gross_capacity=${gross_capacity}&siltation=${silt}&flood_cushion=${flood_cushion}&evaporation=${evaporation}&rainfall=${rainfall}&age=${age_final}&design_life=100`;
 
     console.log("apiUrl to get score: ", apiUrl);
 

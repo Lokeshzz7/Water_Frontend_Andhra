@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import resData from "../data/Andhra_Res.json";
 import ScenarioDataCard from "../component/ScenarioDataCard";
+import {BASE_URL} from '../Config.js'
 
 const StateMap = () => {
   const chartRef = useRef(null);

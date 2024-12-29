@@ -5,6 +5,7 @@ import ReservoirPerformanceChart from '../graph/report_graph/ReportLucGraph.jsx'
 import MonthlyConsumptionChart from '../graph/report_graph/ReportMonthConsumtionGraph.jsx';
 import ScenarioAnalysisChart from '../graph/report_graph/ReportScenarioGraph.jsx';
 import ReportFactorGraph from '../graph/report_graph/ReportFactorGraph.jsx';
+import {BASE_URL} from '../Config.js'
 
 const Reports = () => {
     const pdfExportComponent = useRef(null);

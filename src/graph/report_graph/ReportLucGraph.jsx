@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import axios from 'axios';
+import {BASE_URL} from '../../Config.js'
 
 const ReportLucGraph = () => {
     const [stateName, setStateName] = useState('');
@@ -41,9 +42,9 @@ const ReportLucGraph = () => {
             };
 
             let data;
-            const apiUrl = `http://127.0.0.1:8000/api/forecast/predict-luc/${districtId}/${year}/`;
+            const apiUrl = `${BASE_URL}/api/forecast/predict-luc/${districtId}/${year}/`;
             if (year < 2023) {
-                const landUseUrl = `http://127.0.0.1:8000/api/forecast/get_landuse/${districtId}/${year}/`;
+                const landUseUrl = `${BASE_URL}/api/forecast/get_landuse/${districtId}/${year}/`;
                 data = await fetchLandUseData(landUseUrl);
             } else {
                 data = await fetchLandUseData(apiUrl);

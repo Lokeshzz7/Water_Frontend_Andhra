@@ -1,4 +1,5 @@
 import React from 'react';
+import {BASE_URL} from '../Config.js'
 
 function WaterUsageChart({ title, value, percentage, status }) {
     const months = ['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB'];

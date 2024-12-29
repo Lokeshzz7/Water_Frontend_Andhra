@@ -9,6 +9,7 @@ import RainfallGraph from "./graph/RainfallGraph.jsx";
 import FilterDropdown from "./component/FilterDropdown.jsx";
 import FactorsAffectingGraph from "./graph/FactorsAffectiongGraph.jsx";
 import Months from "./graph/monthsConsumptionGraph.jsx";
+import {BASE_URL} from './Config.js'
 
 function WaterManagementDashboard() {
     const [currentYearData, setCurrentYearData] = useState(null);
@@ -20,7 +21,7 @@ function WaterManagementDashboard() {
 
     const fetchHistoricalYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingFutureYear(true);
-        fetch(`http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`)
+        fetch(`${BASE_URL}/api/forecast/get-usage/${districtId}/${selectedYear}/`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -48,7 +49,7 @@ function WaterManagementDashboard() {
 
     const fetchFutureYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingFutureYear(true);
-        fetch(`http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`)
+        fetch(`${BASE_URL}/api/forecast/predict-usage/${districtId}/${selectedYear}`)
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {
@@ -71,7 +72,7 @@ function WaterManagementDashboard() {
 
     const fetchCurrentYearData = (districtId, selectedYear, selectedMonth) => {
         setLoadingCurrentYear(true);
-        fetch(`http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/2024`)
+        fetch(`${BASE_URL}/api/forecast/get-usage/${districtId}/2024`)
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data) && data.length > 0) {

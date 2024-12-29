@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as echarts from 'echarts';
 import axios from 'axios';
+import {BASE_URL} from '../Config.js'
 
 const RainfallGraph = () => {
     const [districtId, setDistrictId] = useState(localStorage.getItem('selectedDistrict'));
@@ -22,8 +23,8 @@ const RainfallGraph = () => {
                 // If the year is greater than 2024, always fetch 2023 data
                 const apiUrl =
                     year > 2024
-                        ? `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/2023`
-                        : `http://127.0.0.1:8000/api/forecast/get-rainfall/${districtId}/${year}`;
+                        ? `${BASE_URL}/api/forecast/get-rainfall/${districtId}/2023`
+                        : `${BASE_URL}/api/forecast/get-rainfall/${districtId}/${year}`;
 
                 const response = await axios.get(apiUrl);
                 const data = response.data;

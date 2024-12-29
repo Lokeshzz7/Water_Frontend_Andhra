@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../../Config.js'
 
 const ReportMonthConsumptionGraph = () => {
     const [chartData, setChartData] = useState({});
@@ -13,8 +14,8 @@ const ReportMonthConsumptionGraph = () => {
     const fetchMonthData = (districtId, selectedYear) => {
         const apiEndpoint =
             parseInt(selectedYear, 10) > 2024
-                ? `http://127.0.0.1:8000/api/forecast/predict-usage/${districtId}/${selectedYear}`
-                : `http://127.0.0.1:8000/api/forecast/get-usage/${districtId}/${selectedYear}/`;
+                ? `${BASE_URL}/api/forecast/predict-usage/${districtId}/${selectedYear}`
+                : `${BASE_URL}/api/forecast/get-usage/${districtId}/${selectedYear}/`;
 
         fetch(apiEndpoint)
             .then((response) => response.json())

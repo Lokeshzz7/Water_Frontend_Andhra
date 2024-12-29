@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import {BASE_URL} from '../Config.js'
 
 const WaterConsumptionGraph = () => {
     const [chartData, setChartData] = useState({
@@ -31,10 +32,10 @@ const WaterConsumptionGraph = () => {
         try {
             let url;
             if (year < 2025) {
-                url = `http://localhost:8000/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
+                url = `${BASE_URL}/api/reservoir/get-reservoir-by-id/${reservoirId}/${year}`;
             }
             else{
-                url = `http://localhost:8000/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`
+                url = `${BASE_URL}/api/reservoir/get-reservoir-prediction/${reservoirId}/${year}`
             }
             const response = await fetch(url);
             const data = await response.json();

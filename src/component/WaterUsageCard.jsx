@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {BASE_URL} from '../Config.js'
 
 // WaterUsageCard Component
 const WaterUsageCard = () => {
@@ -16,7 +17,7 @@ const WaterUsageCard = () => {
 
                 if (parseInt(selectedYear) >= currentYear) {
                     // Make a POST request if the selected year is in the future
-                    const response = await axios.post("http://127.0.0.1:8000/api/forecast/predict/", {
+                    const response = await axios.post(`${BASE_URL}/api/forecast/predict/`, {
                         state_idx: selectedState,
                         target_year: selectedYear,
                     });
@@ -40,7 +41,7 @@ const WaterUsageCard = () => {
                     });
                 } else {
                     // Make a GET request if the selected year is in the past or the current year
-                    const response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_usage/${selectedState}/${selectedYear}`);
+                    const response = await axios.get(`${BASE_URL}/api/forecast/get_usage/${selectedState}/${selectedYear}`);
                     const data = response.data;
                     console.log(data);
                     console.log('get water usage');

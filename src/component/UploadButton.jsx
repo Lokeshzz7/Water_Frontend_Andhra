@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import {BASE_URL} from '../Config.js'
 
 // Visually hidden input to trigger file selection via the button
 const VisuallyHiddenInput = styled('input')({
@@ -35,7 +36,7 @@ export default function UploadButton() {
         formData.append('file', file); // Append the file to the FormData object
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/reservoir/model-retrain/', {
+            const response = await fetch('${BASE_URL}/api/reservoir/model-retrain/', {
                 method: 'POST',
                 body: formData,
             });

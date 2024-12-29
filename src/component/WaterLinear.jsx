@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {BASE_URL} from '../Config.js'
 
 const WaterLinear = () => {
     const [waterUsage, setWaterUsage] = useState({ title: 'Water Usage Prediction', value: 0 });
@@ -24,7 +25,7 @@ const WaterLinear = () => {
 
                 if (selectedYear >= currentYear) {
                     // POST request for future year
-                    response = await axios.post("http://127.0.0.1:8000/api/forecast/predict/", {
+                    response = await axios.post(`${BASE_URL}/api/forecast/predict/`, {
                         state_idx: selectedState,
                         target_year: selectedYear,
                     });
@@ -32,7 +33,7 @@ const WaterLinear = () => {
                     rawData = response.data[selectedYear]; // Extract data for the selected year
                 } else {
                     // GET request for past or current year
-                    response = await axios.get(`http://127.0.0.1:8000/api/forecast/get_usage/${selectedState}/${selectedYear}`);
+                    response = await axios.get(`${BASE_URL}/api/forecast/get_usage/${selectedState}/${selectedYear}`);
                     rawData = response.data;
                 }
 
