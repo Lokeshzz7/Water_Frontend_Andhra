@@ -155,7 +155,7 @@ const FactorGraph = () => {
                     saveAsImage: {
                         backgroundColor: 'transparent',
                     },
-                   
+
                 },
                 itemSize: 18, // Optional: Adjust the size of toolbox icons
                 top: '1%', // Position the toolbox from the top (you can adjust this)
@@ -190,7 +190,7 @@ const FactorGraph = () => {
 
     return (
         <div>
-            <div
+            {/* <div
                 className="absolute left-7 z-[100] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
                 onMouseEnter={() => {
                     const tooltip = document.getElementById('RiskFactors');
@@ -204,12 +204,12 @@ const FactorGraph = () => {
                 ℹ️
                 <div
                     id="RiskFactors"
-                    className="absolute top-[35px] left-0 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
+                    className="absolute top-[90px] left-8 p-2 bg-black text-white text-sm rounded shadow-md z-[101]"
                     style={{ display: 'none', width: '200px' }}
                 >
-                    A flood score is a numerical metric that quantifies the likelihood of flooding in a specific area, considering factors like rainfall, terrain, water flow, and infrastructure. It helps in risk assessment and planning for flood prevention and response.
+                    Hello My name is Priyanaka
                 </div>
-            </div>
+            </div> */}
             {/* The div where the chart will be rendered */}
             <div id="factor-graph" className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg"></div>
         </div>

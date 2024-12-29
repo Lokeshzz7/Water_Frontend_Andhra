@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
-import data from "../../data/risk_assessment_fake_data.json";
 
 const GaugeChart = () => {
   const chartRef = useRef(null);
@@ -8,24 +7,43 @@ const GaugeChart = () => {
   const [value, setValue] = useState(0);
   const [stateName, setStateName] = useState("");
   const [year, setYear] = useState("");
+  const [loading, setLoading] = useState(false); // For showing a loading state
 
-  // Function to analyze data based on local storage values
-  const analyzeData = () => {
-    const selectedState = localStorage.getItem("selectedState");
-    const selectedYear = localStorage.getItem("selectedYear");
+  // Function to fetch data from API and update the state
+  const analyzeData = async () => {
+    const selectedDistrict = localStorage.getItem("selectedDistrict");
+    const selectedMonth = localStorage.getItem("selectedMonth");
 
-    setStateName(selectedState || "");
-    setYear(selectedYear || "");
+    setStateName(selectedDistrict || "");
+    setYear(selectedMonth || "");
 
-    if (selectedState && selectedYear) {
-      const matchingData = data.find(
-        (item) =>
-          item.index === parseInt(selectedState) && item.year === parseInt(selectedYear)
-      );
-      setValue(matchingData ? matchingData.risk_factor : 0);
+    if (selectedDistrict && selectedMonth) {
+      setLoading(true); // Start loading
+
+      try {
+        // Fetch data from the API
+        const response = await fetch(
+          `http://127.0.0.1:8000/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`
+        );
+        const data = await response.json();
+
+        if (data && data.response && data.response.length > 0) {
+          let riskScore = data.response[0].risk_score;
+          if(riskScore == 100){
+            riskScore = 92;
+          }
+          setValue(riskScore); // Set the value based on the risk score
+        } else {
+          setValue(0); // If no data, set default value to 0
+        }
+      } catch (error) {
+        console.error("Error fetching risk data:", error);
+        setValue(0); // Set default value in case of error
+      } finally {
+        setLoading(false); // Stop loading
+      }
     }
   };
-  console.log("macthiing data ; " + value);
 
   // Effect to listen for localStorage changes
   useEffect(() => {
@@ -52,7 +70,7 @@ const GaugeChart = () => {
       const _valOnRadianMax = 100;
       const _outerRadius = 140;
       const _innerRadius = 90;
-      const _pointerInnerRadius = 25
+      const _pointerInnerRadius = 25;
       const _insidePanelRadius = 130;
 
       function renderItem(params, api) {
@@ -210,17 +228,17 @@ const GaugeChart = () => {
             color: "#fff", // Set tooltip text color to white
             fontSize: 14, // Font size for the tooltip
           },
-        }, angleAxis: {
+        },
+        angleAxis: {
           type: "value",
           startAngle: 0,
           show: false,
           min: 0,
-          max: _valOnRadianMax,
+          max: 100,
         },
         radiusAxis: {
           type: "value",
           show: false,
-
         },
         polar: {},
         title: {
@@ -240,7 +258,6 @@ const GaugeChart = () => {
             renderItem,
           },
         ],
-
       };
 
       chartInstance.current.setOption(option);
@@ -275,8 +292,7 @@ const GaugeChart = () => {
           A flood score is a numerical metric that quantifies the likelihood of flooding in a specific area, considering factors like rainfall, terrain, water flow, and infrastructure. It helps in risk assessment and planning for flood prevention and response.
         </div>
       </div>
-      <div ref={chartRef} className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg" />;
-
+      <div ref={chartRef} className="w-[650px] ml-6 pt-4 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-[#0b1437] h-[330px] rounded-lg" />
     </div>
   );
 };

@@ -14,7 +14,7 @@ const DataVisualizations = () => {
       </section>
       <section className="mt-17 w-full max-w-[1950px] max-md:max-w-full">
         <div className="flex max-md:flex-col">
-          <FactorGraph />
+          {/* <FactorGraph /> */}
         </div>
       </section>
     </main>

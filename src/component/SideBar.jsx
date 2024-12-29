@@ -42,11 +42,11 @@ const Menu = ({ className = "" }) => {
         // { path: "/", label: "Home", icon: <i className="pi pi-home" style={{ fontSize: "1.5rem", color: "white" }}></i> },
         { path: "/waterforecast", label: "Water Forecast", icon: <i className="pi pi-chart-line" style={{ fontSize: "1.5rem", color: "white" }}></i> },
         { path: "/reservoirstatus", label: "Reservoir Status", icon: <i className="pi pi-map-marker" style={{ fontSize: "1.5rem", color: "white" }}></i> },
-        { path: "/riskassessment", label: "Risk Assessment", icon: <i className="pi pi-exclamation-triangle" style={{ fontSize: "1.5rem", color: "white" }}></i> },
         { path: "/scenarioplanning", label: "Scenario Planning", icon: <i className="pi pi-calendar" style={{ fontSize: "1.5rem", color: "white" }}></i> },
+        { path: "/riskassessment", label: "Risk Assessment", icon: <i className="pi pi-exclamation-triangle" style={{ fontSize: "1.5rem", color: "white" }}></i> },
         { path: "/map", label: "Map", icon: <i className="pi pi-globe" style={{ fontSize: "1.5rem", color: "white" }}></i> },
         { path: "/reports", label: "Reports", icon: <i className="pi pi-file" style={{ fontSize: "1.5rem", color: "white" }}></i> },
-        // { path: "/imports", label: "Imports", icon: <i className="pi pi-file" style={{ fontSize: "1.5rem", color: "white" }}></i> },
+        { path: "/imports", label: "Imports", icon: <i className="pi pi-file" style={{ fontSize: "1.5rem", color: "white" }}></i> },
     ];
     return (
         <>

@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 import logo from "../data/logo2.png"; // Imported logo
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
+import userManual from "../data/user_manual.pdf"; // Import the PDF file (adjust the path if needed)
+
 const Header = ({ className = "" }) => {
-  const location = useLocation();
+  const location   = useLocation();
 
   // Map routes to readable names
   const pageNames = {
@@ -46,15 +48,23 @@ const Header = ({ className = "" }) => {
 
         {/* Right Side Buttons */}
         <div className="ml-auto flex items-center">
-        <LanguageSwitcher />
-          {/* Linktree Button */}
+          <LanguageSwitcher />
+          {/* Ref data Links Button */}
           <a
             href="https://www.hopp.bio/bhuvanesh24"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 focus:outline-none"
+            className="ml-4 bg-slate-100 text-black px-4 py-3 rounded-[10px] hover:bg-blue-700 focus:outline-none"
           >
             Ref data Links
+          </a>
+          {/* User Manual Button */}
+          <a
+            href={userManual} // Use the imported PDF file
+            download="User_Manual.pdf" // Specify the download file name
+            className="ml-4 bg-slate-100 text-black px-4 py-3 rounded-[10px] hover:bg-blue-700 focus:outline-none"
+          >
+            User Manual
           </a>
         </div>
       </div>

@@ -4,12 +4,14 @@ import Risk_Selection_Dropdown from './component/Risk_Selection_Dropdown';
 import FilterDropdown from './component/FilterDropdown';
 import RiskAssessment from './component/Risk_text_data';
 import DataVisualizations from './component/DataVisualizations';
+import RiskFilter from './component/RiskFilter.jsx';
 
 const WaterManagementDashboard = () => {
 
   return (
     <main className="flex overflow-hidden flex-col   py-9 shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-darkslateblue max-md:px-5">
-      <FilterDropdown />
+      {/* <FilterDropdown /> */}
+      <RiskFilter />
       {/* <Risk_Selection_Dropdown /> */}
       
       <section className="mt-9 max-md:max-w-full">

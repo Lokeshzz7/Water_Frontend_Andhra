@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import riskData from '../data/RiskInfo.json'; // Import the risk combinations JSON
-import stateData from '../data/risk_assessment_fake_data.json'; // Import the state data JSON
 
 const RiskAssessment = () => {
   const [riskInfo, setRiskInfo] = useState(null);
@@ -8,65 +6,42 @@ const RiskAssessment = () => {
   const [riskLevelClass, setRiskLevelClass] = useState(""); // State for storing the risk level class
   const [stateName, setStateName] = useState("");
   const [year, setYear] = useState("");
+  const [loading, setLoading] = useState(true); // To track loading state
 
-  const analyzeData = () => {
-    // Retrieve selected state index and year from localStorage
-    const selectedStateIndex = parseInt(localStorage.getItem('selectedState'), 10);
-    const selectedYear = parseInt(localStorage.getItem('selectedYear'), 10);
+  const analyzeData = async () => {
+    try {
+      // Retrieve selected data from localStorage
+      const selectedDistrict = localStorage.getItem('selectedDistrict');
+      const selectedMonth = localStorage.getItem('selectedMonth');
 
-    setStateName(selectedStateIndex || "");
-    setYear(selectedYear || "");
+      setStateName(selectedDistrict || "");
+      setYear(selectedMonth || "");
 
-    // Find the corresponding state data for the selected index and year
-    const stateInfo = stateData.find(item => item.index === selectedStateIndex && item.year === selectedYear);
+      // API call to get the risk data based on district, year, and month
+      const response = await fetch(`http://127.0.0.1:8000/api/risk/get-risk/${selectedDistrict}/2024/${selectedMonth}`);
+      const data = await response.json();
+      console.log("api :", response);
+      console.log("data ;", data);
 
-    if (stateInfo) {
-      // Destructure the data
-      const { flood_level, drought_level, evaporation, risk_factor } = stateInfo;
+      if (data.response && data.response.length > 0) {
+        const riskData = data.response[0]; // Assuming there is only one response
 
-      // Determine the highest factor and corresponding combination
-      let combination = "";
-
-      if (flood_level >= drought_level && flood_level >= evaporation) {
-        combination = "Flood > Drought > Evaporation";
-      } else if (flood_level >= evaporation && flood_level >= drought_level) {
-        combination = "Flood > Evaporation > Drought";
-      } else if (drought_level >= flood_level && drought_level >= evaporation) {
-        combination = "Drought > Flood > Evaporation";
-      } else if (drought_level >= evaporation && drought_level >= flood_level) {
-        combination = "Drought > Evaporation > Flood";
-      } else if (evaporation >= flood_level && evaporation >= drought_level) {
-        combination = "Evaporation > Flood > Drought";
-      } else if (evaporation >= drought_level && evaporation >= flood_level) {
-        combination = "Evaporation > Drought > Flood";
-      }
-
-      // Find the corresponding risk data based on the combination
-      const riskCombinationData = riskData.find(item => item.combination === combination);
-
-      // Replace placeholders with actual values dynamically
-      if (riskCombinationData) {
-        const updatedRiskInfo = {
-          ...riskCombinationData,
-          risk: riskCombinationData.risk
-            .replace(/flood level of (\d+)/g, `flood level of ${flood_level}`)
-            .replace(/drought level of (\d+)/g, `drought level of ${drought_level}`)
-            .replace(/evaporation rate of (\d+)/g, `evaporation rate of ${evaporation}`),
-          cause: riskCombinationData.cause
-            .replace(/flood level of (\d+)/g, `flood level of ${flood_level}`)
-            .replace(/drought level of (\d+)/g, `drought level of ${drought_level}`)
-            .replace(/evaporation rate of (\d+)/g, `evaporation rate of ${evaporation}`),
-          mitigation: riskCombinationData.mitigation // No change in mitigation
-        };
+        // Extract risk data
+        const { risk_type, description, causes, mitigation, risk_score } = riskData;
 
         // Set the risk information
-        setRiskInfo(updatedRiskInfo);
+        setRiskInfo({
+          risk: risk_type,
+          description,
+          cause: causes,
+          mitigation: mitigation.split(", "), // Assuming mitigation is a comma-separated list
+        });
 
-        // Determine the risk level based on the risk_factor
-        if (risk_factor <= 33) {
+        // Determine the risk level based on the risk_score
+        if (risk_score <= 33) {
           setRiskLevel("Low");
           setRiskLevelClass("text-green-400");
-        } else if (risk_factor <= 66) {
+        } else if (risk_score <= 66) {
           setRiskLevel("Medium");
           setRiskLevelClass("text-yellow-400");
         } else {
@@ -74,6 +49,10 @@ const RiskAssessment = () => {
           setRiskLevelClass("text-red-400");
         }
       }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false); // Set loading to false once data is fetched
     }
   };
 
@@ -92,22 +71,32 @@ const RiskAssessment = () => {
   }, [stateName, year]); // Dependencies are stateName and year, so it will re-run when they change
 
   return (
-    <section className="flex flex-col items-start p-2 w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-full rounded-lg ml-6 mt-1 mr-4   text-white max-md:px-5 max-md:pb-24 max-md:mt-9 max-md:max-w-full">
+    <section className="flex flex-col items-start p-2 w-full shadow-[4px_4px_4px_rgba(0,_0,_0,_0.25),_-4px_-4px_4px_rgba(0,_0,_0,_0.25)] bg-component h-full rounded-lg ml-6 mt-1 mr-4 text-white max-md:px-5 max-md:pb-24 max-md:mt-9 max-md:max-w-full">
       <h2 className="text-6xl ml-[240px] font-bold max-md:text-4xl text-center text-white">Risk Assessment</h2>
 
-      <div className=" text-lg max-md:max-w-full text-white">
+      <div className="text-lg max-md:max-w-full text-white">
         <div className="mt-2 text-white">
-          <p className="text-[30px] m-0  font-bold ">
+          <p className="text-[30px] m-0 font-bold ">
             Risk level: <span className={`font-semibold ${riskLevelClass}`}>{riskLevel}</span>
           </p>
         </div>
-        {riskInfo ? (
+        {loading ? (
+          <p className="text-center text-xl text-white">Loading risk assessment data...</p>
+        ) : riskInfo ? (
           <>
-            <div className=" pl-6">
+            <div className="pl-6">
               <p className="text-xl font-bold text-blue-800">RISK :</p>
-              <p className="text-lg font-bold text-white">{riskInfo.risk}</p>
+              <p className="text-lg font-bold text-white">{riskInfo.risk.replace(/^Risk:\s*/, '')}</p>
               <p className="text-xl mt-3 font-bold text-blue-800">Cause :</p>
-              <p className=" text-lg font-bold text-white">{riskInfo.cause}</p>
+              <p className="text-lg font-bold text-white">
+                {riskInfo.cause
+                  .slice(9) // Remove the first 9 characters (after "Causes: ")
+                  .split(',') // Split the string by commas
+                  .map((cause, index) => (
+                    <span key={index} className="block mb-2">{cause.trim()}</span> // Add margin-bottom to each line
+                  ))}
+              </p>
+
               <div className="mt-4">
                 <p className="text-xl mt-3 font-bold text-blue-700">Mitigation:</p>
                 <ul className="list-disc pl-6 mt-2 space-y-2 font-bold black">
@@ -119,7 +108,7 @@ const RiskAssessment = () => {
             </div>
           </>
         ) : (
-          <p className="text-center text-xl text-white">Loading risk assessment data...</p>
+          <p className="text-center text-xl text-white">No risk assessment data found for this selection.</p>
         )}
       </div>
     </section>
